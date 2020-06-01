@@ -1,0 +1,151 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Font/dogicapixelbold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Credit Screen/Button.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 85
+font_data = ExtResource( 1 )
+
+[node name="CreditScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.32549, 0.247059, 0.109804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 361.739
+margin_top = 474.172
+margin_right = 666.739
+margin_bottom = 559.172
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Go Back"
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Justin" type="Label" parent="."]
+margin_left = 224.663
+margin_top = 229.378
+margin_right = 825.663
+margin_bottom = 256.378
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -9
+custom_constants/shadow_offset_y = 9
+text = "Justin Bertrand-Haydari- Scriptor"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="alix" type="Label" parent="."]
+margin_left = 300.286
+margin_top = 175.283
+margin_right = 758.286
+margin_bottom = 191.283
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -9
+custom_constants/shadow_offset_y = 9
+text = "Alixandar Dukes- Scriptor"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jose" type="Label" parent="."]
+margin_left = 234.642
+margin_top = 295.397
+margin_right = 830.642
+margin_bottom = 311.397
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -9
+custom_constants/shadow_offset_y = 9
+text = "Jose Santa Maria- Scriptor/Artist"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Toby" type="Label" parent="."]
+margin_left = 321.934
+margin_top = 358.946
+margin_right = 706.934
+margin_bottom = 374.946
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -9
+custom_constants/shadow_offset_y = 9
+text = "Toby Williams - Artist"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vernon" type="Label" parent="."]
+margin_left = 309.364
+margin_top = 414.813
+margin_right = 723.364
+margin_bottom = 430.813
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -9
+custom_constants/shadow_offset_y = 9
+text = "Vernon Stewart - Artist"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cupine Army" type="Label" parent="."]
+margin_left = 83.1023
+margin_top = 52.3754
+margin_right = 954.102
+margin_bottom = 117.375
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -9
+custom_constants/shadow_offset_y = 9
+text = "Cupine Army"
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
