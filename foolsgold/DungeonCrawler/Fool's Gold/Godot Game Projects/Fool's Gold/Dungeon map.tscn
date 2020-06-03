@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=97 format=2]
-=======
-[gd_scene load_steps=98 format=2]
->>>>>>> Stashed changes
 
 [ext_resource path="res://Tile map/hall_corner_left_v1.png" type="Texture" id=1]
 [ext_resource path="res://Tile map/hall_corner_right_v1.png" type="Texture" id=2]
@@ -29,12 +25,8 @@
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=23]
 [ext_resource path="res://hit and hurt/Hurtbox.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Particles2D.gd" type="Script" id=25]
-<<<<<<< Updated upstream
 [ext_resource path="res://Torch/torch_lit_v1.png" type="Texture" id=26]
 [ext_resource path="res://Torch/torch_lit_v2.png" type="Texture" id=27]
-=======
-[ext_resource path="res://Walk particle.gd" type="Script" id=26]
->>>>>>> Stashed changes
 [ext_resource path="res://key_static_v1.png" type="Texture" id=33]
 [ext_resource path="res://Key_count.gd" type="Script" id=34]
 [ext_resource path="res://Key.gd" type="Script" id=35]
@@ -267,40 +259,12 @@ points = PoolVector2Array( 64, 64, 55, 64, 55, 1, 64, 1 )
 8/shapes = [  ]
 8/z_index = 0
 
-<<<<<<< Updated upstream
 [sub_resource type="CapsuleShape2D" id=12]
 radius = 6.90907
 height = 9.01411
 
 [sub_resource type="Animation" id=13]
 resource_name = "attack_down"
-=======
-[sub_resource type="Gradient" id=67]
-colors = PoolColorArray( 0.421875, 0.421875, 0.421875, 1, 0.1875, 0.1875, 0.1875, 1 )
-
-[sub_resource type="GradientTexture" id=66]
-gradient = SubResource( 67 )
-
-[sub_resource type="ParticlesMaterial" id=12]
-resource_local_to_scene = true
-emission_shape = 2
-emission_box_extents = Vector3( 1, 1, 1 )
-flag_disable_z = true
-direction = Vector3( 0, 15, 0 )
-spread = 75.09
-flatness = 1.0
-gravity = Vector3( 0, 1, 0 )
-initial_velocity = 15.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-color_ramp = SubResource( 66 )
-
-[sub_resource type="CapsuleShape2D" id=13]
-radius = 6.90907
-height = 6.7197
-
-[sub_resource type="Animation" id=14]
->>>>>>> Stashed changes
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -353,12 +317,8 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="Animation" id=14]
 resource_name = "down_walk"
-=======
-[sub_resource type="Animation" id=15]
->>>>>>> Stashed changes
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -374,12 +334,8 @@ tracks/0/keys = {
 "values": [ 10, 9, 12, 13 ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="Animation" id=15]
 resource_name = "idle_down"
-=======
-[sub_resource type="Animation" id=16]
->>>>>>> Stashed changes
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -395,12 +351,8 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="Animation" id=16]
 resource_name = "left_attack"
-=======
-[sub_resource type="Animation" id=17]
->>>>>>> Stashed changes
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -453,12 +405,8 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="Animation" id=17]
 resource_name = "left_idle"
-=======
-[sub_resource type="Animation" id=18]
->>>>>>> Stashed changes
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -474,12 +422,8 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="Animation" id=18]
 resource_name = "left_walk"
-=======
-[sub_resource type="Animation" id=19]
->>>>>>> Stashed changes
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -495,12 +439,8 @@ tracks/0/keys = {
 "values": [ 15, 14, 15, 14 ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="Animation" id=19]
 resource_name = "right_attack"
-=======
-[sub_resource type="Animation" id=20]
->>>>>>> Stashed changes
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -553,12 +493,8 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="Animation" id=20]
 resource_name = "right_idle"
-=======
-[sub_resource type="Animation" id=21]
->>>>>>> Stashed changes
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -574,12 +510,8 @@ tracks/0/keys = {
 "values": [ 4 ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="Animation" id=21]
 resource_name = "right_walk"
-=======
-[sub_resource type="Animation" id=22]
->>>>>>> Stashed changes
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -595,12 +527,8 @@ tracks/0/keys = {
 "values": [ 17, 16, 17, 16 ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="Animation" id=22]
 resource_name = "up_attack"
-=======
-[sub_resource type="Animation" id=23]
->>>>>>> Stashed changes
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -653,12 +581,8 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="Animation" id=23]
 resource_name = "up_idle"
-=======
-[sub_resource type="Animation" id=24]
->>>>>>> Stashed changes
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -674,12 +598,8 @@ tracks/0/keys = {
 "values": [ 6 ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="Animation" id=24]
 resource_name = "up_walk"
-=======
-[sub_resource type="Animation" id=25]
->>>>>>> Stashed changes
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -695,7 +615,6 @@ tracks/0/keys = {
 "values": [ 19, 18, 21, 20 ]
 }
 
-<<<<<<< Updated upstream
 [sub_resource type="AnimationNodeAnimation" id=25]
 animation = "attack_down"
 
@@ -739,56 +658,10 @@ blend_point_1/pos = Vector2( 0, 1 )
 blend_point_2/node = SubResource( 32 )
 blend_point_2/pos = Vector2( 1, 0 )
 blend_point_3/node = SubResource( 33 )
-=======
-[sub_resource type="AnimationNodeAnimation" id=26]
-animation = "attack_down"
-
-[sub_resource type="AnimationNodeAnimation" id=27]
-animation = "right_attack"
-
-[sub_resource type="AnimationNodeAnimation" id=28]
-animation = "left_attack"
-
-[sub_resource type="AnimationNodeAnimation" id=29]
-animation = "up_attack"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id=30]
-blend_point_0/node = SubResource( 26 )
-blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 27 )
-blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 28 )
-blend_point_2/pos = Vector2( -1, 0 )
-blend_point_3/node = SubResource( 29 )
-blend_point_3/pos = Vector2( 0, -1 )
-blend_mode = 1
-
-[sub_resource type="AnimationNodeAnimation" id=31]
-animation = "left_idle"
-
-[sub_resource type="AnimationNodeAnimation" id=32]
-animation = "idle_down"
-
-[sub_resource type="AnimationNodeAnimation" id=33]
-animation = "right_idle"
-
-[sub_resource type="AnimationNodeAnimation" id=34]
-animation = "up_idle"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id=35]
-blend_point_0/node = SubResource( 31 )
-blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 32 )
-blend_point_1/pos = Vector2( 0, 1 )
-blend_point_2/node = SubResource( 33 )
-blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 34 )
->>>>>>> Stashed changes
 blend_point_3/pos = Vector2( 0, -1 )
 snap = Vector2( 0.01, 0.01 )
 blend_mode = 1
 
-<<<<<<< Updated upstream
 [sub_resource type="AnimationNodeAnimation" id=35]
 animation = "down_walk"
 
@@ -814,38 +687,12 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=40]
 
-=======
-[sub_resource type="AnimationNodeAnimation" id=36]
-animation = "down_walk"
-
-[sub_resource type="AnimationNodeAnimation" id=37]
-animation = "left_walk"
-
-[sub_resource type="AnimationNodeAnimation" id=38]
-animation = "right_walk"
-
-[sub_resource type="AnimationNodeAnimation" id=39]
-animation = "up_walk"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id=40]
-blend_point_0/node = SubResource( 36 )
-blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 37 )
-blend_point_1/pos = Vector2( -1, 0 )
-blend_point_2/node = SubResource( 38 )
-blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 39 )
-blend_point_3/pos = Vector2( 0, -1 )
-blend_mode = 1
-
->>>>>>> Stashed changes
 [sub_resource type="AnimationNodeStateMachineTransition" id=41]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=42]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=43]
 
-<<<<<<< Updated upstream
 [sub_resource type="AnimationNodeStateMachine" id=44]
 states/Attack/node = SubResource( 29 )
 states/Attack/position = Vector2( 508, 204 )
@@ -862,22 +709,6 @@ graph_offset = Vector2( 0, 26.5131 )
 [sub_resource type="DynamicFont" id=46]
 size = 8
 font_data = ExtResource( 21 )
-=======
-[sub_resource type="AnimationNodeStateMachineTransition" id=44]
-
-[sub_resource type="AnimationNodeStateMachine" id=45]
-states/Attack/node = SubResource( 30 )
-states/Attack/position = Vector2( 508, 204 )
-states/Idle/node = SubResource( 35 )
-states/Idle/position = Vector2( 495, 100 )
-states/Run/node = SubResource( 40 )
-states/Run/position = Vector2( 657, 100 )
-transitions = [ "Idle", "Run", SubResource( 41 ), "Run", "Idle", SubResource( 42 ), "Idle", "Attack", SubResource( 43 ), "Attack", "Idle", SubResource( 44 ) ]
-start_node = "Idle"
-graph_offset = Vector2( 0, 26.5131 )
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=46]
->>>>>>> Stashed changes
 
 [sub_resource type="DynamicFont" id=47]
 size = 8
@@ -891,7 +722,6 @@ font_data = ExtResource( 21 )
 size = 8
 font_data = ExtResource( 21 )
 
-<<<<<<< Updated upstream
 [sub_resource type="CapsuleShape2D" id=50]
 radius = 3.12059
 height = 12.0896
@@ -910,30 +740,6 @@ _data = [ Vector2( 0.00632912, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.336364 
 curve = SubResource( 53 )
 
 [sub_resource type="ParticlesMaterial" id=55]
-=======
-[sub_resource type="DynamicFont" id=50]
-size = 8
-font_data = ExtResource( 21 )
-
-[sub_resource type="CapsuleShape2D" id=51]
-radius = 3.12059
-height = 12.0896
-
-[sub_resource type="Gradient" id=52]
-offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
-colors = PoolColorArray( 1, 1, 1, 1, 0.769531, 0.519354, 0.165329, 1, 0.652344, 0.0311148, 0, 1, 1, 0, 0, 1 )
-
-[sub_resource type="GradientTexture" id=53]
-gradient = SubResource( 52 )
-
-[sub_resource type="Curve" id=54]
-_data = [ Vector2( 0.00632912, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.336364 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=55]
-curve = SubResource( 54 )
-
-[sub_resource type="ParticlesMaterial" id=56]
->>>>>>> Stashed changes
 emission_shape = 2
 emission_box_extents = Vector3( 2, 5, 1 )
 flag_disable_z = true
@@ -947,7 +753,6 @@ orbit_velocity_random = 0.0
 linear_accel = 20.0
 angle = 45.0
 scale = 2.0
-<<<<<<< Updated upstream
 scale_curve = SubResource( 54 )
 color_ramp = SubResource( 52 )
 
@@ -963,10 +768,6 @@ animations = [ {
 "name": "on",
 "speed": 5.0
 } ]
-=======
-scale_curve = SubResource( 55 )
-color_ramp = SubResource( 53 )
->>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id=57]
 extents = Vector2( 2.2953, 6.27969 )
@@ -1006,35 +807,12 @@ collision_layer = 2
 script = ExtResource( 12 )
 
 [node name="Sprite" type="Sprite" parent="obj_player"]
-<<<<<<< Updated upstream
 position = Vector2( 0, 3.31964 )
 scale = Vector2( 0.40462, 0.431326 )
 texture = ExtResource( 11 )
 hframes = 22
 
 [node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
-=======
-position = Vector2( 16.8437, 17.7083 )
-scale = Vector2( 0.354442, 0.333419 )
-texture = ExtResource( 11 )
-hframes = 22
-
-[node name="Walk particle" type="Particles2D" parent="obj_player/Sprite"]
-show_behind_parent = true
-use_parent_material = true
-position = Vector2( 0.607903, 20.76 )
-scale = Vector2( 1, 1 )
-amount = 30
-speed_scale = 1.5
-randomness = 1.0
-fract_delta = false
-local_coords = false
-process_material = SubResource( 12 )
-script = ExtResource( 26 )
-
-[node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
-visible = false
->>>>>>> Stashed changes
 current = true
 zoom = Vector2( 0.18, 0.2 )
 drag_margin_left = 0.1
@@ -1043,27 +821,16 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
-<<<<<<< Updated upstream
 position = Vector2( 0.244171, 2.31964 )
 shape = SubResource( 12 )
 
 [node name="Light2D" type="Light2D" parent="obj_player"]
 position = Vector2( -0.506622, 4.08057 )
-=======
-visible = false
-position = Vector2( 17.3033, 16.9941 )
-shape = SubResource( 13 )
-
-[node name="Light2D" type="Light2D" parent="obj_player"]
-visible = false
-position = Vector2( 16.8145, 16.2134 )
->>>>>>> Stashed changes
 scale = Vector2( 0.087818, 0.0681612 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 
 [node name="player_anim" type="AnimationPlayer" parent="obj_player"]
-<<<<<<< Updated upstream
 anims/attack_down = SubResource( 13 )
 anims/down_walk = SubResource( 14 )
 anims/idle_down = SubResource( 15 )
@@ -1081,42 +848,15 @@ anims/up_walk = SubResource( 24 )
 tree_root = SubResource( 44 )
 anim_player = NodePath("../player_anim")
 parameters/playback = SubResource( 45 )
-=======
-anims/attack_down = SubResource( 14 )
-anims/down_walk = SubResource( 15 )
-anims/idle_down = SubResource( 16 )
-anims/left_attack = SubResource( 17 )
-anims/left_idle = SubResource( 18 )
-anims/left_walk = SubResource( 19 )
-anims/right_attack = SubResource( 20 )
-anims/right_idle = SubResource( 21 )
-anims/right_walk = SubResource( 22 )
-anims/up_attack = SubResource( 23 )
-anims/up_idle = SubResource( 24 )
-anims/up_walk = SubResource( 25 )
-
-[node name="AnimationTree" type="AnimationTree" parent="obj_player"]
-tree_root = SubResource( 45 )
-anim_player = NodePath("../player_anim")
-parameters/playback = SubResource( 46 )
->>>>>>> Stashed changes
 parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 0 )
 
 [node name="Money Bag" type="Control" parent="obj_player"]
-<<<<<<< Updated upstream
 margin_left = -27.7861
 margin_top = -541.926
 margin_right = 996.216
 margin_bottom = 63.0745
-=======
-visible = false
-margin_left = -28.1825
-margin_top = -542.372
-margin_right = 995.82
-margin_bottom = 62.6287
->>>>>>> Stashed changes
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1131,11 +871,7 @@ margin_left = -15.4272
 margin_top = 588.994
 margin_right = 2.57281
 margin_bottom = 594.994
-<<<<<<< Updated upstream
 custom_fonts/font = SubResource( 46 )
-=======
-custom_fonts/font = SubResource( 47 )
->>>>>>> Stashed changes
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "x $"
 __meta__ = {
@@ -1147,11 +883,7 @@ margin_left = 5.56313
 margin_top = 590.285
 margin_right = 19.5631
 margin_bottom = 596.285
-<<<<<<< Updated upstream
 custom_fonts/font = SubResource( 47 )
-=======
-custom_fonts/font = SubResource( 48 )
->>>>>>> Stashed changes
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 19 )
@@ -1169,11 +901,7 @@ margin_left = 36.8544
 margin_top = 590.417
 margin_right = 43.8544
 margin_bottom = 598.417
-<<<<<<< Updated upstream
 custom_fonts/font = SubResource( 48 )
-=======
-custom_fonts/font = SubResource( 49 )
->>>>>>> Stashed changes
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "x"
 __meta__ = {
@@ -1185,11 +913,7 @@ margin_left = 45.5728
 margin_top = 590.851
 margin_right = 53.5728
 margin_bottom = 596.851
-<<<<<<< Updated upstream
 custom_fonts/font = SubResource( 49 )
-=======
-custom_fonts/font = SubResource( 50 )
->>>>>>> Stashed changes
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 34 )
@@ -1198,10 +922,6 @@ __meta__ = {
 }
 
 [node name="HitboxPivot" type="Position2D" parent="obj_player"]
-<<<<<<< Updated upstream
-=======
-visible = false
->>>>>>> Stashed changes
 position = Vector2( 0, 5.101 )
 rotation = 1.5708
 
@@ -1211,24 +931,12 @@ collision_mask = 8
 
 [node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
 position = Vector2( 3.37391, 0.250439 )
-<<<<<<< Updated upstream
 shape = SubResource( 50 )
-=======
-shape = SubResource( 51 )
->>>>>>> Stashed changes
 disabled = true
 
 [node name="torch" type="StaticBody2D" parent="."]
 script = ExtResource( 15 )
 
-<<<<<<< Updated upstream
-=======
-[node name="Sprite" type="Sprite" parent="torch"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-texture = ExtResource( 14 )
-
->>>>>>> Stashed changes
 [node name="torch_light" type="Light2D" parent="torch"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
@@ -1242,7 +950,6 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-<<<<<<< Updated upstream
 process_material = SubResource( 55 )
 script = ExtResource( 25 )
 
@@ -1253,36 +960,17 @@ frames = SubResource( 56 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="torch"]
-=======
-process_material = SubResource( 56 )
-script = ExtResource( 25 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch"]
-visible = false
->>>>>>> Stashed changes
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 57 )
 
 [node name="Area2D" type="Area2D" parent="torch"]
-<<<<<<< Updated upstream
 position = Vector2( 0, 2.57212 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="torch/Area2D"]
-=======
-visible = false
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch/Area2D"]
-visible = false
->>>>>>> Stashed changes
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 58 )
 
 [node name="Bags" type="Node2D" parent="."]
-<<<<<<< Updated upstream
-=======
-visible = false
->>>>>>> Stashed changes
 
 [node name="obj_bag" parent="Bags" instance=ExtResource( 18 )]
 position = Vector2( 221.54, 363.485 )
@@ -1312,10 +1000,6 @@ position = Vector2( 97.4216, 477.968 )
 position = Vector2( 743.579, 50.7986 )
 
 [node name="Path2D" type="Path2D" parent="."]
-<<<<<<< Updated upstream
-=======
-visible = false
->>>>>>> Stashed changes
 position = Vector2( 3.5, 7.21212 )
 scale = Vector2( 0.994318, 0.969697 )
 curve = SubResource( 59 )
@@ -1344,10 +1028,6 @@ shape = SubResource( 60 )
 shape = SubResource( 61 )
 
 [node name="Key" type="Area2D" parent="."]
-<<<<<<< Updated upstream
-=======
-visible = false
->>>>>>> Stashed changes
 position = Vector2( 33, 361 )
 script = ExtResource( 35 )
 
@@ -1361,10 +1041,6 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 33 )
 
 [node name="obj_door" type="StaticBody2D" parent="."]
-<<<<<<< Updated upstream
-=======
-visible = false
->>>>>>> Stashed changes
 position = Vector2( 36, 184 )
 script = ExtResource( 37 )
 
@@ -1385,10 +1061,6 @@ position = Vector2( -0.631124, 0.946678 )
 shape = SubResource( 64 )
 
 [node name="Enemy" parent="." instance=ExtResource( 23 )]
-<<<<<<< Updated upstream
-=======
-visible = false
->>>>>>> Stashed changes
 position = Vector2( 84.9963, 524.91 )
 
 [node name="Sprite" parent="Enemy" index="0"]
