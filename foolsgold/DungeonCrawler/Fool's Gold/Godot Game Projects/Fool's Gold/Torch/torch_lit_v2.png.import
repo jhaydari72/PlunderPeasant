@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/skeleton_anim_v1.png-413faf391ccc80ef20ab63e771b03305.stex"
+path="res://.import/torch_lit_v2.png-105963bc55f466c119a428e3fa92af7d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://skeleton_anim_v1.png"
-dest_files=[ "res://.import/skeleton_anim_v1.png-413faf391ccc80ef20ab63e771b03305.stex" ]
+source_file="res://Torch/torch_lit_v2.png"
+dest_files=[ "res://.import/torch_lit_v2.png-105963bc55f466c119a428e3fa92af7d.stex" ]
 
 [params]
 

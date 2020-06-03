@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=2]
+[gd_scene load_steps=97 format=2]
 
 [ext_resource path="res://Tile map/hall_corner_left_v1.png" type="Texture" id=1]
 [ext_resource path="res://Tile map/hall_corner_right_v1.png" type="Texture" id=2]
@@ -25,6 +25,8 @@
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=23]
 [ext_resource path="res://hit and hurt/Hurtbox.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Particles2D.gd" type="Script" id=25]
+[ext_resource path="res://Torch/torch_lit_v1.png" type="Texture" id=26]
+[ext_resource path="res://Torch/torch_lit_v2.png" type="Texture" id=27]
 [ext_resource path="res://key_static_v1.png" type="Texture" id=33]
 [ext_resource path="res://Key_count.gd" type="Script" id=34]
 [ext_resource path="res://Key.gd" type="Script" id=35]
@@ -754,28 +756,41 @@ scale = 2.0
 scale_curve = SubResource( 54 )
 color_ramp = SubResource( 52 )
 
-[sub_resource type="RectangleShape2D" id=56]
-extents = Vector2( 2.2953, 6.27969 )
+[sub_resource type="SpriteFrames" id=56]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=57]
+extents = Vector2( 2.2953, 6.27969 )
+
+[sub_resource type="RectangleShape2D" id=58]
 extents = Vector2( 15.6504, 18.1411 )
 
-[sub_resource type="Curve2D" id=58]
+[sub_resource type="Curve2D" id=59]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
 }
 
-[sub_resource type="CapsuleShape2D" id=59]
+[sub_resource type="CapsuleShape2D" id=60]
 radius = 13.2374
 height = 9.97013
-
-[sub_resource type="RectangleShape2D" id=60]
 
 [sub_resource type="RectangleShape2D" id=61]
 
 [sub_resource type="RectangleShape2D" id=62]
 
 [sub_resource type="RectangleShape2D" id=63]
+
+[sub_resource type="RectangleShape2D" id=64]
 
 [node name="Dungeon map" type="Node2D"]
 position = Vector2( -1, 2 )
@@ -938,21 +953,22 @@ amount = 50
 process_material = SubResource( 55 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="Sprite" parent="torch"]
+[node name="Sprite" type="AnimatedSprite" parent="torch"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
-texture = ExtResource( 14 )
+frames = SubResource( 56 )
+animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="torch"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 56 )
+shape = SubResource( 57 )
 
 [node name="Area2D" type="Area2D" parent="torch"]
 position = Vector2( 0, 2.57212 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="torch/Area2D"]
 position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 57 )
+shape = SubResource( 58 )
 
 [node name="Bags" type="Node2D" parent="."]
 
@@ -986,7 +1002,7 @@ position = Vector2( 743.579, 50.7986 )
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( 3.5, 7.21212 )
 scale = Vector2( 0.994318, 0.969697 )
-curve = SubResource( 58 )
+curve = SubResource( 59 )
 script = ExtResource( 20 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
@@ -1004,12 +1020,12 @@ rotation = 9.31322e-10
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hurtbox" index="0"]
-shape = SubResource( 59 )
+shape = SubResource( 60 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Path2D/PathFollow2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/KinematicBody2D"]
-shape = SubResource( 60 )
+shape = SubResource( 61 )
 
 [node name="Key" type="Area2D" parent="."]
 position = Vector2( 33, 361 )
@@ -1018,7 +1034,7 @@ script = ExtResource( 35 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
 position = Vector2( -1.00139, 1.25174 )
 scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 61 )
+shape = SubResource( 62 )
 
 [node name="Sprite" type="Sprite" parent="Key"]
 scale = Vector2( 0.5, 0.5 )
@@ -1034,7 +1050,7 @@ texture = ExtResource( 36 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_door"]
 position = Vector2( 0.631119, -0.315567 )
-shape = SubResource( 62 )
+shape = SubResource( 63 )
 
 [node name="Area2D" type="Area2D" parent="obj_door"]
 visible = false
@@ -1042,7 +1058,7 @@ scale = Vector2( 1.5, 1.5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_door/Area2D"]
 position = Vector2( -0.631124, 0.946678 )
-shape = SubResource( 63 )
+shape = SubResource( 64 )
 
 [node name="Enemy" parent="." instance=ExtResource( 23 )]
 position = Vector2( 84.9963, 524.91 )

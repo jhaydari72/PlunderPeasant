@@ -2,7 +2,7 @@ extends StaticBody2D
 
 onready var light = $torch_light
 onready var area = $Area2D
-
+onready var sprite = $Sprite
 
 
 
@@ -12,5 +12,6 @@ func _input(_event):
 		for b in bodies:
 			if b.name == "obj_player":
 				$torch_light.show()
+				$Sprite.play("on")
 				
 	
