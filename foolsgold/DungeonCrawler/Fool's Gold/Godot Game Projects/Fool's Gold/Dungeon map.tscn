@@ -2736,7 +2736,7 @@ position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( 574.395, 411.282 )
+position = Vector2( -133.501, 340.713 )
 collision_layer = 2
 script = ExtResource( 12 )
 
