@@ -12,7 +12,7 @@ func _ready():
 
 #money count set up 
 func _on_obj_bag_collected():
-	bags = bags + 5
+	bags = bags + 25
 	_ready()
 	
 	
