@@ -1,13 +1,16 @@
-[gd_scene load_steps=119 format=2]
+[gd_scene load_steps=138 format=2]
 
 [ext_resource path="res://Tile map/Updated Titles/Left Middle Wall.png" type="Texture" id=1]
 [ext_resource path="res://Tile map/Updated Titles/Top Right Wall.png" type="Texture" id=2]
 [ext_resource path="res://Tile map/Updated Titles/Middle Right Wall.png" type="Texture" id=3]
 [ext_resource path="res://Tile map/Updated Titles/Bottom Right Wall.png" type="Texture" id=4]
+[ext_resource path="res://Tile map/room_back_wall_v1.png" type="Texture" id=5]
 [ext_resource path="res://Tile map/Updated Titles/Center Title.png" type="Texture" id=6]
+[ext_resource path="res://Audio/175949__freefire66__my-sword-hit-1-wav.wav" type="AudioStream" id=7]
+[ext_resource path="res://Tile map/room_center_v1.png" type="Texture" id=8]
 [ext_resource path="res://Tile map/Updated Titles/Bottom Middle Wall.png" type="Texture" id=9]
 [ext_resource path="res://skele anims/skeleton_anim_v1.png" type="Texture" id=10]
-[ext_resource path="res://Player anims/spritesheet.png" type="Texture" id=11]
+[ext_resource path="res://Player anims/playerSS.png" type="Texture" id=11]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=12]
 [ext_resource path="res://LIghting .png" type="Texture" id=13]
 [ext_resource path="res://Torch/torch_unlit_v1.png" type="Texture" id=14]
@@ -43,6 +46,8 @@
 [ext_resource path="res://Tile map/Updated Titles/Vertical Wall.png" type="Texture" id=44]
 [ext_resource path="res://New Door Opening.png" type="Texture" id=45]
 [ext_resource path="res://door_collision.gd" type="Script" id=46]
+[ext_resource path="res://Audio/463351__ddragonpearl__hit-1.wav" type="AudioStream" id=47]
+[ext_resource path="res://Audio/388340__phlair__dungeon-ambiance.wav" type="AudioStream" id=48]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 7.05715, 0, 7.05715, 42.7292, 63.9922, 42.7292, 64, 64, 0, 64, 0, 0 )
@@ -460,6 +465,21 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=22]
+resource_name = "down_dead"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=23]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -544,7 +564,22 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=26]
+resource_name = "left_dead"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=27]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -629,7 +664,22 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=30]
+resource_name = "right_dead"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10 ]
+}
+
+[sub_resource type="Animation" id=31]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -714,7 +764,22 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="Animation" id=34]
+resource_name = "up_dead"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 15, 16, 17, 18 ]
+}
+
+[sub_resource type="Animation" id=35]
 length = 0.1
 loop = true
 tracks/0/type = "value"
