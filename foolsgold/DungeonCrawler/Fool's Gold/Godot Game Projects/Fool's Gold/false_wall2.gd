@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-
+#mOVING WALLS 
 
 func _ready():
 	pass 
