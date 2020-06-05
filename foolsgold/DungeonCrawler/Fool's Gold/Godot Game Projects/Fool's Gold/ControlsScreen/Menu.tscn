@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://ControlsScreen/MenuButton.gd" type="Script" id=1]
 [ext_resource path="res://Font/dogicapixelbold.ttf" type="DynamicFontData" id=2]
@@ -8,23 +8,31 @@ size = 45
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 45
+size = 25
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 45
+size = 25
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 45
+size = 25
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 45
+size = 25
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 45
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 85
 font_data = ExtResource( 2 )
 
 [node name="Menu" type="Control"]
@@ -35,11 +43,11 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -2.19116
-margin_top = -1.7218
-margin_right = 1277.81
-margin_bottom = 718.278
-color = Color( 0.32549, 0.247059, 0.109804, 1 )
+margin_left = -134.875
+margin_top = -62.0931
+margin_right = 1145.13
+margin_bottom = 657.907
+color = Color( 0.192157, 0.12549, 0.00784314, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -58,71 +66,109 @@ flat = true
 script = ExtResource( 1 )
 
 [node name="W_Up" type="Label" parent="."]
-margin_left = 359.21
-margin_top = 64.7664
-margin_right = 649.21
-margin_bottom = 129.766
+margin_left = 204.767
+margin_top = 176.42
+margin_right = 336.767
+margin_bottom = 202.42
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
-custom_constants/shadow_offset_x = -9
-custom_constants/shadow_offset_y = 9
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = -3
+custom_constants/shadow_offset_y = 3
 text = "W x Up"
 align = 1
 valign = 1
 
 [node name="A_Left" type="Label" parent="."]
-margin_left = 86.0486
-margin_top = 151.0
-margin_right = 398.049
-margin_bottom = 194.0
+margin_left = 204.47
+margin_top = 224.19
+margin_right = 386.47
+margin_bottom = 254.19
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
-custom_constants/shadow_offset_x = -9
-custom_constants/shadow_offset_y = 9
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = -3
+custom_constants/shadow_offset_y = 3
 text = "A x Left"
+align = 1
+valign = 1
 
 [node name="S_Down" type="Label" parent="."]
-margin_left = 343.634
-margin_top = 226.401
-margin_right = 689.634
-margin_bottom = 269.401
+margin_left = 205.552
+margin_top = 261.687
+margin_right = 399.552
+margin_bottom = 304.687
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
-custom_constants/shadow_offset_x = -9
-custom_constants/shadow_offset_y = 9
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = -3
+custom_constants/shadow_offset_y = 3
 text = "S x Down"
+align = 1
+valign = 1
 
 [node name="D_Right" type="Label" parent="."]
-margin_left = 605.327
-margin_top = 147.498
-margin_right = 968.327
-margin_bottom = 190.498
+margin_left = 201.002
+margin_top = 309.626
+margin_right = 407.002
+margin_bottom = 348.626
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
-custom_constants/shadow_offset_x = -9
-custom_constants/shadow_offset_y = 9
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = -3
+custom_constants/shadow_offset_y = 3
 text = "D x Right"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left Click" type="Label" parent="."]
+margin_left = 602.836
+margin_top = 167.805
+margin_right = 822.836
+margin_bottom = 210.805
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = -3
+custom_constants/shadow_offset_y = 3
+text = "F x Attack"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Enter" type="Label" parent="."]
-margin_left = 151.239
-margin_top = 295.964
-margin_right = 832.239
-margin_bottom = 338.964
-custom_fonts/font = SubResource( 6 )
+margin_left = 508.63
+margin_top = 226.186
+margin_right = 863.63
+margin_bottom = 245.186
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = -3
+custom_constants/shadow_offset_y = 3
+text = "Enter x Interact"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="Label" parent="."]
+margin_left = 204.333
+margin_top = 48.4297
+margin_right = 841.333
+margin_bottom = 113.43
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
 custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
 custom_constants/shadow_offset_x = -9
 custom_constants/shadow_offset_y = 9
-text = "Enter x Select"
-align = 1
-valign = 1
+text = "Controls"
 __meta__ = {
 "_edit_use_anchors_": false
 }
