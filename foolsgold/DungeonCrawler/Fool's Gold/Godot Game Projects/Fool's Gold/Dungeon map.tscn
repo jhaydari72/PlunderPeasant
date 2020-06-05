@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=2]
+[gd_scene load_steps=139 format=2]
 
 [ext_resource path="res://Tile map/Updated Titles/Left Middle Wall.png" type="Texture" id=1]
 [ext_resource path="res://Tile map/Updated Titles/Top Right Wall.png" type="Texture" id=2]
@@ -48,6 +48,7 @@
 [ext_resource path="res://door_collision.gd" type="Script" id=46]
 [ext_resource path="res://Audio/463351__ddragonpearl__hit-1.wav" type="AudioStream" id=47]
 [ext_resource path="res://Audio/dungeon_track1_v1_mixdown.wav" type="AudioStream" id=48]
+[ext_resource path="res://Dungeon map.gd" type="Script" id=49]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 7.05715, 0, 7.05715, 42.7292, 63.9922, 42.7292, 64, 64, 0, 64, 0, 0 )
@@ -1017,6 +1018,7 @@ extents = Vector2( 4.51196, 59.8682 )
 
 [node name="Dungeon map" type="Node2D"]
 position = Vector2( -1, 2 )
+script = ExtResource( 49 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -925.598
@@ -1130,7 +1132,6 @@ parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 0 )
 
 [node name="Money Bag" type="Control" parent="obj_player"]
-visible = false
 margin_left = -27.7861
 margin_top = -541.926
 margin_right = 996.216
@@ -1170,11 +1171,13 @@ __meta__ = {
 }
 
 [node name="Sprite2" type="Sprite" parent="obj_player/Money Bag"]
+visible = false
 position = Vector2( 33.3884, 594.248 )
 scale = Vector2( 0.313704, 0.25302 )
 texture = ExtResource( 33 )
 
 [node name="Label2" type="Label" parent="obj_player/Money Bag"]
+visible = false
 margin_left = 36.8544
 margin_top = 590.417
 margin_right = 43.8544
@@ -1187,6 +1190,7 @@ __meta__ = {
 }
 
 [node name="Key_count" type="Label" parent="obj_player/Money Bag"]
+visible = false
 margin_left = 45.5728
 margin_top = 590.851
 margin_right = 53.5728
