@@ -74,3 +74,4 @@ func _on_Hurtbox_area_entered(_area):
 	state = DEATH
 	var MusicNode = $AudioStreamPlayer2D2
 	MusicNode.play()
+	

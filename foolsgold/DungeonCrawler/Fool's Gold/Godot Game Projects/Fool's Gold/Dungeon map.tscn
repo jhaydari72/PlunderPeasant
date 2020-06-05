@@ -1070,7 +1070,7 @@ position = Vector2( 0.647095, -21.7282 )
 shape = SubResource( 18 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -57.346, 344.385 )
+position = Vector2( 218.654, 33.3849 )
 collision_layer = 2
 script = ExtResource( 12 )
 
@@ -1237,7 +1237,7 @@ shape = SubResource( 71 )
 stream = ExtResource( 47 )
 
 [node name="torch" type="StaticBody2D" parent="."]
-position = Vector2( -129, 42 )
+position = Vector2( -132, 42 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
@@ -1280,25 +1280,25 @@ shape = SubResource( 79 )
 position = Vector2( 221.54, 363.485 )
 
 [node name="obj_bag2" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 92.4501, 243.308 )
+position = Vector2( 58.4501, 247.308 )
 
 [node name="obj_bag3" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 285.126, 236.228 )
+position = Vector2( 250.126, 242.228 )
 
 [node name="obj_bag4" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 475.105, 173.091 )
+position = Vector2( 449.105, 175.091 )
 
 [node name="obj_bag5" parent="Bags" instance=ExtResource( 18 )]
 position = Vector2( 828.33, 339.18 )
 
 [node name="obj_bag6" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 933.558, 113.367 )
+position = Vector2( 954.558, 99.367 )
 
 [node name="obj_bag7" parent="Bags" instance=ExtResource( 18 )]
 position = Vector2( 920.475, 487.068 )
 
 [node name="obj_bag8" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 97.4216, 477.968 )
+position = Vector2( 123.422, 476.968 )
 
 [node name="obj_bag9" parent="Bags" instance=ExtResource( 18 )]
 position = Vector2( 743.579, 50.7986 )
@@ -1681,6 +1681,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy28" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 645.508, 471.734 )
 
 [node name="Sprite" parent="Enemy28" index="0"]
@@ -1691,6 +1692,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy29" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 835.377, 495.964 )
 
 [node name="Sprite" parent="Enemy29" index="0"]
@@ -1701,6 +1703,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy30" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 842.527, 307.684 )
 
 [node name="Sprite" parent="Enemy30" index="0"]
@@ -1711,6 +1714,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy31" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 695.16, 253.662 )
 
 [node name="Sprite" parent="Enemy31" index="0"]
@@ -1721,6 +1725,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy32" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 759.509, 224.268 )
 
 [node name="Sprite" parent="Enemy32" index="0"]
@@ -1731,6 +1736,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy33" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 1012.93, 441.148 )
 
 [node name="Sprite" parent="Enemy33" index="0"]
@@ -1741,6 +1747,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy34" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 905.685, 273.126 )
 
 [node name="Sprite" parent="Enemy34" index="0"]
@@ -1751,6 +1758,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy35" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 884.632, 221.885 )
 
 [node name="Sprite" parent="Enemy35" index="0"]
@@ -1761,6 +1769,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy36" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 963.281, 177.794 )
 
 [node name="Sprite" parent="Enemy36" index="0"]
@@ -1771,6 +1780,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy37" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 940.64, 309.67 )
 
 [node name="Sprite" parent="Enemy37" index="0"]
@@ -1781,6 +1791,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy38" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 834.98, 206.791 )
 
 [node name="Sprite" parent="Enemy38" index="0"]
@@ -1791,6 +1802,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy39" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 890.59, 329.928 )
 
 [node name="Sprite" parent="Enemy39" index="0"]
@@ -1801,6 +1813,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy40" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 812.438, 97.7925 )
 
 [node name="Sprite" parent="Enemy40" index="0"]
@@ -1811,6 +1824,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy41" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 751.309, 38.985 )
 
 [node name="Sprite" parent="Enemy41" index="0"]
@@ -1821,6 +1835,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy42" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 512.21, 24.2831 )
 
 [node name="Sprite" parent="Enemy42" index="0"]
@@ -1841,6 +1856,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy44" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 388.647, 94.0731 )
 
 [node name="Sprite" parent="Enemy44" index="0"]
@@ -1891,6 +1907,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy49" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 552.69, 347.874 )
 
 [node name="Sprite" parent="Enemy49" index="0"]
@@ -1901,6 +1918,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="Enemy50" parent="." instance=ExtResource( 23 )]
+visible = false
 position = Vector2( 288.055, 450.014 )
 
 [node name="Sprite" parent="Enemy50" index="0"]
