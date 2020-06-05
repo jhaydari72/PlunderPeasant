@@ -1,7 +1,9 @@
-extends Node2D
+extends CollisionShape2D
 
 
-onready var sprite = $Sprite
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,4 +17,4 @@ func _ready():
 
 
 func _on_Hurtbox_area_entered(area):
-	$Sprite.play("dead")
+	queue_free()

@@ -12,4 +12,5 @@ func _process(delta):
 
 # deletes pathing enemy
 func _on_Hurtbox_area_entered(area):
-	queue_free()
+	set_process(false)
+	
