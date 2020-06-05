@@ -447,7 +447,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 10, 9, 12, 13 ]
+"values": [ 19, 20, 19, 20 ]
 }
 
 [sub_resource type="Animation" id=23]
@@ -478,7 +478,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 2, 3, 2 ]
+"values": [ 5, 11, 5 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -547,7 +547,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 2 ]
+"values": [ 5 ]
 }
 
 [sub_resource type="Animation" id=26]
@@ -563,7 +563,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 15, 14, 15, 14 ]
+"values": [ 21, 5, 21, 5 ]
 }
 
 [sub_resource type="Animation" id=27]
@@ -578,7 +578,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 4, 5, 4 ]
+"values": [ 8, 12, 8 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -647,7 +647,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 4 ]
+"values": [ 8 ]
 }
 
 [sub_resource type="Animation" id=29]
@@ -663,7 +663,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 17, 16, 17, 16 ]
+"values": [ 22, 8, 22, 8 ]
 }
 
 [sub_resource type="Animation" id=30]
@@ -678,7 +678,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 6, 7, 8 ]
+"values": [ 13, 14, 13 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -747,7 +747,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 6 ]
+"values": [ 13 ]
 }
 
 [sub_resource type="Animation" id=32]
@@ -763,7 +763,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 19, 18, 21, 20 ]
+"values": [ 23, 24, 23, 24 ]
 }
 
 [sub_resource type="AnimationNodeAnimation" id=33]
@@ -1056,7 +1056,7 @@ position = Vector2( 0, 3.31964 )
 scale = Vector2( 0.40462, 0.431326 )
 texture = ExtResource( 11 )
 hframes = 25
-frame = 11
+frame = 23
 
 [node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
 current = true
@@ -1179,7 +1179,7 @@ __meta__ = {
 [node name="HitboxPivot" type="Position2D" parent="obj_player"]
 visible = false
 position = Vector2( 0, 5.101 )
-rotation = 1.5708
+rotation = -1.5708
 
 [node name="SwordHitbox" parent="obj_player/HitboxPivot" instance=ExtResource( 22 )]
 position = Vector2( 8, 0 )
