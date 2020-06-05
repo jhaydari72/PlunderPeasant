@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=2]
+[gd_scene load_steps=138 format=2]
 
 [ext_resource path="res://Tile map/Updated Titles/Left Middle Wall.png" type="Texture" id=1]
 [ext_resource path="res://Tile map/Updated Titles/Top Right Wall.png" type="Texture" id=2]
@@ -47,8 +47,7 @@
 [ext_resource path="res://New Door Opening.png" type="Texture" id=45]
 [ext_resource path="res://door_collision.gd" type="Script" id=46]
 [ext_resource path="res://Audio/463351__ddragonpearl__hit-1.wav" type="AudioStream" id=47]
-[ext_resource path="res://Audio/dungeon_track1_v1_mixdown.wav" type="AudioStream" id=48]
-[ext_resource path="res://Dungeon map.gd" type="Script" id=49]
+[ext_resource path="res://Audio/388340__phlair__dungeon-ambiance.wav" type="AudioStream" id=48]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 7.05715, 0, 7.05715, 42.7292, 63.9922, 42.7292, 64, 64, 0, 64, 0, 0 )
@@ -1018,7 +1017,6 @@ extents = Vector2( 4.51196, 59.8682 )
 
 [node name="Dungeon map" type="Node2D"]
 position = Vector2( -1, 2 )
-script = ExtResource( 49 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -925.598
@@ -1239,6 +1237,8 @@ shape = SubResource( 71 )
 stream = ExtResource( 47 )
 
 [node name="torch" type="StaticBody2D" parent="."]
+position = Vector2( -129, 42 )
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
 [node name="torch_light" type="Light2D" parent="torch"]
