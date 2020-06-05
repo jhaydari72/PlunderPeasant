@@ -47,7 +47,7 @@
 [ext_resource path="res://New Door Opening.png" type="Texture" id=45]
 [ext_resource path="res://door_collision.gd" type="Script" id=46]
 [ext_resource path="res://Audio/463351__ddragonpearl__hit-1.wav" type="AudioStream" id=47]
-[ext_resource path="res://Audio/388340__phlair__dungeon-ambiance.wav" type="AudioStream" id=48]
+[ext_resource path="res://Audio/dungeon_track1_v1_mixdown.wav" type="AudioStream" id=48]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 7.05715, 0, 7.05715, 42.7292, 63.9922, 42.7292, 64, 64, 0, 64, 0, 0 )
@@ -1921,7 +1921,7 @@ shape = SubResource( 89 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 48 )
-volume_db = 1.0
+volume_db = 6.049
 autoplay = true
 [connection signal="area_entered" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_exited"]
