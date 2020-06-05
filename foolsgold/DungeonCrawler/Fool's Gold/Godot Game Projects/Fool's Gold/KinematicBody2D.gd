@@ -60,7 +60,7 @@ func move_state(delta):
 		var MusicNode = $AudioStreamPlayer2D
 		MusicNode.play()
 
-func attack_state(delta):
+func attack_state(_delta):
 	velocity = Vector2.ZERO
 	animationState.travel("Attack")
 
@@ -68,7 +68,7 @@ func attack_animation_finished():
 	state = MOVE
 
 
-func _on_Hurtbox_area_entered(area):
+func _on_Hurtbox_area_entered(_area):
 	health -= 5
 	animationState.travel("Death")
 	state = DEATH
