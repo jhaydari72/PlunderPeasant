@@ -5,9 +5,12 @@ const ACCELERATION = 500
 const MAX_SPEED = 50
 const FRICTION = 500
  
+var health = 5
+
 enum {
 	MOVE,
-	ATTACK
+	ATTACK,
+	DEATH
 }
 var state = MOVE
 var Key = 0
@@ -43,6 +46,7 @@ func move_state(delta):
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationTree.set("parameters/Attack/blend_position", input_vector)
+		animationTree.set("parameters/Death/blend_position", input_vector)
 		animationState.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
@@ -53,6 +57,8 @@ func move_state(delta):
 	
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
+		var MusicNode = $AudioStreamPlayer2D
+		MusicNode.play()
 
 func attack_state(delta):
 	velocity = Vector2.ZERO
@@ -60,3 +66,11 @@ func attack_state(delta):
 
 func attack_animation_finished():
 	state = MOVE
+
+
+func _on_Hurtbox_area_entered(area):
+	health -= 5
+	animationState.travel("Death")
+	state = DEATH
+	var MusicNode = $AudioStreamPlayer2D2
+	MusicNode.play()

@@ -14,6 +14,9 @@ func _on_obj_bag_body_entered(body):
 		$AnimationPlayer.play("bounce")
 		
 		$Timer.start()
+		
+		var MusicNode = $AudioStreamPlayer2D
+		MusicNode.play()
 
 #this timer is set up to show the animation of the players picking up the money bag 
 func _on_Timer_timeout():
