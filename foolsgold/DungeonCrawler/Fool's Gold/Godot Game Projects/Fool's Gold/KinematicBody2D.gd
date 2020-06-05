@@ -72,3 +72,5 @@ func _on_Hurtbox_area_entered(area):
 	health -= 5
 	animationState.travel("Death")
 	state = DEATH
+	var MusicNode = $AudioStreamPlayer2D2
+	MusicNode.play()
