@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/388340__phlair__dungeon-ambiance.wav-390790351a3c4196e3e708fd2cefb718.sample"
+
+[deps]
+
+source_file="res://Audio/388340__phlair__dungeon-ambiance.wav"
+dest_files=[ "res://.import/388340__phlair__dungeon-ambiance.wav-390790351a3c4196e3e708fd2cefb718.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
