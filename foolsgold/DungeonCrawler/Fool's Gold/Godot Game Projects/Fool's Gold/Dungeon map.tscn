@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=2]
+[gd_scene load_steps=112 format=2]
 
 [ext_resource path="res://Tile map/hall_corner_left_v1.png" type="Texture" id=1]
 [ext_resource path="res://Tile map/hall_corner_right_v1.png" type="Texture" id=2]
@@ -30,10 +30,15 @@
 [ext_resource path="res://false_wall.gd" type="Script" id=28]
 [ext_resource path="res://false_wall2.gd" type="Script" id=29]
 [ext_resource path="res://New Door Closed.png" type="Texture" id=30]
+[ext_resource path="res://PathFollow2D.gd" type="Script" id=31]
+[ext_resource path="res://skele anims/skeleton_dead.png" type="Texture" id=32]
 [ext_resource path="res://key_static_v1.png" type="Texture" id=33]
 [ext_resource path="res://Key_count.gd" type="Script" id=34]
 [ext_resource path="res://Key.gd" type="Script" id=35]
+[ext_resource path="res://skele anims/skeleton_fall.png" type="Texture" id=36]
 [ext_resource path="res://obj_door.gd" type="Script" id=37]
+[ext_resource path="res://obj_enemy.gd" type="Script" id=38]
+[ext_resource path="res://CollisionShape2D.gd" type="Script" id=39]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 62, 0, 63, 63, 56, 63, 57, 19, 0, 20 )
@@ -811,20 +816,33 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
 }
 
-[sub_resource type="CapsuleShape2D" id=66]
-radius = 8.28271
-height = 9.97013
+[sub_resource type="SpriteFrames" id=66]
+animations = [ {
+"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "alive",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=67]
 extents = Vector2( 6.23898, 11.6251 )
 
-[sub_resource type="RectangleShape2D" id=68]
+[sub_resource type="CapsuleShape2D" id=68]
+radius = 8.28271
+height = 9.97013
 
 [sub_resource type="RectangleShape2D" id=69]
 
 [sub_resource type="RectangleShape2D" id=70]
 
 [sub_resource type="RectangleShape2D" id=71]
+
+[sub_resource type="RectangleShape2D" id=72]
 extents = Vector2( 55, 45.6299 )
 
 [node name="Dungeon map" type="Node2D"]
@@ -1083,11 +1101,24 @@ script = ExtResource( 20 )
 position = Vector2( 446.034, 36.9063 )
 rotation = -0.0113611
 rotate = false
+script = ExtResource( 31 )
 
-[node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
-position = Vector2( 3.44864, -0.985458 )
+[node name="obj_enemy" type="KinematicBody2D" parent="Path2D/PathFollow2D"]
+rotation = 9.31322e-10
+scale = Vector2( 1, 1 )
+script = ExtResource( 38 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Path2D/PathFollow2D/obj_enemy"]
+position = Vector2( 3.44867, -0.985462 )
+rotation = 9.31322e-10
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 10 )
+frames = SubResource( 66 )
+animation = "alive"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/obj_enemy"]
+position = Vector2( 2.52783, -0.402496 )
+shape = SubResource( 67 )
+script = ExtResource( 39 )
 
 [node name="Hurtbox" parent="Path2D/PathFollow2D" instance=ExtResource( 24 )]
 rotation = 9.31322e-10
@@ -1095,13 +1126,7 @@ collision_layer = 8
 
 [node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hurtbox" index="0"]
 position = Vector2( 2.94336, 0.0334396 )
-shape = SubResource( 66 )
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="Path2D/PathFollow2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/KinematicBody2D"]
-position = Vector2( 2.52783, -0.402496 )
-shape = SubResource( 67 )
+shape = SubResource( 68 )
 
 [node name="Key" type="Area2D" parent="."]
 position = Vector2( 33, 361 )
@@ -1110,7 +1135,7 @@ script = ExtResource( 35 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
 position = Vector2( -1.00139, 1.25174 )
 scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 68 )
+shape = SubResource( 69 )
 
 [node name="Sprite" type="Sprite" parent="Key"]
 scale = Vector2( 0.5, 0.5 )
@@ -1127,7 +1152,7 @@ texture = ExtResource( 30 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_door"]
 position = Vector2( 0.631119, -0.315567 )
 scale = Vector2( 2.5, 2 )
-shape = SubResource( 69 )
+shape = SubResource( 70 )
 
 [node name="Area2D" type="Area2D" parent="obj_door"]
 visible = false
@@ -1136,7 +1161,7 @@ scale = Vector2( 1.5, 1.5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_door/Area2D"]
 position = Vector2( -0.631124, 0.946678 )
 scale = Vector2( 1.5, 1.5 )
-shape = SubResource( 70 )
+shape = SubResource( 71 )
 
 [node name="Enemy" parent="." instance=ExtResource( 23 )]
 position = Vector2( 84.9963, 524.91 )
@@ -1160,7 +1185,7 @@ texture = ExtResource( 30 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 61, 558 )
 scale = Vector2( 1, 0.1 )
-shape = SubResource( 71 )
+shape = SubResource( 72 )
 [connection signal="area_entered" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_exited"]
 [connection signal="area_entered" from="false_wall/AnimatedSprite/Area2D" to="false_wall" method="_on_Area2D_area_entered"]
@@ -1184,6 +1209,9 @@ shape = SubResource( 71 )
 [connection signal="bagsCollected" from="Bags/obj_bag9" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag9" to="Bags/obj_bag9" method="_on_obj_bag_body_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 
 [editable path="obj_player/HitboxPivot/SwordHitbox"]
 
