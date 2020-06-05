@@ -358,6 +358,58 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 32.7207, 15.1108 )
 
+[sub_resource type="Curve2D" id=80]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
+}
+
+[sub_resource type="SpriteFrames" id=81]
+animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "alive",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=82]
+extents = Vector2( 6.23898, 11.6251 )
+
+[sub_resource type="CapsuleShape2D" id=83]
+radius = 8.28271
+height = 9.97013
+
+[sub_resource type="RectangleShape2D" id=84]
+extents = Vector2( 9.78305, 15.5923 )
+
+[sub_resource type="RectangleShape2D" id=85]
+
+[sub_resource type="SpriteFrames" id=86]
+animations = [ {
+"frames": [ ExtResource( 45 ) ],
+"loop": true,
+"name": "open",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "closed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=87]
+extents = Vector2( 12.5046, 10 )
+
+[sub_resource type="RectangleShape2D" id=88]
+extents = Vector2( 12.6926, 10.9488 )
+
+[sub_resource type="RectangleShape2D" id=89]
+extents = Vector2( 4.51196, 59.8682 )
+
 [sub_resource type="ParticlesMaterial" id=19]
 flag_disable_z = true
 gravity = Vector3( 0, 98, 0 )
@@ -963,58 +1015,6 @@ extents = Vector2( 2.2953, 6.27969 )
 [sub_resource type="RectangleShape2D" id=79]
 extents = Vector2( 15.6504, 18.1411 )
 
-[sub_resource type="Curve2D" id=80]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
-}
-
-[sub_resource type="SpriteFrames" id=81]
-animations = [ {
-"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
-"loop": false,
-"name": "dead",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "alive",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=82]
-extents = Vector2( 6.23898, 11.6251 )
-
-[sub_resource type="CapsuleShape2D" id=83]
-radius = 8.28271
-height = 9.97013
-
-[sub_resource type="RectangleShape2D" id=84]
-extents = Vector2( 9.78305, 15.5923 )
-
-[sub_resource type="RectangleShape2D" id=85]
-
-[sub_resource type="SpriteFrames" id=86]
-animations = [ {
-"frames": [ ExtResource( 45 ) ],
-"loop": true,
-"name": "open",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 30 ) ],
-"loop": true,
-"name": "closed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=87]
-extents = Vector2( 12.5046, 10 )
-
-[sub_resource type="RectangleShape2D" id=88]
-extents = Vector2( 12.6926, 10.9488 )
-
-[sub_resource type="RectangleShape2D" id=89]
-extents = Vector2( 4.51196, 59.8682 )
-
 [node name="Dungeon map" type="Node2D"]
 position = Vector2( -1, 2 )
 
@@ -1033,7 +1033,17 @@ position = Vector2( -31.7773, -1.19165 )
 tile_set = SubResource( 13 )
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 2, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 4, 0, 16, 5, 0, 131069, 2, 0, 131070, 3, 0, 131071, 3, 0, 65536, 1, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 4, 0, 65541, 8, 0, 65542, 2, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 1, 0, 65547, 10, 0, 65548, 8, 0, 65549, 8, 0, 65550, 10, 0, 65551, 5, 0, 65552, 5, 0, 196605, 1, 0, 196606, 1, 0, 196607, 8, 0, 131072, 8, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 5, 0, 131077, 8, 0, 131078, 1, 0, 131079, 2, 0, 131080, 2, 0, 131081, 3, 0, 131082, 1, 0, 131083, 10, 0, 131084, 8, 0, 131085, 2, 0, 131086, 3, 0, 131087, 4, 0, 131088, 5, 0, 262141, 1, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 10, 0, 196611, 5, 0, 196612, 5, 0, 196613, 8, 0, 196614, 1, 0, 196615, 1, 0, 196616, 10, 0, 196617, 8, 0, 196618, 1, 0, 196619, 10, 0, 196620, 8, 0, 196621, 1, 0, 196622, 8, 0, 196623, 5, 0, 196624, 5, 0, 327676, 2, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 4, 0, 262145, 8, 0, 262146, 10, 0, 262147, 8, 0, 262148, 5, 0, 262149, 8, 0, 262150, 8, 0, 262151, 1, 0, 262152, 10, 0, 262153, 8, 0, 262154, 1, 0, 262155, 10, 0, 262156, 8, 0, 262157, 1, 0, 262158, 8, 0, 262159, 5, 0, 262160, 5, 0, 393213, -1073741814, 0, 393214, -1610612726, 0, 393215, -1610612726, 0, 327680, 10, 0, 327681, 8, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 8, 0, 327690, 1, 0, 327691, 10, 0, 327692, 8, 0, 327693, 0, 0, 327694, 7, 0, 327695, 6, 0, 327696, 5, 0, 458748, 0, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 10, 0, 393217, 3, 0, 393218, 4, 0, 393219, 8, 0, 393220, 2, 0, 393221, 4, 0, 393222, 8, 0, 393223, 4, 0, 393224, 3, 0, 393225, 8, 0, 393226, 1, 0, 393227, 2, 0, 393228, 8, 0, 393229, 8, 0, 393230, 8, 0, 393231, 8, 0, 393232, 5, 0, 458752, 10, 0, 458753, 5, 0, 458754, 5, 0, 458755, 8, 0, 458756, 1, 0, 458757, 5, 0, 458758, 8, 0, 458759, 4, 0, 458760, 3, 0, 458761, 8, 0, 458762, 1, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 4, 0, 458768, 5, 0, 524288, 1, 0, 524289, 5, 0, 524290, 8, 0, 524291, 8, 0, 524292, 0, 0, 524293, 6, 0, 524294, 8, 0, 524295, 4, 0, 524296, 3, 0, 524297, 8, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 8, 0, 524304, 5, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0 )
+tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 2, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 4, 0, 16, 5, 0, 131069, 2, 0, 131070, 3, 0, 131071, 3, 0, 65536, 1, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 4, 0, 65541, 8, 0, 65542, 2, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 2, 0, 65547, 10, 0, 65548, 8, 0, 65549, 3, 0, 65550, 4, 0, 65551, 5, 0, 65552, 5, 0, 196605, 1, 0, 196606, 2, 0, 196607, 8, 0, 131072, 8, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 5, 0, 131077, 8, 0, 131078, 1, 0, 131079, 2, 0, 131080, 2, 0, 131081, 3, 0, 131082, 1, 0, 131083, 10, 0, 131084, 8, 0, 131085, 2, 0, 131086, 3, 0, 131087, 4, 0, 131088, 5, 0, 262141, 1, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 10, 0, 196611, 5, 0, 196612, 5, 0, 196613, 8, 0, 196614, 1, 0, 196615, 1, 0, 196616, 10, 0, 196617, 8, 0, 196618, 1, 0, 196619, 10, 0, 196620, 8, 0, 196621, 1, 0, 196622, 8, 0, 196623, 5, 0, 196624, 5, 0, 327676, 2, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 4, 0, 262145, 8, 0, 262146, 10, 0, 262147, 8, 0, 262148, 5, 0, 262149, 8, 0, 262150, 8, 0, 262151, 1, 0, 262152, 10, 0, 262153, 8, 0, 262154, 1, 0, 262155, 10, 0, 262156, 8, 0, 262157, 1, 0, 262158, 8, 0, 262159, 5, 0, 262160, 5, 0, 393213, 9, 0, 393214, 9, 0, 393215, 9, 0, 327680, 10, 0, 327681, 8, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 8, 0, 327690, 1, 0, 327691, 10, 0, 327692, 8, 0, 327693, 0, 0, 327694, 7, 0, 327695, 6, 0, 327696, 5, 0, 458748, 0, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 10, 0, 393217, 3, 0, 393218, 4, 0, 393219, 8, 0, 393220, 2, 0, 393221, 4, 0, 393222, 8, 0, 393223, 2, 0, 393224, 4, 0, 393225, 8, 0, 393226, 1, 0, 393227, 2, 0, 393228, 8, 0, 393229, 8, 0, 393230, 8, 0, 393231, 8, 0, 393232, 5, 0, 458752, 10, 0, 458753, 5, 0, 458754, 5, 0, 458755, 8, 0, 458756, 0, 0, 458757, 6, 0, 458758, 8, 0, 458759, 1, 0, 458760, 5, 0, 458761, 8, 0, 458762, 2, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 4, 0, 458768, 5, 0, 524288, 1, 0, 524289, 5, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 5, 0, 524294, 8, 0, 524295, 1, 0, 524296, 5, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 8, 0, 524304, 5, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -926.616
+margin_top = 595.692
+margin_right = 1413.38
+margin_bottom = 1873.69
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="false_wall2" type="StaticBody2D" parent="."]
 position = Vector2( -927.545, 254.858 )
@@ -1069,8 +1079,123 @@ animation = "closed"
 position = Vector2( 0.647095, -21.7282 )
 shape = SubResource( 18 )
 
+[node name="Bags" type="Node2D" parent="."]
+position = Vector2( -306.253, -12.7109 )
+
+[node name="obj_bag" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 221.54, 363.485 )
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 3.5, 7.21212 )
+scale = Vector2( 0.994318, 0.969697 )
+curve = SubResource( 80 )
+script = ExtResource( 20 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 446.034, 36.9063 )
+rotation = -0.0113611
+rotate = false
+script = ExtResource( 31 )
+
+[node name="obj_enemy" type="KinematicBody2D" parent="Path2D/PathFollow2D"]
+rotation = 9.31322e-10
+script = ExtResource( 38 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Path2D/PathFollow2D/obj_enemy"]
+position = Vector2( 3.44867, -0.985462 )
+rotation = 9.31322e-10
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 81 )
+animation = "alive"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/obj_enemy"]
+position = Vector2( 2.52783, -0.402496 )
+shape = SubResource( 82 )
+script = ExtResource( 39 )
+
+[node name="Hurtbox" parent="Path2D/PathFollow2D" instance=ExtResource( 24 )]
+rotation = 9.31322e-10
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hurtbox" index="0"]
+position = Vector2( 2.94336, 0.0334396 )
+shape = SubResource( 83 )
+
+[node name="Hitbox" parent="Path2D/PathFollow2D" instance=ExtResource( 22 )]
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hitbox" index="0"]
+position = Vector2( 3.40735, -0.519344 )
+shape = SubResource( 84 )
+
+[node name="Key" type="Area2D" parent="."]
+position = Vector2( 897.536, 246.245 )
+script = ExtResource( 35 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
+position = Vector2( -1.00139, 1.25174 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 85 )
+
+[node name="Sprite" type="Sprite" parent="Key"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 33 )
+
+[node name="obj_door" type="StaticBody2D" parent="."]
+position = Vector2( 1017.98, 18.7673 )
+script = ExtResource( 37 )
+
+[node name="Sprite" type="AnimatedSprite" parent="obj_door"]
+position = Vector2( 3.32959, -1.42697 )
+scale = Vector2( 1.71553, 1 )
+frames = SubResource( 86 )
+animation = "closed"
+
+[node name="door_collision" type="CollisionShape2D" parent="obj_door"]
+position = Vector2( 3.72278, -3.64516 )
+scale = Vector2( 2.5, 2 )
+shape = SubResource( 87 )
+script = ExtResource( 46 )
+
+[node name="Area2D" type="Area2D" parent="obj_door"]
+scale = Vector2( 1.5, 1.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_door/Area2D"]
+position = Vector2( 2.38139, 3.80061 )
+scale = Vector2( 1.5, 1.5 )
+shape = SubResource( 88 )
+
+[node name="Enemy" parent="." instance=ExtResource( 23 )]
+position = Vector2( -206.149, 398.52 )
+
+[node name="Sprite" parent="Enemy" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 985.417, -417.669 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 52.2871, 540.539 )
+scale = Vector2( 0.353352, 0.359864 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 52.1439, 541.369 )
+scale = Vector2( 1, 0.1 )
+shape = SubResource( 89 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 48 )
+volume_db = 6.049
+autoplay = true
+
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( 218.654, 33.3849 )
+visible = false
+position = Vector2( -114.118, 343.248 )
 collision_layer = 2
 script = ExtResource( 12 )
 
@@ -1237,7 +1362,7 @@ shape = SubResource( 71 )
 stream = ExtResource( 47 )
 
 [node name="torch" type="StaticBody2D" parent="."]
-position = Vector2( -132, 42 )
+position = Vector2( -60.3791, 122.496 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
@@ -1273,710 +1398,18 @@ position = Vector2( 0, 2.57212 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="torch/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 79 )
-
-[node name="Bags" type="Node2D" parent="."]
-
-[node name="obj_bag" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 221.54, 363.485 )
-
-[node name="obj_bag2" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 58.4501, 247.308 )
-
-[node name="obj_bag3" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 250.126, 242.228 )
-
-[node name="obj_bag4" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 449.105, 175.091 )
-
-[node name="obj_bag5" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 828.33, 339.18 )
-
-[node name="obj_bag6" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 954.558, 99.367 )
-
-[node name="obj_bag7" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 920.475, 487.068 )
-
-[node name="obj_bag8" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 123.422, 476.968 )
-
-[node name="obj_bag9" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 743.579, 50.7986 )
-
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2( 3.5, 7.21212 )
-scale = Vector2( 0.994318, 0.969697 )
-curve = SubResource( 80 )
-script = ExtResource( 20 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 446.034, 36.9063 )
-rotation = -0.0113611
-rotate = false
-script = ExtResource( 31 )
-
-[node name="obj_enemy" type="KinematicBody2D" parent="Path2D/PathFollow2D"]
-rotation = 9.31322e-10
-script = ExtResource( 38 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Path2D/PathFollow2D/obj_enemy"]
-position = Vector2( 3.44867, -0.985462 )
-rotation = 9.31322e-10
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 81 )
-animation = "alive"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/obj_enemy"]
-position = Vector2( 2.52783, -0.402496 )
-shape = SubResource( 82 )
-script = ExtResource( 39 )
-
-[node name="Hurtbox" parent="Path2D/PathFollow2D" instance=ExtResource( 24 )]
-rotation = 9.31322e-10
-collision_layer = 8
-
-[node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hurtbox" index="0"]
-position = Vector2( 2.94336, 0.0334396 )
-shape = SubResource( 83 )
-
-[node name="Hitbox" parent="Path2D/PathFollow2D" instance=ExtResource( 22 )]
-collision_mask = 4
-
-[node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hitbox" index="0"]
-position = Vector2( 3.40735, -0.519344 )
-shape = SubResource( 84 )
-
-[node name="Key" type="Area2D" parent="."]
-position = Vector2( 1005.17, 210.702 )
-script = ExtResource( 35 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
-position = Vector2( -1.00139, 1.25174 )
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 85 )
-
-[node name="Sprite" type="Sprite" parent="Key"]
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 33 )
-
-[node name="obj_door" type="StaticBody2D" parent="."]
-position = Vector2( 1017.98, 18.7673 )
-script = ExtResource( 37 )
-
-[node name="Sprite" type="AnimatedSprite" parent="obj_door"]
-position = Vector2( 3.32959, -1.42697 )
-scale = Vector2( 1.71553, 1 )
-frames = SubResource( 86 )
-animation = "closed"
-
-[node name="door_collision" type="CollisionShape2D" parent="obj_door"]
-position = Vector2( 3.72278, -3.64516 )
-scale = Vector2( 2.5, 2 )
-shape = SubResource( 87 )
-script = ExtResource( 46 )
-
-[node name="Area2D" type="Area2D" parent="obj_door"]
-scale = Vector2( 1.5, 1.5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_door/Area2D"]
-position = Vector2( 2.38139, 3.80061 )
-scale = Vector2( 1.5, 1.5 )
-shape = SubResource( 88 )
-
-[node name="Enemy" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( -206.149, 398.52 )
-
-[node name="Sprite" parent="Enemy" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy2" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( -264.685, 390.473 )
-
-[node name="Sprite" parent="Enemy2" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy2" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy3" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( -253.799, 325.468 )
-
-[node name="Sprite" parent="Enemy3" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy3" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy4" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( -162.128, 289.336 )
-
-[node name="Sprite" parent="Enemy4" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy4" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy5" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 13.8312, 532.973 )
-
-[node name="Sprite" parent="Enemy5" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy5" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy6" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 59.2216, 446.515 )
-
-[node name="Sprite" parent="Enemy6" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy6" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy7" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 188.368, 424.36 )
-
-[node name="Sprite" parent="Enemy7" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy7" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy8" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 68.4077, 216.861 )
-
-[node name="Sprite" parent="Enemy8" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy8" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy9" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( -176.917, 224.966 )
-
-[node name="Sprite" parent="Enemy9" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy9" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy10" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( -110.452, 133.645 )
-
-[node name="Sprite" parent="Enemy10" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy10" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy11" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 300.764, 476.775 )
-
-[node name="Sprite" parent="Enemy11" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy11" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy12" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 275.907, 517.843 )
-
-[node name="Sprite" parent="Enemy12" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy12" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy13" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 267.261, 440.571 )
-
-[node name="Sprite" parent="Enemy13" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy13" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy14" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 192.691, 286.027 )
-
-[node name="Sprite" parent="Enemy14" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy14" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy15" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 228.895, 255.767 )
-
-[node name="Sprite" parent="Enemy15" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy15" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy16" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 228.895, 255.767 )
-
-[node name="Sprite" parent="Enemy16" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy16" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy17" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 175.399, 195.246 )
-
-[node name="Sprite" parent="Enemy17" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy17" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy18" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 314.813, 155.26 )
-
-[node name="Sprite" parent="Enemy18" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy18" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy19" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 351.558, 296.835 )
-
-[node name="Sprite" parent="Enemy19" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy19" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy20" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 369.39, 374.647 )
-
-[node name="Sprite" parent="Enemy20" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy20" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy21" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 396.408, 546.482 )
-
-[node name="Sprite" parent="Enemy21" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy21" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy22" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 440.942, 487.225 )
-
-[node name="Sprite" parent="Enemy22" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy22" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy23" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 569.243, 426.848 )
-
-[node name="Sprite" parent="Enemy23" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy23" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy24" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 576.393, 263.195 )
-
-[node name="Sprite" parent="Enemy24" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy24" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy25" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 500.525, 200.833 )
-
-[node name="Sprite" parent="Enemy25" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy25" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy26" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 437.764, 281.467 )
-
-[node name="Sprite" parent="Enemy26" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy26" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy27" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 451.667, 172.63 )
-
-[node name="Sprite" parent="Enemy27" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy27" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy28" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 645.508, 471.734 )
-
-[node name="Sprite" parent="Enemy28" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy28" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy29" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 835.377, 495.964 )
-
-[node name="Sprite" parent="Enemy29" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy29" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy30" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 842.527, 307.684 )
-
-[node name="Sprite" parent="Enemy30" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy30" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy31" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 695.16, 253.662 )
-
-[node name="Sprite" parent="Enemy31" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy31" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy32" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 759.509, 224.268 )
-
-[node name="Sprite" parent="Enemy32" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy32" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy33" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 1012.93, 441.148 )
-
-[node name="Sprite" parent="Enemy33" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy33" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy34" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 905.685, 273.126 )
-
-[node name="Sprite" parent="Enemy34" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy34" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy35" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 884.632, 221.885 )
-
-[node name="Sprite" parent="Enemy35" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy35" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy36" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 963.281, 177.794 )
-
-[node name="Sprite" parent="Enemy36" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy36" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy37" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 940.64, 309.67 )
-
-[node name="Sprite" parent="Enemy37" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy37" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy38" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 834.98, 206.791 )
-
-[node name="Sprite" parent="Enemy38" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy38" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy39" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 890.59, 329.928 )
-
-[node name="Sprite" parent="Enemy39" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy39" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy40" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 812.438, 97.7925 )
-
-[node name="Sprite" parent="Enemy40" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy40" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy41" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 751.309, 38.985 )
-
-[node name="Sprite" parent="Enemy41" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy41" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy42" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 512.21, 24.2831 )
-
-[node name="Sprite" parent="Enemy42" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy42" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy43" parent="." instance=ExtResource( 23 )]
-position = Vector2( 526.381, 169.904 )
-
-[node name="Sprite" parent="Enemy43" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy43" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy44" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 388.647, 94.0731 )
-
-[node name="Sprite" parent="Enemy44" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy44" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy45" parent="." instance=ExtResource( 23 )]
-position = Vector2( 68.3008, 347.1 )
-
-[node name="Sprite" parent="Enemy45" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy45" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy46" parent="." instance=ExtResource( 23 )]
-position = Vector2( 2.52917, 98.7157 )
-
-[node name="Sprite" parent="Enemy46" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy46" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy47" parent="." instance=ExtResource( 23 )]
-position = Vector2( -63.2425, 156.75 )
-
-[node name="Sprite" parent="Enemy47" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy47" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy48" parent="." instance=ExtResource( 23 )]
-position = Vector2( 146.453, 537.451 )
-
-[node name="Sprite" parent="Enemy48" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy48" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy49" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 552.69, 347.874 )
-
-[node name="Sprite" parent="Enemy49" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy49" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy50" parent="." instance=ExtResource( 23 )]
-visible = false
-position = Vector2( 288.055, 450.014 )
-
-[node name="Sprite" parent="Enemy50" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy50" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 985.417, -417.669 )
-
-[node name="Sprite" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 52.2871, 540.539 )
-scale = Vector2( 0.353352, 0.359864 )
-texture = ExtResource( 30 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 52.1439, 541.369 )
-scale = Vector2( 1, 0.1 )
-shape = SubResource( 89 )
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 48 )
-volume_db = 6.049
-autoplay = true
 [connection signal="area_entered" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_exited"]
 [connection signal="area_entered" from="false_wall/AnimatedSprite/Area2D" to="false_wall" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="false_wall/AnimatedSprite/Area2D" to="false_wall" method="_on_Area2D_area_exited"]
-[connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player" method="_on_Hurtbox_area_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag" to="Bags/obj_bag" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag2" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag2" to="Bags/obj_bag2" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag3" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag3" to="Bags/obj_bag3" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag4" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag4" to="Bags/obj_bag4" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag5" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag5" to="Bags/obj_bag5" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag6" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag6" to="Bags/obj_bag6" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag7" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag7" to="Bags/obj_bag7" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag8" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag8" to="Bags/obj_bag8" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag9" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag9" to="Bags/obj_bag9" method="_on_obj_bag_body_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
-
-[editable path="obj_player/HitboxPivot/SwordHitbox"]
-
-[editable path="obj_player/Hurtbox"]
+[connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player" method="_on_Hurtbox_area_entered"]
 
 [editable path="Path2D/PathFollow2D/Hurtbox"]
 
@@ -1984,100 +1417,6 @@ autoplay = true
 
 [editable path="Enemy"]
 
-[editable path="Enemy2"]
+[editable path="obj_player/HitboxPivot/SwordHitbox"]
 
-[editable path="Enemy3"]
-
-[editable path="Enemy4"]
-
-[editable path="Enemy5"]
-
-[editable path="Enemy6"]
-
-[editable path="Enemy7"]
-
-[editable path="Enemy8"]
-
-[editable path="Enemy9"]
-
-[editable path="Enemy10"]
-
-[editable path="Enemy11"]
-
-[editable path="Enemy12"]
-
-[editable path="Enemy13"]
-
-[editable path="Enemy14"]
-
-[editable path="Enemy15"]
-
-[editable path="Enemy16"]
-
-[editable path="Enemy17"]
-
-[editable path="Enemy18"]
-
-[editable path="Enemy19"]
-
-[editable path="Enemy20"]
-
-[editable path="Enemy21"]
-
-[editable path="Enemy22"]
-
-[editable path="Enemy23"]
-
-[editable path="Enemy24"]
-
-[editable path="Enemy25"]
-
-[editable path="Enemy26"]
-
-[editable path="Enemy27"]
-
-[editable path="Enemy28"]
-
-[editable path="Enemy29"]
-
-[editable path="Enemy30"]
-
-[editable path="Enemy31"]
-
-[editable path="Enemy32"]
-
-[editable path="Enemy33"]
-
-[editable path="Enemy34"]
-
-[editable path="Enemy35"]
-
-[editable path="Enemy36"]
-
-[editable path="Enemy37"]
-
-[editable path="Enemy38"]
-
-[editable path="Enemy39"]
-
-[editable path="Enemy40"]
-
-[editable path="Enemy41"]
-
-[editable path="Enemy42"]
-
-[editable path="Enemy43"]
-
-[editable path="Enemy44"]
-
-[editable path="Enemy45"]
-
-[editable path="Enemy46"]
-
-[editable path="Enemy47"]
-
-[editable path="Enemy48"]
-
-[editable path="Enemy49"]
-
-[editable path="Enemy50"]
+[editable path="obj_player/Hurtbox"]
