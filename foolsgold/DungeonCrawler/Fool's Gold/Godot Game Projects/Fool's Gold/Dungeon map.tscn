@@ -358,6 +358,107 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 32.7207, 15.1108 )
 
+[sub_resource type="Gradient" id=72]
+offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.769531, 0.519354, 0.165329, 1, 0.652344, 0.0311148, 0, 1, 1, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=73]
+gradient = SubResource( 72 )
+
+[sub_resource type="Curve" id=74]
+_data = [ Vector2( 0.00632912, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.336364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=75]
+curve = SubResource( 74 )
+
+[sub_resource type="ParticlesMaterial" id=76]
+emission_shape = 2
+emission_box_extents = Vector3( 2, 5, 1 )
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 15.0
+initial_velocity_random = 1.0
+angular_velocity = 200.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 20.0
+angle = 45.0
+scale = 2.0
+scale_curve = SubResource( 75 )
+color_ramp = SubResource( 73 )
+
+[sub_resource type="SpriteFrames" id=77]
+animations = [ {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=78]
+extents = Vector2( 2.2953, 6.27969 )
+
+[sub_resource type="RectangleShape2D" id=79]
+extents = Vector2( 15.6504, 18.1411 )
+
+[sub_resource type="Curve2D" id=80]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
+}
+
+[sub_resource type="SpriteFrames" id=81]
+animations = [ {
+"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "alive",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=82]
+extents = Vector2( 6.23898, 11.6251 )
+
+[sub_resource type="CapsuleShape2D" id=83]
+radius = 8.28271
+height = 9.97013
+
+[sub_resource type="RectangleShape2D" id=84]
+extents = Vector2( 9.78305, 15.5923 )
+
+[sub_resource type="RectangleShape2D" id=85]
+
+[sub_resource type="SpriteFrames" id=86]
+animations = [ {
+"frames": [ ExtResource( 45 ) ],
+"loop": true,
+"name": "open",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "closed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=87]
+extents = Vector2( 12.5046, 10 )
+
+[sub_resource type="RectangleShape2D" id=88]
+extents = Vector2( 12.6926, 10.9488 )
+
+[sub_resource type="RectangleShape2D" id=89]
+extents = Vector2( 4.51196, 59.8682 )
+
 [sub_resource type="ParticlesMaterial" id=19]
 flag_disable_z = true
 gravity = Vector3( 0, 98, 0 )
@@ -914,107 +1015,6 @@ extents = Vector2( 4.63716, 4.92157 )
 [sub_resource type="RectangleShape2D" id=71]
 extents = Vector2( 7.67579, 12.1784 )
 
-[sub_resource type="Gradient" id=72]
-offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
-colors = PoolColorArray( 1, 1, 1, 1, 0.769531, 0.519354, 0.165329, 1, 0.652344, 0.0311148, 0, 1, 1, 0, 0, 1 )
-
-[sub_resource type="GradientTexture" id=73]
-gradient = SubResource( 72 )
-
-[sub_resource type="Curve" id=74]
-_data = [ Vector2( 0.00632912, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.336364 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=75]
-curve = SubResource( 74 )
-
-[sub_resource type="ParticlesMaterial" id=76]
-emission_shape = 2
-emission_box_extents = Vector3( 2, 5, 1 )
-flag_disable_z = true
-spread = 0.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 15.0
-initial_velocity_random = 1.0
-angular_velocity = 200.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-linear_accel = 20.0
-angle = 45.0
-scale = 2.0
-scale_curve = SubResource( 75 )
-color_ramp = SubResource( 73 )
-
-[sub_resource type="SpriteFrames" id=77]
-animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=78]
-extents = Vector2( 2.2953, 6.27969 )
-
-[sub_resource type="RectangleShape2D" id=79]
-extents = Vector2( 15.6504, 18.1411 )
-
-[sub_resource type="Curve2D" id=80]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
-}
-
-[sub_resource type="SpriteFrames" id=81]
-animations = [ {
-"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
-"loop": false,
-"name": "dead",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "alive",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=82]
-extents = Vector2( 6.23898, 11.6251 )
-
-[sub_resource type="CapsuleShape2D" id=83]
-radius = 8.28271
-height = 9.97013
-
-[sub_resource type="RectangleShape2D" id=84]
-extents = Vector2( 9.78305, 15.5923 )
-
-[sub_resource type="RectangleShape2D" id=85]
-
-[sub_resource type="SpriteFrames" id=86]
-animations = [ {
-"frames": [ ExtResource( 45 ) ],
-"loop": true,
-"name": "open",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 30 ) ],
-"loop": true,
-"name": "closed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=87]
-extents = Vector2( 12.5046, 10 )
-
-[sub_resource type="RectangleShape2D" id=88]
-extents = Vector2( 12.6926, 10.9488 )
-
-[sub_resource type="RectangleShape2D" id=89]
-extents = Vector2( 4.51196, 59.8682 )
-
 [node name="Dungeon map" type="Node2D"]
 position = Vector2( -1, 2 )
 
@@ -1068,173 +1068,6 @@ animation = "closed"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="false_wall/AnimatedSprite/Area2D"]
 position = Vector2( 0.647095, -21.7282 )
 shape = SubResource( 18 )
-
-[node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -63.9555, 350.578 )
-collision_layer = 2
-script = ExtResource( 12 )
-
-[node name="Sprite" type="Sprite" parent="obj_player"]
-position = Vector2( 0, 3.31964 )
-scale = Vector2( 0.40462, 0.431326 )
-texture = ExtResource( 11 )
-hframes = 25
-frame = 5
-
-[node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
-current = true
-zoom = Vector2( 0.18, 0.2 )
-drag_margin_left = 0.1
-drag_margin_right = 0.1
-editor_draw_limits = true
-editor_draw_drag_margin = true
-
-[node name="Particles2D" type="Particles2D" parent="obj_player/Sprite"]
-process_material = SubResource( 19 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
-position = Vector2( 0.0121993, 7.88678 )
-shape = SubResource( 20 )
-
-[node name="Light2D" type="Light2D" parent="obj_player"]
-position = Vector2( -0.506622, 4.08057 )
-scale = Vector2( 0.087818, 0.0681612 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-
-[node name="player_anim" type="AnimationPlayer" parent="obj_player"]
-anims/attack_down = SubResource( 21 )
-anims/down_dead = SubResource( 22 )
-anims/down_walk = SubResource( 23 )
-anims/idle_down = SubResource( 24 )
-anims/left_attack = SubResource( 25 )
-anims/left_dead = SubResource( 26 )
-anims/left_idle = SubResource( 27 )
-anims/left_walk = SubResource( 28 )
-anims/right_attack = SubResource( 29 )
-anims/right_dead = SubResource( 30 )
-anims/right_idle = SubResource( 31 )
-anims/right_walk = SubResource( 32 )
-anims/up_attack = SubResource( 33 )
-anims/up_dead = SubResource( 34 )
-anims/up_idle = SubResource( 35 )
-anims/up_walk = SubResource( 36 )
-
-[node name="AnimationTree" type="AnimationTree" parent="obj_player"]
-tree_root = SubResource( 63 )
-anim_player = NodePath("../player_anim")
-parameters/playback = SubResource( 64 )
-parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
-parameters/Death/blend_position = Vector2( 0.239115, -0.547945 )
-parameters/Idle/blend_position = Vector2( 0, 0 )
-parameters/Run/blend_position = Vector2( 0, 0 )
-
-[node name="Money Bag" type="Control" parent="obj_player"]
-margin_left = -27.7861
-margin_top = -541.926
-margin_right = 996.216
-margin_bottom = 63.0745
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="obj_player/Money Bag"]
-position = Vector2( -21.1034, 593.71 )
-scale = Vector2( 0.250021, 0.241669 )
-texture = ExtResource( 17 )
-
-[node name="Label" type="Label" parent="obj_player/Money Bag"]
-margin_left = -15.4272
-margin_top = 588.994
-margin_right = 2.57281
-margin_bottom = 594.994
-custom_fonts/font = SubResource( 65 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "x $"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Count" type="Label" parent="obj_player/Money Bag"]
-margin_left = 5.56313
-margin_top = 590.285
-margin_right = 19.5631
-margin_bottom = 596.285
-custom_fonts/font = SubResource( 66 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "00"
-script = ExtResource( 19 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite2" type="Sprite" parent="obj_player/Money Bag"]
-visible = false
-position = Vector2( 33.3884, 594.248 )
-scale = Vector2( 0.313704, 0.25302 )
-texture = ExtResource( 33 )
-
-[node name="Label2" type="Label" parent="obj_player/Money Bag"]
-visible = false
-margin_left = 36.8544
-margin_top = 590.417
-margin_right = 43.8544
-margin_bottom = 598.417
-custom_fonts/font = SubResource( 67 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "x"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Key_count" type="Label" parent="obj_player/Money Bag"]
-visible = false
-margin_left = 45.5728
-margin_top = 590.851
-margin_right = 53.5728
-margin_bottom = 596.851
-custom_fonts/font = SubResource( 68 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "00"
-script = ExtResource( 34 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HitboxPivot" type="Position2D" parent="obj_player"]
-visible = false
-position = Vector2( 0, 5.101 )
-rotation = -1.5708
-
-[node name="SwordHitbox" parent="obj_player/HitboxPivot" instance=ExtResource( 22 )]
-position = Vector2( 8, 0 )
-collision_mask = 8
-
-[node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
-position = Vector2( 3.37391, 0.250439 )
-shape = SubResource( 69 )
-disabled = true
-
-[node name="Area2D" type="Area2D" parent="obj_player"]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/Area2D"]
-position = Vector2( 0.238064, 8.45447 )
-shape = SubResource( 70 )
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="obj_player"]
-stream = ExtResource( 7 )
-volume_db = -10.097
-
-[node name="Hurtbox" parent="obj_player" instance=ExtResource( 24 )]
-collision_layer = 4
-
-[node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
-position = Vector2( -7.62939e-06, 2.89954 )
-shape = SubResource( 71 )
-
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
-stream = ExtResource( 47 )
 
 [node name="torch" type="StaticBody2D" parent="."]
 position = Vector2( -132, 42 )
@@ -1929,7 +1762,8 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 985.417, -417.669 )
+visible = false
+position = Vector2( 1068.42, -437.669 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
 position = Vector2( 52.2871, 540.539 )
@@ -1941,6 +1775,173 @@ position = Vector2( 52.1439, 541.369 )
 scale = Vector2( 1, 0.1 )
 shape = SubResource( 89 )
 
+[node name="obj_player" type="KinematicBody2D" parent="."]
+position = Vector2( -59.346, 345.385 )
+collision_layer = 2
+script = ExtResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="obj_player"]
+position = Vector2( 0, 3.31964 )
+scale = Vector2( 0.40462, 0.431326 )
+texture = ExtResource( 11 )
+hframes = 25
+frame = 5
+
+[node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
+current = true
+zoom = Vector2( 0.18, 0.2 )
+drag_margin_left = 0.1
+drag_margin_right = 0.1
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Particles2D" type="Particles2D" parent="obj_player/Sprite"]
+process_material = SubResource( 19 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
+position = Vector2( 0.0121993, 7.88678 )
+shape = SubResource( 20 )
+
+[node name="Light2D" type="Light2D" parent="obj_player"]
+position = Vector2( -0.506622, 4.08057 )
+scale = Vector2( 0.087818, 0.0681612 )
+texture = ExtResource( 13 )
+shadow_enabled = true
+
+[node name="player_anim" type="AnimationPlayer" parent="obj_player"]
+anims/attack_down = SubResource( 21 )
+anims/down_dead = SubResource( 22 )
+anims/down_walk = SubResource( 23 )
+anims/idle_down = SubResource( 24 )
+anims/left_attack = SubResource( 25 )
+anims/left_dead = SubResource( 26 )
+anims/left_idle = SubResource( 27 )
+anims/left_walk = SubResource( 28 )
+anims/right_attack = SubResource( 29 )
+anims/right_dead = SubResource( 30 )
+anims/right_idle = SubResource( 31 )
+anims/right_walk = SubResource( 32 )
+anims/up_attack = SubResource( 33 )
+anims/up_dead = SubResource( 34 )
+anims/up_idle = SubResource( 35 )
+anims/up_walk = SubResource( 36 )
+
+[node name="AnimationTree" type="AnimationTree" parent="obj_player"]
+tree_root = SubResource( 63 )
+anim_player = NodePath("../player_anim")
+parameters/playback = SubResource( 64 )
+parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
+parameters/Death/blend_position = Vector2( 0.239115, -0.547945 )
+parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Run/blend_position = Vector2( 0, 0 )
+
+[node name="Money Bag" type="Control" parent="obj_player"]
+margin_left = -27.7861
+margin_top = -541.926
+margin_right = 996.216
+margin_bottom = 63.0745
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="obj_player/Money Bag"]
+position = Vector2( -21.1034, 593.71 )
+scale = Vector2( 0.250021, 0.241669 )
+texture = ExtResource( 17 )
+
+[node name="Label" type="Label" parent="obj_player/Money Bag"]
+margin_left = -15.4272
+margin_top = 588.994
+margin_right = 2.57281
+margin_bottom = 594.994
+custom_fonts/font = SubResource( 65 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "x $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Count" type="Label" parent="obj_player/Money Bag"]
+margin_left = 5.56313
+margin_top = 590.285
+margin_right = 19.5631
+margin_bottom = 596.285
+custom_fonts/font = SubResource( 66 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "00"
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="obj_player/Money Bag"]
+visible = false
+position = Vector2( 33.3884, 594.248 )
+scale = Vector2( 0.313704, 0.25302 )
+texture = ExtResource( 33 )
+
+[node name="Label2" type="Label" parent="obj_player/Money Bag"]
+visible = false
+margin_left = 36.8544
+margin_top = 590.417
+margin_right = 43.8544
+margin_bottom = 598.417
+custom_fonts/font = SubResource( 67 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Key_count" type="Label" parent="obj_player/Money Bag"]
+visible = false
+margin_left = 45.5728
+margin_top = 590.851
+margin_right = 53.5728
+margin_bottom = 596.851
+custom_fonts/font = SubResource( 68 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "00"
+script = ExtResource( 34 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HitboxPivot" type="Position2D" parent="obj_player"]
+visible = false
+position = Vector2( 0, 5.101 )
+rotation = -1.5708
+
+[node name="SwordHitbox" parent="obj_player/HitboxPivot" instance=ExtResource( 22 )]
+position = Vector2( 8, 0 )
+collision_mask = 8
+
+[node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
+position = Vector2( 3.37391, 0.250439 )
+shape = SubResource( 69 )
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="obj_player"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/Area2D"]
+position = Vector2( 0.238064, 8.45447 )
+shape = SubResource( 70 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="obj_player"]
+stream = ExtResource( 7 )
+volume_db = -10.097
+
+[node name="Hurtbox" parent="obj_player" instance=ExtResource( 24 )]
+collision_layer = 4
+
+[node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
+position = Vector2( -7.62939e-06, 2.89954 )
+shape = SubResource( 71 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
+stream = ExtResource( 47 )
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 48 )
 volume_db = 6.049
@@ -1949,7 +1950,6 @@ autoplay = true
 [connection signal="area_exited" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_exited"]
 [connection signal="area_entered" from="false_wall/AnimatedSprite/Area2D" to="false_wall" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="false_wall/AnimatedSprite/Area2D" to="false_wall" method="_on_Area2D_area_exited"]
-[connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player" method="_on_Hurtbox_area_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag" to="Bags/obj_bag" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag2" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
@@ -1968,15 +1968,12 @@ autoplay = true
 [connection signal="body_entered" from="Bags/obj_bag8" to="Bags/obj_bag8" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag9" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag9" to="Bags/obj_bag9" method="_on_obj_bag_body_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
-
-[editable path="obj_player/HitboxPivot/SwordHitbox"]
-
-[editable path="obj_player/Hurtbox"]
+[connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player" method="_on_Hurtbox_area_entered"]
 
 [editable path="Path2D/PathFollow2D/Hurtbox"]
 
@@ -2081,3 +2078,7 @@ autoplay = true
 [editable path="Enemy49"]
 
 [editable path="Enemy50"]
+
+[editable path="obj_player/HitboxPivot/SwordHitbox"]
+
+[editable path="obj_player/Hurtbox"]
