@@ -338,7 +338,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=16]
-extents = Vector2( 7.1344, 20.6957 )
+extents = Vector2( 2.66423, 9.26929 )
 
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 31.6195, 10.031 )
@@ -411,6 +411,25 @@ extents = Vector2( 12.6926, 10.9488 )
 [sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 4.51196, 59.8682 )
 
+[sub_resource type="SpriteFrames" id=87]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=88]
+extents = Vector2( 2.2953, 6.27969 )
+
+[sub_resource type="RectangleShape2D" id=89]
+extents = Vector2( 15.6504, 18.1411 )
+
 [sub_resource type="Gradient" id=82]
 offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.769531, 0.519354, 0.165329, 1, 0.652344, 0.0311148, 0, 1, 1, 0, 0, 1 )
@@ -440,25 +459,6 @@ angle = 45.0
 scale = 2.0
 scale_curve = SubResource( 85 )
 color_ramp = SubResource( 83 )
-
-[sub_resource type="SpriteFrames" id=87]
-animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=88]
-extents = Vector2( 2.2953, 6.27969 )
-
-[sub_resource type="RectangleShape2D" id=89]
-extents = Vector2( 15.6504, 18.1411 )
 
 [sub_resource type="Gradient" id=90]
 colors = PoolColorArray( 0.214844, 0.214844, 0.214844, 1, 0.09375, 0.09375, 0.09375, 1 )
@@ -1055,45 +1055,48 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="false_wall2" type="StaticBody2D" parent="."]
+[node name="Fake Walls" type="Node2D" parent="."]
+
+[node name="false_wall2" type="StaticBody2D" parent="Fake Walls"]
 position = Vector2( -927.545, 254.858 )
 script = ExtResource( 29 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="false_wall2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/false_wall2"]
 position = Vector2( 637.103, 96.3341 )
 shape = SubResource( 14 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="false_wall2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/false_wall2"]
 position = Vector2( 671.801, 95.9486 )
 frames = SubResource( 15 )
 animation = "closed"
 
-[node name="Area2D" type="Area2D" parent="false_wall2/AnimatedSprite"]
+[node name="Area2D" type="Area2D" parent="Fake Walls/false_wall2/AnimatedSprite"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="false_wall2/AnimatedSprite/Area2D"]
-position = Vector2( 28.452, 1.004 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/false_wall2/AnimatedSprite/Area2D"]
+position = Vector2( 28.3526, 0.40732 )
 shape = SubResource( 16 )
 
-[node name="false_wall" type="StaticBody2D" parent="."]
+[node name="false_wall" type="StaticBody2D" parent="Fake Walls"]
 position = Vector2( 352.243, 62.905 )
 script = ExtResource( 28 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="false_wall"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/false_wall"]
 position = Vector2( 160.399, 329.792 )
 shape = SubResource( 18 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="false_wall"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/false_wall"]
 position = Vector2( 159.925, 352.047 )
 frames = SubResource( 17 )
 animation = "closed"
 
-[node name="Area2D" type="Area2D" parent="false_wall/AnimatedSprite"]
+[node name="Area2D" type="Area2D" parent="Fake Walls/false_wall/AnimatedSprite"]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="false_wall/AnimatedSprite/Area2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/false_wall/AnimatedSprite/Area2D"]
 position = Vector2( 26.4776, 10.578 )
 shape = SubResource( 92 )
 
 [node name="Bags" type="Node2D" parent="."]
+visible = false
 position = Vector2( -286.976, -14.964 )
 
 [node name="obj_bag" parent="Bags" instance=ExtResource( 18 )]
@@ -1519,57 +1522,43 @@ stream = ExtResource( 48 )
 volume_db = 6.049
 autoplay = true
 
-[node name="torch" type="StaticBody2D" parent="."]
+[node name="Torches Behind Player" type="Node2D" parent="."]
+visible = false
+
+[node name="torch" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( -121.755, 107.106 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="torch/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 86 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="torch"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch2" type="StaticBody2D" parent="."]
-position = Vector2( -122.087, 150.946 )
-scale = Vector2( 0.5, 0.5 )
+[node name="torch2" type="StaticBody2D" parent="Torches Behind Player/torch"]
+position = Vector2( -0.663544, 87.6802 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch2"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch/torch2"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch2/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch/torch2/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1578,36 +1567,52 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch2"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch/torch2"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch/torch2"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch2"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch/torch2"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch2/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch/torch2/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch3" type="StaticBody2D" parent="."]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player"]
+position = Vector2( -98.2002, 331.178 )
+scale = Vector2( 0.0844765, 0.081483 )
+texture = ExtResource( 13 )
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 86 )
+script = ExtResource( 25 )
+
+[node name="torch3" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( -248.788, 42.7233 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch3"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch3"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch3/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch3/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1616,36 +1621,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch3"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch3"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch3"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch3"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch3"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch3/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch3/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch4" type="StaticBody2D" parent="."]
+[node name="torch4" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( -122.48, 42.4544 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch4"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch4"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch4/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch4/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1654,36 +1659,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch4"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch4"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch4"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch4"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch4"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch4/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch4/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch8" type="StaticBody2D" parent="."]
+[node name="torch8" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 62.752, 171.328 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch8"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch8"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch8/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch8/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1692,36 +1697,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch8"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch8"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch8"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch8"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch8"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch8"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch8/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch8/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch32" type="StaticBody2D" parent="."]
+[node name="torch32" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 261.359, 278.281 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch32"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch32"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch32/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch32/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1730,36 +1735,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch32"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch32"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch32"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch32"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch32"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch32"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch32/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch32/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch33" type="StaticBody2D" parent="."]
+[node name="torch33" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 260.411, 171.28 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch33"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch33"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch33/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch33/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1768,36 +1773,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch33"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch33"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch33"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch33"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch33"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch33"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch33/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch33/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch34" type="StaticBody2D" parent="."]
+[node name="torch34" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 130.088, 106.81 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch34"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch34"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch34/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch34/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1806,36 +1811,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch34"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch34"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch34"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch34"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch34"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch34"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch34/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch34/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch35" type="StaticBody2D" parent="."]
+[node name="torch35" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 321.762, 107.157 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch35"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch35"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch35/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch35/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1844,36 +1849,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch35"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch35"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch35"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch35"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch35"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch35"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch35/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch35/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch36" type="StaticBody2D" parent="."]
+[node name="torch36" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 483.037, 107.205 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch36"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch36"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch36/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch36/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1882,36 +1887,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch36"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch36"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch36"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch36"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch36"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch36"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch36/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch36/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch37" type="StaticBody2D" parent="."]
+[node name="torch37" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 451.158, 171.135 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch37"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch37"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch37/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch37/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1920,36 +1925,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch37"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch37"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch37"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch37"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch37"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch37"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch37/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch37/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch38" type="StaticBody2D" parent="."]
+[node name="torch38" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 418.365, 299.227 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch38"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch38"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch38/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch38/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1958,36 +1963,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch38"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch38"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch38"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch38"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch38"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch38"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch38/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch38/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch39" type="StaticBody2D" parent="."]
+[node name="torch39" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 611.659, 299.029 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch39"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch39"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch39/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch39/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -1996,36 +2001,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch39"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch39"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch39"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch39"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch39"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch39"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch39/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch39/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch40" type="StaticBody2D" parent="."]
+[node name="torch40" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 684.479, 235.066 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch40"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch40"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch40/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch40/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2034,36 +2039,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch40"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch40"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch40"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch40"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch40"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch40"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch40/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch40/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch41" type="StaticBody2D" parent="."]
+[node name="torch41" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 821.079, 299.437 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch41"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch41"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch41/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch41/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2072,36 +2077,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch41"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch41"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch41"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch41"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch41"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch41"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch41/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch41/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch42" type="StaticBody2D" parent="."]
+[node name="torch42" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 664.587, 171.266 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch42"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch42"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch42/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch42/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2110,36 +2115,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch42"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch42"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch42"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch42"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch42"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch42"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch42/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch42/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch43" type="StaticBody2D" parent="."]
+[node name="torch43" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 948.544, 149.648 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch43"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch43"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch43/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch43/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2148,36 +2153,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch43"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch43"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch43"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch43"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch43"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch43"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch43/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch43/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch44" type="StaticBody2D" parent="."]
+[node name="torch44" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 810.408, 149.858 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch44"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch44"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch44/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch44/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2186,36 +2191,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch44"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch44"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch44"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch44"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch44"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch44"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch44/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch44/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch45" type="StaticBody2D" parent="."]
+[node name="torch45" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 836.237, -85.1176 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch45"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch45"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch45/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch45/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2224,36 +2229,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch45"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch45"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch45"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch45"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch45"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch45"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch45/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch45/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch46" type="StaticBody2D" parent="."]
+[node name="torch46" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 834.743, -148.421 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch46"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch46"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch46/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch46/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2262,36 +2267,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch46"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch46"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch46"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch46"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch46"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch46"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch46/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch46/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch48" type="StaticBody2D" parent="."]
+[node name="torch48" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 642.394, -212.649 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch48"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch48"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch48/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch48/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2300,36 +2305,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch48"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch48"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch48"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch48"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch48"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch48"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch48/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch48/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch49" type="StaticBody2D" parent="."]
+[node name="torch49" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 557.344, -148.72 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch49"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch49"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch49/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch49/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2338,36 +2343,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch49"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch49"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch49"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch49"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch49"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch49"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch49/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch49/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch50" type="StaticBody2D" parent="."]
+[node name="torch50" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 386.237, -148.895 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch50"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch50"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch50/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch50/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2376,36 +2381,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch50"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch50"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch50"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch50"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch50"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch50"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch50/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch50/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch51" type="StaticBody2D" parent="."]
+[node name="torch51" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 420.871, -213.037 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch51"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch51"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch51/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch51/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2414,36 +2419,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch51"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch51"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch51"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch51"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch51"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch51"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch51/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch51/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch52" type="StaticBody2D" parent="."]
+[node name="torch52" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 242.373, -212.982 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch52"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch52"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch52/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch52/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2452,36 +2457,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch52"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch52"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch52"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch52"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch52"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch52"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch52/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch52/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch53" type="StaticBody2D" parent="."]
+[node name="torch53" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 14.0081, -212.54 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch53"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch53"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch53/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch53/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2490,36 +2495,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch53"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch53"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch53"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch53"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch53"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch53"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch53/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch53/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch54" type="StaticBody2D" parent="."]
+[node name="torch54" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 36.6928, -149.028 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch54"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch54"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch54/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch54/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2528,36 +2533,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch54"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch54"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch54"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch54"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch54"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch54"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch54/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch54/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch55" type="StaticBody2D" parent="."]
+[node name="torch55" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 227.455, -148.661 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch55"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch55"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch55/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch55/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2566,36 +2571,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch55"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch55"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch55"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch55"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch55"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch55"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch55/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch55/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch56" type="StaticBody2D" parent="."]
+[node name="torch56" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 504.124, -85.0964 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch56"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch56"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch56/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch56/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2604,36 +2609,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch56"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch56"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch56"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch56"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch56"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch56"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch56/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch56/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch57" type="StaticBody2D" parent="."]
+[node name="torch57" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( -61.346, -20.2786 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch57"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch57"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch57/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch57/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2642,36 +2647,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch57"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch57"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch57"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch57"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch57"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch57"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch57/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch57/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch58" type="StaticBody2D" parent="."]
+[node name="torch58" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( -157.379, -148.656 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch58"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch58"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch58/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch58/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2680,36 +2685,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch58"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch58"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch58"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch58"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch58"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch58"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch58/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch58/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch59" type="StaticBody2D" parent="."]
+[node name="torch59" type="StaticBody2D" parent="Torches Behind Player"]
 position = Vector2( 80.0672, -84.8508 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch59"]
+[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch59"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch59/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Behind Player/torch59/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2718,20 +2723,20 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch59"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch59"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch59"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch59"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch59"]
+[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch59"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch59/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch59/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
@@ -2909,19 +2914,22 @@ shape = SubResource( 81 )
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 47 )
 
-[node name="torch5" type="StaticBody2D" parent="."]
+[node name="Torches Front Player" type="Node2D" parent="."]
+visible = false
+
+[node name="torch5" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( -3.30243, 73.48 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch5"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch5"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch5/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch5/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2930,36 +2938,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch5"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch5"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch5"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch5"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch5"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch5/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch5/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch6" type="StaticBody2D" parent="."]
+[node name="torch6" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( -4.01442, 221.145 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch6"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch6"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch6/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch6/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -2968,36 +2976,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch6"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch6"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch6"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch6"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch6"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch6/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch6/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch7" type="StaticBody2D" parent="."]
+[node name="torch7" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 60.008, 295.258 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch7"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch7"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch7/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch7/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3006,36 +3014,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch7"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch7"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch7"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch7"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch7"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch7/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch7/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch9" type="StaticBody2D" parent="."]
+[node name="torch9" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 123.75, 234.985 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch9"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch9"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch9/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch9/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3044,36 +3052,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch9"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch9"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch9"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch9"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch9"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch9"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch9/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch9/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch10" type="StaticBody2D" parent="."]
+[node name="torch10" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 194.834, 179.347 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch10"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch10"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch10/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch10/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3082,36 +3090,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch10"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch10"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch10"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch10"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch10"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch10"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch10/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch10/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch11" type="StaticBody2D" parent="."]
+[node name="torch11" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 386.495, 321.681 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch11"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch11"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch11/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch11/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3120,36 +3128,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch11"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch11"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch11"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch11"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch11"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch11"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch11/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch11/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch12" type="StaticBody2D" parent="."]
+[node name="torch12" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 387.692, 200.403 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch12"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch12"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch12/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch12/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3158,36 +3166,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch12"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch12"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch12"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch12"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch12"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch12"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch12/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch12/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch13" type="StaticBody2D" parent="."]
+[node name="torch13" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 578.157, 233.749 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch13"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch13"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch13/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch13/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3196,36 +3204,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch13"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch13"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch13"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch13"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch13"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch13"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch13/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch13/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch14" type="StaticBody2D" parent="."]
+[node name="torch14" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 578.712, 56.4959 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch14"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch14"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch14/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch14/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3234,36 +3242,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch14"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch14"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch14"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch14"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch14"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch14"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch14/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch14/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch15" type="StaticBody2D" parent="."]
+[node name="torch15" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 507.865, 60.0008 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch15"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch15"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch15/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch15/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3272,36 +3280,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch15"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch15"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch15"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch15"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch15"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch15"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch15/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch15/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch16" type="StaticBody2D" parent="."]
+[node name="torch16" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 449.534, 47.9842 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch16"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch16"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch16/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch16/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3310,36 +3318,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch16"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch16"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch16"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch16"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch16"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch16"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch16/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch16/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch17" type="StaticBody2D" parent="."]
+[node name="torch17" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 324.199, -43.3417 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch17"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch17"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch17/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch17/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3348,36 +3356,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch17"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch17"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch17"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch17"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch17"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch17"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch17/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch17/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch47" type="StaticBody2D" parent="torch17"]
+[node name="torch47" type="StaticBody2D" parent="Torches Front Player/torch17"]
 position = Vector2( 901.319, -215.168 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch17/torch47"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch17/torch47"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch17/torch47/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch17/torch47/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3386,36 +3394,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch17/torch47"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch17/torch47"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch17/torch47"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch17/torch47"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch17/torch47"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch17/torch47"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch17/torch47/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch17/torch47/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch18" type="StaticBody2D" parent="."]
+[node name="torch18" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 66.3927, 37.0312 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch18"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch18"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch18/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch18/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3424,36 +3432,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch18"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch18"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch18"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch18"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch18"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch18"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch18/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch18/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch19" type="StaticBody2D" parent="."]
+[node name="torch19" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( -190.051, -54.5802 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch19"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch19"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch19/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch19/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3462,36 +3470,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch19"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch19"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch19"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch19"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch19"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch19"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch19/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch19/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch20" type="StaticBody2D" parent="."]
+[node name="torch20" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 124.288, 68.0224 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch20"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch20"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch20/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch20/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3500,36 +3508,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch20"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch20"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch20"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch20"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch20"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch20"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch20/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch20/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch21" type="StaticBody2D" parent="."]
+[node name="torch21" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 252, 63.5951 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch21"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch21"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch21/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch21/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3538,36 +3546,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch21"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch21"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch21"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch21"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch21"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch21"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch21/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch21/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch22" type="StaticBody2D" parent="."]
+[node name="torch22" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 577.918, -189.443 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch22"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch22"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch22/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch22/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3576,36 +3584,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch22"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch22"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch22"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch22"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch22"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch22"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch22/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch22/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch23" type="StaticBody2D" parent="."]
+[node name="torch23" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 578.94, -116.563 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch23"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch23"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch23/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch23/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3614,36 +3622,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch23"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch23"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch23"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch23"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch23"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch23"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch23/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch23/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch24" type="StaticBody2D" parent="."]
+[node name="torch24" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 699.159, 65.6385 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch24"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch24"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch24/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch24/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3652,36 +3660,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch24"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch24"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch24"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch24"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch24"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch24"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch24/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch24/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch25" type="StaticBody2D" parent="."]
+[node name="torch25" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 699.499, -97.4912 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch25"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch25"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch25/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch25/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3690,36 +3698,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch25"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch25"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch25"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch25"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch25"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch25"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch25/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch25/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch26" type="StaticBody2D" parent="."]
+[node name="torch26" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 770.337, -40.9577 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch26"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch26"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch26/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch26/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3728,36 +3736,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch26"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch26"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch26"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch26"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch26"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch26"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch26/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch26/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch27" type="StaticBody2D" parent="."]
+[node name="torch27" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 770.677, 98.3325 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch27"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch27"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch27/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch27/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3766,36 +3774,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch27"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch27"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch27"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch27"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch27"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch27"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch27/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch27/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch28" type="StaticBody2D" parent="."]
+[node name="torch28" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 954.651, 263.821 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch28"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch28"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch28/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch28/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3804,36 +3812,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch28"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch28"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch28"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch28"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch28"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch28"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch28/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch28/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch29" type="StaticBody2D" parent="."]
+[node name="torch29" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 1020.23, 108.896 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch29"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch29"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch29/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch29/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3842,36 +3850,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch29"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch29"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch29"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch29"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch29"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch29"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch29/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch29/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch30" type="StaticBody2D" parent="."]
+[node name="torch30" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 1018.91, -62.7545 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch30"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch30"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch30/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch30/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3880,36 +3888,36 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch30"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch30"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch30"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch30"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch30"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch30"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch30/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch30/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
 
-[node name="torch31" type="StaticBody2D" parent="."]
+[node name="torch31" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 956.851, -122.172 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="torch31"]
+[node name="torch_light" type="Light2D" parent="Torches Front Player/torch31"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="torch31/torch_light"]
+[node name="flame" type="Particles2D" parent="Torches Front Player/torch31/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
@@ -3918,26 +3926,26 @@ amount = 50
 process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch31"]
+[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch31"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
 frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch31"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch31"]
 position = Vector2( 55.328, 457.012 )
 shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="torch31"]
+[node name="Area2D" type="Area2D" parent="Torches Front Player/torch31"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch31/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch31/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 89 )
-[connection signal="area_entered" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_exited"]
-[connection signal="area_entered" from="false_wall/AnimatedSprite/Area2D" to="false_wall" method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="false_wall/AnimatedSprite/Area2D" to="false_wall" method="_on_Area2D_area_exited"]
+[connection signal="area_entered" from="Fake Walls/false_wall2/AnimatedSprite/Area2D" to="Fake Walls/false_wall2" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Fake Walls/false_wall2/AnimatedSprite/Area2D" to="Fake Walls/false_wall2" method="_on_Area2D_area_exited"]
+[connection signal="area_entered" from="Fake Walls/false_wall/AnimatedSprite/Area2D" to="Fake Walls/false_wall" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Fake Walls/false_wall/AnimatedSprite/Area2D" to="Fake Walls/false_wall" method="_on_Area2D_area_exited"]
 [connection signal="bagsCollected" from="Bags/obj_bag" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag" to="Bags/obj_bag" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag2" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
