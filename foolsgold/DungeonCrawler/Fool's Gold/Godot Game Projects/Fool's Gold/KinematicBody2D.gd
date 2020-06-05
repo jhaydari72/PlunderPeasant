@@ -7,8 +7,7 @@ const FRICTION = 500
  
 enum {
 	MOVE,
-	ATTACK,
-	DIE
+	ATTACK
 }
 var state = MOVE
 var Key = 0
