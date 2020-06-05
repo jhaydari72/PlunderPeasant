@@ -738,7 +738,7 @@ radius = 3.12059
 height = 12.0896
 
 [sub_resource type="RectangleShape2D" id=68]
-extents = Vector2( 4.63716, 11.4571 )
+extents = Vector2( 4.63716, 4.92157 )
 
 [sub_resource type="Gradient" id=52]
 offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
@@ -969,10 +969,9 @@ shape = SubResource( 51 )
 disabled = true
 
 [node name="Area2D" type="Area2D" parent="obj_player"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/Area2D"]
-position = Vector2( 0.122082, 2.07544 )
+position = Vector2( 0.238064, 8.45447 )
 shape = SubResource( 68 )
 
 [node name="torch" type="StaticBody2D" parent="."]
