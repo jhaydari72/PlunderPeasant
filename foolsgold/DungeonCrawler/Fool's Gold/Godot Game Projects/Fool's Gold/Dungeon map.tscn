@@ -1061,7 +1061,6 @@ position = Vector2( 28.452, 1.004 )
 shape = SubResource( 16 )
 
 [node name="false_wall" type="StaticBody2D" parent="."]
-visible = false
 script = ExtResource( 28 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="false_wall"]
@@ -1388,7 +1387,6 @@ position = Vector2( 280.085, 77.9193 )
 position = Vector2( 419.073, 50.6094 )
 
 [node name="Path2D" type="Path2D" parent="."]
-visible = false
 position = Vector2( 3.5, 7.21212 )
 scale = Vector2( 0.994318, 0.969697 )
 curve = SubResource( 19 )
@@ -1432,7 +1430,6 @@ position = Vector2( 3.40735, -0.519344 )
 shape = SubResource( 23 )
 
 [node name="Key" type="Area2D" parent="."]
-visible = false
 position = Vector2( 897.536, 246.245 )
 script = ExtResource( 35 )
 
@@ -1446,7 +1443,6 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 33 )
 
 [node name="obj_door" type="StaticBody2D" parent="."]
-visible = false
 position = Vector2( 1017.98, 18.7673 )
 script = ExtResource( 37 )
 
@@ -1471,7 +1467,6 @@ scale = Vector2( 1.5, 1.5 )
 shape = SubResource( 27 )
 
 [node name="Enemy" parent="." instance=ExtResource( 23 )]
-visible = false
 position = Vector2( -206.149, 398.52 )
 
 [node name="Sprite" parent="Enemy" index="0"]
@@ -1482,7 +1477,6 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
 position = Vector2( 985.417, -417.669 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
@@ -1496,13 +1490,11 @@ scale = Vector2( 1, 0.1 )
 shape = SubResource( 28 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-visible = false
 stream = ExtResource( 48 )
 volume_db = 6.049
 autoplay = true
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-visible = false
 position = Vector2( -114.118, 343.248 )
 collision_layer = 2
 script = ExtResource( 12 )
@@ -1670,7 +1662,6 @@ shape = SubResource( 81 )
 stream = ExtResource( 47 )
 
 [node name="torch" type="StaticBody2D" parent="."]
-visible = false
 position = Vector2( -60.3791, 122.496 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
