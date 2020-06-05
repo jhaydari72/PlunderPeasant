@@ -344,68 +344,25 @@ extents = Vector2( 7.1344, 20.6957 )
 
 [sub_resource type="SpriteFrames" id=17]
 animations = [ {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "open",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "closed",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 32.7207, 11.8249 )
+extents = Vector2( 32.7207, 15.1108 )
 
-[sub_resource type="Curve2D" id=68]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
-}
-
-[sub_resource type="SpriteFrames" id=69]
-animations = [ {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "alive",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
-"loop": false,
-"name": "dead",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=70]
-extents = Vector2( 6.23898, 11.6251 )
-
-[sub_resource type="CapsuleShape2D" id=71]
-radius = 8.28271
-height = 9.97013
-
-[sub_resource type="RectangleShape2D" id=72]
-
-[sub_resource type="SpriteFrames" id=73]
-animations = [ {
-"frames": [ ExtResource( 45 ) ],
-"loop": true,
-"name": "open",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 30 ) ],
-"loop": true,
-"name": "closed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=74]
-extents = Vector2( 12.5046, 10 )
-
-[sub_resource type="RectangleShape2D" id=75]
-extents = Vector2( 12.6926, 10.9488 )
-
-[sub_resource type="RectangleShape2D" id=76]
-extents = Vector2( 4.51196, 59.8682 )
+[sub_resource type="ParticlesMaterial" id=19]
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
 
 [sub_resource type="CapsuleShape2D" id=20]
 radius = 6.90907
@@ -492,10 +449,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 10, 9, 12, 13 ]
+"values": [ 19, 20, 19, 20 ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=24]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -511,7 +468,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=25]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -523,7 +480,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 2, 3, 2 ]
+"values": [ 5, 11, 5 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -592,10 +549,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 2 ]
+"values": [ 5 ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=28]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -608,10 +565,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 15, 14, 15, 14 ]
+"values": [ 21, 5, 21, 5 ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=29]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -623,7 +580,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 4, 5, 4 ]
+"values": [ 8, 12, 8 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -692,10 +649,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 4 ]
+"values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=32]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -708,10 +665,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 17, 16, 17, 16 ]
+"values": [ 22, 8, 22, 8 ]
 }
 
-[sub_resource type="Animation" id=30]
+[sub_resource type="Animation" id=33]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -723,7 +680,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 6, 7, 8 ]
+"values": [ 13, 14, 13 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -792,10 +749,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 6 ]
+"values": [ 13 ]
 }
 
-[sub_resource type="Animation" id=32]
+[sub_resource type="Animation" id=36]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -808,137 +765,169 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 19, 18, 21, 20 ]
+"values": [ 23, 24, 23, 24 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=33]
+[sub_resource type="AnimationNodeAnimation" id=37]
 animation = "attack_down"
 
-[sub_resource type="AnimationNodeAnimation" id=34]
+[sub_resource type="AnimationNodeAnimation" id=38]
 animation = "right_attack"
 
-[sub_resource type="AnimationNodeAnimation" id=35]
+[sub_resource type="AnimationNodeAnimation" id=39]
 animation = "left_attack"
 
-[sub_resource type="AnimationNodeAnimation" id=36]
+[sub_resource type="AnimationNodeAnimation" id=40]
 animation = "up_attack"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=37]
-blend_point_0/node = SubResource( 33 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=41]
+blend_point_0/node = SubResource( 37 )
 blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 34 )
+blend_point_1/node = SubResource( 38 )
 blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 35 )
+blend_point_2/node = SubResource( 39 )
 blend_point_2/pos = Vector2( -1, 0 )
-blend_point_3/node = SubResource( 36 )
+blend_point_3/node = SubResource( 40 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=38]
+[sub_resource type="AnimationNodeAnimation" id=42]
+animation = "down_dead"
+
+[sub_resource type="AnimationNodeAnimation" id=43]
+animation = "right_dead"
+
+[sub_resource type="AnimationNodeAnimation" id=44]
+animation = "up_dead"
+
+[sub_resource type="AnimationNodeAnimation" id=45]
+animation = "left_dead"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=46]
+blend_point_0/node = SubResource( 42 )
+blend_point_0/pos = Vector2( -0.00142753, 0.989446 )
+blend_point_1/node = SubResource( 43 )
+blend_point_1/pos = Vector2( 0.998572, -0.00263858 )
+blend_point_2/node = SubResource( 44 )
+blend_point_2/pos = Vector2( -0.00142753, -0.989446 )
+blend_point_3/node = SubResource( 45 )
+blend_point_3/pos = Vector2( -0.999286, 0.0079155 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=47]
 animation = "left_idle"
 
-[sub_resource type="AnimationNodeAnimation" id=39]
+[sub_resource type="AnimationNodeAnimation" id=48]
 animation = "idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id=40]
+[sub_resource type="AnimationNodeAnimation" id=49]
 animation = "right_idle"
 
-[sub_resource type="AnimationNodeAnimation" id=41]
+[sub_resource type="AnimationNodeAnimation" id=50]
 animation = "up_idle"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=42]
-blend_point_0/node = SubResource( 38 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=51]
+blend_point_0/node = SubResource( 47 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 39 )
+blend_point_1/node = SubResource( 48 )
 blend_point_1/pos = Vector2( 0, 1 )
-blend_point_2/node = SubResource( 40 )
+blend_point_2/node = SubResource( 49 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 41 )
+blend_point_3/node = SubResource( 50 )
 blend_point_3/pos = Vector2( 0, -1 )
 snap = Vector2( 0.01, 0.01 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=43]
+[sub_resource type="AnimationNodeAnimation" id=52]
 animation = "down_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=44]
+[sub_resource type="AnimationNodeAnimation" id=53]
 animation = "left_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=45]
+[sub_resource type="AnimationNodeAnimation" id=54]
 animation = "right_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=46]
+[sub_resource type="AnimationNodeAnimation" id=55]
 animation = "up_walk"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=47]
-blend_point_0/node = SubResource( 43 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=56]
+blend_point_0/node = SubResource( 52 )
 blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 44 )
+blend_point_1/node = SubResource( 53 )
 blend_point_1/pos = Vector2( -1, 0 )
-blend_point_2/node = SubResource( 45 )
+blend_point_2/node = SubResource( 54 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 46 )
+blend_point_3/node = SubResource( 55 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=48]
+[sub_resource type="AnimationNodeStateMachineTransition" id=57]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=49]
+[sub_resource type="AnimationNodeStateMachineTransition" id=58]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=50]
+[sub_resource type="AnimationNodeStateMachineTransition" id=59]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=51]
+[sub_resource type="AnimationNodeStateMachineTransition" id=60]
 
-[sub_resource type="AnimationNodeStateMachine" id=52]
-states/Attack/node = SubResource( 37 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=61]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=62]
+
+[sub_resource type="AnimationNodeStateMachine" id=63]
+states/Attack/node = SubResource( 41 )
 states/Attack/position = Vector2( 508, 204 )
-states/Idle/node = SubResource( 42 )
+states/Death/node = SubResource( 46 )
+states/Death/position = Vector2( 342, 100 )
+states/Idle/node = SubResource( 51 )
 states/Idle/position = Vector2( 495, 100 )
-states/Run/node = SubResource( 47 )
+states/Run/node = SubResource( 56 )
 states/Run/position = Vector2( 657, 100 )
-transitions = [ "Idle", "Run", SubResource( 48 ), "Run", "Idle", SubResource( 49 ), "Idle", "Attack", SubResource( 50 ), "Attack", "Idle", SubResource( 51 ) ]
+transitions = [ "Idle", "Run", SubResource( 57 ), "Run", "Idle", SubResource( 58 ), "Idle", "Attack", SubResource( 59 ), "Attack", "Idle", SubResource( 60 ), "Death", "Idle", SubResource( 61 ), "Idle", "Death", SubResource( 62 ) ]
 start_node = "Idle"
 graph_offset = Vector2( 0, 26.5131 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=53]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=64]
 
-[sub_resource type="DynamicFont" id=54]
+[sub_resource type="DynamicFont" id=65]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=55]
+[sub_resource type="DynamicFont" id=66]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=56]
+[sub_resource type="DynamicFont" id=67]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=57]
+[sub_resource type="DynamicFont" id=68]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="CapsuleShape2D" id=58]
+[sub_resource type="CapsuleShape2D" id=69]
 radius = 3.12059
 height = 12.0896
 
-[sub_resource type="RectangleShape2D" id=59]
+[sub_resource type="RectangleShape2D" id=70]
 extents = Vector2( 4.63716, 4.92157 )
 
-[sub_resource type="Gradient" id=60]
+[sub_resource type="RectangleShape2D" id=71]
+extents = Vector2( 7.67579, 12.1784 )
+
+[sub_resource type="Gradient" id=72]
 offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.769531, 0.519354, 0.165329, 1, 0.652344, 0.0311148, 0, 1, 1, 0, 0, 1 )
 
-[sub_resource type="GradientTexture" id=61]
-gradient = SubResource( 60 )
+[sub_resource type="GradientTexture" id=73]
+gradient = SubResource( 72 )
 
-[sub_resource type="Curve" id=62]
+[sub_resource type="Curve" id=74]
 _data = [ Vector2( 0.00632912, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.336364 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=63]
-curve = SubResource( 62 )
+[sub_resource type="CurveTexture" id=75]
+curve = SubResource( 74 )
 
-[sub_resource type="ParticlesMaterial" id=64]
+[sub_resource type="ParticlesMaterial" id=76]
 emission_shape = 2
 emission_box_extents = Vector3( 2, 5, 1 )
 flag_disable_z = true
@@ -952,36 +941,88 @@ orbit_velocity_random = 0.0
 linear_accel = 20.0
 angle = 45.0
 scale = 2.0
-scale_curve = SubResource( 63 )
-color_ramp = SubResource( 61 )
+scale_curve = SubResource( 75 )
+color_ramp = SubResource( 73 )
 
-[sub_resource type="SpriteFrames" id=65]
+[sub_resource type="SpriteFrames" id=77]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=66]
+[sub_resource type="RectangleShape2D" id=78]
 extents = Vector2( 2.2953, 6.27969 )
 
-[sub_resource type="RectangleShape2D" id=67]
+[sub_resource type="RectangleShape2D" id=79]
 extents = Vector2( 15.6504, 18.1411 )
+
+[sub_resource type="Curve2D" id=80]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
+}
+
+[sub_resource type="SpriteFrames" id=81]
+animations = [ {
+"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "alive",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=82]
+extents = Vector2( 6.23898, 11.6251 )
+
+[sub_resource type="CapsuleShape2D" id=83]
+radius = 8.28271
+height = 9.97013
+
+[sub_resource type="RectangleShape2D" id=84]
+extents = Vector2( 9.78305, 15.5923 )
+
+[sub_resource type="RectangleShape2D" id=85]
+
+[sub_resource type="SpriteFrames" id=86]
+animations = [ {
+"frames": [ ExtResource( 45 ) ],
+"loop": true,
+"name": "open",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "closed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=87]
+extents = Vector2( 12.5046, 10 )
+
+[sub_resource type="RectangleShape2D" id=88]
+extents = Vector2( 12.6926, 10.9488 )
+
+[sub_resource type="RectangleShape2D" id=89]
+extents = Vector2( 4.51196, 59.8682 )
 
 [node name="Dungeon map" type="Node2D"]
 position = Vector2( -1, 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -925.598
-margin_top = -289.663
+margin_top = -289.175
 margin_right = 1414.4
-margin_bottom = 988.337
+margin_bottom = 988.825
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -992,17 +1033,7 @@ position = Vector2( -31.7773, -1.19165 )
 tile_set = SubResource( 13 )
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 2, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 4, 0, 16, 5, 0, 131069, 2, 0, 131070, 3, 0, 131071, 3, 0, 65536, 1, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 4, 0, 65541, 8, 0, 65542, 2, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 2, 0, 65547, 10, 0, 65548, 8, 0, 65549, 8, 0, 65550, 8, 0, 65551, 5, 0, 65552, 5, 0, 196605, 1, 0, 196606, 1, 0, 196607, 8, 0, 131072, 8, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 5, 0, 131077, 8, 0, 131078, 1, 0, 131079, 2, 0, 131080, 2, 0, 131081, 3, 0, 131082, 1, 0, 131083, 10, 0, 131084, 8, 0, 131085, 2, 0, 131086, 3, 0, 131087, 4, 0, 131088, 5, 0, 262141, 1, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 10, 0, 196611, 5, 0, 196612, 5, 0, 196613, 8, 0, 196614, 1, 0, 196615, 1, 0, 196616, 10, 0, 196617, 8, 0, 196618, 1, 0, 196619, 10, 0, 196620, 8, 0, 196621, 1, 0, 196622, 8, 0, 196623, 5, 0, 196624, 5, 0, 327676, 2, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 4, 0, 262145, 8, 0, 262146, 10, 0, 262147, 8, 0, 262148, 5, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0, 262152, 10, 0, 262153, 8, 0, 262154, 1, 0, 262155, 10, 0, 262156, 8, 0, 262157, 1, 0, 262158, 8, 0, 262159, 5, 0, 262160, 5, 0, 393212, 1, 0, 393213, 9, 0, 393214, 9, 0, 393215, 9, 0, 327680, 10, 0, 327681, 8, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 4, 0, 327689, 8, 0, 327690, 1, 0, 327691, 10, 0, 327692, 8, 0, 327693, 0, 0, 327694, 7, 0, 327695, 6, 0, 327696, 5, 0, 458748, 0, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 10, 0, 393217, 3, 0, 393218, 4, 0, 393219, 8, 0, 393220, 2, 0, 393221, 4, 0, 393222, 8, 0, 393223, 2, 0, 393224, 4, 0, 393225, 3, 0, 393226, 1, 0, 393227, 2, 0, 393228, 8, 0, 393229, 8, 0, 393230, 8, 0, 393231, 8, 0, 393232, 5, 0, 458752, 10, 0, 458753, 5, 0, 458754, 5, 0, 458755, 8, 0, 458756, 1, 0, 458757, 5, 0, 458758, 8, 0, 458759, 1, 0, 458760, 5, 0, 458761, 8, 0, 458762, 1, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 4, 0, 458768, 5, 0, 524288, 1, 0, 524289, 5, 0, 524290, 8, 0, 524291, 8, 0, 524292, 3, 0, 524294, 8, 0, 524295, 4, 0, 524296, 3, 0, 524297, 8, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 8, 0, 524304, 5, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0 )
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-margin_left = -952.415
-margin_top = 596.022
-margin_right = 1387.58
-margin_bottom = 1874.02
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 2, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 4, 0, 16, 5, 0, 131069, 2, 0, 131070, 3, 0, 131071, 3, 0, 65536, 1, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 4, 0, 65541, 8, 0, 65542, 2, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 1, 0, 65547, 10, 0, 65548, 8, 0, 65549, 8, 0, 65550, 10, 0, 65551, 5, 0, 65552, 5, 0, 196605, 1, 0, 196606, 1, 0, 196607, 8, 0, 131072, 8, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 5, 0, 131077, 8, 0, 131078, 1, 0, 131079, 2, 0, 131080, 2, 0, 131081, 3, 0, 131082, 1, 0, 131083, 10, 0, 131084, 8, 0, 131085, 2, 0, 131086, 3, 0, 131087, 4, 0, 131088, 5, 0, 262141, 1, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 10, 0, 196611, 5, 0, 196612, 5, 0, 196613, 8, 0, 196614, 1, 0, 196615, 1, 0, 196616, 10, 0, 196617, 8, 0, 196618, 1, 0, 196619, 10, 0, 196620, 8, 0, 196621, 1, 0, 196622, 8, 0, 196623, 5, 0, 196624, 5, 0, 327676, 2, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 4, 0, 262145, 8, 0, 262146, 10, 0, 262147, 8, 0, 262148, 5, 0, 262149, 8, 0, 262150, 8, 0, 262151, 1, 0, 262152, 10, 0, 262153, 8, 0, 262154, 1, 0, 262155, 10, 0, 262156, 8, 0, 262157, 1, 0, 262158, 8, 0, 262159, 5, 0, 262160, 5, 0, 393213, -1073741814, 0, 393214, -1610612726, 0, 393215, -1610612726, 0, 327680, 10, 0, 327681, 8, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 8, 0, 327690, 1, 0, 327691, 10, 0, 327692, 8, 0, 327693, 0, 0, 327694, 7, 0, 327695, 6, 0, 327696, 5, 0, 458748, 0, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 10, 0, 393217, 3, 0, 393218, 4, 0, 393219, 8, 0, 393220, 2, 0, 393221, 4, 0, 393222, 8, 0, 393223, 4, 0, 393224, 3, 0, 393225, 8, 0, 393226, 1, 0, 393227, 2, 0, 393228, 8, 0, 393229, 8, 0, 393230, 8, 0, 393231, 8, 0, 393232, 5, 0, 458752, 10, 0, 458753, 5, 0, 458754, 5, 0, 458755, 8, 0, 458756, 1, 0, 458757, 5, 0, 458758, 8, 0, 458759, 4, 0, 458760, 3, 0, 458761, 8, 0, 458762, 1, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 4, 0, 458768, 5, 0, 524288, 1, 0, 524289, 5, 0, 524290, 8, 0, 524291, 8, 0, 524292, 0, 0, 524293, 6, 0, 524294, 8, 0, 524295, 4, 0, 524296, 3, 0, 524297, 8, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 8, 0, 524304, 5, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0 )
 
 [node name="false_wall2" type="StaticBody2D" parent="."]
 position = Vector2( -927.545, 254.858 )
@@ -1024,559 +1055,22 @@ position = Vector2( 28.452, 1.004 )
 shape = SubResource( 16 )
 
 [node name="false_wall" type="StaticBody2D" parent="."]
-position = Vector2( 2.16321, -2.22375 )
+visible = false
 script = ExtResource( 28 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="false_wall"]
-position = Vector2( 318.08, 544.996 )
+position = Vector2( 159.925, 352.047 )
 frames = SubResource( 17 )
 animation = "closed"
 
 [node name="Area2D" type="Area2D" parent="false_wall/AnimatedSprite"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="false_wall/AnimatedSprite/Area2D"]
-position = Vector2( 0.590515, -20.2576 )
+position = Vector2( 0.647095, -21.7282 )
 shape = SubResource( 18 )
 
-[node name="Bags" type="Node2D" parent="."]
-
-[node name="obj_bag" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( -50.18, 395.747 )
-
-[node name="obj_bag4" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( -65.3853, 350.021 )
-
-[node name="obj_bag5" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( -58.4438, 353.216 )
-
-[node name="obj_bag2" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( -62.4104, 402.247 )
-
-[node name="obj_bag3" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( -55.0281, 411.503 )
-
-[node name="obj_bag6" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( -12.8193, 561.783 )
-
-[node name="obj_bag7" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 5.7363, 563.822 )
-
-[node name="obj_bag8" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( -3.84735, 564.433 )
-
-[node name="obj_bag9" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 267.992, 429.07 )
-
-[node name="obj_bag10" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 283.489, 413.573 )
-
-[node name="obj_bag11" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 244.94, 430.232 )
-
-[node name="obj_bag12" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 262.568, 413.185 )
-
-[node name="obj_bag13" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 245.328, 412.216 )
-
-[node name="obj_bag14" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 448.391, 451.552 )
-
-[node name="obj_bag15" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 471.491, 456.173 )
-
-[node name="obj_bag16" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 479.191, 445.392 )
-
-[node name="obj_bag17" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 494.592, 439.232 )
-
-[node name="obj_bag18" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 181.452, 164.593 )
-
-[node name="obj_bag19" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 189.666, 187.694 )
-
-[node name="obj_bag20" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 386.276, 106.072 )
-
-[node name="obj_bag21" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 589.56, 108.126 )
-
-[node name="obj_bag22" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 573.133, 436.665 )
-
-[node name="obj_bag23" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 591.1, 361.717 )
-
-[node name="obj_bag24" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 562.867, 357.097 )
-
-[node name="obj_bag25" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 640.895, 111.206 )
-
-[node name="obj_bag26" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 637.815, 137.899 )
-
-[node name="obj_bag27" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 652.188, 161.513 )
-
-[node name="obj_bag28" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 881.692, 258.214 )
-
-[node name="obj_bag29" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 876.489, 317.833 )
-
-[node name="obj_bag30" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 700.443, 357.097 )
-
-[node name="obj_bag31" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 923.772, 297.822 )
-
-[node name="obj_bag32" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 926.167, 272.675 )
-
-[node name="obj_bag33" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 893.835, 285.847 )
-
-[node name="obj_bag34" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 912.995, 246.33 )
-
-[node name="obj_bag35" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 959.098, 283.452 )
-
-[node name="obj_bag36" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 933.352, 348.715 )
-
-[node name="obj_bag37" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 950.116, 184.062 )
-
-[node name="obj_bag38" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 875.274, 148.137 )
-
-[node name="obj_bag39" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 863.299, 213.999 )
-
-[node name="obj_bag40" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 898.625, 199.629 )
-
-[node name="obj_bag41" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 921.976, 74.4925 )
-
-[node name="obj_bag42" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 871.083, 66.7089 )
-
-[node name="obj_bag43" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 847.732, 96.6458 )
-
-[node name="obj_bag44" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 957.9, 52.9379 )
-
-[node name="obj_bag45" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 973.467, 419.965 )
-
-[node name="obj_bag46" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 940.537, 497.202 )
-
-[node name="obj_bag47" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 804.024, 557.076 )
-
-[node name="obj_bag48" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 562.733, 548.095 )
-
-[node name="obj_bag49" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 411.252, 552.885 )
-
-[node name="obj_bag50" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 378.92, 412.181 )
-
-[node name="obj_bag51" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 260.37, 498.998 )
-
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2( 3.5, 7.21212 )
-scale = Vector2( 0.994318, 0.969697 )
-curve = SubResource( 68 )
-script = ExtResource( 20 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 446.034, 36.9063 )
-rotation = -0.0113611
-rotate = false
-script = ExtResource( 31 )
-
-[node name="obj_enemy" type="KinematicBody2D" parent="Path2D/PathFollow2D"]
-rotation = 9.31322e-10
-script = ExtResource( 38 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Path2D/PathFollow2D/obj_enemy"]
-position = Vector2( 3.44867, -0.985462 )
-rotation = 9.31322e-10
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 69 )
-animation = "alive"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/obj_enemy"]
-position = Vector2( 2.52783, -0.402496 )
-shape = SubResource( 70 )
-script = ExtResource( 39 )
-
-[node name="Hurtbox" parent="Path2D/PathFollow2D" instance=ExtResource( 24 )]
-rotation = 9.31322e-10
-collision_layer = 8
-
-[node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hurtbox" index="0"]
-position = Vector2( 2.94336, 0.0334396 )
-shape = SubResource( 71 )
-
-[node name="Key" type="Area2D" parent="."]
-position = Vector2( 1005.17, 210.702 )
-script = ExtResource( 35 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
-position = Vector2( -1.00139, 1.25174 )
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 72 )
-
-[node name="Sprite" type="Sprite" parent="Key"]
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 33 )
-
-[node name="obj_door" type="StaticBody2D" parent="."]
-position = Vector2( 1017.98, 18.7673 )
-script = ExtResource( 37 )
-
-[node name="Sprite" type="AnimatedSprite" parent="obj_door"]
-position = Vector2( 3.32959, -1.42697 )
-scale = Vector2( 1.71553, 1 )
-frames = SubResource( 73 )
-animation = "closed"
-
-[node name="door_collision" type="CollisionShape2D" parent="obj_door"]
-position = Vector2( 3.72278, -3.64516 )
-scale = Vector2( 2.5, 2 )
-shape = SubResource( 74 )
-script = ExtResource( 46 )
-
-[node name="Area2D" type="Area2D" parent="obj_door"]
-scale = Vector2( 1.5, 1.5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_door/Area2D"]
-position = Vector2( 2.38139, 3.80061 )
-scale = Vector2( 1.5, 1.5 )
-shape = SubResource( 75 )
-
-[node name="Enemy" parent="." instance=ExtResource( 23 )]
-position = Vector2( -134.99, 412.405 )
-
-[node name="Sprite" parent="Enemy" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy2" parent="." instance=ExtResource( 23 )]
-position = Vector2( -153.924, 402.465 )
-
-[node name="Enemy3" parent="." instance=ExtResource( 23 )]
-position = Vector2( -120.632, 390.789 )
-
-[node name="Sprite" parent="Enemy3" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy3" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy4" parent="." instance=ExtResource( 23 )]
-position = Vector2( 266.945, 485.455 )
-
-[node name="Enemy5" parent="." instance=ExtResource( 23 )]
-position = Vector2( 287.01, 462.374 )
-
-[node name="Sprite" parent="Enemy5" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy5" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy6" parent="." instance=ExtResource( 23 )]
-position = Vector2( 312.875, 459.939 )
-
-[node name="Enemy7" parent="." instance=ExtResource( 23 )]
-position = Vector2( 313.686, 491.022 )
-
-[node name="Sprite" parent="Enemy7" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy7" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy8" parent="." instance=ExtResource( 23 )]
-position = Vector2( 446.055, 481.389 )
-
-[node name="Enemy9" parent="." instance=ExtResource( 23 )]
-position = Vector2( 476.947, 470.428 )
-
-[node name="Sprite" parent="Enemy9" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy9" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy10" parent="." instance=ExtResource( 23 )]
-position = Vector2( 508.669, 455.812 )
-
-[node name="Enemy11" parent="." instance=ExtResource( 23 )]
-position = Vector2( 468.144, 424.09 )
-
-[node name="Sprite" parent="Enemy11" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy11" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy12" parent="." instance=ExtResource( 23 )]
-position = Vector2( 468.144, 424.09 )
-
-[node name="Enemy13" parent="." instance=ExtResource( 23 )]
-position = Vector2( -132.61, 165.855 )
-
-[node name="Sprite" parent="Enemy13" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy13" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy14" parent="." instance=ExtResource( 23 )]
-position = Vector2( 18.2913, 146.717 )
-
-[node name="Enemy15" parent="." instance=ExtResource( 23 )]
-position = Vector2( 28.3622, 524.414 )
-
-[node name="Sprite" parent="Enemy15" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy15" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy16" parent="." instance=ExtResource( 23 )]
-position = Vector2( -183.586, 226.032 )
-
-[node name="Enemy17" parent="." instance=ExtResource( 23 )]
-position = Vector2( 200.048, 352.281 )
-
-[node name="Sprite" parent="Enemy17" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy17" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy18" parent="." instance=ExtResource( 23 )]
-position = Vector2( 217.153, 293.636 )
-
-[node name="Enemy19" parent="." instance=ExtResource( 23 )]
-position = Vector2( 337.433, 125.321 )
-
-[node name="Sprite" parent="Enemy19" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy19" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy20" parent="." instance=ExtResource( 23 )]
-position = Vector2( 422.409, 281.419 )
-
-[node name="Enemy21" parent="." instance=ExtResource( 23 )]
-position = Vector2( 594.27, 521.699 )
-
-[node name="Sprite" parent="Enemy21" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy21" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy22" parent="." instance=ExtResource( 23 )]
-position = Vector2( 700.971, 542.876 )
-
-[node name="Enemy23" parent="." instance=ExtResource( 23 )]
-position = Vector2( 774.276, 404.409 )
-
-[node name="Sprite" parent="Enemy23" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy23" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy24" parent="." instance=ExtResource( 23 )]
-position = Vector2( 841.88, 287.12 )
-
-[node name="Enemy25" parent="." instance=ExtResource( 23 )]
-position = Vector2( 918.444, 318.886 )
-
-[node name="Sprite" parent="Enemy25" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy25" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy26" parent="." instance=ExtResource( 23 )]
-position = Vector2( 907.856, 215.443 )
-
-[node name="Enemy27" parent="." instance=ExtResource( 23 )]
-position = Vector2( 850.84, 184.492 )
-
-[node name="Sprite" parent="Enemy27" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy27" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy28" parent="." instance=ExtResource( 23 )]
-position = Vector2( 906.227, 191.823 )
-
-[node name="Enemy29" parent="." instance=ExtResource( 23 )]
-position = Vector2( 880.162, 259.427 )
-
-[node name="Sprite" parent="Enemy29" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy29" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy30" parent="." instance=ExtResource( 23 )]
-position = Vector2( 841.881, 235.806 )
-
-[node name="Enemy31" parent="." instance=ExtResource( 23 )]
-position = Vector2( 950.21, 186.936 )
-
-[node name="Sprite" parent="Enemy31" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy31" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy32" parent="." instance=ExtResource( 23 )]
-position = Vector2( 939.622, 274.088 )
-
-[node name="Enemy33" parent="." instance=ExtResource( 23 )]
-position = Vector2( 831.292, 408.482 )
-
-[node name="Sprite" parent="Enemy33" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy33" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy34" parent="." instance=ExtResource( 23 )]
-position = Vector2( 773.462, 124.219 )
-
-[node name="Enemy35" parent="." instance=ExtResource( 23 )]
-position = Vector2( 837.808, 74.5335 )
-
-[node name="Sprite" parent="Enemy35" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy35" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy36" parent="." instance=ExtResource( 23 )]
-position = Vector2( 652.915, 344.95 )
-
-[node name="Enemy37" parent="." instance=ExtResource( 23 )]
-position = Vector2( 648.028, 263.499 )
-
-[node name="Sprite" parent="Enemy37" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy37" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy38" parent="." instance=ExtResource( 23 )]
-position = Vector2( 707.487, 257.798 )
-
-[node name="Enemy39" parent="." instance=ExtResource( 23 )]
-position = Vector2( 356.434, 363.684 )
-
-[node name="Sprite" parent="Enemy39" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy39" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy40" parent="." instance=ExtResource( 23 )]
-position = Vector2( 446.844, 199.968 )
-
-[node name="Enemy41" parent="." instance=ExtResource( 23 )]
-position = Vector2( 368.651, 283.862 )
-
-[node name="Sprite" parent="Enemy41" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy41" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy42" parent="." instance=ExtResource( 23 )]
-position = Vector2( 304.305, 164.129 )
-
-[node name="Enemy43" parent="." instance=ExtResource( 23 )]
-position = Vector2( 132.444, 110.372 )
-
-[node name="Sprite" parent="Enemy43" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy43" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="Enemy44" parent="." instance=ExtResource( 23 )]
-position = Vector2( 288.015, 41.9531 )
-
-[node name="Enemy45" parent="." instance=ExtResource( 23 )]
-position = Vector2( 127.557, 557.537 )
-
-[node name="Sprite" parent="Enemy45" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy45" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 985.417, -417.669 )
-
-[node name="Sprite" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 52.2871, 540.539 )
-scale = Vector2( 0.353352, 0.359864 )
-texture = ExtResource( 30 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 52.1439, 541.369 )
-scale = Vector2( 1, 0.1 )
-shape = SubResource( 76 )
-
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -94.28, 348.567 )
+position = Vector2( -57.346, 344.385 )
 collision_layer = 2
 script = ExtResource( 12 )
 
@@ -1584,10 +1078,10 @@ script = ExtResource( 12 )
 position = Vector2( 0, 3.31964 )
 scale = Vector2( 0.40462, 0.431326 )
 texture = ExtResource( 11 )
-hframes = 22
+hframes = 25
+frame = 5
 
 [node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
-visible = false
 current = true
 zoom = Vector2( 0.18, 0.2 )
 drag_margin_left = 0.1
@@ -1595,13 +1089,14 @@ drag_margin_right = 0.1
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
+[node name="Particles2D" type="Particles2D" parent="obj_player/Sprite"]
+process_material = SubResource( 19 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
-visible = false
 position = Vector2( 0.0121993, 7.88678 )
 shape = SubResource( 20 )
 
 [node name="Light2D" type="Light2D" parent="obj_player"]
-visible = false
 position = Vector2( -0.506622, 4.08057 )
 scale = Vector2( 0.087818, 0.0681612 )
 texture = ExtResource( 13 )
@@ -1609,23 +1104,28 @@ shadow_enabled = true
 
 [node name="player_anim" type="AnimationPlayer" parent="obj_player"]
 anims/attack_down = SubResource( 21 )
-anims/down_walk = SubResource( 22 )
-anims/idle_down = SubResource( 23 )
-anims/left_attack = SubResource( 24 )
-anims/left_idle = SubResource( 25 )
-anims/left_walk = SubResource( 26 )
-anims/right_attack = SubResource( 27 )
-anims/right_idle = SubResource( 28 )
-anims/right_walk = SubResource( 29 )
-anims/up_attack = SubResource( 30 )
-anims/up_idle = SubResource( 31 )
-anims/up_walk = SubResource( 32 )
+anims/down_dead = SubResource( 22 )
+anims/down_walk = SubResource( 23 )
+anims/idle_down = SubResource( 24 )
+anims/left_attack = SubResource( 25 )
+anims/left_dead = SubResource( 26 )
+anims/left_idle = SubResource( 27 )
+anims/left_walk = SubResource( 28 )
+anims/right_attack = SubResource( 29 )
+anims/right_dead = SubResource( 30 )
+anims/right_idle = SubResource( 31 )
+anims/right_walk = SubResource( 32 )
+anims/up_attack = SubResource( 33 )
+anims/up_dead = SubResource( 34 )
+anims/up_idle = SubResource( 35 )
+anims/up_walk = SubResource( 36 )
 
 [node name="AnimationTree" type="AnimationTree" parent="obj_player"]
-tree_root = SubResource( 52 )
+tree_root = SubResource( 63 )
 anim_player = NodePath("../player_anim")
-parameters/playback = SubResource( 53 )
+parameters/playback = SubResource( 64 )
 parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
+parameters/Death/blend_position = Vector2( 0.239115, -0.547945 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 0 )
 
@@ -1649,7 +1149,7 @@ margin_left = -15.4272
 margin_top = 588.994
 margin_right = 2.57281
 margin_bottom = 594.994
-custom_fonts/font = SubResource( 54 )
+custom_fonts/font = SubResource( 65 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "x $"
 __meta__ = {
@@ -1661,7 +1161,7 @@ margin_left = 5.56313
 margin_top = 590.285
 margin_right = 19.5631
 margin_bottom = 596.285
-custom_fonts/font = SubResource( 55 )
+custom_fonts/font = SubResource( 66 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 19 )
@@ -1679,7 +1179,7 @@ margin_left = 36.8544
 margin_top = 590.417
 margin_right = 43.8544
 margin_bottom = 598.417
-custom_fonts/font = SubResource( 56 )
+custom_fonts/font = SubResource( 67 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "x"
 __meta__ = {
@@ -1691,7 +1191,7 @@ margin_left = 45.5728
 margin_top = 590.851
 margin_right = 53.5728
 margin_bottom = 596.851
-custom_fonts/font = SubResource( 57 )
+custom_fonts/font = SubResource( 68 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 34 )
@@ -1702,7 +1202,7 @@ __meta__ = {
 [node name="HitboxPivot" type="Position2D" parent="obj_player"]
 visible = false
 position = Vector2( 0, 5.101 )
-rotation = 1.5708
+rotation = -1.5708
 
 [node name="SwordHitbox" parent="obj_player/HitboxPivot" instance=ExtResource( 22 )]
 position = Vector2( 8, 0 )
@@ -1710,20 +1210,30 @@ collision_mask = 8
 
 [node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
 position = Vector2( 3.37391, 0.250439 )
-shape = SubResource( 58 )
+shape = SubResource( 69 )
 disabled = true
 
 [node name="Area2D" type="Area2D" parent="obj_player"]
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/Area2D"]
-visible = false
 position = Vector2( 0.238064, 8.45447 )
-shape = SubResource( 59 )
+shape = SubResource( 70 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="obj_player"]
+stream = ExtResource( 7 )
+
+[node name="Hurtbox" parent="obj_player" instance=ExtResource( 24 )]
+collision_layer = 4
+
+[node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
+position = Vector2( -7.62939e-06, 2.89954 )
+shape = SubResource( 71 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
+stream = ExtResource( 47 )
 
 [node name="torch" type="StaticBody2D" parent="."]
-position = Vector2( -58.5176, 70.4823 )
-scale = Vector2( 0.469582, 0.613305 )
 script = ExtResource( 15 )
 
 [node name="torch_light" type="Light2D" parent="torch"]
@@ -1739,153 +1249,693 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 64 )
+process_material = SubResource( 76 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="torch"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 65 )
+frames = SubResource( 77 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="torch"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 66 )
+shape = SubResource( 78 )
 
 [node name="Area2D" type="Area2D" parent="torch"]
 position = Vector2( 0, 2.57212 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="torch/Area2D"]
 position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 67 )
+shape = SubResource( 79 )
 
-[node name="torch2" type="StaticBody2D" parent="."]
-position = Vector2( -59.2889, 120.065 )
-scale = Vector2( 0.469582, 0.613305 )
-script = ExtResource( 15 )
+[node name="Bags" type="Node2D" parent="."]
 
-[node name="torch_light" type="Light2D" parent="torch2"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
+[node name="obj_bag" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 221.54, 363.485 )
 
-[node name="flame" type="Particles2D" parent="torch2/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 64 )
-script = ExtResource( 25 )
+[node name="obj_bag2" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 92.4501, 243.308 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch2"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 65 )
-animation = "off"
+[node name="obj_bag3" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 285.126, 236.228 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch2"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 66 )
+[node name="obj_bag4" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 475.105, 173.091 )
 
-[node name="Area2D" type="Area2D" parent="torch2"]
-position = Vector2( 0, 2.57212 )
+[node name="obj_bag5" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 828.33, 339.18 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch2/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 67 )
+[node name="obj_bag6" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 933.558, 113.367 )
 
-[node name="torch3" type="StaticBody2D" parent="."]
-position = Vector2( -1.54153, 40.3861 )
-scale = Vector2( 0.469582, 0.613305 )
-script = ExtResource( 15 )
+[node name="obj_bag7" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 920.475, 487.068 )
 
-[node name="torch_light" type="Light2D" parent="torch3"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
+[node name="obj_bag8" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 97.4216, 477.968 )
 
-[node name="flame" type="Particles2D" parent="torch3/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 64 )
-script = ExtResource( 25 )
+[node name="obj_bag9" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 743.579, 50.7986 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch3"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 65 )
-animation = "off"
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 3.5, 7.21212 )
+scale = Vector2( 0.994318, 0.969697 )
+curve = SubResource( 80 )
+script = ExtResource( 20 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch3"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 66 )
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 446.034, 36.9063 )
+rotation = -0.0113611
+rotate = false
+script = ExtResource( 31 )
 
-[node name="Area2D" type="Area2D" parent="torch3"]
-position = Vector2( 0, 2.57212 )
+[node name="obj_enemy" type="KinematicBody2D" parent="Path2D/PathFollow2D"]
+rotation = 9.31322e-10
+script = ExtResource( 38 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch3/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 67 )
+[node name="Sprite" type="AnimatedSprite" parent="Path2D/PathFollow2D/obj_enemy"]
+position = Vector2( 3.44867, -0.985462 )
+rotation = 9.31322e-10
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 81 )
+animation = "alive"
 
-[node name="torch4" type="StaticBody2D" parent="."]
-position = Vector2( -1.74545, 219.621 )
-scale = Vector2( 0.469582, 0.613305 )
-script = ExtResource( 15 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/obj_enemy"]
+position = Vector2( 2.52783, -0.402496 )
+shape = SubResource( 82 )
+script = ExtResource( 39 )
 
-[node name="torch_light" type="Light2D" parent="torch4"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
+[node name="Hurtbox" parent="Path2D/PathFollow2D" instance=ExtResource( 24 )]
+rotation = 9.31322e-10
+collision_layer = 8
 
-[node name="flame" type="Particles2D" parent="torch4/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 64 )
-script = ExtResource( 25 )
+[node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hurtbox" index="0"]
+position = Vector2( 2.94336, 0.0334396 )
+shape = SubResource( 83 )
 
-[node name="Sprite" type="AnimatedSprite" parent="torch4"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 65 )
-animation = "off"
+[node name="Hitbox" parent="Path2D/PathFollow2D" instance=ExtResource( 22 )]
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch4"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 66 )
+[node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hitbox" index="0"]
+position = Vector2( 3.40735, -0.519344 )
+shape = SubResource( 84 )
 
-[node name="Area2D" type="Area2D" parent="torch4"]
-position = Vector2( 0, 2.57212 )
+[node name="Key" type="Area2D" parent="."]
+position = Vector2( 1005.17, 210.702 )
+script = ExtResource( 35 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch4/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 67 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
+position = Vector2( -1.00139, 1.25174 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 85 )
+
+[node name="Sprite" type="Sprite" parent="Key"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 33 )
+
+[node name="obj_door" type="StaticBody2D" parent="."]
+position = Vector2( 1017.98, 18.7673 )
+script = ExtResource( 37 )
+
+[node name="Sprite" type="AnimatedSprite" parent="obj_door"]
+position = Vector2( 3.32959, -1.42697 )
+scale = Vector2( 1.71553, 1 )
+frames = SubResource( 86 )
+animation = "closed"
+
+[node name="door_collision" type="CollisionShape2D" parent="obj_door"]
+position = Vector2( 3.72278, -3.64516 )
+scale = Vector2( 2.5, 2 )
+shape = SubResource( 87 )
+script = ExtResource( 46 )
+
+[node name="Area2D" type="Area2D" parent="obj_door"]
+scale = Vector2( 1.5, 1.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_door/Area2D"]
+position = Vector2( 2.38139, 3.80061 )
+scale = Vector2( 1.5, 1.5 )
+shape = SubResource( 88 )
+
+[node name="Enemy" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( -206.149, 398.52 )
+
+[node name="Sprite" parent="Enemy" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( -264.685, 390.473 )
+
+[node name="Sprite" parent="Enemy2" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy2" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( -253.799, 325.468 )
+
+[node name="Sprite" parent="Enemy3" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy3" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( -162.128, 289.336 )
+
+[node name="Sprite" parent="Enemy4" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy4" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 13.8312, 532.973 )
+
+[node name="Sprite" parent="Enemy5" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy5" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 59.2216, 446.515 )
+
+[node name="Sprite" parent="Enemy6" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy6" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy7" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 188.368, 424.36 )
+
+[node name="Sprite" parent="Enemy7" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy7" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy8" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 68.4077, 216.861 )
+
+[node name="Sprite" parent="Enemy8" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy8" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy9" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( -176.917, 224.966 )
+
+[node name="Sprite" parent="Enemy9" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy9" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy10" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( -110.452, 133.645 )
+
+[node name="Sprite" parent="Enemy10" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy10" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy11" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 300.764, 476.775 )
+
+[node name="Sprite" parent="Enemy11" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy11" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy12" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 275.907, 517.843 )
+
+[node name="Sprite" parent="Enemy12" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy12" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy13" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 267.261, 440.571 )
+
+[node name="Sprite" parent="Enemy13" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy13" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy14" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 192.691, 286.027 )
+
+[node name="Sprite" parent="Enemy14" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy14" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy15" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 228.895, 255.767 )
+
+[node name="Sprite" parent="Enemy15" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy15" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy16" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 228.895, 255.767 )
+
+[node name="Sprite" parent="Enemy16" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy16" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy17" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 175.399, 195.246 )
+
+[node name="Sprite" parent="Enemy17" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy17" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy18" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 314.813, 155.26 )
+
+[node name="Sprite" parent="Enemy18" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy18" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy19" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 351.558, 296.835 )
+
+[node name="Sprite" parent="Enemy19" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy19" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy20" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 369.39, 374.647 )
+
+[node name="Sprite" parent="Enemy20" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy20" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy21" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 396.408, 546.482 )
+
+[node name="Sprite" parent="Enemy21" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy21" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy22" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 440.942, 487.225 )
+
+[node name="Sprite" parent="Enemy22" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy22" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy23" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 569.243, 426.848 )
+
+[node name="Sprite" parent="Enemy23" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy23" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy24" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 576.393, 263.195 )
+
+[node name="Sprite" parent="Enemy24" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy24" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy25" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 500.525, 200.833 )
+
+[node name="Sprite" parent="Enemy25" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy25" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy26" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 437.764, 281.467 )
+
+[node name="Sprite" parent="Enemy26" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy26" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy27" parent="." instance=ExtResource( 23 )]
+visible = false
+position = Vector2( 451.667, 172.63 )
+
+[node name="Sprite" parent="Enemy27" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy27" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy28" parent="." instance=ExtResource( 23 )]
+position = Vector2( 645.508, 471.734 )
+
+[node name="Sprite" parent="Enemy28" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy28" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy29" parent="." instance=ExtResource( 23 )]
+position = Vector2( 835.377, 495.964 )
+
+[node name="Sprite" parent="Enemy29" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy29" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy30" parent="." instance=ExtResource( 23 )]
+position = Vector2( 842.527, 307.684 )
+
+[node name="Sprite" parent="Enemy30" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy30" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy31" parent="." instance=ExtResource( 23 )]
+position = Vector2( 695.16, 253.662 )
+
+[node name="Sprite" parent="Enemy31" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy31" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy32" parent="." instance=ExtResource( 23 )]
+position = Vector2( 759.509, 224.268 )
+
+[node name="Sprite" parent="Enemy32" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy32" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy33" parent="." instance=ExtResource( 23 )]
+position = Vector2( 1012.93, 441.148 )
+
+[node name="Sprite" parent="Enemy33" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy33" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy34" parent="." instance=ExtResource( 23 )]
+position = Vector2( 905.685, 273.126 )
+
+[node name="Sprite" parent="Enemy34" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy34" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy35" parent="." instance=ExtResource( 23 )]
+position = Vector2( 884.632, 221.885 )
+
+[node name="Sprite" parent="Enemy35" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy35" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy36" parent="." instance=ExtResource( 23 )]
+position = Vector2( 963.281, 177.794 )
+
+[node name="Sprite" parent="Enemy36" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy36" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy37" parent="." instance=ExtResource( 23 )]
+position = Vector2( 940.64, 309.67 )
+
+[node name="Sprite" parent="Enemy37" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy37" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy38" parent="." instance=ExtResource( 23 )]
+position = Vector2( 834.98, 206.791 )
+
+[node name="Sprite" parent="Enemy38" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy38" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy39" parent="." instance=ExtResource( 23 )]
+position = Vector2( 890.59, 329.928 )
+
+[node name="Sprite" parent="Enemy39" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy39" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy40" parent="." instance=ExtResource( 23 )]
+position = Vector2( 812.438, 97.7925 )
+
+[node name="Sprite" parent="Enemy40" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy40" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy41" parent="." instance=ExtResource( 23 )]
+position = Vector2( 751.309, 38.985 )
+
+[node name="Sprite" parent="Enemy41" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy41" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy42" parent="." instance=ExtResource( 23 )]
+position = Vector2( 512.21, 24.2831 )
+
+[node name="Sprite" parent="Enemy42" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy42" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy43" parent="." instance=ExtResource( 23 )]
+position = Vector2( 526.381, 169.904 )
+
+[node name="Sprite" parent="Enemy43" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy43" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy44" parent="." instance=ExtResource( 23 )]
+position = Vector2( 388.647, 94.0731 )
+
+[node name="Sprite" parent="Enemy44" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy44" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy45" parent="." instance=ExtResource( 23 )]
+position = Vector2( 68.3008, 347.1 )
+
+[node name="Sprite" parent="Enemy45" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy45" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy46" parent="." instance=ExtResource( 23 )]
+position = Vector2( 2.52917, 98.7157 )
+
+[node name="Sprite" parent="Enemy46" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy46" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy47" parent="." instance=ExtResource( 23 )]
+position = Vector2( -63.2425, 156.75 )
+
+[node name="Sprite" parent="Enemy47" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy47" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy48" parent="." instance=ExtResource( 23 )]
+position = Vector2( 146.453, 537.451 )
+
+[node name="Sprite" parent="Enemy48" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy48" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy49" parent="." instance=ExtResource( 23 )]
+position = Vector2( 552.69, 347.874 )
+
+[node name="Sprite" parent="Enemy49" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy49" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="Enemy50" parent="." instance=ExtResource( 23 )]
+position = Vector2( 288.055, 450.014 )
+
+[node name="Sprite" parent="Enemy50" index="0"]
+position = Vector2( 0.157776, 1.26227 )
+scale = Vector2( 0.437912, 0.418188 )
+
+[node name="Hurtbox" parent="Enemy50" index="1"]
+position = Vector2( 19.9173, -16.0714 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 985.417, -417.669 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 52.2871, 540.539 )
+scale = Vector2( 0.353352, 0.359864 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 52.1439, 541.369 )
+scale = Vector2( 1, 0.1 )
+shape = SubResource( 89 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 48 )
+autoplay = true
 [connection signal="area_entered" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_exited"]
 [connection signal="area_entered" from="false_wall/AnimatedSprite/Area2D" to="false_wall" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="false_wall/AnimatedSprite/Area2D" to="false_wall" method="_on_Area2D_area_exited"]
+[connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player" method="_on_Hurtbox_area_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag" to="Bags/obj_bag" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag4" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag4" to="Bags/obj_bag4" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag5" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag5" to="Bags/obj_bag5" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag2" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag2" to="Bags/obj_bag2" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag3" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag3" to="Bags/obj_bag3" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="Bags/obj_bag4" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="Bags/obj_bag4" to="Bags/obj_bag4" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="Bags/obj_bag5" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="Bags/obj_bag5" to="Bags/obj_bag5" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag6" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag6" to="Bags/obj_bag6" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag7" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
@@ -1894,142 +1944,116 @@ shape = SubResource( 67 )
 [connection signal="body_entered" from="Bags/obj_bag8" to="Bags/obj_bag8" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag9" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag9" to="Bags/obj_bag9" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag10" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag10" to="Bags/obj_bag10" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag11" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag11" to="Bags/obj_bag11" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag12" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag12" to="Bags/obj_bag12" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag13" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag13" to="Bags/obj_bag13" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag14" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag14" to="Bags/obj_bag14" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag15" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag15" to="Bags/obj_bag15" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag16" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag16" to="Bags/obj_bag16" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag17" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag17" to="Bags/obj_bag17" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag18" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag18" to="Bags/obj_bag18" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag19" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag19" to="Bags/obj_bag19" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag20" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag20" to="Bags/obj_bag20" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag21" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag21" to="Bags/obj_bag21" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag22" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag22" to="Bags/obj_bag22" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag23" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag23" to="Bags/obj_bag23" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag24" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag24" to="Bags/obj_bag24" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag25" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag25" to="Bags/obj_bag25" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag26" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag26" to="Bags/obj_bag26" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag27" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag27" to="Bags/obj_bag27" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag28" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag28" to="Bags/obj_bag28" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag29" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag29" to="Bags/obj_bag29" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag30" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag30" to="Bags/obj_bag30" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag31" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag31" to="Bags/obj_bag31" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag32" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag32" to="Bags/obj_bag32" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag33" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag33" to="Bags/obj_bag33" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag34" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag34" to="Bags/obj_bag34" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag35" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag35" to="Bags/obj_bag35" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag36" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag36" to="Bags/obj_bag36" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag37" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag37" to="Bags/obj_bag37" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag38" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag38" to="Bags/obj_bag38" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag39" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag39" to="Bags/obj_bag39" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag40" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag40" to="Bags/obj_bag40" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag41" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag41" to="Bags/obj_bag41" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag42" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag42" to="Bags/obj_bag42" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag43" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag43" to="Bags/obj_bag43" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag44" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag44" to="Bags/obj_bag44" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag45" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag45" to="Bags/obj_bag45" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag46" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag46" to="Bags/obj_bag46" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag47" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag47" to="Bags/obj_bag47" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag48" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag48" to="Bags/obj_bag48" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag49" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag49" to="Bags/obj_bag49" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag50" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag50" to="Bags/obj_bag50" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag51" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag51" to="Bags/obj_bag51" method="_on_obj_bag_body_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
 
+[editable path="obj_player/HitboxPivot/SwordHitbox"]
+
+[editable path="obj_player/Hurtbox"]
+
 [editable path="Path2D/PathFollow2D/Hurtbox"]
+
+[editable path="Path2D/PathFollow2D/Hitbox"]
 
 [editable path="Enemy"]
 
+[editable path="Enemy2"]
+
 [editable path="Enemy3"]
+
+[editable path="Enemy4"]
 
 [editable path="Enemy5"]
 
+[editable path="Enemy6"]
+
 [editable path="Enemy7"]
+
+[editable path="Enemy8"]
 
 [editable path="Enemy9"]
 
+[editable path="Enemy10"]
+
 [editable path="Enemy11"]
+
+[editable path="Enemy12"]
 
 [editable path="Enemy13"]
 
+[editable path="Enemy14"]
+
 [editable path="Enemy15"]
+
+[editable path="Enemy16"]
 
 [editable path="Enemy17"]
 
+[editable path="Enemy18"]
+
 [editable path="Enemy19"]
+
+[editable path="Enemy20"]
 
 [editable path="Enemy21"]
 
+[editable path="Enemy22"]
+
 [editable path="Enemy23"]
+
+[editable path="Enemy24"]
 
 [editable path="Enemy25"]
 
+[editable path="Enemy26"]
+
 [editable path="Enemy27"]
+
+[editable path="Enemy28"]
 
 [editable path="Enemy29"]
 
+[editable path="Enemy30"]
+
 [editable path="Enemy31"]
+
+[editable path="Enemy32"]
 
 [editable path="Enemy33"]
 
+[editable path="Enemy34"]
+
 [editable path="Enemy35"]
+
+[editable path="Enemy36"]
 
 [editable path="Enemy37"]
 
+[editable path="Enemy38"]
+
 [editable path="Enemy39"]
+
+[editable path="Enemy40"]
 
 [editable path="Enemy41"]
 
+[editable path="Enemy42"]
+
 [editable path="Enemy43"]
+
+[editable path="Enemy44"]
 
 [editable path="Enemy45"]
 
-[editable path="obj_player/HitboxPivot/SwordHitbox"]
+[editable path="Enemy46"]
+
+[editable path="Enemy47"]
+
+[editable path="Enemy48"]
+
+[editable path="Enemy49"]
+
+[editable path="Enemy50"]
