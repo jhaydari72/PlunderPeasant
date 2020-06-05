@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/175949__freefire66__my-sword-hit-1-wav.wav-eb2bce5b3b6975091db9d9989d77411a.sample"
+
+[deps]
+
+source_file="res://Audio/175949__freefire66__my-sword-hit-1-wav.wav"
+dest_files=[ "res://.import/175949__freefire66__my-sword-hit-1-wav.wav-eb2bce5b3b6975091db9d9989d77411a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
