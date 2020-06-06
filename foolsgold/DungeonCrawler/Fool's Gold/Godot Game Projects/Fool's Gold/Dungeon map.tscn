@@ -1,13 +1,13 @@
-[gd_scene load_steps=143 format=2]
+[gd_scene load_steps=138 format=2]
 
 [ext_resource path="res://Tile map/Updated Titles/Left Middle Wall.png" type="Texture" id=1]
 [ext_resource path="res://Tile map/Updated Titles/Top Right Wall.png" type="Texture" id=2]
 [ext_resource path="res://Tile map/Updated Titles/Middle Right Wall.png" type="Texture" id=3]
 [ext_resource path="res://Tile map/Updated Titles/Bottom Right Wall.png" type="Texture" id=4]
-[ext_resource path="res://Barrel.png" type="Texture" id=5]
+[ext_resource path="res://Tile map/room_back_wall_v1.png" type="Texture" id=5]
 [ext_resource path="res://Tile map/Updated Titles/Center Title.png" type="Texture" id=6]
 [ext_resource path="res://Audio/hit_sound_mixdown.wav" type="AudioStream" id=7]
-[ext_resource path="res://hit and hurt/Hitbox.gd" type="Script" id=8]
+[ext_resource path="res://Tile map/room_center_v1.png" type="Texture" id=8]
 [ext_resource path="res://Tile map/Updated Titles/Bottom Middle Wall.png" type="Texture" id=9]
 [ext_resource path="res://skele anims/skeleton_anim_v1.png" type="Texture" id=10]
 [ext_resource path="res://Player anims/playerSS.png" type="Texture" id=11]
@@ -48,7 +48,6 @@
 [ext_resource path="res://door_collision.gd" type="Script" id=46]
 [ext_resource path="res://Audio/463351__ddragonpearl__hit-1.wav" type="AudioStream" id=47]
 [ext_resource path="res://Audio/388340__phlair__dungeon-ambiance.wav" type="AudioStream" id=48]
-[ext_resource path="res://Player anims/SwordHitbox.gd" type="Script" id=49]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 7.05715, 0, 7.05715, 42.7292, 63.9922, 42.7292, 64, 64, 0, 64, 0, 0 )
@@ -341,33 +340,30 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=16]
-extents = Vector2( 2.66423, 9.26929 )
+extents = Vector2( 7.1344, 20.6957 )
 
-[sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 31.6195, 10.031 )
-
-[sub_resource type="SpriteFrames" id=18]
+[sub_resource type="SpriteFrames" id=17]
 animations = [ {
-"frames": [ ExtResource( 42 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "open",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "closed",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 12.8753, 10 )
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 32.7207, 15.1108 )
 
-[sub_resource type="Curve2D" id=20]
+[sub_resource type="Curve2D" id=19]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
 }
 
-[sub_resource type="SpriteFrames" id=21]
+[sub_resource type="SpriteFrames" id=20]
 animations = [ {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
@@ -380,19 +376,19 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 3.42169, 12.7206 )
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 6.23898, 11.6251 )
 
-[sub_resource type="CapsuleShape2D" id=23]
-radius = 7.82721
-height = 12.0289
+[sub_resource type="CapsuleShape2D" id=22]
+radius = 8.28271
+height = 9.97013
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 9.78305, 15.5923 )
 
 [sub_resource type="RectangleShape2D" id=24]
-extents = Vector2( 3.74698, 12.5364 )
 
-[sub_resource type="RectangleShape2D" id=25]
-
-[sub_resource type="SpriteFrames" id=26]
+[sub_resource type="SpriteFrames" id=25]
 animations = [ {
 "frames": [ ExtResource( 45 ) ],
 "loop": true,
@@ -405,92 +401,26 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=27]
+[sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 12.5046, 10 )
 
-[sub_resource type="RectangleShape2D" id=28]
+[sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 12.6926, 10.9488 )
 
-[sub_resource type="RectangleShape2D" id=29]
+[sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 4.51196, 59.8682 )
 
+[sub_resource type="ParticlesMaterial" id=29]
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
 [sub_resource type="CapsuleShape2D" id=30]
-radius = 19.4561
-height = 10.6115
-
-[sub_resource type="Gradient" id=31]
-offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
-colors = PoolColorArray( 1, 1, 1, 1, 0.769531, 0.519354, 0.165329, 1, 0.652344, 0.0311148, 0, 1, 1, 0, 0, 1 )
-
-[sub_resource type="GradientTexture" id=32]
-gradient = SubResource( 31 )
-
-[sub_resource type="Curve" id=33]
-_data = [ Vector2( 0.00632912, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.336364 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=34]
-curve = SubResource( 33 )
-
-[sub_resource type="ParticlesMaterial" id=35]
-emission_shape = 2
-emission_box_extents = Vector3( 2, 5, 1 )
-flag_disable_z = true
-spread = 0.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 15.0
-initial_velocity_random = 1.0
-angular_velocity = 200.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-linear_accel = 20.0
-angle = 45.0
-scale = 2.0
-scale_curve = SubResource( 34 )
-color_ramp = SubResource( 32 )
-
-[sub_resource type="SpriteFrames" id=36]
-animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=37]
-extents = Vector2( 2.2953, 6.27969 )
-
-[sub_resource type="RectangleShape2D" id=38]
-extents = Vector2( 15.6504, 18.1411 )
-
-[sub_resource type="Gradient" id=39]
-colors = PoolColorArray( 0.398438, 0.398438, 0.398438, 1, 0.214844, 0.214005, 0.214005, 1 )
-
-[sub_resource type="GradientTexture" id=40]
-gradient = SubResource( 39 )
-
-[sub_resource type="ParticlesMaterial" id=41]
-emission_shape = 2
-emission_box_extents = Vector3( 1, 1, 1 )
-flag_disable_z = true
-spread = 180.0
-gravity = Vector3( 0, 5, 0 )
-initial_velocity = 5.0
-initial_velocity_random = 1.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-scale = 0.35
-color_ramp = SubResource( 40 )
-
-[sub_resource type="CapsuleShape2D" id=42]
 radius = 6.90907
 height = 0.224829
 
-[sub_resource type="Animation" id=43]
+[sub_resource type="Animation" id=31]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -543,7 +473,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=44]
+[sub_resource type="Animation" id=32]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -557,7 +487,7 @@ tracks/0/keys = {
 "values": [ 2, 3, 4 ]
 }
 
-[sub_resource type="Animation" id=45]
+[sub_resource type="Animation" id=33]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -573,7 +503,7 @@ tracks/0/keys = {
 "values": [ 19, 20, 19, 20 ]
 }
 
-[sub_resource type="Animation" id=46]
+[sub_resource type="Animation" id=34]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -589,7 +519,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=35]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -642,7 +572,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=36]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -656,7 +586,7 @@ tracks/0/keys = {
 "values": [ 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id=37]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -672,7 +602,7 @@ tracks/0/keys = {
 "values": [ 5 ]
 }
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id=38]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -688,7 +618,7 @@ tracks/0/keys = {
 "values": [ 21, 5, 21, 5 ]
 }
 
-[sub_resource type="Animation" id=51]
+[sub_resource type="Animation" id=39]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -741,7 +671,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=52]
+[sub_resource type="Animation" id=40]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -755,7 +685,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10 ]
 }
 
-[sub_resource type="Animation" id=53]
+[sub_resource type="Animation" id=41]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -771,7 +701,7 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=54]
+[sub_resource type="Animation" id=42]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -787,7 +717,7 @@ tracks/0/keys = {
 "values": [ 22, 8, 22, 8 ]
 }
 
-[sub_resource type="Animation" id=55]
+[sub_resource type="Animation" id=43]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -840,7 +770,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=56]
+[sub_resource type="Animation" id=44]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -854,7 +784,7 @@ tracks/0/keys = {
 "values": [ 15, 16, 17, 18 ]
 }
 
-[sub_resource type="Animation" id=57]
+[sub_resource type="Animation" id=45]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -870,7 +800,7 @@ tracks/0/keys = {
 "values": [ 13 ]
 }
 
-[sub_resource type="Animation" id=58]
+[sub_resource type="Animation" id=46]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -886,160 +816,209 @@ tracks/0/keys = {
 "values": [ 23, 24, 23, 24 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=59]
+[sub_resource type="AnimationNodeAnimation" id=47]
 animation = "attack_down"
 
-[sub_resource type="AnimationNodeAnimation" id=60]
+[sub_resource type="AnimationNodeAnimation" id=48]
 animation = "right_attack"
 
-[sub_resource type="AnimationNodeAnimation" id=61]
+[sub_resource type="AnimationNodeAnimation" id=49]
 animation = "left_attack"
 
-[sub_resource type="AnimationNodeAnimation" id=62]
+[sub_resource type="AnimationNodeAnimation" id=50]
 animation = "up_attack"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=63]
-blend_point_0/node = SubResource( 59 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=51]
+blend_point_0/node = SubResource( 47 )
 blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 60 )
+blend_point_1/node = SubResource( 48 )
 blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 61 )
+blend_point_2/node = SubResource( 49 )
 blend_point_2/pos = Vector2( -1, 0 )
-blend_point_3/node = SubResource( 62 )
+blend_point_3/node = SubResource( 50 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=64]
+[sub_resource type="AnimationNodeAnimation" id=52]
 animation = "down_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=65]
+[sub_resource type="AnimationNodeAnimation" id=53]
 animation = "right_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=66]
+[sub_resource type="AnimationNodeAnimation" id=54]
 animation = "up_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=67]
+[sub_resource type="AnimationNodeAnimation" id=55]
 animation = "left_dead"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=68]
-blend_point_0/node = SubResource( 64 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=56]
+blend_point_0/node = SubResource( 52 )
 blend_point_0/pos = Vector2( -0.00142753, 0.989446 )
-blend_point_1/node = SubResource( 65 )
+blend_point_1/node = SubResource( 53 )
 blend_point_1/pos = Vector2( 0.998572, -0.00263858 )
-blend_point_2/node = SubResource( 66 )
+blend_point_2/node = SubResource( 54 )
 blend_point_2/pos = Vector2( -0.00142753, -0.989446 )
-blend_point_3/node = SubResource( 67 )
+blend_point_3/node = SubResource( 55 )
 blend_point_3/pos = Vector2( -0.999286, 0.0079155 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=69]
+[sub_resource type="AnimationNodeAnimation" id=57]
 animation = "left_idle"
 
-[sub_resource type="AnimationNodeAnimation" id=70]
+[sub_resource type="AnimationNodeAnimation" id=58]
 animation = "idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id=71]
+[sub_resource type="AnimationNodeAnimation" id=59]
 animation = "right_idle"
 
-[sub_resource type="AnimationNodeAnimation" id=72]
+[sub_resource type="AnimationNodeAnimation" id=60]
 animation = "up_idle"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=73]
-blend_point_0/node = SubResource( 69 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=61]
+blend_point_0/node = SubResource( 57 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 70 )
+blend_point_1/node = SubResource( 58 )
 blend_point_1/pos = Vector2( 0, 1 )
-blend_point_2/node = SubResource( 71 )
+blend_point_2/node = SubResource( 59 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 72 )
+blend_point_3/node = SubResource( 60 )
 blend_point_3/pos = Vector2( 0, -1 )
 snap = Vector2( 0.01, 0.01 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=74]
+[sub_resource type="AnimationNodeAnimation" id=62]
 animation = "down_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=75]
+[sub_resource type="AnimationNodeAnimation" id=63]
 animation = "left_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=76]
+[sub_resource type="AnimationNodeAnimation" id=64]
 animation = "right_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=77]
+[sub_resource type="AnimationNodeAnimation" id=65]
 animation = "up_walk"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=78]
-blend_point_0/node = SubResource( 74 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=66]
+blend_point_0/node = SubResource( 62 )
 blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 75 )
+blend_point_1/node = SubResource( 63 )
 blend_point_1/pos = Vector2( -1, 0 )
-blend_point_2/node = SubResource( 76 )
+blend_point_2/node = SubResource( 64 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 77 )
+blend_point_3/node = SubResource( 65 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=79]
+[sub_resource type="AnimationNodeStateMachineTransition" id=67]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=80]
+[sub_resource type="AnimationNodeStateMachineTransition" id=68]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=81]
+[sub_resource type="AnimationNodeStateMachineTransition" id=69]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=82]
+[sub_resource type="AnimationNodeStateMachineTransition" id=70]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=83]
+[sub_resource type="AnimationNodeStateMachineTransition" id=71]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=84]
+[sub_resource type="AnimationNodeStateMachineTransition" id=72]
 
-[sub_resource type="AnimationNodeStateMachine" id=85]
-states/Attack/node = SubResource( 63 )
+[sub_resource type="AnimationNodeStateMachine" id=73]
+states/Attack/node = SubResource( 51 )
 states/Attack/position = Vector2( 508, 204 )
-states/Death/node = SubResource( 68 )
+states/Death/node = SubResource( 56 )
 states/Death/position = Vector2( 342, 100 )
-states/Idle/node = SubResource( 73 )
+states/Idle/node = SubResource( 61 )
 states/Idle/position = Vector2( 495, 100 )
-states/Run/node = SubResource( 78 )
+states/Run/node = SubResource( 66 )
 states/Run/position = Vector2( 657, 100 )
-transitions = [ "Idle", "Run", SubResource( 79 ), "Run", "Idle", SubResource( 80 ), "Idle", "Attack", SubResource( 81 ), "Attack", "Idle", SubResource( 82 ), "Death", "Idle", SubResource( 83 ), "Idle", "Death", SubResource( 84 ) ]
+transitions = [ "Idle", "Run", SubResource( 67 ), "Run", "Idle", SubResource( 68 ), "Idle", "Attack", SubResource( 69 ), "Attack", "Idle", SubResource( 70 ), "Death", "Idle", SubResource( 71 ), "Idle", "Death", SubResource( 72 ) ]
 start_node = "Idle"
 graph_offset = Vector2( 0, 26.5131 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=86]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=74]
 
-[sub_resource type="DynamicFont" id=87]
+[sub_resource type="DynamicFont" id=75]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=88]
+[sub_resource type="DynamicFont" id=76]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=89]
+[sub_resource type="DynamicFont" id=77]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=90]
+[sub_resource type="DynamicFont" id=78]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="CapsuleShape2D" id=91]
+[sub_resource type="CapsuleShape2D" id=79]
 radius = 3.12059
 height = 12.0896
 
-[sub_resource type="RectangleShape2D" id=92]
+[sub_resource type="RectangleShape2D" id=80]
 extents = Vector2( 4.63716, 4.92157 )
 
-[sub_resource type="RectangleShape2D" id=93]
+[sub_resource type="RectangleShape2D" id=81]
 extents = Vector2( 7.67579, 12.1784 )
+
+[sub_resource type="Gradient" id=82]
+offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.769531, 0.519354, 0.165329, 1, 0.652344, 0.0311148, 0, 1, 1, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=83]
+gradient = SubResource( 82 )
+
+[sub_resource type="Curve" id=84]
+_data = [ Vector2( 0.00632912, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.336364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=85]
+curve = SubResource( 84 )
+
+[sub_resource type="ParticlesMaterial" id=86]
+emission_shape = 2
+emission_box_extents = Vector3( 2, 5, 1 )
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 15.0
+initial_velocity_random = 1.0
+angular_velocity = 200.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 20.0
+angle = 45.0
+scale = 2.0
+scale_curve = SubResource( 85 )
+color_ramp = SubResource( 83 )
+
+[sub_resource type="SpriteFrames" id=87]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=88]
+extents = Vector2( 2.2953, 6.27969 )
+
+[sub_resource type="RectangleShape2D" id=89]
+extents = Vector2( 15.6504, 18.1411 )
 
 [node name="Dungeon map" type="Node2D"]
 position = Vector2( -1, 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -925.456
-margin_top = -289.317
-margin_right = 1414.54
-margin_bottom = 988.683
+margin_left = -925.598
+margin_top = -289.175
+margin_right = 1414.4
+margin_bottom = 988.825
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1050,7 +1029,7 @@ position = Vector2( -31.7773, -1.19165 )
 tile_set = SubResource( 13 )
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 2, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 4, 0, 16, 5, 0, 131069, 2, 0, 131070, 3, 0, 131071, 3, 0, 65536, 1, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 4, 0, 65541, 8, 0, 65542, 2, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 2, 0, 65547, 10, 0, 65548, 8, 0, 65549, 3, 0, 65550, 4, 0, 65551, 5, 0, 65552, 5, 0, 196605, 1, 0, 196606, 2, 0, 196607, 8, 0, 131072, 8, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 5, 0, 131077, 8, 0, 131078, 1, 0, 131079, 2, 0, 131080, 2, 0, 131081, 3, 0, 131082, 1, 0, 131083, 10, 0, 131084, 8, 0, 131085, 2, 0, 131086, 3, 0, 131087, 4, 0, 131088, 5, 0, 262141, 1, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 10, 0, 196611, 5, 0, 196612, 5, 0, 196613, 8, 0, 196614, 1, 0, 196615, 1, 0, 196616, 10, 0, 196617, 8, 0, 196618, 1, 0, 196619, 10, 0, 196620, 8, 0, 196621, 1, 0, 196622, 8, 0, 196623, 5, 0, 196624, 5, 0, 327676, 2, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 4, 0, 262145, 8, 0, 262146, 10, 0, 262147, 8, 0, 262148, 5, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0, 262152, 10, 0, 262153, 8, 0, 262154, 1, 0, 262155, 10, 0, 262156, 8, 0, 262157, 1, 0, 262158, 8, 0, 262159, 5, 0, 262160, 5, 0, 393212, 1, 0, 393213, 9, 0, 393214, 9, 0, 393215, 9, 0, 327680, 10, 0, 327681, 8, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 8, 0, 327690, 1, 0, 327691, 10, 0, 327692, 8, 0, 327693, 0, 0, 327694, 7, 0, 327695, 6, 0, 327696, 5, 0, 458748, 0, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 10, 0, 393217, 3, 0, 393218, 4, 0, 393219, 8, 0, 393220, 2, 0, 393221, 4, 0, 393222, 8, 0, 393223, 2, 0, 393224, 3, 0, 393225, 8, 0, 393226, 1, 0, 393227, 2, 0, 393228, 8, 0, 393229, 8, 0, 393230, 8, 0, 393231, 8, 0, 393232, 5, 0, 458752, 10, 0, 458753, 5, 0, 458754, 5, 0, 458755, 8, 0, 458756, 0, 0, 458757, 6, 0, 458758, 8, 0, 458759, 1, 0, 458760, 4, 0, 458761, 8, 0, 458762, 2, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 4, 0, 458768, 5, 0, 524288, 1, 0, 524289, 5, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 2, 0, 524296, 5, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 8, 0, 524304, 5, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0 )
+tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 2, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 4, 0, 16, 5, 0, 131069, 2, 0, 131070, 3, 0, 131071, 3, 0, 65536, 1, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 4, 0, 65541, 8, 0, 65542, 2, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 2, 0, 65547, 10, 0, 65548, 8, 0, 65549, 3, 0, 65550, 4, 0, 65551, 5, 0, 65552, 5, 0, 196605, 1, 0, 196606, 2, 0, 196607, 8, 0, 131072, 8, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 5, 0, 131077, 8, 0, 131078, 1, 0, 131079, 2, 0, 131080, 2, 0, 131081, 3, 0, 131082, 1, 0, 131083, 10, 0, 131084, 8, 0, 131085, 2, 0, 131086, 3, 0, 131087, 4, 0, 131088, 5, 0, 262141, 1, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 10, 0, 196611, 5, 0, 196612, 5, 0, 196613, 8, 0, 196614, 1, 0, 196615, 1, 0, 196616, 10, 0, 196617, 8, 0, 196618, 1, 0, 196619, 10, 0, 196620, 8, 0, 196621, 1, 0, 196622, 8, 0, 196623, 5, 0, 196624, 5, 0, 327676, 2, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 4, 0, 262145, 8, 0, 262146, 10, 0, 262147, 8, 0, 262148, 5, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0, 262152, 10, 0, 262153, 8, 0, 262154, 1, 0, 262155, 10, 0, 262156, 8, 0, 262157, 1, 0, 262158, 8, 0, 262159, 5, 0, 262160, 5, 0, 393213, 9, 0, 393214, 9, 0, 393215, 9, 0, 327680, 10, 0, 327681, 8, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 8, 0, 327690, 1, 0, 327691, 10, 0, 327692, 8, 0, 327693, 0, 0, 327694, 7, 0, 327695, 6, 0, 327696, 5, 0, 458748, 0, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 10, 0, 393217, 3, 0, 393218, 4, 0, 393219, 8, 0, 393220, 2, 0, 393221, 4, 0, 393222, 8, 0, 393223, 2, 0, 393224, 4, 0, 393225, 8, 0, 393226, 1, 0, 393227, 2, 0, 393228, 8, 0, 393229, 8, 0, 393230, 8, 0, 393231, 8, 0, 393232, 5, 0, 458752, 10, 0, 458753, 5, 0, 458754, 5, 0, 458755, 8, 0, 458756, 0, 0, 458757, 6, 0, 458758, 8, 0, 458759, 1, 0, 458760, 4, 0, 458761, 8, 0, 458762, 2, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 4, 0, 458768, 5, 0, 524288, 1, 0, 524289, 5, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 2, 0, 524296, 5, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 8, 0, 524304, 5, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0, 720893, 2, 0, 786430, 2, 0, 851967, 2, 0 )
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 margin_left = -926.616
@@ -1062,364 +1041,50 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Fake Walls" type="Node2D" parent="."]
-visible = false
-
-[node name="false_wall2" type="StaticBody2D" parent="Fake Walls"]
+[node name="false_wall2" type="StaticBody2D" parent="."]
 position = Vector2( -927.545, 254.858 )
 script = ExtResource( 29 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/false_wall2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="false_wall2"]
 position = Vector2( 637.103, 96.3341 )
 shape = SubResource( 14 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/false_wall2"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="false_wall2"]
 position = Vector2( 671.801, 95.9486 )
 frames = SubResource( 15 )
 animation = "closed"
 
-[node name="Area2D" type="Area2D" parent="Fake Walls/false_wall2/AnimatedSprite"]
+[node name="Area2D" type="Area2D" parent="false_wall2/AnimatedSprite"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/false_wall2/AnimatedSprite/Area2D"]
-position = Vector2( 28.3526, 0.40732 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="false_wall2/AnimatedSprite/Area2D"]
+position = Vector2( 28.452, 1.004 )
 shape = SubResource( 16 )
 
-[node name="false_wall" type="StaticBody2D" parent="Fake Walls"]
-position = Vector2( 352.243, 62.905 )
+[node name="false_wall" type="StaticBody2D" parent="."]
+visible = false
 script = ExtResource( 28 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/false_wall"]
-position = Vector2( 160.399, 329.792 )
-shape = SubResource( 17 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/false_wall"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="false_wall"]
 position = Vector2( 159.925, 352.047 )
-frames = SubResource( 18 )
+frames = SubResource( 17 )
 animation = "closed"
 
-[node name="Area2D" type="Area2D" parent="Fake Walls/false_wall/AnimatedSprite"]
+[node name="Area2D" type="Area2D" parent="false_wall/AnimatedSprite"]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/false_wall/AnimatedSprite/Area2D"]
-position = Vector2( 26.4776, 10.578 )
-shape = SubResource( 19 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="false_wall/AnimatedSprite/Area2D"]
+position = Vector2( 0.647095, -21.7282 )
+shape = SubResource( 18 )
 
 [node name="Bags" type="Node2D" parent="."]
-visible = false
-position = Vector2( -286.976, -14.964 )
+position = Vector2( -306.253, -12.7109 )
 
 [node name="obj_bag" parent="Bags" instance=ExtResource( 18 )]
 position = Vector2( 221.54, 363.485 )
 
-[node name="obj_bag2" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 228.8, 367.491 )
-
-[node name="obj_bag3" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 234.808, 405.793 )
-
-[node name="obj_bag4" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 224.544, 413.304 )
-
-[node name="obj_bag5" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 233.306, 421.064 )
-
-[node name="obj_bag6" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 331.386, 568.085 )
-
-[node name="obj_bag7" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 341.529, 571.773 )
-
-[node name="obj_bag8" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 334.153, 575.154 )
-
-[node name="obj_bag9" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 532.399, 427.93 )
-
-[node name="obj_bag10" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 526.559, 434.077 )
-
-[node name="obj_bag11" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 535.78, 440.839 )
-
-[node name="obj_bag12" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 530.084, 488.541 )
-
-[node name="obj_bag13" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 536.776, 493.24 )
-
-[node name="obj_bag14" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 720.686, 556.485 )
-
-[node name="obj_bag15" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 727.066, 563.42 )
-
-[node name="obj_bag16" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 722.35, 572.297 )
-
-[node name="obj_bag17" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 924.533, 443.202 )
-
-[node name="obj_bag18" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 917.78, 445.982 )
-
-[node name="obj_bag19" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 926.122, 451.543 )
-
-[node name="obj_bag20" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 482.035, 374.88 )
-
-[node name="obj_bag21" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 668.726, 378.058 )
-
-[node name="obj_bag22" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 792.657, 319.668 )
-
-[node name="obj_bag23" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 808.943, 319.27 )
-
-[node name="obj_bag24" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 852.637, 508.742 )
-
-[node name="obj_bag25" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 867.333, 509.934 )
-
-[node name="obj_bag26" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 859.389, 512.317 )
-
-[node name="obj_bag27" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 346.564, 242.886 )
-
-[node name="obj_bag28" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 363.545, 241.754 )
-
-[node name="obj_bag29" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 92.6041, 122.132 )
-
-[node name="obj_bag30" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 157.509, 194.207 )
-
-[node name="obj_bag31" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 166.943, 194.207 )
-
-[node name="obj_bag32" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 404.677, 309.3 )
-
-[node name="obj_bag33" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 422.412, 311.564 )
-
-[node name="obj_bag34" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 412.601, 316.092 )
-
-[node name="obj_bag35" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 476.751, 177.226 )
-
-[node name="obj_bag36" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 482.412, 185.15 )
-
-[node name="obj_bag37" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 541.656, 139.113 )
-
-[node name="obj_bag38" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 412.978, 183.264 )
-
-[node name="obj_bag39" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 845.427, 52.6988 )
-
-[node name="obj_bag40" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 858.257, 52.3214 )
-
-[node name="obj_bag41" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 853.729, 59.8685 )
-
-[node name="obj_bag42" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 866.181, 60.6233 )
-
-[node name="obj_bag43" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 865.804, 108.17 )
-
-[node name="obj_bag44" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 875.615, 115.717 )
-
-[node name="obj_bag45" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 863.163, 117.227 )
-
-[node name="obj_bag46" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 923.917, 202.886 )
-
-[node name="obj_bag47" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 723.919, 180.999 )
-
-[node name="obj_bag48" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 730.333, 186.282 )
-
-[node name="obj_bag49" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 736.749, 194.584 )
-
-[node name="obj_bag50" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 680.9, 308.923 )
-
-[node name="obj_bag51" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 607.693, 149.302 )
-
-[node name="obj_bag52" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1154.86, 111.566 )
-
-[node name="obj_bag53" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 932.218, 518.732 )
-
-[node name="obj_bag54" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 928.067, 501.374 )
-
-[node name="obj_bag55" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 921.275, 514.204 )
-
-[node name="obj_bag56" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 915.992, 504.77 )
-
-[node name="obj_bag57" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 732.138, 436.007 )
-
-[node name="obj_bag58" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 865.761, 262.395 )
-
-[node name="obj_bag59" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 859.421, 575.483 )
-
-[node name="obj_bag60" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 852.594, 567.68 )
-
-[node name="obj_bag61" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 864.786, 566.705 )
-
-[node name="obj_bag62" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1108.14, 331.645 )
-
-[node name="obj_bag63" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1118.77, 333.472 )
-
-[node name="obj_bag64" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1118.77, 333.472 )
-
-[node name="obj_bag65" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1106.31, 338.288 )
-
-[node name="obj_bag66" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1113.28, 345.097 )
-
-[node name="obj_bag67" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1123.25, 347.589 )
-
-[node name="obj_bag68" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1123.75, 302.082 )
-
-[node name="obj_bag69" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1129.73, 306.898 )
-
-[node name="obj_bag70" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1118.1, 310.054 )
-
-[node name="obj_bag71" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1126.07, 314.372 )
-
-[node name="obj_bag72" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1126.07, 314.372 )
-
-[node name="obj_bag73" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 986.122, 375.275 )
-
-[node name="obj_bag74" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 992.118, 377.326 )
-
-[node name="obj_bag75" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 985.175, 381.113 )
-
-[node name="obj_bag76" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 992.591, 386.004 )
-
-[node name="obj_bag77" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 983.124, 388.055 )
-
-[node name="obj_bag78" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1178.14, 328.572 )
-
-[node name="obj_bag79" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1183.5, 332.359 )
-
-[node name="obj_bag80" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1188.87, 336.777 )
-
-[node name="obj_bag81" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1173.41, 336.303 )
-
-[node name="obj_bag82" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1177.67, 340.879 )
-
-[node name="obj_bag83" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1184.29, 345.139 )
-
-[node name="obj_bag84" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1194.71, 347.664 )
-
-[node name="obj_bag85" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1164.26, 337.566 )
-
-[node name="obj_bag86" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1122.44, 193.355 )
-
-[node name="obj_bag87" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1127.34, 197.142 )
-
-[node name="obj_bag88" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1135.38, 197.3 )
-
-[node name="obj_bag89" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1195.65, 177.735 )
-
-[node name="obj_bag90" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1196.6, 182.784 )
-
-[node name="obj_bag91" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1200.39, 189.253 )
-
-[node name="obj_bag92" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1191.08, 189.568 )
-
-[node name="obj_bag93" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1162.05, 175.684 )
-
-[node name="obj_bag94" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1166.46, 181.679 )
-
-[node name="obj_bag95" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1116.13, 247 )
-
-[node name="obj_bag96" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1122.6, 252.365 )
-
-[node name="obj_bag97" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1127.18, 256.783 )
-
-[node name="obj_bag98" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1236.92, 106.931 )
-
-[node name="obj_bag99" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1305.19, 544.35 )
-
-[node name="obj_bag100" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1298.07, 548.556 )
-
-[node name="obj_bag101" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1307.13, 554.379 )
-
-[node name="obj_bag102" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 280.085, 77.9193 )
-
-[node name="obj_bag103" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 419.073, 50.6094 )
-
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( 3.5, 7.21212 )
 scale = Vector2( 0.994318, 0.969697 )
-curve = SubResource( 20 )
+curve = SubResource( 19 )
 script = ExtResource( 20 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
@@ -1430,19 +1095,18 @@ script = ExtResource( 31 )
 
 [node name="obj_enemy" type="KinematicBody2D" parent="Path2D/PathFollow2D"]
 rotation = 9.31322e-10
-collision_layer = 0
 script = ExtResource( 38 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Path2D/PathFollow2D/obj_enemy"]
 position = Vector2( 3.44867, -0.985462 )
 rotation = 9.31322e-10
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 21 )
+frames = SubResource( 20 )
 animation = "alive"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/obj_enemy"]
-position = Vector2( 4.22879, -0.742015 )
-shape = SubResource( 22 )
+position = Vector2( 2.52783, -0.402496 )
+shape = SubResource( 21 )
 script = ExtResource( 39 )
 
 [node name="Hurtbox" parent="Path2D/PathFollow2D" instance=ExtResource( 24 )]
@@ -1450,46 +1114,43 @@ rotation = 9.31322e-10
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hurtbox" index="0"]
-position = Vector2( 4.21185, -0.822247 )
-shape = SubResource( 23 )
+position = Vector2( 2.94336, 0.0334396 )
+shape = SubResource( 22 )
 
 [node name="Hitbox" parent="Path2D/PathFollow2D" instance=ExtResource( 22 )]
 collision_mask = 4
-script = ExtResource( 8 )
 
 [node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hitbox" index="0"]
-position = Vector2( 4.14258, -0.811954 )
-shape = SubResource( 24 )
+position = Vector2( 3.40735, -0.519344 )
+shape = SubResource( 23 )
 
 [node name="Key" type="Area2D" parent="."]
-visible = false
 position = Vector2( 897.536, 246.245 )
 script = ExtResource( 35 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
 position = Vector2( -1.00139, 1.25174 )
 scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 25 )
+shape = SubResource( 24 )
 
 [node name="Sprite" type="Sprite" parent="Key"]
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 33 )
 
 [node name="obj_door" type="StaticBody2D" parent="."]
-visible = false
-position = Vector2( 1019.19, 18.7781 )
+position = Vector2( 1017.98, 18.7673 )
 script = ExtResource( 37 )
 
 [node name="Sprite" type="AnimatedSprite" parent="obj_door"]
 position = Vector2( 3.32959, -1.42697 )
 scale = Vector2( 1.71553, 1 )
-frames = SubResource( 26 )
+frames = SubResource( 25 )
 animation = "closed"
 
 [node name="door_collision" type="CollisionShape2D" parent="obj_door"]
 position = Vector2( 3.72278, -3.64516 )
 scale = Vector2( 2.5, 2 )
-shape = SubResource( 27 )
+shape = SubResource( 26 )
 script = ExtResource( 46 )
 
 [node name="Area2D" type="Area2D" parent="obj_door"]
@@ -1498,10 +1159,9 @@ scale = Vector2( 1.5, 1.5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_door/Area2D"]
 position = Vector2( 2.38139, 3.80061 )
 scale = Vector2( 1.5, 1.5 )
-shape = SubResource( 28 )
+shape = SubResource( 27 )
 
 [node name="Enemy" parent="." instance=ExtResource( 23 )]
-visible = false
 position = Vector2( -206.149, 398.52 )
 
 [node name="Sprite" parent="Enemy" index="0"]
@@ -1512,9 +1172,7 @@ scale = Vector2( 0.437912, 0.418188 )
 position = Vector2( 19.9173, -16.0714 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
-position = Vector2( -149.359, -208.361 )
-scale = Vector2( 2, 1 )
+position = Vector2( 985.417, -417.669 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
 position = Vector2( 52.2871, 540.539 )
@@ -1524,1251 +1182,15 @@ texture = ExtResource( 30 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 52.1439, 541.369 )
 scale = Vector2( 1, 0.1 )
-shape = SubResource( 29 )
+shape = SubResource( 28 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-visible = false
 stream = ExtResource( 48 )
 volume_db = 6.049
 autoplay = true
 
-[node name="Barrels" type="Node2D" parent="."]
-position = Vector2( -364.891, 369.477 )
-scale = Vector2( 0.291128, 0.329089 )
-
-[node name="Barrel" type="Sprite" parent="Barrels"]
-position = Vector2( 314.935, 145.435 )
-texture = ExtResource( 5 )
-
-[node name="Area2D" type="Area2D" parent="Barrels/Barrel"]
-position = Vector2( -314.935, -145.435 )
-input_pickable = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel/Area2D"]
-position = Vector2( 314.768, 145.14 )
-shape = SubResource( 30 )
-
-[node name="Torches Behind Player" type="Node2D" parent="."]
-visible = false
-
-[node name="torch2" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( -122.087, 150.946 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch2"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch2/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch2"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch2"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch2"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch2/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( -121.755, 107.106 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch3" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( -248.788, 42.7233 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch3"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch3/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch3"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch3"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch3"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch3/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch4" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( -122.48, 42.4544 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch4"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch4/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch4"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch4"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch4"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch4/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch8" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 62.752, 171.328 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch8"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch8/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch8"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch8"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch8"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch8/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch32" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 261.359, 278.281 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch32"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch32/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch32"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch32"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch32"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch32/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch33" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 260.411, 171.28 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch33"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch33/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch33"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch33"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch33"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch33/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch34" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 130.088, 106.81 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch34"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch34/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch34"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch34"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch34"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch34/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch35" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 321.762, 107.157 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch35"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch35/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch35"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch35"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch35"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch35/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch36" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 483.037, 107.205 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch36"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch36/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch36"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch36"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch36"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch36/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch37" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 451.158, 171.135 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch37"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch37/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch37"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch37"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch37"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch37/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch38" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 418.365, 299.227 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch38"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch38/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch38"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch38"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch38"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch38/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch39" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 611.659, 299.029 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch39"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch39/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch39"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch39"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch39"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch39/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch40" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 684.479, 235.066 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch40"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch40/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch40"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch40"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch40"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch40/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch41" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 821.079, 299.437 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch41"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch41/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch41"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch41"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch41"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch41/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch42" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 664.587, 171.266 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch42"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch42/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch42"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch42"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch42"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch42/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch43" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 948.544, 149.648 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch43"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch43/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch43"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch43"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch43"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch43/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch44" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 810.408, 149.858 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch44"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch44/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch44"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch44"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch44"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch44/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch45" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 836.237, -85.1176 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch45"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch45/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch45"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch45"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch45"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch45/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch46" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 834.743, -148.421 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch46"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch46/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch46"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch46"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch46"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch46/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch48" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 642.394, -212.649 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch48"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch48/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch48"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch48"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch48"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch48/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch49" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 557.344, -148.72 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch49"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch49/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch49"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch49"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch49"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch49/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch50" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 386.237, -148.895 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch50"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch50/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch50"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch50"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch50"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch50/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch51" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 420.871, -213.037 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch51"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch51/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch51"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch51"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch51"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch51/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch52" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 242.373, -212.982 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch52"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch52/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch52"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch52"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch52"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch52/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch53" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 14.0081, -212.54 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch53"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch53/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch53"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch53"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch53"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch53/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch54" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 36.6928, -149.028 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch54"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch54/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch54"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch54"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch54"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch54/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch55" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 227.455, -148.661 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch55"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch55/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch55"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch55"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch55"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch55/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch56" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 504.124, -85.0964 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch56"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch56/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch56"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch56"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch56"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch56/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch57" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( -61.346, -20.2786 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch57"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch57/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch57"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch57"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch57"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch57/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch58" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( -157.379, -148.656 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch58"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch58/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch58"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch58"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch58"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch58/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch59" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 80.0672, -84.8508 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Behind Player/torch59"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Behind Player/torch59/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Behind Player/torch59"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch59"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Behind Player/torch59"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Behind Player/torch59/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( 203.906, 33.4443 )
+position = Vector2( -114.118, 343.248 )
 collision_layer = 2
 script = ExtResource( 12 )
 
@@ -2788,16 +1210,11 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="Particles2D" type="Particles2D" parent="obj_player/Sprite"]
-show_behind_parent = true
-position = Vector2( -1.23608, 20.1741 )
-amount = 30
-speed_scale = 5.0
-local_coords = false
-process_material = SubResource( 41 )
+process_material = SubResource( 29 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
 position = Vector2( 0.0121993, 7.88678 )
-shape = SubResource( 42 )
+shape = SubResource( 30 )
 
 [node name="Light2D" type="Light2D" parent="obj_player"]
 position = Vector2( -0.506622, 4.08057 )
@@ -2806,56 +1223,52 @@ texture = ExtResource( 13 )
 shadow_enabled = true
 
 [node name="player_anim" type="AnimationPlayer" parent="obj_player"]
-anims/attack_down = SubResource( 43 )
-anims/down_dead = SubResource( 44 )
-anims/down_walk = SubResource( 45 )
-anims/idle_down = SubResource( 46 )
-anims/left_attack = SubResource( 47 )
-anims/left_dead = SubResource( 48 )
-anims/left_idle = SubResource( 49 )
-anims/left_walk = SubResource( 50 )
-anims/right_attack = SubResource( 51 )
-anims/right_dead = SubResource( 52 )
-anims/right_idle = SubResource( 53 )
-anims/right_walk = SubResource( 54 )
-anims/up_attack = SubResource( 55 )
-anims/up_dead = SubResource( 56 )
-anims/up_idle = SubResource( 57 )
-anims/up_walk = SubResource( 58 )
+anims/attack_down = SubResource( 31 )
+anims/down_dead = SubResource( 32 )
+anims/down_walk = SubResource( 33 )
+anims/idle_down = SubResource( 34 )
+anims/left_attack = SubResource( 35 )
+anims/left_dead = SubResource( 36 )
+anims/left_idle = SubResource( 37 )
+anims/left_walk = SubResource( 38 )
+anims/right_attack = SubResource( 39 )
+anims/right_dead = SubResource( 40 )
+anims/right_idle = SubResource( 41 )
+anims/right_walk = SubResource( 42 )
+anims/up_attack = SubResource( 43 )
+anims/up_dead = SubResource( 44 )
+anims/up_idle = SubResource( 45 )
+anims/up_walk = SubResource( 46 )
 
 [node name="AnimationTree" type="AnimationTree" parent="obj_player"]
-tree_root = SubResource( 85 )
+tree_root = SubResource( 73 )
 anim_player = NodePath("../player_anim")
-parameters/playback = SubResource( 86 )
+parameters/playback = SubResource( 74 )
 parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
 parameters/Death/blend_position = Vector2( 0.239115, -0.547945 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 0 )
 
 [node name="Money Bag" type="Control" parent="obj_player"]
-visible = false
-margin_left = -27.5822
+margin_left = -27.7861
 margin_top = -541.926
-margin_right = 996.42
+margin_right = 996.216
 margin_bottom = 63.0745
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Sprite" type="Sprite" parent="obj_player/Money Bag"]
-position = Vector2( -58.8118, 490.211 )
-scale = Vector2( 0.12214, 0.119944 )
+position = Vector2( -21.1034, 593.71 )
+scale = Vector2( 0.250021, 0.241669 )
 texture = ExtResource( 17 )
 
 [node name="Label" type="Label" parent="obj_player/Money Bag"]
-anchor_left = 0.000132113
-anchor_right = 0.000132113
-margin_left = -55.8394
-margin_top = 488.39
-margin_right = -37.8394
-margin_bottom = 494.39
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 87 )
+margin_left = -15.4272
+margin_top = 588.994
+margin_right = 2.57281
+margin_bottom = 594.994
+custom_fonts/font = SubResource( 75 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "x $"
 __meta__ = {
@@ -2863,12 +1276,11 @@ __meta__ = {
 }
 
 [node name="Count" type="Label" parent="obj_player/Money Bag"]
-margin_left = -45.0
-margin_top = 488.0
-margin_right = -31.0
-margin_bottom = 495.0
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 88 )
+margin_left = 5.56313
+margin_top = 590.285
+margin_right = 19.5631
+margin_bottom = 596.285
+custom_fonts/font = SubResource( 76 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 19 )
@@ -2888,7 +1300,7 @@ margin_left = 36.8544
 margin_top = 590.417
 margin_right = 43.8544
 margin_bottom = 598.417
-custom_fonts/font = SubResource( 89 )
+custom_fonts/font = SubResource( 77 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "x"
 __meta__ = {
@@ -2901,7 +1313,7 @@ margin_left = 45.5728
 margin_top = 590.851
 margin_right = 53.5728
 margin_bottom = 596.851
-custom_fonts/font = SubResource( 90 )
+custom_fonts/font = SubResource( 78 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 34 )
@@ -2910,24 +1322,25 @@ __meta__ = {
 }
 
 [node name="HitboxPivot" type="Position2D" parent="obj_player"]
+visible = false
 position = Vector2( 0, 5.101 )
 rotation = -1.5708
 
 [node name="SwordHitbox" parent="obj_player/HitboxPivot" instance=ExtResource( 22 )]
 position = Vector2( 8, 0 )
 collision_mask = 8
-script = ExtResource( 49 )
 
 [node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
 position = Vector2( 3.37391, 0.250439 )
-shape = SubResource( 91 )
+shape = SubResource( 79 )
 disabled = true
 
 [node name="Area2D" type="Area2D" parent="obj_player"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/Area2D"]
 position = Vector2( 0.238064, 8.45447 )
-shape = SubResource( 92 )
+shape = SubResource( 80 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 7 )
@@ -2938,1252 +1351,56 @@ collision_layer = 4
 
 [node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
 position = Vector2( -7.62939e-06, 2.89954 )
-shape = SubResource( 93 )
+shape = SubResource( 81 )
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 47 )
 
-[node name="Torches Front Player" type="Node2D" parent="."]
-visible = false
-
-[node name="torch5" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( -3.30243, 73.48 )
+[node name="torch" type="StaticBody2D" parent="."]
+position = Vector2( -60.3791, 122.496 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch5"]
+[node name="torch_light" type="Light2D" parent="torch"]
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
 shadow_enabled = true
 script = ExtResource( 16 )
 
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch5/torch_light"]
+[node name="flame" type="Particles2D" parent="torch/torch_light"]
 show_behind_parent = true
 position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 35 )
+process_material = SubResource( 86 )
 script = ExtResource( 25 )
 
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch5"]
+[node name="Sprite" type="AnimatedSprite" parent="torch"]
 position = Vector2( 50.6324, 450.899 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
+frames = SubResource( 87 )
 animation = "off"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
+shape = SubResource( 88 )
 
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch5"]
+[node name="Area2D" type="Area2D" parent="torch"]
 position = Vector2( 0, 2.57212 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch5/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch/Area2D"]
 position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch6" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( -4.01442, 221.145 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch6"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch6/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch6"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch6"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch6"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch6/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch7" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 60.008, 295.258 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch7"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch7/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch7"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch7"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch7"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch7/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch9" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 123.75, 234.985 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch9"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch9/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch9"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch9"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch9"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch9/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch10" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 194.834, 179.347 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch10"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch10/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch10"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch10"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch10"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch10/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch11" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 386.495, 321.681 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch11"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch11/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch11"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch11"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch11"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch11/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch12" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 387.692, 200.403 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch12"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch12/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch12"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch12"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch12"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch12/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch13" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 578.157, 233.749 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch13"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch13/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch13"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch13"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch13"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch13/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch14" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 578.712, 56.4959 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch14"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch14/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch14"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch14"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch14"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch14/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch15" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 507.865, 60.0008 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch15"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch15/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch15"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch15"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch15"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch15/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch16" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 449.534, 47.9842 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch16"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch16/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch16"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch16"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch16"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch16/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch17" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 324.199, -43.3417 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch17"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch17/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch17"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch17"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch17"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch17/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch47" type="StaticBody2D" parent="Torches Front Player/torch17"]
-position = Vector2( 901.319, -215.168 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch17/torch47"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch17/torch47/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch17/torch47"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch17/torch47"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch17/torch47"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch17/torch47/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch18" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 66.3927, 37.0312 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch18"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch18/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch18"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch18"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch18"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch18/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch19" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( -190.051, -54.5802 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch19"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch19/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch19"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch19"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch19"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch19/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch20" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 124.288, 68.0224 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch20"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch20/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch20"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch20"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch20"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch20/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch21" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 252, 63.5951 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch21"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch21/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch21"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch21"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch21"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch21/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch22" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 577.918, -189.443 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch22"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch22/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch22"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch22"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch22"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch22/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch23" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 578.94, -116.563 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch23"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch23/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch23"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch23"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch23"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch23/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch24" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 699.159, 65.6385 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch24"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch24/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch24"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch24"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch24"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch24/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch25" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 699.499, -97.4912 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch25"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch25/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch25"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch25"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch25"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch25/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch26" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 770.337, -40.9577 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch26"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch26/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch26"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch26"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch26"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch26/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch27" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 770.677, 98.3325 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch27"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch27/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch27"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch27"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch27"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch27/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch28" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 954.651, 263.821 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch28"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch28/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch28"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch28"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch28"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch28/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch29" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 1020.23, 108.896 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch29"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch29/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch29"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch29"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch29"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch29/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch30" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 1018.91, -62.7545 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch30"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch30/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch30"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch30"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch30"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch30/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
-[node name="torch31" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 956.851, -122.172 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch31"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch31/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch31"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch31"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch31"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch31/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-[connection signal="area_entered" from="Fake Walls/false_wall2/AnimatedSprite/Area2D" to="Fake Walls/false_wall2" method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="Fake Walls/false_wall2/AnimatedSprite/Area2D" to="Fake Walls/false_wall2" method="_on_Area2D_area_exited"]
-[connection signal="area_entered" from="Fake Walls/false_wall/AnimatedSprite/Area2D" to="Fake Walls/false_wall" method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="Fake Walls/false_wall/AnimatedSprite/Area2D" to="Fake Walls/false_wall" method="_on_Area2D_area_exited"]
+shape = SubResource( 89 )
+[connection signal="area_entered" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="false_wall2/AnimatedSprite/Area2D" to="false_wall2" method="_on_Area2D_area_exited"]
+[connection signal="area_entered" from="false_wall/AnimatedSprite/Area2D" to="false_wall" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="false_wall/AnimatedSprite/Area2D" to="false_wall" method="_on_Area2D_area_exited"]
 [connection signal="bagsCollected" from="Bags/obj_bag" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag" to="Bags/obj_bag" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag2" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag2" to="Bags/obj_bag2" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag3" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag3" to="Bags/obj_bag3" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag4" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag4" to="Bags/obj_bag4" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag5" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag5" to="Bags/obj_bag5" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag6" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag6" to="Bags/obj_bag6" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag7" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag7" to="Bags/obj_bag7" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag8" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag8" to="Bags/obj_bag8" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag9" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag9" to="Bags/obj_bag9" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag10" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag10" to="Bags/obj_bag10" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag11" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag11" to="Bags/obj_bag11" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag12" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag12" to="Bags/obj_bag12" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag13" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag13" to="Bags/obj_bag13" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag14" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag14" to="Bags/obj_bag14" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag15" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag15" to="Bags/obj_bag15" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag16" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag16" to="Bags/obj_bag16" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag17" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag17" to="Bags/obj_bag17" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag18" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag18" to="Bags/obj_bag18" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag19" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag19" to="Bags/obj_bag19" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag20" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag20" to="Bags/obj_bag20" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag21" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag21" to="Bags/obj_bag21" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag22" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag22" to="Bags/obj_bag22" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag23" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag23" to="Bags/obj_bag23" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag24" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag24" to="Bags/obj_bag24" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag25" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag25" to="Bags/obj_bag25" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag26" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag26" to="Bags/obj_bag26" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag27" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag27" to="Bags/obj_bag27" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag28" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag28" to="Bags/obj_bag28" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag29" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag29" to="Bags/obj_bag29" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag30" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag30" to="Bags/obj_bag30" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag31" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag31" to="Bags/obj_bag31" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag32" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag32" to="Bags/obj_bag32" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag33" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag33" to="Bags/obj_bag33" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag34" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag34" to="Bags/obj_bag34" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag35" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag35" to="Bags/obj_bag35" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag36" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag36" to="Bags/obj_bag36" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag37" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag37" to="Bags/obj_bag37" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag38" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag38" to="Bags/obj_bag38" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag39" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag39" to="Bags/obj_bag39" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag40" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag40" to="Bags/obj_bag40" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag41" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag41" to="Bags/obj_bag41" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag42" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag42" to="Bags/obj_bag42" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag43" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag43" to="Bags/obj_bag43" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag44" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag44" to="Bags/obj_bag44" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag45" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag45" to="Bags/obj_bag45" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag46" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag46" to="Bags/obj_bag46" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag47" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag47" to="Bags/obj_bag47" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag48" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag48" to="Bags/obj_bag48" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag49" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag49" to="Bags/obj_bag49" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag50" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag50" to="Bags/obj_bag50" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag51" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag51" to="Bags/obj_bag51" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag52" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag52" to="Bags/obj_bag52" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag53" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag53" to="Bags/obj_bag53" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag54" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag54" to="Bags/obj_bag54" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag55" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag55" to="Bags/obj_bag55" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag56" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag56" to="Bags/obj_bag56" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag57" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag57" to="Bags/obj_bag57" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag58" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag58" to="Bags/obj_bag58" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag59" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag59" to="Bags/obj_bag59" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag60" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag60" to="Bags/obj_bag60" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag61" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag61" to="Bags/obj_bag61" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag62" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag62" to="Bags/obj_bag62" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag63" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag63" to="Bags/obj_bag63" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag64" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag64" to="Bags/obj_bag64" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag65" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag65" to="Bags/obj_bag65" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag66" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag66" to="Bags/obj_bag66" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag67" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag67" to="Bags/obj_bag67" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag68" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag68" to="Bags/obj_bag68" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag69" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag69" to="Bags/obj_bag69" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag70" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag70" to="Bags/obj_bag70" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag71" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag71" to="Bags/obj_bag71" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag72" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag72" to="Bags/obj_bag72" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag73" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag73" to="Bags/obj_bag73" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag74" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag74" to="Bags/obj_bag74" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag75" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag75" to="Bags/obj_bag75" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag76" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag76" to="Bags/obj_bag76" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag77" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag77" to="Bags/obj_bag77" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag78" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag78" to="Bags/obj_bag78" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag79" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag79" to="Bags/obj_bag79" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag80" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag80" to="Bags/obj_bag80" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag81" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag81" to="Bags/obj_bag81" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag82" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag82" to="Bags/obj_bag82" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag83" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag83" to="Bags/obj_bag83" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag84" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag84" to="Bags/obj_bag84" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag85" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag85" to="Bags/obj_bag85" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag86" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag86" to="Bags/obj_bag86" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag87" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag87" to="Bags/obj_bag87" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag88" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag88" to="Bags/obj_bag88" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag89" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag89" to="Bags/obj_bag89" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag90" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag90" to="Bags/obj_bag90" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag91" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag91" to="Bags/obj_bag91" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag92" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag92" to="Bags/obj_bag92" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag93" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag93" to="Bags/obj_bag93" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag94" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag94" to="Bags/obj_bag94" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag95" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag95" to="Bags/obj_bag95" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag96" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag96" to="Bags/obj_bag96" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag97" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag97" to="Bags/obj_bag97" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag98" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag98" to="Bags/obj_bag98" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag99" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag99" to="Bags/obj_bag99" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag100" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag100" to="Bags/obj_bag100" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag101" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag101" to="Bags/obj_bag101" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag102" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag102" to="Bags/obj_bag102" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag103" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
-[connection signal="body_entered" from="Bags/obj_bag103" to="Bags/obj_bag103" method="_on_obj_bag_body_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
