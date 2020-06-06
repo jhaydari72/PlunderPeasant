@@ -1063,7 +1063,6 @@ __meta__ = {
 }
 
 [node name="Fake Walls" type="Node2D" parent="."]
-visible = false
 
 [node name="false_wall2" type="StaticBody2D" parent="Fake Walls"]
 position = Vector2( -927.545, 254.858 )
@@ -1416,7 +1415,6 @@ position = Vector2( 280.085, 77.9193 )
 position = Vector2( 419.073, 50.6094 )
 
 [node name="Path2D" type="Path2D" parent="."]
-visible = false
 position = Vector2( 3.5, 7.21212 )
 scale = Vector2( 0.994318, 0.969697 )
 curve = SubResource( 20 )
@@ -1475,7 +1473,6 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 33 )
 
 [node name="obj_door" type="StaticBody2D" parent="."]
-visible = false
 position = Vector2( 1019.19, 18.7781 )
 script = ExtResource( 37 )
 
@@ -1500,7 +1497,6 @@ scale = Vector2( 1.5, 1.5 )
 shape = SubResource( 28 )
 
 [node name="Enemy" parent="." instance=ExtResource( 23 )]
-visible = false
 position = Vector2( -206.149, 398.52 )
 
 [node name="Sprite" parent="Enemy" index="0"]
@@ -1525,7 +1521,6 @@ scale = Vector2( 1, 0.1 )
 shape = SubResource( 29 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-visible = false
 stream = ExtResource( 48 )
 volume_db = 6.049
 autoplay = true
@@ -2783,7 +2778,6 @@ position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 38 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-visible = false
 position = Vector2( -242.052, 381.177 )
 collision_layer = 2
 script = ExtResource( 12 )
