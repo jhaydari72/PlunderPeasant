@@ -79,3 +79,19 @@ func _on_Hurtbox_area_entered(_area):
 	var MusicNode = $AudioStreamPlayer2D2
 	MusicNode.play()
 	
+
+#This function will make the player take damage from the rats
+
+func _on_Rat_Attack_Player(body):
+	if body.name == "obj_player":
+		get_tree().change_scene("res://GameOver/GameOver.tscn")
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

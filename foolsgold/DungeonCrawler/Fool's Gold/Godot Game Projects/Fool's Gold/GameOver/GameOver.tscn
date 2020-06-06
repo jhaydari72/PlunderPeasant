@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GameOver/Button.gd" type="Script" id=1]
+[ext_resource path="res://Font/dogicapixelbold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GameOver/MainMenu.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 45
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -231.195
+margin_top = -84.1464
+margin_right = 1301.8
+margin_bottom = 803.854
+color = Color( 0.192157, 0.12549, 0.00784314, 1 )
+
+[node name="GameOver" type="Label" parent="."]
+margin_left = 44.39
+margin_top = 101.589
+margin_right = 957.39
+margin_bottom = 177.589
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -9
+custom_constants/shadow_offset_y = 9
+text = "Game Over!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Try Again" type="Button" parent="."]
+margin_left = 336.573
+margin_top = 290.593
+margin_right = 708.573
+margin_bottom = 331.593
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Try Again"
+flat = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu" type="Button" parent="."]
+margin_left = 228.993
+margin_top = 391.71
+margin_right = 820.993
+margin_bottom = 432.71
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Return To Menu"
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Try Again" to="Try Again" method="_on_Button_pressed"]
+[connection signal="pressed" from="MainMenu" to="MainMenu" method="_on_MainMenu_pressed"]

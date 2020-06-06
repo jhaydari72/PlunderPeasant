@@ -10,7 +10,7 @@ size = 100
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 55
+size = 80
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -24,20 +24,20 @@ font_data = ExtResource( 3 )
 [node name="HomeScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1.79626
-margin_top = -0.598755
-margin_right = 1.79626
-margin_bottom = -0.598755
+margin_left = 2.0
+margin_top = -1.0
+margin_right = 6.0
+margin_bottom = -1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -0.301666
-margin_top = -2.0
-margin_right = 1279.7
-margin_bottom = 718.0
-color = Color( 0.32549, 0.247059, 0.109804, 1 )
+margin_left = -141.61
+margin_top = -45.7857
+margin_right = 1138.39
+margin_bottom = 674.214
+color = Color( 0.192157, 0.12549, 0.00784314, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -60,10 +60,10 @@ __meta__ = {
 }
 
 [node name="PlayButton" type="Button" parent="."]
-margin_left = 356.243
-margin_top = 309.607
-margin_right = 637.243
-margin_bottom = 409.607
+margin_left = 62.4875
+margin_top = 326.507
+margin_right = 404.487
+margin_bottom = 426.507
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
 custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
@@ -76,10 +76,10 @@ __meta__ = {
 }
 
 [node name="MenuButton" type="Button" parent="."]
-margin_left = 247.248
-margin_top = 411.468
-margin_right = 780.248
-margin_bottom = 495.468
+margin_left = 513.361
+margin_top = 303.19
+margin_right = 885.361
+margin_bottom = 344.19
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -92,10 +92,10 @@ __meta__ = {
 }
 
 [node name="CreditsButton" type="Button" parent="."]
-margin_left = 273.839
-margin_top = 499.555
-margin_right = 741.839
-margin_bottom = 554.555
+margin_left = 514.534
+margin_top = 405.245
+margin_right = 841.534
+margin_bottom = 446.245
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
