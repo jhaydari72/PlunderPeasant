@@ -35,7 +35,7 @@ func _physics_process(delta):
 		ATTACK:
 			attack_state(delta)
 
-#movement state
+#movement states
 func move_state(delta):
 	var input_vector = Vector2.ZERO
 	
