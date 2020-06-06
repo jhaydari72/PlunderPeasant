@@ -15,13 +15,16 @@ enum {
 var state = MOVE
 var Key = 0
 var velocity = Vector2.ZERO
+var kill_direction = Vector2.LEFT
 #these signal the different nodes for specific purposes
 onready var player_anim = $player_anim
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
+onready var swordhitbox = $HitboxPivot/SwordHitbox
 
 func _ready():
 	animationTree.active = true
+	swordhitbox.knockback_vector = velocity
 
 #this function is called every frame of the game
 func _physics_process(delta):
@@ -40,9 +43,10 @@ func move_state(delta):
 	input_vector.x = Input.get_action_strength("ui_d") - Input.get_action_strength("ui_a")
 	input_vector.y = Input.get_action_strength("ui_s") - Input.get_action_strength("ui_w")
 	input_vector = input_vector.normalized()
-	
 	# gives speed and animations
 	if input_vector != Vector2.ZERO:
+		kill_direction = input_vector
+		swordhitbox.knockback_vector = input_vector
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationTree.set("parameters/Attack/blend_position", input_vector)
