@@ -1,4 +1,4 @@
-[gd_scene load_steps=141 format=2]
+[gd_scene load_steps=142 format=2]
 
 [ext_resource path="res://Tile map/Updated Titles/Left Middle Wall.png" type="Texture" id=1]
 [ext_resource path="res://Tile map/Updated Titles/Top Right Wall.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Barrel.png" type="Texture" id=5]
 [ext_resource path="res://Tile map/Updated Titles/Center Title.png" type="Texture" id=6]
 [ext_resource path="res://Audio/hit_sound_mixdown.wav" type="AudioStream" id=7]
+[ext_resource path="res://Barrel Collision.gd" type="Script" id=8]
 [ext_resource path="res://Tile map/Updated Titles/Bottom Middle Wall.png" type="Texture" id=9]
 [ext_resource path="res://skele anims/skeleton_anim_v1.png" type="Texture" id=10]
 [ext_resource path="res://Player anims/playerSS.png" type="Texture" id=11]
@@ -1532,17 +1533,18 @@ autoplay = true
 position = Vector2( -364.891, 369.477 )
 scale = Vector2( 0.291128, 0.329089 )
 
-[node name="Barrel" type="Sprite" parent="Barrels"]
+[node name="Barrel Collision" type="StaticBody2D" parent="Barrels"]
+scale = Vector2( 1, 1 )
+script = ExtResource( 8 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision"]
 position = Vector2( 314.935, 145.435 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 
-[node name="Area2D" type="Area2D" parent="Barrels/Barrel"]
-position = Vector2( -314.935, -145.435 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision"]
+position = Vector2( 314.768, 145.141 )
 scale = Vector2( 1, 1 )
-input_pickable = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel/Area2D"]
-position = Vector2( 314.768, 145.14 )
 shape = SubResource( 93 )
 
 [node name="Torches Behind Player" type="Node2D" parent="."]
@@ -2765,6 +2767,7 @@ position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 37 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
+visible = false
 position = Vector2( -133.501, 340.713 )
 collision_layer = 2
 script = ExtResource( 12 )
