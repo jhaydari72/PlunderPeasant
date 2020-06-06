@@ -365,7 +365,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 12.8753, 10 )
 
-[sub_resource type="Animation" id=100]
+[sub_resource type="Animation" id=20]
 resource_name = "rat_animation"
 length = 4.0
 loop = true
@@ -394,37 +394,37 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 180.0, 180.0 ]
 }
 
-[sub_resource type="Curve2D" id=20]
+[sub_resource type="Curve2D" id=21]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
 }
 
-[sub_resource type="SpriteFrames" id=21]
+[sub_resource type="SpriteFrames" id=22]
 animations = [ {
-"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
-"loop": false,
-"name": "dead",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "alive",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=22]
+[sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 3.42169, 12.7206 )
 
-[sub_resource type="CapsuleShape2D" id=23]
+[sub_resource type="CapsuleShape2D" id=24]
 radius = 7.82721
 height = 12.0289
 
-[sub_resource type="RectangleShape2D" id=24]
+[sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 3.74698, 12.5364 )
 
-[sub_resource type="RectangleShape2D" id=25]
+[sub_resource type="RectangleShape2D" id=26]
 
-[sub_resource type="SpriteFrames" id=26]
+[sub_resource type="SpriteFrames" id=27]
 animations = [ {
 "frames": [ ExtResource( 45 ) ],
 "loop": true,
@@ -437,13 +437,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=27]
+[sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 12.5046, 10 )
 
-[sub_resource type="RectangleShape2D" id=28]
+[sub_resource type="RectangleShape2D" id=29]
 extents = Vector2( 12.6926, 10.9488 )
 
-[sub_resource type="RectangleShape2D" id=29]
+[sub_resource type="RectangleShape2D" id=30]
 extents = Vector2( 4.51196, 59.8682 )
 
 [sub_resource type="Gradient" id=31]
@@ -478,14 +478,14 @@ color_ramp = SubResource( 32 )
 
 [sub_resource type="SpriteFrames" id=36]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -495,38 +495,38 @@ extents = Vector2( 2.2953, 6.27969 )
 [sub_resource type="RectangleShape2D" id=38]
 extents = Vector2( 15.6504, 18.1411 )
 
-[sub_resource type="CapsuleShape2D" id=30]
+[sub_resource type="CapsuleShape2D" id=39]
 radius = 19.2
 height = 13.0661
 
-[sub_resource type="CapsuleShape2D" id=94]
+[sub_resource type="CapsuleShape2D" id=40]
 radius = 19.3859
 height = 74.3843
 
-[sub_resource type="CapsuleShape2D" id=95]
+[sub_resource type="CapsuleShape2D" id=41]
 radius = 18.6699
 height = 39.6003
 
-[sub_resource type="RectangleShape2D" id=97]
+[sub_resource type="RectangleShape2D" id=42]
 extents = Vector2( 125.797, 20.867 )
 
-[sub_resource type="RectangleShape2D" id=98]
+[sub_resource type="RectangleShape2D" id=43]
 extents = Vector2( 108.518, 23.0579 )
 
-[sub_resource type="CapsuleShape2D" id=99]
+[sub_resource type="CapsuleShape2D" id=44]
 radius = 18.7512
 height = 153.676
 
-[sub_resource type="RectangleShape2D" id=96]
+[sub_resource type="RectangleShape2D" id=45]
 extents = Vector2( 64.411, 99.2789 )
 
-[sub_resource type="Gradient" id=39]
+[sub_resource type="Gradient" id=46]
 colors = PoolColorArray( 0.398438, 0.398438, 0.398438, 1, 0.214844, 0.214005, 0.214005, 1 )
 
-[sub_resource type="GradientTexture" id=40]
-gradient = SubResource( 39 )
+[sub_resource type="GradientTexture" id=47]
+gradient = SubResource( 46 )
 
-[sub_resource type="ParticlesMaterial" id=41]
+[sub_resource type="ParticlesMaterial" id=48]
 emission_shape = 2
 emission_box_extents = Vector3( 1, 1, 1 )
 flag_disable_z = true
@@ -537,13 +537,13 @@ initial_velocity_random = 1.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 0.35
-color_ramp = SubResource( 40 )
+color_ramp = SubResource( 47 )
 
-[sub_resource type="CapsuleShape2D" id=42]
+[sub_resource type="CapsuleShape2D" id=49]
 radius = 6.90907
 height = 0.224829
 
-[sub_resource type="Animation" id=43]
+[sub_resource type="Animation" id=50]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -596,7 +596,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=44]
+[sub_resource type="Animation" id=51]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -610,7 +610,7 @@ tracks/0/keys = {
 "values": [ 2, 3, 4 ]
 }
 
-[sub_resource type="Animation" id=45]
+[sub_resource type="Animation" id=52]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -626,7 +626,7 @@ tracks/0/keys = {
 "values": [ 19, 20, 19, 20 ]
 }
 
-[sub_resource type="Animation" id=46]
+[sub_resource type="Animation" id=53]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -642,7 +642,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=54]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -695,7 +695,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=55]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -709,7 +709,7 @@ tracks/0/keys = {
 "values": [ 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id=56]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -725,7 +725,7 @@ tracks/0/keys = {
 "values": [ 5 ]
 }
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id=57]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -741,7 +741,7 @@ tracks/0/keys = {
 "values": [ 21, 5, 21, 5 ]
 }
 
-[sub_resource type="Animation" id=51]
+[sub_resource type="Animation" id=58]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -794,7 +794,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=52]
+[sub_resource type="Animation" id=59]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -808,7 +808,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10 ]
 }
 
-[sub_resource type="Animation" id=53]
+[sub_resource type="Animation" id=60]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -824,7 +824,7 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=54]
+[sub_resource type="Animation" id=61]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -840,7 +840,7 @@ tracks/0/keys = {
 "values": [ 22, 8, 22, 8 ]
 }
 
-[sub_resource type="Animation" id=55]
+[sub_resource type="Animation" id=62]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -893,7 +893,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=56]
+[sub_resource type="Animation" id=63]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -907,7 +907,7 @@ tracks/0/keys = {
 "values": [ 15, 16, 17, 18 ]
 }
 
-[sub_resource type="Animation" id=57]
+[sub_resource type="Animation" id=64]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -923,7 +923,7 @@ tracks/0/keys = {
 "values": [ 13 ]
 }
 
-[sub_resource type="Animation" id=58]
+[sub_resource type="Animation" id=65]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -939,150 +939,150 @@ tracks/0/keys = {
 "values": [ 23, 24, 23, 24 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=59]
+[sub_resource type="AnimationNodeAnimation" id=66]
 animation = "attack_down"
 
-[sub_resource type="AnimationNodeAnimation" id=60]
+[sub_resource type="AnimationNodeAnimation" id=67]
 animation = "right_attack"
 
-[sub_resource type="AnimationNodeAnimation" id=61]
+[sub_resource type="AnimationNodeAnimation" id=68]
 animation = "left_attack"
 
-[sub_resource type="AnimationNodeAnimation" id=62]
+[sub_resource type="AnimationNodeAnimation" id=69]
 animation = "up_attack"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=63]
-blend_point_0/node = SubResource( 59 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=70]
+blend_point_0/node = SubResource( 66 )
 blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 60 )
+blend_point_1/node = SubResource( 67 )
 blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 61 )
+blend_point_2/node = SubResource( 68 )
 blend_point_2/pos = Vector2( -1, 0 )
-blend_point_3/node = SubResource( 62 )
+blend_point_3/node = SubResource( 69 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=64]
+[sub_resource type="AnimationNodeAnimation" id=71]
 animation = "down_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=65]
+[sub_resource type="AnimationNodeAnimation" id=72]
 animation = "right_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=66]
+[sub_resource type="AnimationNodeAnimation" id=73]
 animation = "up_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=67]
+[sub_resource type="AnimationNodeAnimation" id=74]
 animation = "left_dead"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=68]
-blend_point_0/node = SubResource( 64 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=75]
+blend_point_0/node = SubResource( 71 )
 blend_point_0/pos = Vector2( -0.00142753, 0.989446 )
-blend_point_1/node = SubResource( 65 )
+blend_point_1/node = SubResource( 72 )
 blend_point_1/pos = Vector2( 0.998572, -0.00263858 )
-blend_point_2/node = SubResource( 66 )
+blend_point_2/node = SubResource( 73 )
 blend_point_2/pos = Vector2( -0.00142753, -0.989446 )
-blend_point_3/node = SubResource( 67 )
+blend_point_3/node = SubResource( 74 )
 blend_point_3/pos = Vector2( -0.999286, 0.0079155 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=69]
+[sub_resource type="AnimationNodeAnimation" id=76]
 animation = "left_idle"
 
-[sub_resource type="AnimationNodeAnimation" id=70]
+[sub_resource type="AnimationNodeAnimation" id=77]
 animation = "idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id=71]
+[sub_resource type="AnimationNodeAnimation" id=78]
 animation = "right_idle"
 
-[sub_resource type="AnimationNodeAnimation" id=72]
+[sub_resource type="AnimationNodeAnimation" id=79]
 animation = "up_idle"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=73]
-blend_point_0/node = SubResource( 69 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=80]
+blend_point_0/node = SubResource( 76 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 70 )
+blend_point_1/node = SubResource( 77 )
 blend_point_1/pos = Vector2( 0, 1 )
-blend_point_2/node = SubResource( 71 )
+blend_point_2/node = SubResource( 78 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 72 )
+blend_point_3/node = SubResource( 79 )
 blend_point_3/pos = Vector2( 0, -1 )
 snap = Vector2( 0.01, 0.01 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=74]
+[sub_resource type="AnimationNodeAnimation" id=81]
 animation = "down_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=75]
+[sub_resource type="AnimationNodeAnimation" id=82]
 animation = "left_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=76]
+[sub_resource type="AnimationNodeAnimation" id=83]
 animation = "right_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=77]
+[sub_resource type="AnimationNodeAnimation" id=84]
 animation = "up_walk"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=78]
-blend_point_0/node = SubResource( 74 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=85]
+blend_point_0/node = SubResource( 81 )
 blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 75 )
+blend_point_1/node = SubResource( 82 )
 blend_point_1/pos = Vector2( -1, 0 )
-blend_point_2/node = SubResource( 76 )
+blend_point_2/node = SubResource( 83 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 77 )
+blend_point_3/node = SubResource( 84 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=79]
+[sub_resource type="AnimationNodeStateMachineTransition" id=86]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=80]
+[sub_resource type="AnimationNodeStateMachineTransition" id=87]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=81]
+[sub_resource type="AnimationNodeStateMachineTransition" id=88]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=82]
+[sub_resource type="AnimationNodeStateMachineTransition" id=89]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=83]
+[sub_resource type="AnimationNodeStateMachineTransition" id=90]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=84]
+[sub_resource type="AnimationNodeStateMachineTransition" id=91]
 
-[sub_resource type="AnimationNodeStateMachine" id=85]
-states/Attack/node = SubResource( 63 )
+[sub_resource type="AnimationNodeStateMachine" id=92]
+states/Attack/node = SubResource( 70 )
 states/Attack/position = Vector2( 508, 204 )
-states/Death/node = SubResource( 68 )
+states/Death/node = SubResource( 75 )
 states/Death/position = Vector2( 342, 100 )
-states/Idle/node = SubResource( 73 )
+states/Idle/node = SubResource( 80 )
 states/Idle/position = Vector2( 495, 100 )
-states/Run/node = SubResource( 78 )
+states/Run/node = SubResource( 85 )
 states/Run/position = Vector2( 657, 100 )
-transitions = [ "Idle", "Run", SubResource( 79 ), "Run", "Idle", SubResource( 80 ), "Idle", "Attack", SubResource( 81 ), "Attack", "Idle", SubResource( 82 ), "Death", "Idle", SubResource( 83 ), "Idle", "Death", SubResource( 84 ) ]
+transitions = [ "Idle", "Run", SubResource( 86 ), "Run", "Idle", SubResource( 87 ), "Idle", "Attack", SubResource( 88 ), "Attack", "Idle", SubResource( 89 ), "Death", "Idle", SubResource( 90 ), "Idle", "Death", SubResource( 91 ) ]
 start_node = "Idle"
 graph_offset = Vector2( 0, 26.5131 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=86]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=93]
 
-[sub_resource type="DynamicFont" id=87]
+[sub_resource type="DynamicFont" id=94]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=88]
+[sub_resource type="DynamicFont" id=95]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=89]
+[sub_resource type="DynamicFont" id=96]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=90]
+[sub_resource type="DynamicFont" id=97]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="CapsuleShape2D" id=91]
+[sub_resource type="CapsuleShape2D" id=98]
 radius = 3.12059
 height = 12.0896
 
-[sub_resource type="RectangleShape2D" id=92]
+[sub_resource type="RectangleShape2D" id=99]
 extents = Vector2( 4.63716, 4.92157 )
 
-[sub_resource type="RectangleShape2D" id=93]
+[sub_resource type="RectangleShape2D" id=100]
 extents = Vector2( 7.67579, 12.1784 )
 
 [node name="Dungeon map" type="Node2D"]
@@ -1166,12 +1166,12 @@ scale = Vector2( 1, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Rat/Rat Attack"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 100 )
+anims/rat_animation = SubResource( 20 )
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( 3.5, 7.21212 )
 scale = Vector2( 0.994318, 0.969697 )
-curve = SubResource( 20 )
+curve = SubResource( 21 )
 script = ExtResource( 20 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
@@ -1189,12 +1189,12 @@ script = ExtResource( 38 )
 position = Vector2( 3.44867, -0.985462 )
 rotation = 9.31322e-10
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 21 )
+frames = SubResource( 22 )
 animation = "alive"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/obj_enemy"]
 position = Vector2( 4.22879, -0.742015 )
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 script = ExtResource( 39 )
 
 [node name="Hurtbox" parent="Path2D/PathFollow2D" instance=ExtResource( 24 )]
@@ -1203,7 +1203,7 @@ collision_layer = 8
 
 [node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hurtbox" index="0"]
 position = Vector2( 4.21185, -0.822247 )
-shape = SubResource( 23 )
+shape = SubResource( 24 )
 
 [node name="Hitbox" parent="Path2D/PathFollow2D" instance=ExtResource( 22 )]
 collision_mask = 4
@@ -1211,7 +1211,7 @@ script = ExtResource( 8 )
 
 [node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hitbox" index="0"]
 position = Vector2( 4.14258, -0.811954 )
-shape = SubResource( 24 )
+shape = SubResource( 25 )
 
 [node name="Key" type="Area2D" parent="."]
 position = Vector2( 857.925, 318.426 )
@@ -1220,7 +1220,7 @@ script = ExtResource( 35 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
 position = Vector2( -1.00139, 1.25174 )
 scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 25 )
+shape = SubResource( 26 )
 
 [node name="Sprite" type="Sprite" parent="Key"]
 scale = Vector2( 0.5, 0.5 )
@@ -1233,13 +1233,13 @@ script = ExtResource( 37 )
 [node name="Sprite" type="AnimatedSprite" parent="obj_door"]
 position = Vector2( 3.32959, -1.42697 )
 scale = Vector2( 1.71553, 1 )
-frames = SubResource( 26 )
+frames = SubResource( 27 )
 animation = "closed"
 
 [node name="door_collision" type="CollisionShape2D" parent="obj_door"]
 position = Vector2( 3.72278, -3.64516 )
 scale = Vector2( 2.5, 2 )
-shape = SubResource( 27 )
+shape = SubResource( 28 )
 script = ExtResource( 46 )
 
 [node name="Area2D" type="Area2D" parent="obj_door"]
@@ -1248,7 +1248,7 @@ scale = Vector2( 1.5, 1.5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_door/Area2D"]
 position = Vector2( 2.38139, 3.80061 )
 scale = Vector2( 1.5, 1.5 )
-shape = SubResource( 28 )
+shape = SubResource( 29 )
 
 [node name="Enemy" parent="." instance=ExtResource( 23 )]
 position = Vector2( -206.149, 398.52 )
@@ -1272,7 +1272,7 @@ texture = ExtResource( 30 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 52.1439, 541.369 )
 scale = Vector2( 1, 0.1 )
-shape = SubResource( 29 )
+shape = SubResource( 30 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 48 )
@@ -2797,7 +2797,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision2" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 713.155, 23.6486 )
@@ -2807,7 +2807,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision2"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision3" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 691.458, 45.7767 )
@@ -2817,7 +2817,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision3"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision4" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1007.52, 31.0608 )
@@ -2827,7 +2827,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision4"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision5" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1048.1, 29.295 )
@@ -2837,7 +2837,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision5"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision6" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 547.735, -292.097 )
@@ -2847,7 +2847,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision6"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision7" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 586.992, -292.097 )
@@ -2857,7 +2857,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision7"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision8" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 626.916, -293.275 )
@@ -2867,7 +2867,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision8"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision9" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 566.365, -270.907 )
@@ -2877,7 +2877,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision9"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision10" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 607.619, -269.729 )
@@ -2887,7 +2887,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision10"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision11" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1270.34, -285.034 )
@@ -2897,7 +2897,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision11"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision12" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1191.83, 120.533 )
@@ -2907,7 +2907,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision12"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision13" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1316.25, 390.126 )
@@ -2917,7 +2917,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision13"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision14" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1191.16, 565.538 )
@@ -2927,7 +2927,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision14"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision15" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1230.42, 564.949 )
@@ -2937,7 +2937,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision15"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision16" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1233.47, 596.535 )
@@ -2947,7 +2947,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision16"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision18" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1442.07, 95.4927 )
@@ -2957,7 +2957,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision18"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision19" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1689.22, 92.6968 )
@@ -2967,7 +2967,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision19"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision20" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1608.31, 513.215 )
@@ -2977,7 +2977,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision20"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision21" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1648.77, 515.452 )
@@ -2987,7 +2987,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision21"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision22" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1689.22, 514.892 )
@@ -2997,7 +2997,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision22"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision17" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1192.92, 596.356 )
@@ -3007,7 +3007,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision17"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision25" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2271.25, 107.974 )
@@ -3017,7 +3017,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision25"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision26" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2270.39, 141.003 )
@@ -3027,7 +3027,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision26"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision27" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2270.39, 173.052 )
@@ -3037,7 +3037,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision27"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision28" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2270.21, 206.149 )
@@ -3047,1162 +3047,1057 @@ texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision28"]
 position = Vector2( -0.308838, -49.686 )
-shape = SubResource( 94 )
+shape = SubResource( 40 )
 
 [node name="Barrel Collision29" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2271.92, 301.666 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision29"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision29"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision30" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2270.93, 335.207 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision30"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision30"]
 position = Vector2( -0.601562, -10.0477 )
-shape = SubResource( 95 )
+shape = SubResource( 41 )
 
 [node name="Barrel Collision31" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2660.15, 492.957 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision31"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision31"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision32" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2936.23, 292.767 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision32"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision32"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision33" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2870.15, 485.75 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision33"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision33"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision34" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3062.05, -102.808 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision34"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision34"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision35" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3102.78, -103.608 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision35"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision35"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision36" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3210.5, 476.941 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision36"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision36"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision37" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3248.51, 476.141 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision37"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision37"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision38" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3232.22, 500.163 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision38"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision38"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision39" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3599.72, 488.953 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision39"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision39"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision40" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3901.14, 483.347 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision40"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision40"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision41" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3941.88, 484.148 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision41"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision41"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision42" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3733.69, 288.763 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision42"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision42"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision43" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3770.8, 289.564 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision43"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision43"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision44" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3528.21, 209.488 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision44"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision44"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision45" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4054.34, -315.729 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision45"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision45"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision46" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4096.48, -313.447 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision46"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision46"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision47" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4137.75, -313.447 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision47"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision47"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision48" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4178.17, -311.926 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision48"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision48"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision49" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4216, -310.404 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision49"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision49"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision50" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4257.28, -310.404 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision50"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision50"]
 position = Vector2( -108.124, -1.23694 )
-shape = SubResource( 97 )
+shape = SubResource( 42 )
 
 [node name="Barrel Collision51" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4257.28, -270.847 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision51"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision51"]
 position = Vector2( 90.4812, -0.602417 )
-shape = SubResource( 98 )
+shape = SubResource( 43 )
 
 [node name="Barrel Collision52" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4296.84, -270.086 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision52"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision52"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision53" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4335.53, -268.565 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision53"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision53"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision54" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4375.09, -269.325 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision54"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision54"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision55" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4414.64, -271.607 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision55"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision55"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision56" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4454.2, -271.607 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision56"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision56"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision57" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4453.34, -235.853 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision57"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision57"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision58" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4454.2, -197.817 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision58"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision58"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision59" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4455.06, -157.499 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision59"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision59"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision60" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4455.06, -123.267 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision60"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision60"]
 position = Vector2( -1.46094, -71.4376 )
-shape = SubResource( 99 )
+shape = SubResource( 44 )
 
 [node name="Barrel Collision61" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4177.77, 28.6275 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision61"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision61"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision62" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4216.66, 29.6105 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision62"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision62"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision63" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3607.66, -342.992 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision63"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision63"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision64" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3533.21, 156.433 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision64"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision64"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision65" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3609.89, 205.589 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision65"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision65"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision66" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4100.81, -878.253 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision66"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision66"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision69" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4521.83, -1078.95 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision69"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision69"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision70" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4562.33, -1079.62 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision70"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision70"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision71" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4602.07, -1077.95 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision71"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision71"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision72" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4543.78, -1058.53 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision72"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision72"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision73" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 4582.77, -1057.86 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision73"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision73"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision74" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3642.53, -1067.07 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision74"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision74"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision75" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3682.69, -1067.07 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision75"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision75"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision76" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3467.11, -872.235 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision76"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision76"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision77" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3506.37, -872.824 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision77"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision77"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision78" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3069.21, -1065.89 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision78"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision78"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision79" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2970.6, -869.057 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision79"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision79"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision80" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 3010.42, -867.938 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision80"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision80"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision81" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2765.16, -678.37 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision81"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision81"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision82" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2804.98, -676.693 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision82"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision82"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision83" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2844.81, -676.693 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision83"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision83"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision84" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2662.87, -384.416 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision84"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision84"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision85" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2349.12, -100.521 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision85"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision85"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision86" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2391.87, -99.1659 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision86"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision86"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision87" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2433.79, -100.889 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision87"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision87"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision88" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2350.92, -63.0917 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision88"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision88"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision89" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2392.98, -62.616 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision89"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision89"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision90" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2436.31, -63.28 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision90"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision90"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision91" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2351.61, -25.2744 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision91"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision91"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision92" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2394.51, -24.4244 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision92"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision92"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision93" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2438.59, -24.05 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision93"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision93"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision94" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2353.19, 13.9181 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision94"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision94"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision95" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2396.34, 13.3721 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision95"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision95"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision97" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1605.61, -96.1786 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision97"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision97"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision98" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1644.86, -96.6968 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision98"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision98"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision99" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1199.85, -493.93 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision99"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision99"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision100" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1239.68, -495.607 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision100"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision100"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision101" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1279.5, -492.811 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision101"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision101"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision102" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1220.08, -471.002 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision102"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision102"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision103" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1263.07, -468.206 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision103"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision103"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision104" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 532.942, -883.44 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision104"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision104"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision105" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 532.341, -545.571 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision105"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision105"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision106" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 532.942, -507.853 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision106"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision106"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision107" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 573.776, -885.033 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision107"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision107"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision108" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 614.01, -883.44 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision108"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision108"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision109" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1049.38, -887.159 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision109"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision109"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision110" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1090.81, -887.69 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision110"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision110"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision111" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1093.22, -861.659 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision111"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision111"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision112" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1119.64, -839.347 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision112"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision112"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision113" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 783.985, -684.449 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision113"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision113"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision114" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 824.441, -684.449 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision114"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision114"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision115" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1529.25, -875.695 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision115"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision115"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision116" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1569.7, -875.136 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision116"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision116"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision117" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1700.05, -682.154 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision117"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision117"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision118" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1739.88, -680.552 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision118"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision118"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision119" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1829.49, -232.127 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision119"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision119"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision120" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1872.94, -230.526 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision120"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision120"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision121" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1916.38, -229.725 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision121"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision121"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision122" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1858.45, -206.503 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision122"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision122"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision123" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1899.16, -205.783 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision123"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision123"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision124" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1829.69, -181.658 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision124"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision124"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision125" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1871.07, -180.938 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision125"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision125"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision126" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 1912.05, -180.938 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision126"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision126"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision127" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2010.61, -878.473 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision127"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision127"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision128" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2172.81, -875.04 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision128"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision128"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision129" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2518.93, -869.548 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision129"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision129"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision130" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2265.57, -356.449 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision130"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision130"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision131" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2306.21, -356.449 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision131"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision131"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision132" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2347.88, -355.542 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision132"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision132"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision133" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2442.23, -825.753 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision133"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision133"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision134" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2400.56, -822.731 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision134"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision134"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision135" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2359.57, -820.918 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision135"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision135"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+shape = SubResource( 39 )
 
 [node name="Barrel Collision96" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 2439.73, 13.3184 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision96"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision96"]
 position = Vector2( -46.2399, -55.5764 )
-shape = SubResource( 96 )
+shape = SubResource( 45 )
 
 [node name="Bags" type="Node2D" parent="."]
 position = Vector2( -286.976, -14.964 )
@@ -4524,6 +4419,8 @@ position = Vector2( -134.417, 339.704 )
 collision_layer = 2
 script = ExtResource( 12 )
 
+[node name="Timer" type="Timer" parent="obj_player"]
+
 [node name="Sprite" type="Sprite" parent="obj_player"]
 position = Vector2( 0, 3.31964 )
 scale = Vector2( 0.40462, 0.431326 )
@@ -4545,11 +4442,11 @@ position = Vector2( -1.23608, 20.1741 )
 amount = 30
 speed_scale = 5.0
 local_coords = false
-process_material = SubResource( 41 )
+process_material = SubResource( 48 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
 position = Vector2( 0.0121993, 7.88678 )
-shape = SubResource( 42 )
+shape = SubResource( 49 )
 
 [node name="Light2D" type="Light2D" parent="obj_player"]
 position = Vector2( -0.506622, 4.08057 )
@@ -4558,27 +4455,27 @@ texture = ExtResource( 13 )
 shadow_enabled = true
 
 [node name="player_anim" type="AnimationPlayer" parent="obj_player"]
-anims/attack_down = SubResource( 43 )
-anims/down_dead = SubResource( 44 )
-anims/down_walk = SubResource( 45 )
-anims/idle_down = SubResource( 46 )
-anims/left_attack = SubResource( 47 )
-anims/left_dead = SubResource( 48 )
-anims/left_idle = SubResource( 49 )
-anims/left_walk = SubResource( 50 )
-anims/right_attack = SubResource( 51 )
-anims/right_dead = SubResource( 52 )
-anims/right_idle = SubResource( 53 )
-anims/right_walk = SubResource( 54 )
-anims/up_attack = SubResource( 55 )
-anims/up_dead = SubResource( 56 )
-anims/up_idle = SubResource( 57 )
-anims/up_walk = SubResource( 58 )
+anims/attack_down = SubResource( 50 )
+anims/down_dead = SubResource( 51 )
+anims/down_walk = SubResource( 52 )
+anims/idle_down = SubResource( 53 )
+anims/left_attack = SubResource( 54 )
+anims/left_dead = SubResource( 55 )
+anims/left_idle = SubResource( 56 )
+anims/left_walk = SubResource( 57 )
+anims/right_attack = SubResource( 58 )
+anims/right_dead = SubResource( 59 )
+anims/right_idle = SubResource( 60 )
+anims/right_walk = SubResource( 61 )
+anims/up_attack = SubResource( 62 )
+anims/up_dead = SubResource( 63 )
+anims/up_idle = SubResource( 64 )
+anims/up_walk = SubResource( 65 )
 
 [node name="AnimationTree" type="AnimationTree" parent="obj_player"]
-tree_root = SubResource( 85 )
+tree_root = SubResource( 92 )
 anim_player = NodePath("../player_anim")
-parameters/playback = SubResource( 86 )
+parameters/playback = SubResource( 93 )
 parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
 parameters/Death/blend_position = Vector2( 0.239115, -0.547945 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
@@ -4606,7 +4503,7 @@ margin_top = 488.39
 margin_right = -37.8394
 margin_bottom = 494.39
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 87 )
+custom_fonts/font = SubResource( 94 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "x $"
 __meta__ = {
@@ -4619,7 +4516,7 @@ margin_top = 488.0
 margin_right = -31.0
 margin_bottom = 495.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 88 )
+custom_fonts/font = SubResource( 95 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 19 )
@@ -4639,7 +4536,7 @@ margin_left = 36.8544
 margin_top = 590.417
 margin_right = 43.8544
 margin_bottom = 598.417
-custom_fonts/font = SubResource( 89 )
+custom_fonts/font = SubResource( 96 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "x"
 __meta__ = {
@@ -4652,7 +4549,7 @@ margin_left = 45.5728
 margin_top = 590.851
 margin_right = 53.5728
 margin_bottom = 596.851
-custom_fonts/font = SubResource( 90 )
+custom_fonts/font = SubResource( 97 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 34 )
@@ -4671,14 +4568,14 @@ script = ExtResource( 49 )
 
 [node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
 position = Vector2( 3.37391, 0.250439 )
-shape = SubResource( 91 )
+shape = SubResource( 98 )
 disabled = true
 
 [node name="Area2D" type="Area2D" parent="obj_player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/Area2D"]
 position = Vector2( 0.238064, 8.45447 )
-shape = SubResource( 92 )
+shape = SubResource( 99 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 7 )
@@ -4689,7 +4586,7 @@ collision_layer = 4
 
 [node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
 position = Vector2( -7.62939e-06, 2.89954 )
-shape = SubResource( 93 )
+shape = SubResource( 100 )
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 47 )
@@ -5689,9 +5586,9 @@ shape = SubResource( 38 )
 [connection signal="area_exited" from="Fake Walls/false_wall/AnimatedSprite/Area2D" to="Fake Walls/false_wall" method="_on_Area2D_area_exited"]
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="bagsCollected" from="Bags/obj_bag" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag" to="Bags/obj_bag" method="_on_obj_bag_body_entered"]
@@ -5901,6 +5798,7 @@ shape = SubResource( 38 )
 [connection signal="body_entered" from="Bags/obj_bag102" to="Bags/obj_bag102" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag103" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag103" to="Bags/obj_bag103" method="_on_obj_bag_body_entered"]
+[connection signal="timeout" from="obj_player/Timer" to="obj_player" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player" method="_on_Hurtbox_area_entered"]
 
 [editable path="Path2D/PathFollow2D/Hurtbox"]

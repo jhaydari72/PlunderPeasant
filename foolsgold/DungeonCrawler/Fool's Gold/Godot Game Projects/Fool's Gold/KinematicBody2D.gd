@@ -21,6 +21,7 @@ onready var player_anim = $player_anim
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 onready var swordhitbox = $HitboxPivot/SwordHitbox
+onready var time = $Timer
 
 func _ready():
 	animationTree.active = true
@@ -84,14 +85,12 @@ func _on_Hurtbox_area_entered(_area):
 
 func _on_Rat_Attack_Player(body):
 	if body.name == "obj_player":
-		get_tree().change_scene("res://GameOver/GameOver.tscn")
+		animationState.travel("Death")
+		state = DEATH
+		$Timer.start()
+		
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
+func _on_Timer_timeout():
+	get_tree().change_scene("res://GameOver/GameOver.tscn")
