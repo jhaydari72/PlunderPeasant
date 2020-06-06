@@ -1,10 +1,10 @@
-[gd_scene load_steps=143 format=2]
+[gd_scene load_steps=153 format=2]
 
 [ext_resource path="res://Tile map/Updated Titles/Left Middle Wall.png" type="Texture" id=1]
 [ext_resource path="res://Tile map/Updated Titles/Top Right Wall.png" type="Texture" id=2]
 [ext_resource path="res://Tile map/Updated Titles/Middle Right Wall.png" type="Texture" id=3]
 [ext_resource path="res://Tile map/Updated Titles/Bottom Right Wall.png" type="Texture" id=4]
-[ext_resource path="res://Barrel.png" type="Texture" id=5]
+[ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=5]
 [ext_resource path="res://Tile map/Updated Titles/Center Title.png" type="Texture" id=6]
 [ext_resource path="res://Audio/hit_sound_mixdown.wav" type="AudioStream" id=7]
 [ext_resource path="res://hit and hurt/Hitbox.gd" type="Script" id=8]
@@ -49,6 +49,9 @@
 [ext_resource path="res://Audio/463351__ddragonpearl__hit-1.wav" type="AudioStream" id=47]
 [ext_resource path="res://Audio/388340__phlair__dungeon-ambiance.wav" type="AudioStream" id=48]
 [ext_resource path="res://Player anims/SwordHitbox.gd" type="Script" id=49]
+[ext_resource path="res://Art Assets/Banner.png" type="Texture" id=50]
+[ext_resource path="res://Art Assets/Spider Wed.png" type="Texture" id=51]
+[ext_resource path="res://Enemy/Rat Attack.tscn" type="PackedScene" id=52]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 7.05715, 0, 7.05715, 42.7292, 63.9922, 42.7292, 64, 64, 0, 64, 0, 0 )
@@ -362,6 +365,35 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 12.8753, 10 )
 
+[sub_resource type="Animation" id=100]
+resource_name = "rat_animation"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.125961, 7.30556 ), Vector2( 0.420746, 44.1783 ), Vector2( 0.105194, 80.5728 ), Vector2( 0.420746, 44.1783 ), Vector2( -0.125961, 7.30556 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.9, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 180.0, 180.0 ]
+}
+
 [sub_resource type="Curve2D" id=20]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
@@ -414,10 +446,6 @@ extents = Vector2( 12.6926, 10.9488 )
 [sub_resource type="RectangleShape2D" id=29]
 extents = Vector2( 4.51196, 59.8682 )
 
-[sub_resource type="CapsuleShape2D" id=30]
-radius = 19.2
-height = 12.1876
-
 [sub_resource type="Gradient" id=31]
 offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.769531, 0.519354, 0.165329, 1, 0.652344, 0.0311148, 0, 1, 1, 0, 0, 1 )
@@ -466,6 +494,31 @@ extents = Vector2( 2.2953, 6.27969 )
 
 [sub_resource type="RectangleShape2D" id=38]
 extents = Vector2( 15.6504, 18.1411 )
+
+[sub_resource type="CapsuleShape2D" id=30]
+radius = 19.2
+height = 13.0661
+
+[sub_resource type="CapsuleShape2D" id=94]
+radius = 19.3859
+height = 74.3843
+
+[sub_resource type="CapsuleShape2D" id=95]
+radius = 18.6699
+height = 39.6003
+
+[sub_resource type="RectangleShape2D" id=97]
+extents = Vector2( 125.797, 20.867 )
+
+[sub_resource type="RectangleShape2D" id=98]
+extents = Vector2( 108.518, 23.0579 )
+
+[sub_resource type="CapsuleShape2D" id=99]
+radius = 18.7512
+height = 153.676
+
+[sub_resource type="RectangleShape2D" id=96]
+extents = Vector2( 64.411, 99.2789 )
 
 [sub_resource type="Gradient" id=39]
 colors = PoolColorArray( 0.398438, 0.398438, 0.398438, 1, 0.214844, 0.214005, 0.214005, 1 )
@@ -1033,7 +1086,7 @@ extents = Vector2( 4.63716, 4.92157 )
 extents = Vector2( 7.67579, 12.1784 )
 
 [node name="Dungeon map" type="Node2D"]
-position = Vector2( -1, 2 )
+position = Vector2( 2.82852, 2.15314 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -925.456
@@ -1050,7 +1103,7 @@ position = Vector2( -31.7773, -1.19165 )
 tile_set = SubResource( 13 )
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 2, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 4, 0, 16, 5, 0, 131069, 2, 0, 131070, 3, 0, 131071, 3, 0, 65536, 1, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 4, 0, 65541, 8, 0, 65542, 2, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 2, 0, 65547, 10, 0, 65548, 8, 0, 65549, 3, 0, 65550, 4, 0, 65551, 5, 0, 65552, 5, 0, 196605, 1, 0, 196606, 2, 0, 196607, 8, 0, 131072, 8, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 5, 0, 131077, 8, 0, 131078, 1, 0, 131079, 2, 0, 131080, 2, 0, 131081, 3, 0, 131082, 1, 0, 131083, 10, 0, 131084, 8, 0, 131085, 2, 0, 131086, 3, 0, 131087, 4, 0, 131088, 5, 0, 262141, 1, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 10, 0, 196611, 5, 0, 196612, 5, 0, 196613, 8, 0, 196614, 1, 0, 196615, 1, 0, 196616, 10, 0, 196617, 8, 0, 196618, 1, 0, 196619, 10, 0, 196620, 8, 0, 196621, 1, 0, 196622, 8, 0, 196623, 5, 0, 196624, 5, 0, 327676, 2, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 4, 0, 262145, 8, 0, 262146, 10, 0, 262147, 8, 0, 262148, 5, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0, 262152, 10, 0, 262153, 8, 0, 262154, 1, 0, 262155, 10, 0, 262156, 8, 0, 262157, 1, 0, 262158, 8, 0, 262159, 5, 0, 262160, 5, 0, 393212, 1, 0, 393213, 9, 0, 393214, 9, 0, 393215, 9, 0, 327680, 10, 0, 327681, 8, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 8, 0, 327690, 1, 0, 327691, 10, 0, 327692, 8, 0, 327693, 0, 0, 327694, 7, 0, 327695, 6, 0, 327696, 5, 0, 458748, 0, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 10, 0, 393217, 3, 0, 393218, 4, 0, 393219, 8, 0, 393220, 2, 0, 393221, 4, 0, 393222, 8, 0, 393223, 2, 0, 393224, 3, 0, 393225, 8, 0, 393226, 1, 0, 393227, 2, 0, 393228, 8, 0, 393229, 8, 0, 393230, 8, 0, 393231, 8, 0, 393232, 5, 0, 458752, 10, 0, 458753, 5, 0, 458754, 5, 0, 458755, 8, 0, 458756, 0, 0, 458757, 6, 0, 458758, 8, 0, 458759, 1, 0, 458760, 4, 0, 458761, 8, 0, 458762, 2, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 4, 0, 458768, 5, 0, 524288, 1, 0, 524289, 5, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 2, 0, 524296, 5, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 8, 0, 524304, 5, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0 )
+tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 2, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 4, 0, 16, 5, 0, 131069, 2, 0, 131070, 3, 0, 131071, 3, 0, 65536, 1, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 4, 0, 65541, 8, 0, 65542, 2, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 2, 0, 65547, 10, 0, 65548, 8, 0, 65549, 3, 0, 65550, 4, 0, 65551, 5, 0, 65552, 5, 0, 196605, 1, 0, 196606, 2, 0, 196607, 8, 0, 131072, 8, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 5, 0, 131077, 8, 0, 131078, 1, 0, 131079, 2, 0, 131080, 2, 0, 131081, 3, 0, 131082, 1, 0, 131083, 5, 0, 131084, 8, 0, 131085, 2, 0, 131086, 3, 0, 131087, 5, 0, 131088, 5, 0, 262141, 1, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 10, 0, 196611, 5, 0, 196612, 5, 0, 196613, 8, 0, 196614, 1, 0, 196615, 1, 0, 196616, 10, 0, 196617, 8, 0, 196618, 1, 0, 196619, 10, 0, 196620, 8, 0, 196621, 1, 0, 196622, 8, 0, 196623, 5, 0, 196624, 5, 0, 327676, 2, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 4, 0, 262145, 8, 0, 262146, 10, 0, 262147, 8, 0, 262148, 5, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0, 262152, 10, 0, 262153, 8, 0, 262154, 1, 0, 262155, 10, 0, 262156, 8, 0, 262157, 1, 0, 262158, 8, 0, 262159, 5, 0, 262160, 5, 0, 393212, 1, 0, 393213, 9, 0, 393214, 9, 0, 393215, 9, 0, 327680, 10, 0, 327681, 8, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 8, 0, 327690, 1, 0, 327691, 10, 0, 327692, 8, 0, 327693, 0, 0, 327694, 7, 0, 327695, 6, 0, 327696, 5, 0, 458748, 0, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 10, 0, 393217, 3, 0, 393218, 4, 0, 393219, 8, 0, 393220, 2, 0, 393221, 4, 0, 393222, 8, 0, 393223, 2, 0, 393224, 3, 0, 393225, 8, 0, 393226, 1, 0, 393227, 2, 0, 393228, 8, 0, 393229, 8, 0, 393230, 8, 0, 393231, 8, 0, 393232, 5, 0, 458752, 10, 0, 458753, 5, 0, 458754, 5, 0, 458755, 8, 0, 458756, 0, 0, 458757, 7, 0, 458758, 8, 0, 458759, 1, 0, 458760, 4, 0, 458761, 8, 0, 458762, 2, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 4, 0, 458768, 5, 0, 524288, 1, 0, 524289, 5, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 2, 0, 524296, 8, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 8, 0, 524304, 5, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0 )
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 margin_left = -926.616
@@ -1102,317 +1155,18 @@ animation = "closed"
 position = Vector2( 26.4776, 10.578 )
 shape = SubResource( 19 )
 
-[node name="Bags" type="Node2D" parent="."]
-position = Vector2( -286.976, -14.964 )
-
-[node name="obj_bag" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 221.54, 363.485 )
-
-[node name="obj_bag2" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 228.8, 367.491 )
-
-[node name="obj_bag3" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 234.808, 405.793 )
-
-[node name="obj_bag4" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 224.544, 413.304 )
-
-[node name="obj_bag5" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 233.306, 421.064 )
-
-[node name="obj_bag6" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 331.386, 568.085 )
-
-[node name="obj_bag7" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 341.529, 571.773 )
-
-[node name="obj_bag8" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 334.153, 575.154 )
-
-[node name="obj_bag9" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 532.399, 427.93 )
-
-[node name="obj_bag10" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 526.559, 434.077 )
-
-[node name="obj_bag11" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 535.78, 440.839 )
-
-[node name="obj_bag12" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 530.084, 488.541 )
-
-[node name="obj_bag13" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 536.776, 493.24 )
-
-[node name="obj_bag14" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 720.686, 556.485 )
-
-[node name="obj_bag15" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 727.066, 563.42 )
-
-[node name="obj_bag16" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 722.35, 572.297 )
-
-[node name="obj_bag17" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 924.533, 443.202 )
-
-[node name="obj_bag18" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 917.78, 445.982 )
-
-[node name="obj_bag19" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 926.122, 451.543 )
-
-[node name="obj_bag20" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 482.035, 374.88 )
-
-[node name="obj_bag21" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 668.726, 378.058 )
-
-[node name="obj_bag22" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 792.657, 319.668 )
-
-[node name="obj_bag23" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 808.943, 319.27 )
-
-[node name="obj_bag24" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 852.637, 508.742 )
-
-[node name="obj_bag25" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 867.333, 509.934 )
-
-[node name="obj_bag26" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 859.389, 512.317 )
-
-[node name="obj_bag27" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 346.564, 242.886 )
-
-[node name="obj_bag28" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 363.545, 241.754 )
-
-[node name="obj_bag29" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 92.6041, 122.132 )
-
-[node name="obj_bag30" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 157.509, 194.207 )
-
-[node name="obj_bag31" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 166.943, 194.207 )
-
-[node name="obj_bag32" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 404.677, 309.3 )
-
-[node name="obj_bag33" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 422.412, 311.564 )
-
-[node name="obj_bag34" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 412.601, 316.092 )
-
-[node name="obj_bag35" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 476.751, 177.226 )
-
-[node name="obj_bag36" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 482.412, 185.15 )
-
-[node name="obj_bag37" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 541.656, 139.113 )
-
-[node name="obj_bag38" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 412.978, 183.264 )
-
-[node name="obj_bag39" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 845.427, 52.6988 )
-
-[node name="obj_bag40" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 858.257, 52.3214 )
-
-[node name="obj_bag41" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 853.729, 59.8685 )
-
-[node name="obj_bag42" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 866.181, 60.6233 )
-
-[node name="obj_bag43" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 865.804, 108.17 )
-
-[node name="obj_bag44" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 875.615, 115.717 )
-
-[node name="obj_bag45" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 863.163, 117.227 )
-
-[node name="obj_bag46" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 923.917, 202.886 )
-
-[node name="obj_bag47" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 723.919, 180.999 )
-
-[node name="obj_bag48" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 730.333, 186.282 )
-
-[node name="obj_bag49" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 736.749, 194.584 )
-
-[node name="obj_bag50" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 680.9, 308.923 )
-
-[node name="obj_bag51" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 607.693, 149.302 )
-
-[node name="obj_bag52" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1154.86, 111.566 )
-
-[node name="obj_bag53" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 932.218, 518.732 )
-
-[node name="obj_bag54" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 928.067, 501.374 )
-
-[node name="obj_bag55" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 921.275, 514.204 )
-
-[node name="obj_bag56" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 915.992, 504.77 )
-
-[node name="obj_bag57" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 732.138, 436.007 )
-
-[node name="obj_bag58" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 865.761, 262.395 )
-
-[node name="obj_bag59" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 859.421, 575.483 )
-
-[node name="obj_bag60" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 852.594, 567.68 )
-
-[node name="obj_bag61" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 864.786, 566.705 )
-
-[node name="obj_bag62" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1108.14, 331.645 )
-
-[node name="obj_bag63" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1118.77, 333.472 )
-
-[node name="obj_bag64" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1118.77, 333.472 )
-
-[node name="obj_bag65" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1106.31, 338.288 )
-
-[node name="obj_bag66" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1113.28, 345.097 )
-
-[node name="obj_bag67" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1123.25, 347.589 )
-
-[node name="obj_bag68" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1123.75, 302.082 )
-
-[node name="obj_bag69" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1129.73, 306.898 )
-
-[node name="obj_bag70" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1118.1, 310.054 )
-
-[node name="obj_bag71" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1126.07, 314.372 )
-
-[node name="obj_bag72" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1126.07, 314.372 )
-
-[node name="obj_bag73" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 986.122, 375.275 )
-
-[node name="obj_bag74" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 992.118, 377.326 )
-
-[node name="obj_bag75" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 985.175, 381.113 )
-
-[node name="obj_bag76" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 992.591, 386.004 )
-
-[node name="obj_bag77" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 983.124, 388.055 )
-
-[node name="obj_bag78" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1178.14, 328.572 )
-
-[node name="obj_bag79" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1183.5, 332.359 )
-
-[node name="obj_bag80" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1188.87, 336.777 )
-
-[node name="obj_bag81" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1173.41, 336.303 )
-
-[node name="obj_bag82" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1177.67, 340.879 )
-
-[node name="obj_bag83" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1184.29, 345.139 )
-
-[node name="obj_bag84" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1194.71, 347.664 )
-
-[node name="obj_bag85" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1164.26, 337.566 )
-
-[node name="obj_bag86" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1122.44, 193.355 )
-
-[node name="obj_bag87" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1127.34, 197.142 )
-
-[node name="obj_bag88" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1135.38, 197.3 )
-
-[node name="obj_bag89" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1195.65, 177.735 )
-
-[node name="obj_bag90" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1196.6, 182.784 )
-
-[node name="obj_bag91" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1200.39, 189.253 )
-
-[node name="obj_bag92" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1191.08, 189.568 )
-
-[node name="obj_bag93" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1162.05, 175.684 )
-
-[node name="obj_bag94" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1166.46, 181.679 )
-
-[node name="obj_bag95" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1116.13, 247 )
-
-[node name="obj_bag96" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1122.6, 252.365 )
-
-[node name="obj_bag97" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1127.18, 256.783 )
-
-[node name="obj_bag98" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1236.92, 106.931 )
-
-[node name="obj_bag99" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1305.19, 544.35 )
-
-[node name="obj_bag100" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1298.07, 548.556 )
-
-[node name="obj_bag101" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 1307.13, 554.379 )
-
-[node name="obj_bag102" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 280.085, 77.9193 )
-
-[node name="obj_bag103" parent="Bags" instance=ExtResource( 18 )]
-position = Vector2( 419.073, 50.6094 )
+[node name="Rat" type="Node2D" parent="."]
+position = Vector2( -260.367, 277.652 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Rat Attack" parent="Rat" instance=ExtResource( 52 )]
+position = Vector2( -0.125961, 7.30556 )
+rotation = 3.14159
+scale = Vector2( 1, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rat/Rat Attack"]
+autoplay = "rat_animation"
+anims/rat_animation = SubResource( 100 )
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( 3.5, 7.21212 )
@@ -1460,7 +1214,7 @@ position = Vector2( 4.14258, -0.811954 )
 shape = SubResource( 24 )
 
 [node name="Key" type="Area2D" parent="."]
-position = Vector2( 897.536, 246.245 )
+position = Vector2( 857.925, 318.426 )
 script = ExtResource( 35 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
@@ -1525,39 +1279,159 @@ stream = ExtResource( 48 )
 volume_db = 6.049
 autoplay = true
 
-[node name="Barrels" type="Node2D" parent="."]
-position = Vector2( -364.891, 369.477 )
-scale = Vector2( 0.291128, 0.329089 )
+[node name="Spiderweb" type="Node2D" parent="."]
 
-[node name="Barrel Collision" type="StaticBody2D" parent="Barrels"]
-position = Vector2( 673.497, 24.3329 )
+[node name="Spider Wed" type="Sprite" parent="Spiderweb"]
+position = Vector2( -246.994, 268.326 )
+texture = ExtResource( 51 )
 
-[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision"]
-texture = ExtResource( 5 )
+[node name="Spider Wed2" type="Sprite" parent="Spiderweb"]
+position = Vector2( -211.524, 333.096 )
+texture = ExtResource( 51 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision"]
-position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+[node name="Spider Wed3" type="Sprite" parent="Spiderweb"]
+position = Vector2( -131.428, 376.481 )
+texture = ExtResource( 51 )
 
-[node name="Barrel Collision2" type="StaticBody2D" parent="Barrels"]
-position = Vector2( 713.155, 23.6486 )
+[node name="Spider Wed4" type="Sprite" parent="Spiderweb"]
+position = Vector2( -2.53841, 267.724 )
+texture = ExtResource( 51 )
 
-[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision2"]
-texture = ExtResource( 5 )
+[node name="Spider Wed5" type="Sprite" parent="Spiderweb"]
+position = Vector2( 115.791, 395.438 )
+texture = ExtResource( 51 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision2"]
-position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+[node name="Spider Wed6" type="Sprite" parent="Spiderweb"]
+position = Vector2( 246.265, 395.438 )
+texture = ExtResource( 51 )
 
-[node name="Barrel Collision3" type="StaticBody2D" parent="Barrels"]
-position = Vector2( 691.458, 45.7767 )
+[node name="Spider Wed7" type="Sprite" parent="Spiderweb"]
+position = Vector2( 285.279, 504.382 )
+texture = ExtResource( 51 )
 
-[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision3"]
-texture = ExtResource( 5 )
+[node name="Spider Wed8" type="Sprite" parent="Spiderweb"]
+position = Vector2( 509.239, 460.4 )
+texture = ExtResource( 51 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision3"]
-position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 30 )
+[node name="Spider Wed9" type="Sprite" parent="Spiderweb"]
+position = Vector2( 442.253, 396.358 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed10" type="Sprite" parent="Spiderweb"]
+position = Vector2( 338.094, 502.726 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed11" type="Sprite" parent="Spiderweb"]
+position = Vector2( 557.27, 524.073 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed12" type="Sprite" parent="Spiderweb"]
+position = Vector2( 722.157, 461.504 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed13" type="Sprite" parent="Spiderweb"]
+position = Vector2( 731.175, 524.073 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed14" type="Sprite" parent="Spiderweb"]
+position = Vector2( 874.163, 461.504 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed15" type="Sprite" parent="Spiderweb"]
+position = Vector2( 905.08, 523.337 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed16" type="Sprite" parent="Spiderweb"]
+position = Vector2( 948.527, 375.99 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed17" type="Sprite" parent="Spiderweb"]
+position = Vector2( 710.137, 396.424 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed18" type="Sprite" parent="Spiderweb"]
+position = Vector2( 812.498, 374.809 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed19" type="Sprite" parent="Spiderweb"]
+position = Vector2( 823.713, 140.112 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed20" type="Sprite" parent="Spiderweb"]
+position = Vector2( 890.544, 76.3809 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed21" type="Sprite" parent="Spiderweb"]
+position = Vector2( 893.45, 12.6497 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed22" type="Sprite" parent="Spiderweb"]
+position = Vector2( 719.69, 11.6811 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed23" type="Sprite" parent="Spiderweb"]
+position = Vector2( 627.125, 76.4584 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed24" type="Sprite" parent="Spiderweb"]
+position = Vector2( 492.785, 11.6811 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed25" type="Sprite" parent="Spiderweb"]
+position = Vector2( 499.226, 141.052 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed26" type="Sprite" parent="Spiderweb"]
+position = Vector2( 372.464, 77.076 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed27" type="Sprite" parent="Spiderweb"]
+position = Vector2( 304.208, 13.1005 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed28" type="Sprite" parent="Spiderweb"]
+position = Vector2( 232.86, 77.076 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed29" type="Sprite" parent="Spiderweb"]
+position = Vector2( 103.719, 12.6248 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed30" type="Sprite" parent="Spiderweb"]
+position = Vector2( 46.165, 77.3139 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed31" type="Sprite" parent="Spiderweb"]
+position = Vector2( 48.3054, 204.552 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed32" type="Sprite" parent="Spiderweb"]
+position = Vector2( -121.979, 140.1 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed33" type="Sprite" parent="Spiderweb"]
+position = Vector2( 62.0994, 140.338 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed34" type="Sprite" parent="Spiderweb"]
+position = Vector2( -69.8948, 75.1734 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed35" type="Sprite" parent="Spiderweb"]
+position = Vector2( 125.122, 332.567 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed36" type="Sprite" parent="Spiderweb"]
+position = Vector2( 242.706, 331.85 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed37" type="Sprite" parent="Spiderweb"]
+position = Vector2( 406.176, 331.85 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed38" type="Sprite" parent="Spiderweb"]
+position = Vector2( 452.779, 140.777 )
+texture = ExtResource( 51 )
 
 [node name="Torches Behind Player" type="Node2D" parent="."]
 
@@ -1866,7 +1740,7 @@ position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 38 )
 
 [node name="torch35" type="StaticBody2D" parent="Torches Behind Player"]
-position = Vector2( 321.762, 107.157 )
+position = Vector2( 343.211, 105.99 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
@@ -2777,8 +2651,1876 @@ position = Vector2( 0, 2.57212 )
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 38 )
 
+[node name="Banner2" type="Node2D" parent="."]
+
+[node name="Banner" type="Sprite" parent="Banner2"]
+position = Vector2( -265.526, 268.617 )
+texture = ExtResource( 50 )
+
+[node name="Banner2" type="Sprite" parent="Banner2"]
+position = Vector2( -114.395, 332.23 )
+texture = ExtResource( 50 )
+
+[node name="Banner3" type="Sprite" parent="Banner2"]
+position = Vector2( -79.8937, 375.525 )
+texture = ExtResource( 50 )
+
+[node name="Banner4" type="Sprite" parent="Banner2"]
+position = Vector2( -156.275, 268.627 )
+texture = ExtResource( 50 )
+
+[node name="Banner5" type="Sprite" parent="Banner2"]
+position = Vector2( -116.304, 205.568 )
+texture = ExtResource( 50 )
+
+[node name="Banner6" type="Sprite" parent="Banner2"]
+position = Vector2( -39.2027, 268.784 )
+texture = ExtResource( 50 )
+
+[node name="Banner7" type="Sprite" parent="Banner2"]
+position = Vector2( -115.117, 76.5525 )
+texture = ExtResource( 50 )
+
+[node name="Banner8" type="Sprite" parent="Banner2"]
+position = Vector2( 56.0326, 205.262 )
+texture = ExtResource( 50 )
+
+[node name="Banner9" type="Sprite" parent="Banner2"]
+position = Vector2( 107.668, 396.618 )
+texture = ExtResource( 50 )
+
+[node name="Banner10" type="Sprite" parent="Banner2"]
+position = Vector2( 246.089, 503.715 )
+texture = ExtResource( 50 )
+
+[node name="Banner11" type="Sprite" parent="Banner2"]
+position = Vector2( 314.755, 396.841 )
+texture = ExtResource( 50 )
+
+[node name="Banner12" type="Sprite" parent="Banner2"]
+position = Vector2( 232.948, 333.268 )
+texture = ExtResource( 50 )
+
+[node name="Banner13" type="Sprite" parent="Banner2"]
+position = Vector2( 442.821, 332.863 )
+texture = ExtResource( 50 )
+
+[node name="Banner14" type="Sprite" parent="Banner2"]
+position = Vector2( 547.899, 140.908 )
+texture = ExtResource( 50 )
+
+[node name="Banner15" type="Sprite" parent="Banner2"]
+position = Vector2( 326.032, 503.732 )
+texture = ExtResource( 50 )
+
+[node name="Banner16" type="Sprite" parent="Banner2"]
+position = Vector2( 498.669, 460.981 )
+texture = ExtResource( 50 )
+
+[node name="Banner17" type="Sprite" parent="Banner2"]
+position = Vector2( 723.255, 524.724 )
+texture = ExtResource( 50 )
+
+[node name="Banner18" type="Sprite" parent="Banner2"]
+position = Vector2( 690.642, 461.352 )
+texture = ExtResource( 50 )
+
+[node name="Banner19" type="Sprite" parent="Banner2"]
+position = Vector2( 862.789, 460.657 )
+texture = ExtResource( 50 )
+
+[node name="Banner20" type="Sprite" parent="Banner2"]
+position = Vector2( 862.34, 524.283 )
+texture = ExtResource( 50 )
+
+[node name="Banner21" type="Sprite" parent="Banner2"]
+position = Vector2( 938.02, 375.55 )
+texture = ExtResource( 50 )
+
+[node name="Banner22" type="Sprite" parent="Banner2"]
+position = Vector2( 869.385, 375.818 )
+texture = ExtResource( 50 )
+
+[node name="Banner23" type="Sprite" parent="Banner2"]
+position = Vector2( 897.127, 140.561 )
+texture = ExtResource( 50 )
+
+[node name="Banner24" type="Sprite" parent="Banner2"]
+position = Vector2( 883.487, 76.2226 )
+texture = ExtResource( 50 )
+
+[node name="Banner25" type="Sprite" parent="Banner2"]
+position = Vector2( 882.097, 12.2543 )
+texture = ExtResource( 50 )
+
+[node name="Banner26" type="Sprite" parent="Banner2"]
+position = Vector2( 561.111, 12.2463 )
+texture = ExtResource( 50 )
+
+[node name="Banner27" type="Sprite" parent="Banner2"]
+position = Vector2( 461.044, 75.9238 )
+texture = ExtResource( 50 )
+
+[node name="Banner28" type="Sprite" parent="Banner2"]
+position = Vector2( 315.179, 13.3094 )
+texture = ExtResource( 50 )
+
+[node name="Banner29" type="Sprite" parent="Banner2"]
+position = Vector2( 119.611, 12.581 )
+texture = ExtResource( 50 )
+
+[node name="Banner30" type="Sprite" parent="Banner2"]
+position = Vector2( 187.296, 141.429 )
+texture = ExtResource( 50 )
+
+[node name="Banner31" type="Sprite" parent="Banner2"]
+position = Vector2( 156.823, 76.9717 )
+texture = ExtResource( 50 )
+
+[node name="Banner32" type="Sprite" parent="Banner2"]
+position = Vector2( 462.453, 524.056 )
+texture = ExtResource( 50 )
+
+[node name="Banner33" type="Sprite" parent="Banner2"]
+position = Vector2( 638.37, 77.0061 )
+texture = ExtResource( 50 )
+
+[node name="Barrels" type="Node2D" parent="."]
+position = Vector2( -364.891, 369.477 )
+scale = Vector2( 0.291128, 0.329089 )
+
+[node name="Barrel Collision" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 673.497, 24.3329 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision2" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 713.155, 23.6486 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision2"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision2"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision3" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 691.458, 45.7767 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision3"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision3"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision4" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1007.52, 31.0608 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision4"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision4"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision5" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1048.1, 29.295 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision5"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision5"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision6" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 547.735, -292.097 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision6"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision6"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision7" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 586.992, -292.097 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision7"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision7"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision8" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 626.916, -293.275 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision8"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision8"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision9" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 566.365, -270.907 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision9"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision9"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision10" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 607.619, -269.729 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision10"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision10"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision11" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1270.34, -285.034 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision11"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision11"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision12" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1191.83, 120.533 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision12"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision12"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision13" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1316.25, 390.126 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision13"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision13"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision14" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1191.16, 565.538 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision14"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision14"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision15" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1230.42, 564.949 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision15"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision15"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision16" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1233.47, 596.535 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision16"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision16"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision18" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1442.07, 95.4927 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision18"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision18"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision19" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1689.22, 92.6968 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision19"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision19"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision20" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1608.31, 513.215 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision20"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision20"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision21" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1648.77, 515.452 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision21"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision21"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision22" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1689.22, 514.892 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision22"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision22"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision17" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1192.92, 596.356 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision17"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision17"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision25" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2271.25, 107.974 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision25"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision25"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision26" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2270.39, 141.003 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision26"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision26"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision27" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2270.39, 173.052 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision27"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision27"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision28" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2270.21, 206.149 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision28"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision28"]
+position = Vector2( -0.308838, -49.686 )
+shape = SubResource( 94 )
+
+[node name="Barrel Collision29" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2271.92, 301.666 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision29"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision29"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision30" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2270.93, 335.207 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision30"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision30"]
+position = Vector2( -0.601562, -10.0477 )
+shape = SubResource( 95 )
+
+[node name="Barrel Collision31" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2660.15, 492.957 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision31"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision31"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision32" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2936.23, 292.767 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision32"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision32"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision33" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2870.15, 485.75 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision33"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision33"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision34" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3062.05, -102.808 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision34"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision34"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision35" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3102.78, -103.608 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision35"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision35"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision36" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3210.5, 476.941 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision36"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision36"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision37" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3248.51, 476.141 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision37"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision37"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision38" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3232.22, 500.163 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision38"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision38"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision39" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3599.72, 488.953 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision39"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision39"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision40" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3901.14, 483.347 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision40"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision40"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision41" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3941.88, 484.148 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision41"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision41"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision42" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3733.69, 288.763 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision42"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision42"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision43" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3770.8, 289.564 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision43"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision43"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision44" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3528.21, 209.488 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision44"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision44"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision45" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4054.34, -315.729 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision45"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision45"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision46" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4096.48, -313.447 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision46"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision46"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision47" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4137.75, -313.447 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision47"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision47"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision48" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4178.17, -311.926 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision48"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision48"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision49" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4216, -310.404 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision49"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision49"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision50" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4257.28, -310.404 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision50"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision50"]
+position = Vector2( -108.124, -1.23694 )
+shape = SubResource( 97 )
+
+[node name="Barrel Collision51" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4257.28, -270.847 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision51"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision51"]
+position = Vector2( 90.4812, -0.602417 )
+shape = SubResource( 98 )
+
+[node name="Barrel Collision52" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4296.84, -270.086 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision52"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision52"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision53" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4335.53, -268.565 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision53"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision53"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision54" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4375.09, -269.325 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision54"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision54"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision55" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4414.64, -271.607 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision55"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision55"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision56" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4454.2, -271.607 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision56"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision56"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision57" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4453.34, -235.853 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision57"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision57"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision58" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4454.2, -197.817 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision58"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision58"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision59" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4455.06, -157.499 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision59"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision59"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision60" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4455.06, -123.267 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision60"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision60"]
+position = Vector2( -1.46094, -71.4376 )
+shape = SubResource( 99 )
+
+[node name="Barrel Collision61" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4177.77, 28.6275 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision61"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision61"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision62" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4216.66, 29.6105 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision62"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision62"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision63" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3607.66, -342.992 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision63"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision63"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision64" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3533.21, 156.433 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision64"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision64"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision65" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3609.89, 205.589 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision65"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision65"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision66" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4100.81, -878.253 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision66"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision66"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision69" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4521.83, -1078.95 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision69"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision69"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision70" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4562.33, -1079.62 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision70"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision70"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision71" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4602.07, -1077.95 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision71"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision71"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision72" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4543.78, -1058.53 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision72"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision72"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision73" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 4582.77, -1057.86 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision73"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision73"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision74" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3642.53, -1067.07 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision74"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision74"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision75" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3682.69, -1067.07 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision75"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision75"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision76" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3467.11, -872.235 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision76"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision76"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision77" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3506.37, -872.824 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision77"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision77"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision78" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3069.21, -1065.89 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision78"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision78"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision79" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2970.6, -869.057 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision79"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision79"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision80" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 3010.42, -867.938 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision80"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision80"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision81" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2765.16, -678.37 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision81"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision81"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision82" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2804.98, -676.693 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision82"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision82"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision83" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2844.81, -676.693 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision83"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision83"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision84" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2662.87, -384.416 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision84"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision84"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision85" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2349.12, -100.521 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision85"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision85"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision86" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2391.87, -99.1659 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision86"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision86"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision87" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2433.79, -100.889 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision87"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision87"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision88" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2350.92, -63.0917 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision88"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision88"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision89" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2392.98, -62.616 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision89"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision89"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision90" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2436.31, -63.28 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision90"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision90"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision91" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2351.61, -25.2744 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision91"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision91"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision92" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2394.51, -24.4244 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision92"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision92"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision93" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2438.59, -24.05 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision93"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision93"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision94" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2353.19, 13.9181 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision94"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision94"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision95" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2396.34, 13.3721 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision95"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision95"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision97" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1605.61, -96.1786 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision97"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision97"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision98" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1644.86, -96.6968 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision98"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision98"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision99" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1199.85, -493.93 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision99"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision99"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision100" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1239.68, -495.607 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision100"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision100"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision101" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1279.5, -492.811 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision101"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision101"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision102" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1220.08, -471.002 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision102"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision102"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision103" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1263.07, -468.206 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision103"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision103"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision104" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 532.942, -883.44 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision104"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision104"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision105" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 532.341, -545.571 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision105"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision105"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision106" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 532.942, -507.853 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision106"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision106"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision107" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 573.776, -885.033 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision107"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision107"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision108" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 614.01, -883.44 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision108"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision108"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision109" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1049.38, -887.159 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision109"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision109"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision110" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1090.81, -887.69 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision110"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision110"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision111" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1093.22, -861.659 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision111"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision111"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision112" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1119.64, -839.347 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision112"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision112"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision113" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 783.985, -684.449 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision113"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision113"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision114" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 824.441, -684.449 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision114"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision114"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision115" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1529.25, -875.695 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision115"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision115"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision116" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1569.7, -875.136 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision116"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision116"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision117" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1700.05, -682.154 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision117"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision117"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision118" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1739.88, -680.552 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision118"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision118"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision119" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1829.49, -232.127 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision119"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision119"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision120" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1872.94, -230.526 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision120"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision120"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision121" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1916.38, -229.725 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision121"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision121"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision122" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1858.45, -206.503 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision122"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision122"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision123" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1899.16, -205.783 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision123"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision123"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision124" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1829.69, -181.658 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision124"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision124"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision125" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1871.07, -180.938 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision125"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision125"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision126" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 1912.05, -180.938 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision126"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision126"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision127" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2010.61, -878.473 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision127"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision127"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision128" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2172.81, -875.04 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision128"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision128"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision129" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2518.93, -869.548 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision129"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision129"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision130" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2265.57, -356.449 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision130"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision130"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision131" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2306.21, -356.449 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision131"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision131"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision132" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2347.88, -355.542 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision132"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision132"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision133" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2442.23, -825.753 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision133"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision133"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision134" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2400.56, -822.731 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision134"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision134"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision135" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2359.57, -820.918 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision135"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision135"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 30 )
+
+[node name="Barrel Collision96" type="StaticBody2D" parent="Barrels"]
+position = Vector2( 2439.73, 13.3184 )
+scale = Vector2( 1, 1 )
+
+[node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision96"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision96"]
+position = Vector2( -46.2399, -55.5764 )
+shape = SubResource( 96 )
+
+[node name="Bags" type="Node2D" parent="."]
+position = Vector2( -286.976, -14.964 )
+
+[node name="obj_bag" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 221.54, 363.485 )
+
+[node name="obj_bag104" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1312.67, 153.202 )
+
+[node name="obj_bag2" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 228.8, 367.491 )
+
+[node name="obj_bag3" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 234.808, 405.793 )
+
+[node name="obj_bag4" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 224.544, 413.304 )
+
+[node name="obj_bag5" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 233.306, 421.064 )
+
+[node name="obj_bag6" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 393.901, 569.129 )
+
+[node name="obj_bag7" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 401.028, 572.237 )
+
+[node name="obj_bag8" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 392.26, 577.01 )
+
+[node name="obj_bag9" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 532.399, 427.93 )
+
+[node name="obj_bag10" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 526.559, 434.077 )
+
+[node name="obj_bag11" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 535.78, 440.839 )
+
+[node name="obj_bag12" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 530.084, 488.541 )
+
+[node name="obj_bag13" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 536.776, 493.24 )
+
+[node name="obj_bag14" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 720.686, 556.485 )
+
+[node name="obj_bag15" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 727.066, 563.42 )
+
+[node name="obj_bag16" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 722.35, 572.297 )
+
+[node name="obj_bag17" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 924.533, 443.202 )
+
+[node name="obj_bag18" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 917.78, 445.982 )
+
+[node name="obj_bag19" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 926.122, 451.543 )
+
+[node name="obj_bag20" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 482.035, 374.88 )
+
+[node name="obj_bag21" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 668.726, 378.058 )
+
+[node name="obj_bag22" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 792.657, 319.668 )
+
+[node name="obj_bag23" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 808.943, 319.27 )
+
+[node name="obj_bag24" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 852.637, 508.742 )
+
+[node name="obj_bag25" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 867.333, 509.934 )
+
+[node name="obj_bag26" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 859.389, 512.317 )
+
+[node name="obj_bag27" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 346.564, 242.886 )
+
+[node name="obj_bag28" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 363.545, 241.754 )
+
+[node name="obj_bag29" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 92.6041, 122.132 )
+
+[node name="obj_bag30" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 157.509, 194.207 )
+
+[node name="obj_bag31" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 166.943, 194.207 )
+
+[node name="obj_bag32" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 404.677, 309.3 )
+
+[node name="obj_bag33" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 422.412, 311.564 )
+
+[node name="obj_bag34" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 412.601, 316.092 )
+
+[node name="obj_bag35" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 476.751, 177.226 )
+
+[node name="obj_bag36" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 482.412, 185.15 )
+
+[node name="obj_bag37" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 541.656, 139.113 )
+
+[node name="obj_bag38" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 412.978, 183.264 )
+
+[node name="obj_bag39" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 845.427, 52.6988 )
+
+[node name="obj_bag40" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 858.257, 52.3214 )
+
+[node name="obj_bag41" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 853.729, 59.8685 )
+
+[node name="obj_bag42" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 866.181, 60.6233 )
+
+[node name="obj_bag43" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 865.804, 108.17 )
+
+[node name="obj_bag44" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 875.615, 115.717 )
+
+[node name="obj_bag45" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 863.163, 117.227 )
+
+[node name="obj_bag46" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 923.917, 202.886 )
+
+[node name="obj_bag47" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 723.919, 180.999 )
+
+[node name="obj_bag48" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 730.333, 186.282 )
+
+[node name="obj_bag49" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 736.749, 194.584 )
+
+[node name="obj_bag50" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 680.9, 308.923 )
+
+[node name="obj_bag51" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 607.693, 149.302 )
+
+[node name="obj_bag52" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1154.86, 111.566 )
+
+[node name="obj_bag53" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 914.703, 487.974 )
+
+[node name="obj_bag54" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 912.261, 493.969 )
+
+[node name="obj_bag55" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 919.994, 496.12 )
+
+[node name="obj_bag56" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 918.698, 503.061 )
+
+[node name="obj_bag57" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 732.138, 436.007 )
+
+[node name="obj_bag58" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 865.761, 262.395 )
+
+[node name="obj_bag59" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 859.286, 559.926 )
+
+[node name="obj_bag60" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 852.594, 567.68 )
+
+[node name="obj_bag61" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 864.786, 566.705 )
+
+[node name="obj_bag62" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1108.14, 331.645 )
+
+[node name="obj_bag63" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1118.77, 333.472 )
+
+[node name="obj_bag64" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1123.23, 340.833 )
+
+[node name="obj_bag65" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1106.31, 338.288 )
+
+[node name="obj_bag66" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1113.28, 345.097 )
+
+[node name="obj_bag67" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1123.25, 347.589 )
+
+[node name="obj_bag68" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1123.75, 302.082 )
+
+[node name="obj_bag69" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1129.73, 306.898 )
+
+[node name="obj_bag70" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1118.1, 310.054 )
+
+[node name="obj_bag71" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1126.07, 314.372 )
+
+[node name="obj_bag72" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1126.07, 314.372 )
+
+[node name="obj_bag73" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 986.122, 375.275 )
+
+[node name="obj_bag74" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 992.118, 377.326 )
+
+[node name="obj_bag75" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 985.175, 381.113 )
+
+[node name="obj_bag76" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 992.591, 386.004 )
+
+[node name="obj_bag77" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 983.124, 388.055 )
+
+[node name="obj_bag78" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1178.14, 328.572 )
+
+[node name="obj_bag79" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1183.5, 332.359 )
+
+[node name="obj_bag80" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1188.87, 336.777 )
+
+[node name="obj_bag81" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1173.41, 336.303 )
+
+[node name="obj_bag82" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1177.67, 340.879 )
+
+[node name="obj_bag83" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1184.29, 345.139 )
+
+[node name="obj_bag84" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1194.71, 347.664 )
+
+[node name="obj_bag85" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1176.85, 346.089 )
+
+[node name="obj_bag86" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1122.44, 193.355 )
+
+[node name="obj_bag87" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1127.34, 197.142 )
+
+[node name="obj_bag88" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1135.38, 197.3 )
+
+[node name="obj_bag89" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1195.65, 177.735 )
+
+[node name="obj_bag90" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1196.6, 182.784 )
+
+[node name="obj_bag91" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1200.39, 189.253 )
+
+[node name="obj_bag92" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1191.08, 189.568 )
+
+[node name="obj_bag93" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1162.05, 175.684 )
+
+[node name="obj_bag94" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1166.46, 181.679 )
+
+[node name="obj_bag95" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1116.13, 247 )
+
+[node name="obj_bag96" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1122.6, 252.365 )
+
+[node name="obj_bag97" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1127.18, 256.783 )
+
+[node name="obj_bag98" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1236.92, 106.931 )
+
+[node name="obj_bag99" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1305.19, 544.35 )
+
+[node name="obj_bag100" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1298.07, 548.556 )
+
+[node name="obj_bag101" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 1307.13, 554.379 )
+
+[node name="obj_bag102" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 280.085, 77.9193 )
+
+[node name="obj_bag103" parent="Bags" instance=ExtResource( 18 )]
+position = Vector2( 419.073, 50.6094 )
+
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( 100.503, 32.0057 )
+position = Vector2( -134.417, 339.704 )
 collision_layer = 2
 script = ExtResource( 12 )
 
@@ -2843,11 +4585,10 @@ parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 0 )
 
 [node name="Money Bag" type="Control" parent="obj_player"]
-visible = false
 margin_left = -27.5822
-margin_top = -541.926
+margin_top = -542.341
 margin_right = 996.42
-margin_bottom = 63.0745
+margin_bottom = 62.6595
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -3639,44 +5380,6 @@ position = Vector2( 0, 2.57212 )
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 38 )
 
-[node name="torch23" type="StaticBody2D" parent="Torches Front Player"]
-position = Vector2( 578.94, -116.563 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches Front Player/torch23"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches Front Player/torch23/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 35 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches Front Player/torch23"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 36 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch23"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 37 )
-
-[node name="Area2D" type="Area2D" parent="Torches Front Player/torch23"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch23/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 38 )
-
 [node name="torch24" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( 699.159, 65.6385 )
 scale = Vector2( 0.5, 0.5 )
@@ -3984,8 +5687,16 @@ shape = SubResource( 38 )
 [connection signal="area_exited" from="Fake Walls/false_wall2/AnimatedSprite/Area2D" to="Fake Walls/false_wall2" method="_on_Area2D_area_exited"]
 [connection signal="area_entered" from="Fake Walls/false_wall/AnimatedSprite/Area2D" to="Fake Walls/false_wall" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Fake Walls/false_wall/AnimatedSprite/Area2D" to="Fake Walls/false_wall" method="_on_Area2D_area_exited"]
+[connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
+[connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="bagsCollected" from="Bags/obj_bag" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag" to="Bags/obj_bag" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="Bags/obj_bag104" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="Bags/obj_bag104" to="Bags/obj_bag104" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag2" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag2" to="Bags/obj_bag2" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag3" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
@@ -4190,11 +5901,6 @@ shape = SubResource( 38 )
 [connection signal="body_entered" from="Bags/obj_bag102" to="Bags/obj_bag102" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag103" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag103" to="Bags/obj_bag103" method="_on_obj_bag_body_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
-[connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player" method="_on_Hurtbox_area_entered"]
 
 [editable path="Path2D/PathFollow2D/Hurtbox"]
