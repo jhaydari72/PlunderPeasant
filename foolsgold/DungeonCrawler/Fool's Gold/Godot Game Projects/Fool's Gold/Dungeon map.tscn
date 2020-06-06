@@ -369,14 +369,14 @@ _data = {
 
 [sub_resource type="SpriteFrames" id=21]
 animations = [ {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "alive",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
 "loop": false,
 "name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "alive",
 "speed": 5.0
 } ]
 
@@ -414,7 +414,7 @@ extents = Vector2( 12.6926, 10.9488 )
 [sub_resource type="RectangleShape2D" id=29]
 extents = Vector2( 4.51196, 59.8682 )
 
-[sub_resource type="CapsuleShape2D" id=94]
+[sub_resource type="CapsuleShape2D" id=30]
 radius = 19.2
 height = 12.1876
 
@@ -1536,42 +1536,33 @@ scale = Vector2( 0.291128, 0.329089 )
 
 [node name="Barrel Collision" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 673.497, 24.3329 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision"]
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision"]
 position = Vector2( -0.894531, 0.0560303 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 94 )
+shape = SubResource( 30 )
 
 [node name="Barrel Collision2" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 713.155, 23.6486 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision2"]
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision2"]
 position = Vector2( -0.894531, 0.0560303 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 94 )
+shape = SubResource( 30 )
 
 [node name="Barrel Collision3" type="StaticBody2D" parent="Barrels"]
 position = Vector2( 691.458, 45.7767 )
-scale = Vector2( 1, 1 )
 
 [node name="Barrel" type="Sprite" parent="Barrels/Barrel Collision3"]
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrels/Barrel Collision3"]
 position = Vector2( -0.894531, 0.0560303 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 94 )
+shape = SubResource( 30 )
 
 [node name="Torches Behind Player" type="Node2D" parent="."]
 
