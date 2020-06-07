@@ -13,7 +13,7 @@ onready var timer = $Timer
 func set_invincible(value):
 	invincible = value
 	if invincible == true:
-		emit_signal("invincibilty_started")
+		emit_signal("invincibility_started")
 	else:
 		emit_signal("invincibility_ended")
 

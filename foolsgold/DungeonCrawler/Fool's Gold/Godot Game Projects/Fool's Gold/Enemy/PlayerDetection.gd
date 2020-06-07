@@ -10,9 +10,9 @@ func _on_PlayerDetection_body_entered(body):
 	player = body
 
 
-func _on_PlayerDetection_body_exited(body):
+func _on_PlayerDetection_body_exited(_body):
 	player = null
 
 
-func _on_Hurtbox_area_entered(area):
+func _on_Hurtbox_area_entered(_area):
 	queue_free()

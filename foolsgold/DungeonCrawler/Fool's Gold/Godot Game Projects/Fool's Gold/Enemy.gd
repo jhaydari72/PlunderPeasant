@@ -9,7 +9,7 @@ enum {
 	CHASE
 }
 var velocity = Vector2.ZERO
-var state = IDLE 
+var state = CHASE 
 var is_dead = false
 var knockback = Vector2.ZERO
 
@@ -26,17 +26,18 @@ func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
 	knockback = move_and_slide(knockback)
 	match state:
-		DEAD:
-			if is_dead == true:
-				velocity = Vector2(0, 0)
-				$Sprite.play("dead")
 		IDLE:
 			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 			$Sprite.play("idle")
 			find_player()
+		DEAD:
+			if is_dead == true:
+				velocity = Vector2(0, 0)
+				$Sprite.play("dead")
 		CHASE:
 			var player = playerdetection.player
 			if player != null:
+				$Sprite.play("walk")
 				var direction = (player.global_position - global_position).normalized()
 				velocity = velocity.move_toward(direction * SPEED, ACCELERATION * delta)
 			else:
