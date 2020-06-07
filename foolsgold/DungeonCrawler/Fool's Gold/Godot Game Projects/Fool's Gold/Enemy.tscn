@@ -62,8 +62,8 @@ script = ExtResource( 9 )
 [node name="CollisionShape2D" parent="enemy_hitbox" index="0"]
 position = Vector2( -18.9335, 18.4352 )
 shape = SubResource( 4 )
-[connection signal="area_entered" from="Hurtbox" to="enemy_hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="collision" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="enemy_hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
 [editable path="Hurtbox"]
