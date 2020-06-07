@@ -77,6 +77,7 @@ func _on_Hurtbox_area_entered(_area):
 	health -= 5
 	animationState.travel("Death")
 	state = DEATH
+	$Timer.start()
 	var MusicNode = $AudioStreamPlayer2D2
 	MusicNode.play()
 	
@@ -94,3 +95,4 @@ func _on_Rat_Attack_Player(body):
 	
 func _on_Timer_timeout():
 	get_tree().change_scene("res://GameOver/GameOver.tscn")
+
