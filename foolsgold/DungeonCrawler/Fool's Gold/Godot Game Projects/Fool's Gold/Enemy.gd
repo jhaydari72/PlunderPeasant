@@ -4,6 +4,7 @@ export var ACCELERATION = 300
 export var SPEED = 50
 export var FRICTION = 200
 enum {
+	IDLE,
 	WALK,
 	CHASE
 }
@@ -24,7 +25,7 @@ func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
 	knockback = move_and_slide(knockback)
 	match state:
-		WALK:
+		IDLE:
 			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 			find_player()
 		CHASE:
@@ -32,6 +33,9 @@ func _physics_process(delta):
 			if player != null:
 				var direction = (player.global_position - global_position).normalized()
 				velocity = velocity.move_toward(direction * SPEED, ACCELERATION * delta)
+			else:
+				state = IDLE
+			sprite.flip_h = velocity.x > 0
 	velocity = move_and_slide(velocity)
 	
 		
