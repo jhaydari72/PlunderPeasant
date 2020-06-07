@@ -5,7 +5,7 @@ const ACCELERATION = 500
 const MAX_SPEED = 50
 const FRICTION = 500
  
-var health = 5
+
 
 enum {
 	MOVE,
@@ -16,12 +16,16 @@ var state = MOVE
 var Key = 0
 var velocity = Vector2.ZERO
 var kill_direction = Vector2.LEFT
+var health = 5
+
+
 #these signal the different nodes for specific purposes
 onready var player_anim = $player_anim
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 onready var swordhitbox = $HitboxPivot/SwordHitbox
 onready var time = $Timer
+onready var hurtbox = $Hurtbox
 
 func _ready():
 	animationTree.active = true
@@ -65,6 +69,13 @@ func move_state(delta):
 		var MusicNode = $AudioStreamPlayer2D
 		MusicNode.play()
 
+	if health <= 0:
+		animationState.travel("Death")
+		state = DEATH
+		$Timer.start()
+		var MusicNode = $AudioStreamPlayer2D2
+		MusicNode.play()
+	
 func attack_state(_delta):
 	velocity = Vector2.ZERO
 	animationState.travel("Attack")
@@ -74,21 +85,16 @@ func attack_animation_finished():
 
 
 func _on_Hurtbox_area_entered(_area):
-	health -= 5
-	animationState.travel("Death")
-	state = DEATH
-	$Timer.start()
-	var MusicNode = $AudioStreamPlayer2D2
-	MusicNode.play()
+	health -= 1
+	hurtbox.start_invincibility(0.5)
+	
 	
 
 #This function will make the player take damage from the rats
 
 func _on_Rat_Attack_Player(body):
 	if body.name == "obj_player":
-		animationState.travel("Death")
-		state = DEATH
-		$Timer.start()
+		health -= 1
 		
 	
 	

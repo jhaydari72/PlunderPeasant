@@ -457,14 +457,14 @@ _data = {
 
 [sub_resource type="SpriteFrames" id=32]
 animations = [ {
-"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
-"loop": false,
-"name": "dead",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "alive",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "dead",
 "speed": 5.0
 } ]
 
@@ -1138,8 +1138,9 @@ height = 12.0896
 [sub_resource type="RectangleShape2D" id=109]
 extents = Vector2( 4.63716, 4.92157 )
 
-[sub_resource type="RectangleShape2D" id=110]
-extents = Vector2( 7.67579, 12.1784 )
+[sub_resource type="CapsuleShape2D" id=116]
+radius = 3.35056
+height = 6.42819
 
 [sub_resource type="OccluderPolygon2D" id=111]
 polygon = PoolVector2Array( 185.042, 189.87, 191.993, 189.906, 191.958, 320.294, 184.935, 320.294 )
@@ -4651,8 +4652,8 @@ volume_db = -10.097
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
-position = Vector2( -7.62939e-06, 2.89954 )
-shape = SubResource( 110 )
+position = Vector2( -0.341042, 5.54251 )
+shape = SubResource( 116 )
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 47 )

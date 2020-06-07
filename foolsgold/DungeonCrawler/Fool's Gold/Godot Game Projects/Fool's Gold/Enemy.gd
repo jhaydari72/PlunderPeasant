@@ -5,16 +5,17 @@ export var SPEED = 50
 export var FRICTION = 200
 enum {
 	IDLE,
-	WALK,
+	DEAD,
 	CHASE
 }
 var velocity = Vector2.ZERO
-var state = CHASE 
+var state = IDLE 
 var is_dead = false
 var knockback = Vector2.ZERO
 
 onready var sprite = $Sprite
 onready var playerdetection = $PlayerDetection
+onready var hurtbox = $Hurtbox
 
 
 func _ready():
@@ -25,8 +26,13 @@ func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
 	knockback = move_and_slide(knockback)
 	match state:
+		DEAD:
+			if is_dead == true:
+				velocity = Vector2(0, 0)
+				$Sprite.play("dead")
 		IDLE:
 			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+			$Sprite.play("idle")
 			find_player()
 		CHASE:
 			var player = playerdetection.player
@@ -47,6 +53,5 @@ func find_player():
 func _on_Hurtbox_area_entered(area):
 	knockback = area.knockback_vector * 200
 	is_dead = true
-	velocity = Vector2(0, 0)
-	$Sprite.play("dead")
+	state = DEAD
 

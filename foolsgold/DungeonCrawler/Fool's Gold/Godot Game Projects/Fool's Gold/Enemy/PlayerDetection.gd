@@ -12,3 +12,7 @@ func _on_PlayerDetection_body_entered(body):
 
 func _on_PlayerDetection_body_exited(body):
 	player = null
+
+
+func _on_Hurtbox_area_entered(area):
+	queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://skele anims/enemy_left2.png" type="Texture" id=1]
 [ext_resource path="res://Enemy.gd" type="Script" id=2]
@@ -10,20 +10,26 @@
 [ext_resource path="res://hit and hurt/Hitbox.tscn" type="PackedScene" id=8]
 [ext_resource path="res://hit and hurt/Hitbox.gd" type="Script" id=9]
 [ext_resource path="res://Enemy/PlayerDetection.tscn" type="PackedScene" id=10]
+[ext_resource path="res://skele anims/skeleton_anim_v1.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2.23993, 9.84857 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
-"loop": false,
-"name": "dead",
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 1 ) ],
 "loop": true,
-"name": "alive",
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "dead",
 "speed": 5.0
 } ]
 
@@ -31,29 +37,27 @@ animations = [ {
 radius = 8.15225
 height = 14.4803
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 3.22827, 12.2905 )
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 4.33533
+height = 7.37469
 
 [node name="Enemy" type="KinematicBody2D"]
-position = Vector2( 311, 269 )
+position = Vector2( 7.69143, -5.86014 )
 script = ExtResource( 2 )
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2( -18.9931, 18.8936 )
 shape = SubResource( 1 )
 script = ExtResource( 7 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( -19.1513, 18.0248 )
 scale = Vector2( 0.401521, 0.436725 )
 frames = SubResource( 2 )
-animation = "alive"
+animation = "idle"
 
 [node name="Hurtbox" parent="." instance=ExtResource( 3 )]
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2( -18.8556, 18.6216 )
 shape = SubResource( 3 )
 
 [node name="enemy_hitbox" parent="." instance=ExtResource( 8 )]
@@ -61,15 +65,12 @@ collision_mask = 4
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" parent="enemy_hitbox" index="0"]
-position = Vector2( -18.9335, 18.4352 )
 shape = SubResource( 4 )
 
 [node name="PlayerDetection" parent="." instance=ExtResource( 10 )]
-
-[node name="CollisionShape2D" parent="PlayerDetection" index="0"]
-position = Vector2( -19.2335, 19.6516 )
-[connection signal="area_entered" from="Hurtbox" to="enemy_hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="collision" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="enemy_hitbox" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="PlayerDetection" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
 [editable path="Hurtbox"]
