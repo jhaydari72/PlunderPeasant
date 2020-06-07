@@ -3,6 +3,8 @@ extends KinematicBody2D
 export var ACCELERATION = 300
 export var SPEED = 50
 export var FRICTION = 200
+export var RANGE = 4
+
 enum {
 	IDLE,
 	WANDER,
@@ -20,7 +22,7 @@ onready var hurtbox = $Hurtbox
 onready var controller = $Wander
 
 func _ready():
-	pass 
+	state = new_state([IDLE, WANDER])
 	
 
 func _physics_process(delta):
@@ -30,22 +32,28 @@ func _physics_process(delta):
 	
 	match state:
 		IDLE:
+			
 			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 			$Sprite.play("idle")
 			find_player()
+			
 			if controller.time_left() == 0:
 				state = new_state([IDLE, WANDER])
 				controller.start_wander_timer(rand_range(1, 3))
+		
 		WANDER:
+			
+			$Sprite.play("walk")
 			find_player()
+			
 			if controller.time_left() == 0:
 				state = new_state([IDLE, WANDER])
 				controller.start_wander_timer(rand_range(1, 3))
 				
 			var direction = global_position.direction_to(controller.target_position)
 			velocity = velocity.move_toward(direction * SPEED, ACCELERATION * delta)
-			
-			if global_position.distance_to(controller.target_position) <= 10:
+			sprite.flip_h = velocity.x > 0
+			if global_position.distance_to(controller.target_position) <= RANGE:
 				state = new_state([IDLE, WANDER])
 				controller.start_wander_timer(rand_range(1, 3))
 			

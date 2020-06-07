@@ -28,6 +28,7 @@ onready var time = $Timer
 onready var hurtbox = $Hurtbox
 
 func _ready():
+	randomize()
 	animationTree.active = true
 	swordhitbox.knockback_vector = velocity
 
