@@ -47,7 +47,7 @@
 [ext_resource path="res://New Door Opening.png" type="Texture" id=45]
 [ext_resource path="res://door_collision.gd" type="Script" id=46]
 [ext_resource path="res://Audio/463351__ddragonpearl__hit-1.wav" type="AudioStream" id=47]
-[ext_resource path="res://Audio/388340__phlair__dungeon-ambiance.wav" type="AudioStream" id=48]
+[ext_resource path="res://Audio/dungeon_track1_v1_mixdown.wav" type="AudioStream" id=48]
 [ext_resource path="res://Player anims/SwordHitbox.gd" type="Script" id=49]
 [ext_resource path="res://Art Assets/Banner.png" type="Texture" id=50]
 [ext_resource path="res://Art Assets/Spider Wed.png" type="Texture" id=51]
@@ -534,14 +534,14 @@ color_ramp = SubResource( 42 )
 
 [sub_resource type="SpriteFrames" id=46]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -1141,19 +1141,19 @@ extents = Vector2( 4.63716, 4.92157 )
 [sub_resource type="RectangleShape2D" id=110]
 extents = Vector2( 7.67579, 12.1784 )
 
-[sub_resource type="OccluderPolygon2D" id=115]
+[sub_resource type="OccluderPolygon2D" id=111]
 polygon = PoolVector2Array( 185.042, 189.87, 191.993, 189.906, 191.958, 320.294, 184.935, 320.294 )
 
-[sub_resource type="OccluderPolygon2D" id=114]
+[sub_resource type="OccluderPolygon2D" id=112]
 polygon = PoolVector2Array( 760.993, 181.663, 767.92, 181.795, 767.986, 390.789, 761.191, 390.855, 761.191, 383.796 )
 
 [sub_resource type="OccluderPolygon2D" id=113]
 polygon = PoolVector2Array( 762.019, 63.9857, 767.981, 64.0155, 767.976, 128.207, 761.224, 128.004 )
 
-[sub_resource type="OccluderPolygon2D" id=112]
+[sub_resource type="OccluderPolygon2D" id=114]
 polygon = PoolVector2Array( 32.1895, 510.787, 32.1943, 308.815, 25.166, 308.863, 26.2545, 510.757 )
 
-[sub_resource type="OccluderPolygon2D" id=111]
+[sub_resource type="OccluderPolygon2D" id=115]
 polygon = PoolVector2Array( -223.825, 362.715, -31.7883, 362.755, -31.7093, 369.667, -223.874, 369.864 )
 
 [node name="Dungeon map" type="Node2D"]
@@ -5655,21 +5655,21 @@ color = Color( 0.27451, 0.27451, 0.27451, 1 )
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
 position = Vector2( -31.7773, -1.19165 )
-occluder = SubResource( 115 )
+occluder = SubResource( 111 )
 
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
 position = Vector2( -31.7773, -1.19165 )
-occluder = SubResource( 114 )
+occluder = SubResource( 112 )
 
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
 position = Vector2( -31.7773, -1.19165 )
 occluder = SubResource( 113 )
 
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
-occluder = SubResource( 112 )
+occluder = SubResource( 114 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource( 111 )
+occluder = SubResource( 115 )
 [connection signal="frame_changed" from="Fake Walls/vertical_fake_wall/AnimatedSprite" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
 [connection signal="area_entered" from="Fake Walls/vertical_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/vertical_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="frame_changed" from="Fake Walls/horizontal_fake_wall/AnimatedSprite" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
