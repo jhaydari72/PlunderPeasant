@@ -1,14 +1,19 @@
 extends KinematicBody2D
 
-const SPEED = 50
-
-var velocity = Vector2()
-var direction = -1
+export var ACCELERATION = 300
+export var SPEED = 50
+export var FRICTION = 200
+enum {
+	WALK,
+	CHASE
+}
+var velocity = Vector2.ZERO
+var state = CHASE 
 var is_dead = false
 var knockback = Vector2.ZERO
 
 onready var sprite = $Sprite
-
+onready var playerdetection = $PlayerDetection
 
 
 func _ready():
@@ -16,22 +21,25 @@ func _ready():
 	
 
 func _physics_process(delta):
-	knockback = knockback.move_toward(Vector2.ZERO, 500 * delta)
+	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
 	knockback = move_and_slide(knockback)
-	if is_dead == false:
-		velocity.x = SPEED * direction
-		if direction == 1:
-			$Sprite.flip_h = true
-		else:
-			$Sprite.flip_h = false
-			
+	match state:
+		WALK:
+			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+			find_player()
+		CHASE:
+			var player = playerdetection.player
+			if player != null:
+				var direction = (player.global_position - global_position).normalized()
+				velocity = velocity.move_toward(direction * SPEED, ACCELERATION * delta)
+	velocity = move_and_slide(velocity)
 	
-		velocity = move_and_slide(velocity)
-	
-	if is_on_wall():
-		direction = direction * -1
 		
-
+func find_player():
+	if playerdetection.can_see_player():
+		state = CHASE
+	
+	
 func _on_Hurtbox_area_entered(area):
 	knockback = area.knockback_vector * 200
 	is_dead = true
