@@ -1270,16 +1270,6 @@ position = Vector2( 2.38139, 3.80061 )
 scale = Vector2( 1.5, 1.5 )
 shape = SubResource( 29 )
 
-[node name="Enemy" parent="." instance=ExtResource( 23 )]
-position = Vector2( -206.149, 398.52 )
-
-[node name="Sprite" parent="Enemy" index="0"]
-position = Vector2( 0.157776, 1.26227 )
-scale = Vector2( 0.437912, 0.418188 )
-
-[node name="Hurtbox" parent="Enemy" index="1"]
-position = Vector2( 19.9173, -16.0714 )
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( -149.359, -208.361 )
 scale = Vector2( 2, 1 )
@@ -4435,7 +4425,7 @@ position = Vector2( 280.085, 77.9193 )
 position = Vector2( 419.073, 50.6094 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( 207.503, 35.2341 )
+position = Vector2( -158.676, 344.69 )
 collision_layer = 2
 script = ExtResource( 12 )
 
@@ -5601,14 +5591,17 @@ position = Vector2( 0, 2.57212 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch31/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 38 )
+
+[node name="Enemy" parent="." instance=ExtResource( 23 )]
+position = Vector2( -184.88, 386.575 )
 [connection signal="frame_changed" from="Fake Walls/vertical_fake_wall/AnimatedSprite" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
 [connection signal="area_entered" from="Fake Walls/vertical_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/vertical_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="frame_changed" from="Fake Walls/horizontal_fake_wall/AnimatedSprite" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
 [connection signal="area_entered" from="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/horizontal_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="Path2D/PathFollow2D/Hitbox" to="obj_player" method="_on_Hitbox_body_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
@@ -5827,8 +5820,8 @@ shape = SubResource( 38 )
 
 [editable path="Path2D/PathFollow2D/Hitbox"]
 
-[editable path="Enemy"]
-
 [editable path="obj_player/HitboxPivot/SwordHitbox"]
 
 [editable path="obj_player/Hurtbox"]
+
+[editable path="Enemy"]
