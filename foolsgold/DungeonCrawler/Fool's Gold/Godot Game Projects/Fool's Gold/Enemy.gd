@@ -38,8 +38,7 @@ func _physics_process(delta):
 			find_player()
 			
 			if controller.time_left() == 0:
-				state = new_state([IDLE, WANDER])
-				controller.start_wander_timer(rand_range(1, 3))
+				update_state()
 		
 		WANDER:
 			
@@ -47,15 +46,12 @@ func _physics_process(delta):
 			find_player()
 			
 			if controller.time_left() == 0:
-				state = new_state([IDLE, WANDER])
-				controller.start_wander_timer(rand_range(1, 3))
+				update_state()
 				
-			var direction = global_position.direction_to(controller.target_position)
-			velocity = velocity.move_toward(direction * SPEED, ACCELERATION * delta)
-			sprite.flip_h = velocity.x > 0
+			accelerate_towards_point(controller.target_position, delta)
+			
 			if global_position.distance_to(controller.target_position) <= RANGE:
-				state = new_state([IDLE, WANDER])
-				controller.start_wander_timer(rand_range(1, 3))
+				update_state()
 			
 		DEAD:
 			if is_dead == true:
@@ -65,13 +61,20 @@ func _physics_process(delta):
 			var player = playerdetection.player
 			if player != null:
 				$Sprite.play("walk")
-				var direction = global_position.direction_to(player.global_position)
-				velocity = velocity.move_toward(direction * SPEED, ACCELERATION * delta)
+				accelerate_towards_point(player.global_position, delta)
 			else:
 				state = IDLE
 			sprite.flip_h = velocity.x > 0
 	velocity = move_and_slide(velocity)
 	
+func accelerate_towards_point(point, delta):
+	var direction = global_position.direction_to(point)
+	velocity = velocity.move_toward(direction * SPEED, ACCELERATION * delta)
+	sprite.flip_h = velocity.x > 0
+
+func update_state():
+	state = new_state([IDLE, WANDER])
+	controller.start_wander_timer(rand_range(1, 3))
 func new_state(state_list):
 	state_list.shuffle()
 	return state_list.pop_front()
