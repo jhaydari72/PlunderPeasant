@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://skele anims/enemy_left2.png" type="Texture" id=1]
 [ext_resource path="res://Enemy.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://hit and hurt/Hitbox.gd" type="Script" id=9]
 [ext_resource path="res://Enemy/PlayerDetection.tscn" type="PackedScene" id=10]
 [ext_resource path="res://skele anims/skeleton_anim_v1.png" type="Texture" id=11]
+[ext_resource path="res://Wander.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2.23993, 9.84857 )
@@ -68,10 +69,12 @@ script = ExtResource( 9 )
 shape = SubResource( 4 )
 
 [node name="PlayerDetection" parent="." instance=ExtResource( 10 )]
-[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+
+[node name="Wander" parent="." instance=ExtResource( 12 )]
 [connection signal="area_entered" from="Hurtbox" to="collision" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Hurtbox" to="enemy_hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="PlayerDetection" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="enemy_hitbox" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
 [editable path="Hurtbox"]
 
