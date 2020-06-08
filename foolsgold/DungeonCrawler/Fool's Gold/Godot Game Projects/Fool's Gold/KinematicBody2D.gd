@@ -17,7 +17,7 @@ var Key = 0
 var velocity = Vector2.ZERO
 var kill_direction = Vector2.LEFT
 var health = 5
-
+var value = null
 
 #these signal the different nodes for specific purposes
 onready var player_anim = $player_anim
@@ -101,5 +101,6 @@ func _on_Rat_Attack_Player(body):
 	
 	
 func _on_Timer_timeout():
-	get_tree().change_scene("res://GameOver/GameOver.tscn")
+	value = get_tree().change_scene("res://GameOver/GameOver.tscn")
+	return value
 

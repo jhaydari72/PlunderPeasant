@@ -1,5 +1,6 @@
 extends Button
 
+var value = null
 
 func _ready():
 	pass 
@@ -7,4 +8,5 @@ func _ready():
 
 
 func _on_CreditsButton_pressed():
-	get_tree().change_scene("res://Credit Screen/CreditScreen.tscn")
+	value = get_tree().change_scene("res://Credit Screen/CreditScreen.tscn")
+	return value
