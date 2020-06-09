@@ -1,4 +1,4 @@
-[gd_scene load_steps=193 format=2]
+[gd_scene load_steps=194 format=2]
 
 [ext_resource path="res://Tile map/Updated Titles/Left Middle Wall.png" type="Texture" id=1]
 [ext_resource path="res://Tile map/Updated Titles/Top Right Wall.png" type="Texture" id=2]
@@ -128,7 +128,7 @@ polygon = PoolVector2Array( 56.9824, 0, 64, 0, 64, 49.739, 0, 50.2063, 0, 42.884
 points = PoolVector2Array( 63.743, -0.279762, 63.743, 64.0234, -0.186298, 64.2103, -0.0928345, 42.8071, 56.4528, 42.5267, 56.5462, 0.0940933 )
 
 [sub_resource type="OccluderPolygon2D" id=18]
-polygon = PoolVector2Array( 0, 43.0407, 64, 42.8849, 64, 64, 0, 64 )
+polygon = PoolVector2Array( 0, 43.0407, 64, 42.8849, 64, 48.9495, 0, 48.9495 )
 
 [sub_resource type="ConvexPolygonShape2D" id=19]
 points = PoolVector2Array( 63.9299, 64.0234, -0.747082, 64.0234, -0.747082, 42.994, 63.9299, 42.994 )
@@ -540,14 +540,14 @@ color_ramp = SubResource( 42 )
 
 [sub_resource type="SpriteFrames" id=46]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -612,6 +612,9 @@ polygon = PoolVector2Array( 32.1895, 510.787, 32.1943, 308.815, 25.166, 308.863,
 
 [sub_resource type="OccluderPolygon2D" id=62]
 polygon = PoolVector2Array( -223.825, 362.715, -31.7883, 362.755, -31.7093, 369.667, -223.874, 369.864 )
+
+[sub_resource type="OccluderPolygon2D" id=118]
+polygon = PoolVector2Array( 538.501, 324.775, 544.073, 324.816, 544.104, 190.781, 538.222, 190.796 )
 
 [sub_resource type="Gradient" id=63]
 colors = PoolColorArray( 0.398438, 0.398438, 0.398438, 1, 0.214844, 0.214005, 0.214005, 1 )
@@ -5523,6 +5526,9 @@ occluder = SubResource( 61 )
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource( 62 )
 
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="."]
+occluder = SubResource( 118 )
+
 [node name="obj_player" type="KinematicBody2D" parent="."]
 position = Vector2( -158.676, 344.69 )
 collision_layer = 2
@@ -5706,11 +5712,13 @@ stream = ExtResource( 47 )
 [connection signal="area_entered" from="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/horizontal_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="Path2D/PathFollow2D/Hitbox" to="obj_player" method="_on_Hitbox_body_entered"]
+[connection signal="body_entered" from="Key" to="Key" method="_on_Key_body_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
+[connection signal="body_entered" from="obj_door/Area2D" to="obj_door" method="_on_Area2D_body_entered"]
 [connection signal="area_entered" from="Barrels/Barrel Collision3/Hurtbox" to="Barrels/Barrel Collision3" method="_on_Hurtbox_area_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag" to="Bags/obj_bag" method="_on_obj_bag_body_entered"]
