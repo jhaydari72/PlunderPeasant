@@ -1,5 +1,5 @@
 extends Button
-
+#This button will play the game
 var value = null 
 
 func _ready():
