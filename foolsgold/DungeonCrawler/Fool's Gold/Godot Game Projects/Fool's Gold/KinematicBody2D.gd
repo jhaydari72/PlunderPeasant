@@ -18,6 +18,7 @@ var velocity = Vector2.ZERO
 var kill_direction = Vector2.LEFT
 var health = 5
 var value = null
+var knockback = Vector2.ZERO
 
 #these signal the different nodes for specific purposes
 onready var player_anim = $player_anim
@@ -34,6 +35,8 @@ func _ready():
 
 #this function is called every frame of the game
 func _physics_process(delta):
+	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
+	knockback = move_and_slide(knockback)
 	Key = min(Key, 9)
 	match state:
 		MOVE:
@@ -85,9 +88,10 @@ func attack_animation_finished():
 	state = MOVE
 
 
-func _on_Hurtbox_area_entered(_area):
+func _on_Hurtbox_area_entered(area):
 	health -= 1
 	hurtbox.start_invincibility(0.5)
+	knockback = area.knockback_vector * 200
 	
 	
 

@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-export var ACCELERATION = 300
+export var ACCELERATION = 200
 export var SPEED = 50
-export var FRICTION = 200
+export var FRICTION = 500
 export var RANGE = 4
 
 enum {
@@ -15,7 +15,9 @@ var velocity = Vector2.ZERO
 var state = CHASE 
 var is_dead = false
 var knockback = Vector2.ZERO
+var kill_direction = Vector2.LEFT
 
+onready var enemy_hitbox = $enemy_hitbox
 onready var sprite = $Sprite
 onready var playerdetection = $PlayerDetection
 onready var hurtbox = $Hurtbox
@@ -23,6 +25,7 @@ onready var controller = $Wander
 
 func _ready():
 	state = new_state([IDLE, WANDER])
+	enemy_hitbox.knockback_vector = velocity
 	
 
 func _physics_process(delta):
@@ -66,6 +69,10 @@ func _physics_process(delta):
 				state = IDLE
 			sprite.flip_h = velocity.x > 0
 	velocity = move_and_slide(velocity)
+	if velocity != Vector2.ZERO:
+		kill_direction = velocity.normalized()
+		enemy_hitbox.knockback_vector = velocity.normalized()
+	
 	
 func accelerate_towards_point(point, delta):
 	var direction = global_position.direction_to(point)

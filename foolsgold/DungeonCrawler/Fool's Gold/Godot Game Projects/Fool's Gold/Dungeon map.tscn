@@ -463,14 +463,14 @@ _data = {
 
 [sub_resource type="SpriteFrames" id=32]
 animations = [ {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "alive",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
 "loop": false,
 "name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "alive",
 "speed": 5.0
 } ]
 
@@ -540,14 +540,14 @@ color_ramp = SubResource( 42 )
 
 [sub_resource type="SpriteFrames" id=46]
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
 "speed": 5.0
 } ]
 
@@ -633,7 +633,7 @@ scale = 0.35
 color_ramp = SubResource( 64 )
 
 [sub_resource type="CapsuleShape2D" id=66]
-radius = 6.90907
+radius = 3.12805
 height = 0.224829
 
 [sub_resource type="Animation" id=67]
@@ -1176,7 +1176,7 @@ height = 12.0896
 extents = Vector2( 4.63716, 4.92157 )
 
 [sub_resource type="CapsuleShape2D" id=117]
-radius = 3.35056
+radius = 8.53227
 height = 6.42819
 
 [node name="Dungeon map" type="Node2D"]
@@ -5535,7 +5535,6 @@ position = Vector2( 0, 3.31964 )
 scale = Vector2( 0.40462, 0.431326 )
 texture = ExtResource( 11 )
 hframes = 25
-frame = 5
 
 [node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
 current = true
@@ -5670,7 +5669,7 @@ __meta__ = {
 
 [node name="HitboxPivot" type="Position2D" parent="obj_player"]
 position = Vector2( 0, 5.101 )
-rotation = -1.5708
+rotation = 1.5708
 
 [node name="SwordHitbox" parent="obj_player/HitboxPivot" instance=ExtResource( 22 )]
 position = Vector2( 8, 0 )
@@ -5696,7 +5695,7 @@ volume_db = -10.097
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
-position = Vector2( -0.341042, 5.54251 )
+position = Vector2( -0.0723805, 4.03799 )
 shape = SubResource( 117 )
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
@@ -5707,8 +5706,8 @@ stream = ExtResource( 47 )
 [connection signal="area_entered" from="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/horizontal_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="Path2D/PathFollow2D/Hitbox" to="obj_player" method="_on_Hitbox_body_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
