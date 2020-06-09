@@ -540,14 +540,14 @@ color_ramp = SubResource( 42 )
 
 [sub_resource type="SpriteFrames" id=46]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -563,14 +563,14 @@ height = 13.0661
 
 [sub_resource type="SpriteFrames" id=50]
 animations = [ {
-"frames": [ ExtResource( 74 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 75 ) ],
-"loop": true,
-"name": "spider",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "barrel",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 74 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 75 ) ],
+"loop": true,
+"name": "spider",
 "speed": 5.0
 } ]
 
