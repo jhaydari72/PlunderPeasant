@@ -4,7 +4,7 @@ extends StaticBody2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+onready var spider = $Barrel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_Hurtbox_area_entered(area):
-	queue_free()
+	spider.play("spider")
