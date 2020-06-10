@@ -42,17 +42,17 @@ func _physics_process(delta):
 		
 		SPIDERWANDER:
 			
-			$Barrel.play("walk")
+			#$Barrel.play("walk")
 			find_player()
 		
 		SPIDERDEAD:
 			if is_dead == true:
 				velocity = Vector2(0, 0)
-				$Barrel.play("dead")
+				#$Barrel.play("dead")
 		SPIDERCHASE:
 			var player = playerdetection.player
 			if player != null:
-				$Barrel.play("walk")
+				#$Barrel.play("walk")
 				accelerate_towards_point(player.global_position, delta)
 			else:
 				state = BARREL
