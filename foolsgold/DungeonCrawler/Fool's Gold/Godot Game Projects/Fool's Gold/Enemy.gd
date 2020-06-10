@@ -11,6 +11,7 @@ enum {
 	DEAD,
 	CHASE
 }
+
 var velocity = Vector2.ZERO
 var state = CHASE 
 var is_dead = false
