@@ -13,7 +13,7 @@ enum {
 }
 
 var velocity = Vector2.ZERO
-var state = SPIDERCHASE
+var state = BARREL
 var is_dead = false
 var knockback = Vector2.ZERO
 var kill_direction = Vector2.LEFT
@@ -35,9 +35,7 @@ func _ready():
 	hitbox.knockback_vector = velocity
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -48,8 +46,15 @@ func _physics_process(delta):
 		
 		SPIDERWANDER:
 			
-			#$Barrel.play("walk")
 			find_player()
+			
+			if controller.time_left() == 0:
+				update_state()
+				
+			accelerate_towards_point(controller.target_position, delta)
+			
+			if global_position.distance_to(controller.target_position) <= RANGE:
+				update_state()
 		
 		SPIDERDEAD:
 			if is_dead == true:
@@ -61,17 +66,22 @@ func _physics_process(delta):
 				#$Barrel.play("walk")
 				accelerate_towards_point(player.global_position, delta)
 			else:
-				state = BARREL
+				state = SPIDERWANDER
+	velocity = move_and_slide(velocity)
+	
+	
+	if velocity != Vector2.ZERO:
+		kill_direction = velocity.normalized()
+		hitbox.knockback_vector = velocity.normalized()
 	
 	#kills spider
 	if health == 0:
 		queue_free()
 	
-	velocity = move_and_slide(velocity)
+
 	
-	if velocity != Vector2.ZERO:
-		kill_direction = velocity.normalized()
-		hitbox.knockback_vector = velocity.normalized()
+func update_state():
+	controller.start_wander_timer(rand_range(1, 3))
 
 func accelerate_towards_point(point, delta):
 	var direction = global_position.direction_to(point)
@@ -89,4 +99,5 @@ func _on_Hurtbox_area_entered(area):
 
 
 func _on_Barrel_frame_changed():
-	state = SPIDERCHASE
+	find_player()
+	

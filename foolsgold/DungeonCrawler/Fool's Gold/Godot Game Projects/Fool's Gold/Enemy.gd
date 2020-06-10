@@ -83,6 +83,7 @@ func accelerate_towards_point(point, delta):
 func update_state():
 	state = new_state([IDLE, WANDER])
 	controller.start_wander_timer(rand_range(1, 3))
+
 func new_state(state_list):
 	state_list.shuffle()
 	return state_list.pop_front()
