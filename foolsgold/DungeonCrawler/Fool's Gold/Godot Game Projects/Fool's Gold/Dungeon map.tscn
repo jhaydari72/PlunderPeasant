@@ -1,21 +1,21 @@
-[gd_scene load_steps=198 format=2]
+[gd_scene load_steps=194 format=2]
 
-[ext_resource path="res://Tile map/Updated Titles/Left Middle Wall.png" type="Texture" id=1]
-[ext_resource path="res://Tile map/Updated Titles/Top Right Wall.png" type="Texture" id=2]
-[ext_resource path="res://Tile map/Updated Titles/Middle Right Wall.png" type="Texture" id=3]
-[ext_resource path="res://Tile map/Updated Titles/Bottom Right Wall.png" type="Texture" id=4]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Left Middle Wall.png" type="Texture" id=1]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Top Right Wall.png" type="Texture" id=2]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Middle Right Wall.png" type="Texture" id=3]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Bottom Right Wall.png" type="Texture" id=4]
 [ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=5]
-[ext_resource path="res://Tile map/Updated Titles/Center Title.png" type="Texture" id=6]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Center Title.png" type="Texture" id=6]
 [ext_resource path="res://Audio/hit_sound_mixdown.wav" type="AudioStream" id=7]
 [ext_resource path="res://hit and hurt/Hitbox.gd" type="Script" id=8]
-[ext_resource path="res://Tile map/Updated Titles/Bottom Middle Wall.png" type="Texture" id=9]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Bottom Middle Wall.png" type="Texture" id=9]
 [ext_resource path="res://skele anims/skeleton_anim_v1.png" type="Texture" id=10]
 [ext_resource path="res://Player anims/playerSS.png" type="Texture" id=11]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=12]
 [ext_resource path="res://LIghting .png" type="Texture" id=13]
-[ext_resource path="res://Torch/torch_unlit_v1.png" type="Texture" id=14]
-[ext_resource path="res://Torch/Unlit torch.gd" type="Script" id=15]
-[ext_resource path="res://Torch/torch_light.gd" type="Script" id=16]
+[ext_resource path="res://Art Assets/Torch/torch_unlit_v1.png" type="Texture" id=14]
+[ext_resource path="res://Art Assets/Torch/Unlit torch.gd" type="Script" id=15]
+[ext_resource path="res://Art Assets/Torch/torch_light.gd" type="Script" id=16]
 [ext_resource path="res://money_bag.png" type="Texture" id=17]
 [ext_resource path="res://Money Machine/obj_bag.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Count.gd" type="Script" id=19]
@@ -25,8 +25,8 @@
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=23]
 [ext_resource path="res://hit and hurt/Hurtbox.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Particles2D.gd" type="Script" id=25]
-[ext_resource path="res://Torch/torch_lit_v1.png" type="Texture" id=26]
-[ext_resource path="res://Torch/torch_lit_v2.png" type="Texture" id=27]
+[ext_resource path="res://Art Assets/Torch/torch_lit_v1.png" type="Texture" id=26]
+[ext_resource path="res://Art Assets/Torch/torch_lit_v2.png" type="Texture" id=27]
 [ext_resource path="res://false_wall.gd" type="Script" id=28]
 [ext_resource path="res://false_wall2.gd" type="Script" id=29]
 [ext_resource path="res://New Door Closed.png" type="Texture" id=30]
@@ -39,11 +39,11 @@
 [ext_resource path="res://obj_door.gd" type="Script" id=37]
 [ext_resource path="res://obj_enemy.gd" type="Script" id=38]
 [ext_resource path="res://CollisionShape2D.gd" type="Script" id=39]
-[ext_resource path="res://Tile map/Updated Titles/Bottom Left Wall.png" type="Texture" id=40]
-[ext_resource path="res://Tile map/Updated Titles/Top Left Wall.png" type="Texture" id=41]
-[ext_resource path="res://Tile map/Updated Titles/Top Middle Wall.png" type="Texture" id=42]
-[ext_resource path="res://Tile map/Updated Titles/Horizontal Wall.png" type="Texture" id=43]
-[ext_resource path="res://Tile map/Updated Titles/Vertical Wall.png" type="Texture" id=44]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Bottom Left Wall.png" type="Texture" id=40]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Top Left Wall.png" type="Texture" id=41]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Top Middle Wall.png" type="Texture" id=42]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Horizontal Wall.png" type="Texture" id=43]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Vertical Wall.png" type="Texture" id=44]
 [ext_resource path="res://New Door Opening.png" type="Texture" id=45]
 [ext_resource path="res://door_collision.gd" type="Script" id=46]
 [ext_resource path="res://Audio/463351__ddragonpearl__hit-1.wav" type="AudioStream" id=47]
@@ -52,22 +52,18 @@
 [ext_resource path="res://Art Assets/Banner.png" type="Texture" id=50]
 [ext_resource path="res://Art Assets/Spider Wed.png" type="Texture" id=51]
 [ext_resource path="res://Enemy/Rat Attack.tscn" type="PackedScene" id=52]
-[ext_resource path="res://false walls anims/spr_wall_right_move3.png" type="Texture" id=53]
-[ext_resource path="res://false walls anims/spr_wall_right_move1.png" type="Texture" id=54]
-[ext_resource path="res://false walls anims/spr_wall_right_move5.png" type="Texture" id=55]
-[ext_resource path="res://false walls anims/spr_wall_right_move7.png" type="Texture" id=56]
-[ext_resource path="res://false walls anims/spr_wall_right_move8.png" type="Texture" id=57]
-[ext_resource path="res://false walls anims/spr_wall_right_move2.png" type="Texture" id=58]
-[ext_resource path="res://false walls anims/spr_wall_right_move4.png" type="Texture" id=59]
-[ext_resource path="res://false walls anims/spr_wall_right_move6.png" type="Texture" id=60]
-[ext_resource path="res://false walls anims/spr_wall_top_move7.png" type="Texture" id=61]
-[ext_resource path="res://false walls anims/spr_wall_top_move5.png" type="Texture" id=62]
-[ext_resource path="res://false walls anims/spr_wall_top_move1.png" type="Texture" id=63]
-[ext_resource path="res://false walls anims/spr_wall_top_move2.png" type="Texture" id=64]
-[ext_resource path="res://false walls anims/spr_wall_top_move3.png" type="Texture" id=65]
-[ext_resource path="res://false walls anims/spr_wall_top_move8.png" type="Texture" id=66]
-[ext_resource path="res://false walls anims/spr_wall_top_move6.png" type="Texture" id=67]
-[ext_resource path="res://false walls anims/spr_wall_top_move4.png" type="Texture" id=68]
+[ext_resource path="res://Art Assets/Fake Walls/Vertical Walls/All Wall.png" type="Texture" id=53]
+[ext_resource path="res://Art Assets/Fake Walls/Vertical Walls/six eighth vertical wall.png" type="Texture" id=54]
+[ext_resource path="res://Art Assets/Fake Walls/Vertical Walls/two eighth vertical wall .png" type="Texture" id=55]
+[ext_resource path="res://Art Assets/Fake Walls/Vertical Walls/five eighth vertical wall.png" type="Texture" id=56]
+[ext_resource path="res://Art Assets/Fake Walls/Vertical Walls/three eighth vertical wall.png" type="Texture" id=57]
+[ext_resource path="res://Art Assets/Fake Walls/Vertical Walls/one eighth vertical wall.png" type="Texture" id=58]
+[ext_resource path="res://Art Assets/Fake Walls/Vertical Walls/seven eighth vertical wall.png" type="Texture" id=59]
+[ext_resource path="res://Art Assets/Fake Walls/Vertical Walls/half vertical wall.png" type="Texture" id=60]
+[ext_resource path="res://Art Assets/Fake Walls/Horizontal Walls/Horizontal Fake Wall.png" type="Texture" id=61]
+[ext_resource path="res://Art Assets/Fake Walls/Horizontal Walls/Horizontal Fake Wall part 3.png" type="Texture" id=62]
+[ext_resource path="res://Art Assets/Fake Walls/Horizontal Walls/Horizontal Fake Wall part 2.png" type="Texture" id=63]
+[ext_resource path="res://Art Assets/Fake Walls/Horizontal Walls/Horizontal Fake Wall part 4.png" type="Texture" id=64]
 [ext_resource path="res://wall_collision.gd" type="Script" id=69]
 [ext_resource path="res://Barrel Collision3.gd" type="Script" id=70]
 [ext_resource path="res://spider attack/spider_attackup3.png" type="Texture" id=71]
@@ -394,44 +390,6 @@ points = PoolVector2Array( 64.1168, 63.9299, -0.279762, 63.9299, -0.279762, 44.1
 } ]
 10/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=24]
-extents = Vector2( 10, 32.1574 )
-
-[sub_resource type="SpriteFrames" id=25]
-animations = [ {
-"frames": [ ExtResource( 54 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 60 ), ExtResource( 56 ), ExtResource( 57 ) ],
-"loop": false,
-"name": "open",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 54 ) ],
-"loop": false,
-"name": "closed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=26]
-extents = Vector2( 2.66423, 9.26929 )
-
-[sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 31.6195, 10.031 )
-
-[sub_resource type="SpriteFrames" id=28]
-animations = [ {
-"frames": [ ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 68 ), ExtResource( 62 ), ExtResource( 67 ), ExtResource( 61 ), ExtResource( 66 ) ],
-"loop": false,
-"name": "open",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 63 ) ],
-"loop": false,
-"name": "closed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=29]
-extents = Vector2( 12.8753, 10 )
-
 [sub_resource type="Animation" id=30]
 length = 4.0
 loop = true
@@ -624,6 +582,44 @@ polygon = PoolVector2Array( 762.019, 63.9857, 767.981, 64.0155, 767.976, 128.207
 
 [sub_resource type="OccluderPolygon2D" id=64]
 polygon = PoolVector2Array( 32.1895, 510.787, 32.1943, 308.815, 25.166, 308.863, 26.2545, 510.757 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 10, 32.1574 )
+
+[sub_resource type="SpriteFrames" id=25]
+animations = [ {
+"frames": [ ExtResource( 53 ), ExtResource( 59 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 58 ) ],
+"loop": false,
+"name": "open",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 53 ) ],
+"loop": false,
+"name": "closed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 4.10583, 3.08548 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 31.6195, 10.031 )
+
+[sub_resource type="SpriteFrames" id=28]
+animations = [ {
+"frames": [ ExtResource( 61 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 64 ) ],
+"loop": false,
+"name": "open",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 61 ) ],
+"loop": false,
+"name": "closed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 4.56714, 3.91049 )
 
 [sub_resource type="DynamicFont" id=65]
 size = 8
@@ -1168,11 +1164,11 @@ graph_offset = Vector2( 0, 26.5131 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=115]
 
-[sub_resource type="CapsuleShape2D" id=117]
+[sub_resource type="CapsuleShape2D" id=116]
 radius = 3.12059
 height = 12.0896
 
-[sub_resource type="RectangleShape2D" id=116]
+[sub_resource type="RectangleShape2D" id=117]
 extents = Vector2( 4.63716, 4.92157 )
 
 [sub_resource type="CapsuleShape2D" id=118]
@@ -1203,9 +1199,9 @@ format = 1
 tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 2, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 4, 0, 16, 5, 0, 131069, 2, 0, 131070, 3, 0, 131071, 3, 0, 65536, 1, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 4, 0, 65541, 8, 0, 65542, 2, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 2, 0, 65547, 10, 0, 65548, 8, 0, 65549, 3, 0, 65550, 4, 0, 65551, 5, 0, 65552, 5, 0, 196605, 1, 0, 196606, 2, 0, 196607, 8, 0, 131072, 8, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 5, 0, 131077, 8, 0, 131078, 1, 0, 131079, 2, 0, 131080, 2, 0, 131081, 3, 0, 131082, 1, 0, 131083, 5, 0, 131084, 8, 0, 131085, 2, 0, 131086, 3, 0, 131087, 5, 0, 131088, 5, 0, 262141, 1, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 10, 0, 196611, 5, 0, 196612, 5, 0, 196613, 8, 0, 196614, 1, 0, 196615, 1, 0, 196616, 10, 0, 196617, 8, 0, 196618, 1, 0, 196619, 10, 0, 196620, 8, 0, 196621, 1, 0, 196622, 8, 0, 196623, 5, 0, 196624, 5, 0, 327676, 2, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 4, 0, 262145, 8, 0, 262146, 10, 0, 262147, 8, 0, 262148, 5, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0, 262152, 10, 0, 262153, 8, 0, 262154, 1, 0, 262155, 10, 0, 262156, 8, 0, 262157, 1, 0, 262158, 8, 0, 262159, 5, 0, 262160, 5, 0, 393212, 1, 0, 393213, 9, 0, 393214, 9, 0, 393215, 9, 0, 327680, 10, 0, 327681, 8, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 8, 0, 327690, 1, 0, 327691, 10, 0, 327692, 8, 0, 327693, 0, 0, 327694, 7, 0, 327695, 6, 0, 327696, 5, 0, 458748, 0, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 10, 0, 393217, 3, 0, 393218, 4, 0, 393219, 8, 0, 393220, 2, 0, 393221, 4, 0, 393222, 8, 0, 393223, 2, 0, 393224, 5, 0, 393225, 8, 0, 393226, 1, 0, 393227, 2, 0, 393228, 8, 0, 393229, 8, 0, 393230, 8, 0, 393231, 8, 0, 393232, 5, 0, 458752, 10, 0, 458753, 5, 0, 458754, 5, 0, 458755, 8, 0, 458756, 0, 0, 458757, 7, 0, 458758, 8, 0, 458759, 1, 0, 458760, 4, 0, 458761, 8, 0, 458762, 2, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 4, 0, 458768, 5, 0, 524288, 1, 0, 524289, 5, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 2, 0, 524296, 8, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 8, 0, 524304, 5, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0 )
 
 [node name="ColorRect2" type="ColorRect" parent="Map Layout"]
-margin_left = -926.616
+margin_left = -969.264
 margin_top = 595.692
-margin_right = 1413.38
+margin_right = 1370.73
 margin_bottom = 1873.69
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
@@ -1213,50 +1209,8 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Map Layout"]
+visible = false
 color = Color( 0, 0, 0, 1 )
-
-[node name="Fake Walls" type="Node2D" parent="."]
-
-[node name="vertical_fake_wall" type="StaticBody2D" parent="Fake Walls"]
-position = Vector2( -927.545, 254.858 )
-script = ExtResource( 29 )
-
-[node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
-position = Vector2( 637.026, 93.6361 )
-shape = SubResource( 24 )
-script = ExtResource( 69 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/vertical_fake_wall"]
-position = Vector2( 671.651, 96.0985 )
-frames = SubResource( 25 )
-animation = "closed"
-
-[node name="Area2D" type="Area2D" parent="Fake Walls/vertical_fake_wall/AnimatedSprite"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall/AnimatedSprite/Area2D"]
-position = Vector2( 28.3526, 0.40732 )
-shape = SubResource( 26 )
-
-[node name="horizontal_fake_wall" type="StaticBody2D" parent="Fake Walls"]
-position = Vector2( 352.243, 62.905 )
-script = ExtResource( 28 )
-
-[node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall"]
-position = Vector2( 160.399, 329.792 )
-shape = SubResource( 27 )
-script = ExtResource( 69 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall"]
-position = Vector2( 156.678, 350.678 )
-scale = Vector2( 0.901764, 0.969241 )
-frames = SubResource( 28 )
-animation = "closed"
-
-[node name="Area2D" type="Area2D" parent="Fake Walls/horizontal_fake_wall/AnimatedSprite"]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D"]
-position = Vector2( 1.29553, -28.4703 )
-shape = SubResource( 29 )
 
 [node name="Rat" type="Node2D" parent="."]
 position = Vector2( -260.367, 277.652 )
@@ -4572,6 +4526,286 @@ occluder = SubResource( 64 )
 [node name="Enemy skeleton" parent="." instance=ExtResource( 23 )]
 position = Vector2( -100.026, 409.238 )
 
+[node name="Fake Walls" type="Node2D" parent="."]
+
+[node name="vertical_fake_wall" type="StaticBody2D" parent="Fake Walls"]
+position = Vector2( -927.545, 254.858 )
+script = ExtResource( 29 )
+
+[node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
+position = Vector2( 637.026, 93.6361 )
+shape = SubResource( 24 )
+script = ExtResource( 69 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/vertical_fake_wall"]
+position = Vector2( 671.651, 96.0985 )
+frames = SubResource( 25 )
+animation = "closed"
+
+[node name="Area2D" type="Area2D" parent="Fake Walls/vertical_fake_wall/AnimatedSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall/AnimatedSprite/Area2D"]
+position = Vector2( 30.7342, -15.1919 )
+shape = SubResource( 26 )
+
+[node name="horizontal_fake_wall" type="StaticBody2D" parent="Fake Walls"]
+position = Vector2( 352.243, 62.905 )
+script = ExtResource( 28 )
+
+[node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall"]
+position = Vector2( 160.399, 329.792 )
+shape = SubResource( 27 )
+script = ExtResource( 69 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall"]
+position = Vector2( 156.678, 350.678 )
+scale = Vector2( 0.901764, 0.969241 )
+frames = SubResource( 28 )
+animation = "closed"
+
+[node name="Area2D" type="Area2D" parent="Fake Walls/horizontal_fake_wall/AnimatedSprite"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D"]
+position = Vector2( 26.451, -30.8046 )
+shape = SubResource( 29 )
+
+[node name="obj_player" type="KinematicBody2D" parent="."]
+position = Vector2( -101.959, 339.674 )
+z_as_relative = false
+collision_layer = 2
+script = ExtResource( 12 )
+
+[node name="Timer" type="Timer" parent="obj_player"]
+
+[node name="Sprite" type="Sprite" parent="obj_player"]
+position = Vector2( 0, 3.31964 )
+scale = Vector2( 0.40462, 0.431326 )
+texture = ExtResource( 11 )
+hframes = 25
+
+[node name="UI Layer Only" type="CanvasLayer" parent="obj_player/Sprite"]
+
+[node name="Money Bag" type="Control" parent="obj_player/Sprite/UI Layer Only"]
+margin_left = 13.2823
+margin_top = -0.269234
+margin_right = 41.2823
+margin_bottom = 9.73077
+rect_scale = Vector2( 5.2, 4.52 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+position = Vector2( 1.8916, 4.73267 )
+scale = Vector2( 0.12214, 0.119944 )
+texture = ExtResource( 17 )
+
+[node name="Label" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+anchor_left = 0.000132113
+anchor_right = 0.000132113
+margin_left = 4.73078
+margin_top = 2.61816
+margin_right = 22.7308
+margin_bottom = 8.61816
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 65 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "*"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Count" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+margin_left = 10.4161
+margin_top = 2.54916
+margin_right = 24.4161
+margin_bottom = 9.54916
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 66 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "00"
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+visible = false
+position = Vector2( 33.3884, 594.248 )
+scale = Vector2( 0.313704, 0.25302 )
+texture = ExtResource( 33 )
+
+[node name="Label2" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+visible = false
+margin_left = 36.8544
+margin_top = 590.417
+margin_right = 43.8544
+margin_bottom = 598.417
+custom_fonts/font = SubResource( 67 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Key_count" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+visible = false
+margin_left = 45.5728
+margin_top = 590.851
+margin_right = 53.5728
+margin_bottom = 596.851
+custom_fonts/font = SubResource( 68 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "00"
+script = ExtResource( 34 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="obj_player/Sprite"]
+
+[node name="Pause" type="Control" parent="obj_player/Sprite/CanvasLayer"]
+pause_mode = 2
+visible = false
+margin_right = 186.0
+margin_bottom = 123.0
+rect_scale = Vector2( 5.52, 5 )
+script = ExtResource( 76 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorOverLay" type="ColorRect" parent="obj_player/Sprite/CanvasLayer/Pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -93.0
+margin_top = -61.5
+margin_right = 655.0
+margin_bottom = 538.5
+rect_scale = Vector2( 0.24822, 0.202859 )
+color = Color( 0.25098, 0.160784, 0, 0.709804 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause Logo" type="Label" parent="obj_player/Sprite/CanvasLayer/Pause"]
+margin_left = 20.4783
+margin_top = 10.8479
+margin_right = 165.478
+margin_bottom = 34.8479
+custom_fonts/font = SubResource( 69 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -2
+custom_constants/shadow_offset_y = 2
+text = "Pause Menu"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitGame" type="Button" parent="obj_player/Sprite/CanvasLayer/Pause"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 51.74
+margin_top = 80.1309
+margin_right = -55.26
+margin_bottom = -17.8691
+custom_fonts/font = SubResource( 70 )
+custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Quit Game"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
+current = true
+zoom = Vector2( 0.18, 0.2 )
+drag_margin_left = 0.1
+drag_margin_right = 0.1
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
+position = Vector2( 0.475624, 10.4891 )
+shape = SubResource( 71 )
+
+[node name="Light2D" type="Light2D" parent="obj_player"]
+position = Vector2( 0.837524, 4.9165 )
+scale = Vector2( 0.087818, 0.0681612 )
+texture = ExtResource( 13 )
+texture_scale = 4.68
+color = Color( 1, 1, 1, 0.113725 )
+energy = 3.54
+shadow_enabled = true
+
+[node name="player_anim" type="AnimationPlayer" parent="obj_player"]
+anims/attack_down = SubResource( 72 )
+anims/down_dead = SubResource( 73 )
+anims/down_walk = SubResource( 74 )
+anims/idle_down = SubResource( 75 )
+anims/left_attack = SubResource( 76 )
+anims/left_dead = SubResource( 77 )
+anims/left_idle = SubResource( 78 )
+anims/left_walk = SubResource( 79 )
+anims/right_attack = SubResource( 80 )
+anims/right_dead = SubResource( 81 )
+anims/right_idle = SubResource( 82 )
+anims/right_walk = SubResource( 83 )
+anims/up_attack = SubResource( 84 )
+anims/up_dead = SubResource( 85 )
+anims/up_idle = SubResource( 86 )
+anims/up_walk = SubResource( 87 )
+
+[node name="AnimationTree" type="AnimationTree" parent="obj_player"]
+tree_root = SubResource( 114 )
+anim_player = NodePath("../player_anim")
+parameters/playback = SubResource( 115 )
+parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
+parameters/Death/blend_position = Vector2( 0.239115, -0.547945 )
+parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Run/blend_position = Vector2( 0, 0 )
+
+[node name="HitboxPivot" type="Position2D" parent="obj_player"]
+position = Vector2( 0, 5.101 )
+rotation = 1.5708
+
+[node name="SwordHitbox" parent="obj_player/HitboxPivot" instance=ExtResource( 22 )]
+position = Vector2( 8, 0 )
+collision_mask = 8
+script = ExtResource( 49 )
+
+[node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
+position = Vector2( 3.37391, 0.250439 )
+shape = SubResource( 116 )
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="obj_player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/Area2D"]
+position = Vector2( 0.238064, 9.31003 )
+shape = SubResource( 117 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="obj_player"]
+stream = ExtResource( 7 )
+volume_db = -10.097
+
+[node name="Hurtbox" parent="obj_player" instance=ExtResource( 24 )]
+collision_layer = 4
+
+[node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
+position = Vector2( 0.391045, 5.71347 )
+shape = SubResource( 118 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
+stream = ExtResource( 47 )
+
 [node name="Torches Front Player" type="Node2D" parent="."]
 
 [node name="torch5" type="StaticBody2D" parent="Torches Front Player"]
@@ -5561,248 +5795,6 @@ position = Vector2( 0, 2.57212 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch31/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 48 )
-
-[node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -158.676, 344.69 )
-z_as_relative = false
-collision_layer = 2
-script = ExtResource( 12 )
-
-[node name="Timer" type="Timer" parent="obj_player"]
-
-[node name="Sprite" type="Sprite" parent="obj_player"]
-position = Vector2( 0, 3.31964 )
-scale = Vector2( 0.40462, 0.431326 )
-texture = ExtResource( 11 )
-hframes = 25
-
-[node name="UI Layer Only" type="CanvasLayer" parent="obj_player/Sprite"]
-
-[node name="Money Bag" type="Control" parent="obj_player/Sprite/UI Layer Only"]
-margin_left = 13.2823
-margin_top = -0.269234
-margin_right = 41.2823
-margin_bottom = 9.73077
-rect_scale = Vector2( 5.2, 4.52 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
-position = Vector2( 1.8916, 4.73267 )
-scale = Vector2( 0.12214, 0.119944 )
-texture = ExtResource( 17 )
-
-[node name="Label" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
-anchor_left = 0.000132113
-anchor_right = 0.000132113
-margin_left = 4.73078
-margin_top = 2.61816
-margin_right = 22.7308
-margin_bottom = 8.61816
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 65 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "*"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Count" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
-margin_left = 10.4161
-margin_top = 2.54916
-margin_right = 24.4161
-margin_bottom = 9.54916
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 66 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "00"
-script = ExtResource( 19 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite2" type="Sprite" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
-visible = false
-position = Vector2( 33.3884, 594.248 )
-scale = Vector2( 0.313704, 0.25302 )
-texture = ExtResource( 33 )
-
-[node name="Label2" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
-visible = false
-margin_left = 36.8544
-margin_top = 590.417
-margin_right = 43.8544
-margin_bottom = 598.417
-custom_fonts/font = SubResource( 67 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "x"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Key_count" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
-visible = false
-margin_left = 45.5728
-margin_top = 590.851
-margin_right = 53.5728
-margin_bottom = 596.851
-custom_fonts/font = SubResource( 68 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "00"
-script = ExtResource( 34 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CanvasLayer" type="CanvasLayer" parent="obj_player/Sprite"]
-
-[node name="Pause" type="Control" parent="obj_player/Sprite/CanvasLayer"]
-pause_mode = 2
-visible = false
-margin_right = 186.0
-margin_bottom = 123.0
-rect_scale = Vector2( 5.52, 5 )
-script = ExtResource( 76 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorOverLay" type="ColorRect" parent="obj_player/Sprite/CanvasLayer/Pause"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -93.0
-margin_top = -61.5
-margin_right = 655.0
-margin_bottom = 538.5
-rect_scale = Vector2( 0.24822, 0.202859 )
-color = Color( 0.25098, 0.160784, 0, 0.709804 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Pause Logo" type="Label" parent="obj_player/Sprite/CanvasLayer/Pause"]
-margin_left = 20.4783
-margin_top = 10.8479
-margin_right = 165.478
-margin_bottom = 34.8479
-custom_fonts/font = SubResource( 69 )
-custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
-custom_constants/shadow_offset_x = -2
-custom_constants/shadow_offset_y = 2
-text = "Pause Menu"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="QuitGame" type="Button" parent="obj_player/Sprite/CanvasLayer/Pause"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 51.74
-margin_top = 80.1309
-margin_right = -55.26
-margin_bottom = -17.8691
-custom_fonts/font = SubResource( 70 )
-custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-text = "Quit Game"
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
-scale = Vector2( 1, 1 )
-current = true
-zoom = Vector2( 0.18, 0.2 )
-drag_margin_left = 0.1
-drag_margin_right = 0.1
-editor_draw_limits = true
-editor_draw_drag_margin = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
-position = Vector2( 0.475624, 10.4891 )
-shape = SubResource( 71 )
-
-[node name="Light2D" type="Light2D" parent="obj_player"]
-position = Vector2( 0.837524, 4.9165 )
-scale = Vector2( 0.087818, 0.0681612 )
-texture = ExtResource( 13 )
-texture_scale = 4.68
-color = Color( 1, 1, 1, 0.113725 )
-energy = 3.54
-shadow_enabled = true
-
-[node name="player_anim" type="AnimationPlayer" parent="obj_player"]
-anims/attack_down = SubResource( 72 )
-anims/down_dead = SubResource( 73 )
-anims/down_walk = SubResource( 74 )
-anims/idle_down = SubResource( 75 )
-anims/left_attack = SubResource( 76 )
-anims/left_dead = SubResource( 77 )
-anims/left_idle = SubResource( 78 )
-anims/left_walk = SubResource( 79 )
-anims/right_attack = SubResource( 80 )
-anims/right_dead = SubResource( 81 )
-anims/right_idle = SubResource( 82 )
-anims/right_walk = SubResource( 83 )
-anims/up_attack = SubResource( 84 )
-anims/up_dead = SubResource( 85 )
-anims/up_idle = SubResource( 86 )
-anims/up_walk = SubResource( 87 )
-
-[node name="AnimationTree" type="AnimationTree" parent="obj_player"]
-tree_root = SubResource( 114 )
-anim_player = NodePath("../player_anim")
-parameters/playback = SubResource( 115 )
-parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
-parameters/Death/blend_position = Vector2( 0.239115, -0.547945 )
-parameters/Idle/blend_position = Vector2( 0, 0 )
-parameters/Run/blend_position = Vector2( 0, 0 )
-
-[node name="HitboxPivot" type="Position2D" parent="obj_player"]
-position = Vector2( 0, 5.101 )
-rotation = 1.5708
-
-[node name="SwordHitbox" parent="obj_player/HitboxPivot" instance=ExtResource( 22 )]
-position = Vector2( 8, 0 )
-collision_mask = 8
-script = ExtResource( 49 )
-
-[node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
-position = Vector2( 3.37391, 0.250439 )
-shape = SubResource( 117 )
-disabled = true
-
-[node name="Area2D" type="Area2D" parent="obj_player"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/Area2D"]
-position = Vector2( 0.238064, 9.31003 )
-shape = SubResource( 116 )
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="obj_player"]
-stream = ExtResource( 7 )
-volume_db = -10.097
-
-[node name="Hurtbox" parent="obj_player" instance=ExtResource( 24 )]
-collision_layer = 4
-
-[node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
-position = Vector2( 0.391045, 5.71347 )
-shape = SubResource( 118 )
-
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
-stream = ExtResource( 47 )
-[connection signal="frame_changed" from="Fake Walls/vertical_fake_wall/AnimatedSprite" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
-[connection signal="area_entered" from="Fake Walls/vertical_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/vertical_fake_wall" method="_on_Area2D_area_entered"]
-[connection signal="frame_changed" from="Fake Walls/horizontal_fake_wall/AnimatedSprite" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
-[connection signal="area_entered" from="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/horizontal_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
@@ -6022,6 +6014,10 @@ stream = ExtResource( 47 )
 [connection signal="body_entered" from="Bags/obj_bag102" to="Bags/obj_bag102" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="Bags/obj_bag103" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag103" to="Bags/obj_bag103" method="_on_obj_bag_body_entered"]
+[connection signal="frame_changed" from="Fake Walls/vertical_fake_wall/AnimatedSprite" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
+[connection signal="area_entered" from="Fake Walls/vertical_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/vertical_fake_wall" method="_on_Area2D_area_entered"]
+[connection signal="frame_changed" from="Fake Walls/horizontal_fake_wall/AnimatedSprite" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
+[connection signal="area_entered" from="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/horizontal_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="timeout" from="obj_player/Timer" to="obj_player" method="_on_Timer_timeout"]
 [connection signal="pressed" from="obj_player/Sprite/CanvasLayer/Pause/QuitGame" to="obj_player/Sprite/CanvasLayer/Pause" method="_on_QuitGame_pressed"]
 [connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player" method="_on_Hurtbox_area_entered"]
