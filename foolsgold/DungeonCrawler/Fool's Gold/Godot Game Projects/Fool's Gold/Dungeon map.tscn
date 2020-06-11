@@ -563,14 +563,14 @@ extents = Vector2( 15.6504, 18.1411 )
 
 [sub_resource type="SpriteFrames" id=49]
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "barrel",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 74 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 75 ) ],
 "loop": true,
 "name": "spider",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "barrel",
 "speed": 5.0
 } ]
 
@@ -642,11 +642,10 @@ size = 8
 font_data = ExtResource( 21 )
 
 [sub_resource type="DynamicFont" id=69]
-size = 30
 font_data = ExtResource( 77 )
 
 [sub_resource type="DynamicFont" id=70]
-size = 25
+size = 8
 font_data = ExtResource( 77 )
 
 [sub_resource type="CapsuleShape2D" id=71]
@@ -1169,11 +1168,11 @@ graph_offset = Vector2( 0, 26.5131 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=115]
 
-[sub_resource type="CapsuleShape2D" id=116]
+[sub_resource type="CapsuleShape2D" id=117]
 radius = 3.12059
 height = 12.0896
 
-[sub_resource type="RectangleShape2D" id=117]
+[sub_resource type="RectangleShape2D" id=116]
 extents = Vector2( 4.63716, 4.92157 )
 
 [sub_resource type="CapsuleShape2D" id=118]
@@ -1186,10 +1185,10 @@ position = Vector2( 2.82852, 2.15314 )
 [node name="Map Layout" type="Node2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Map Layout"]
-margin_left = -926.645
-margin_top = -263.632
-margin_right = 1413.35
-margin_bottom = 1014.37
+margin_left = -966.505
+margin_top = -282.688
+margin_right = 1373.49
+margin_bottom = 995.314
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1214,7 +1213,6 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Map Layout"]
-visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Fake Walls" type="Node2D" parent="."]
@@ -1319,7 +1317,6 @@ position = Vector2( 4.14258, -0.811954 )
 shape = SubResource( 35 )
 
 [node name="Key" type="Area2D" parent="."]
-visible = false
 position = Vector2( 857.925, 318.426 )
 script = ExtResource( 35 )
 
@@ -4538,11 +4535,7 @@ position = Vector2( 280.085, 77.9193 )
 [node name="obj_bag103" parent="Bags" instance=ExtResource( 18 )]
 position = Vector2( 419.073, 50.6094 )
 
-[node name="Enemy skeleton" parent="." instance=ExtResource( 23 )]
-position = Vector2( -100.026, 409.238 )
-
 [node name="LightOccluder" type="Node2D" parent="."]
-visible = false
 position = Vector2( -250.12, 288.487 )
 scale = Vector2( 0.40462, 0.431326 )
 
@@ -4576,244 +4569,10 @@ position = Vector2( 618.161, -668.837 )
 scale = Vector2( 2.47145, 2.31843 )
 occluder = SubResource( 64 )
 
-[node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -158.676, 344.69 )
-z_as_relative = false
-collision_layer = 2
-script = ExtResource( 12 )
-
-[node name="Timer" type="Timer" parent="obj_player"]
-
-[node name="Money Bag" type="Control" parent="obj_player"]
-margin_left = -27.5822
-margin_top = -542.341
-margin_right = 996.42
-margin_bottom = 62.6595
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="obj_player/Money Bag"]
-position = Vector2( -58.8118, 490.211 )
-scale = Vector2( 0.12214, 0.119944 )
-texture = ExtResource( 17 )
-
-[node name="Label" type="Label" parent="obj_player/Money Bag"]
-anchor_left = 0.000132113
-anchor_right = 0.000132113
-margin_left = -55.8394
-margin_top = 488.39
-margin_right = -37.8394
-margin_bottom = 494.39
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 65 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "x $"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Count" type="Label" parent="obj_player/Money Bag"]
-margin_left = -45.0
-margin_top = 488.0
-margin_right = -31.0
-margin_bottom = 495.0
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 66 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "00"
-script = ExtResource( 19 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite2" type="Sprite" parent="obj_player/Money Bag"]
-visible = false
-position = Vector2( 33.3884, 594.248 )
-scale = Vector2( 0.313704, 0.25302 )
-texture = ExtResource( 33 )
-
-[node name="Label2" type="Label" parent="obj_player/Money Bag"]
-visible = false
-margin_left = 36.8544
-margin_top = 590.417
-margin_right = 43.8544
-margin_bottom = 598.417
-custom_fonts/font = SubResource( 67 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "x"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Key_count" type="Label" parent="obj_player/Money Bag"]
-visible = false
-margin_left = 45.5728
-margin_top = 590.851
-margin_right = 53.5728
-margin_bottom = 596.851
-custom_fonts/font = SubResource( 68 )
-custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
-text = "00"
-script = ExtResource( 34 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="obj_player"]
-position = Vector2( 0, 3.31964 )
-scale = Vector2( 0.40462, 0.431326 )
-texture = ExtResource( 11 )
-hframes = 25
-
-[node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
-current = true
-zoom = Vector2( 0.18, 0.2 )
-drag_margin_left = 0.1
-drag_margin_right = 0.1
-editor_draw_limits = true
-editor_draw_drag_margin = true
-
-[node name="Pause" type="Control" parent="obj_player/Sprite"]
-pause_mode = 2
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -226.0
-margin_top = -138.0
-margin_right = 164.0
-margin_bottom = 74.0
-script = ExtResource( 76 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorOverLay" type="ColorRect" parent="obj_player/Sprite/Pause"]
-anchor_left = -0.0374449
-anchor_top = -0.0797101
-anchor_right = 3.04405
-anchor_bottom = 3.71739
-margin_left = -1.0
-margin_top = 1.0
-margin_right = 561.0
-margin_bottom = 471.0
-rect_scale = Vector2( 0.24822, 0.202859 )
-color = Color( 0.25098, 0.160784, 0, 0.709804 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="Pause Logo" type="Label" parent="obj_player/Sprite/Pause"]
-margin_left = 84.9354
-margin_top = 40.892
-margin_right = 373.935
-margin_bottom = 64.892
-custom_fonts/font = SubResource( 69 )
-custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
-custom_constants/shadow_offset_x = -5
-custom_constants/shadow_offset_y = 5
-text = "Pause Menu"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="QuitGame" type="Button" parent="obj_player/Sprite/Pause"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 107.0
-margin_top = 219.0
-margin_right = -125.0
-margin_bottom = -32.0
-custom_fonts/font = SubResource( 70 )
-custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-text = "Quit Game"
-flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
-position = Vector2( 0.475624, 10.4891 )
-shape = SubResource( 71 )
-
-[node name="Light2D" type="Light2D" parent="obj_player"]
-visible = false
-position = Vector2( 0.837524, 4.9165 )
-scale = Vector2( 0.087818, 0.0681612 )
-texture = ExtResource( 13 )
-texture_scale = 4.68
-color = Color( 1, 1, 1, 0.113725 )
-energy = 3.54
-shadow_enabled = true
-
-[node name="player_anim" type="AnimationPlayer" parent="obj_player"]
-anims/attack_down = SubResource( 72 )
-anims/down_dead = SubResource( 73 )
-anims/down_walk = SubResource( 74 )
-anims/idle_down = SubResource( 75 )
-anims/left_attack = SubResource( 76 )
-anims/left_dead = SubResource( 77 )
-anims/left_idle = SubResource( 78 )
-anims/left_walk = SubResource( 79 )
-anims/right_attack = SubResource( 80 )
-anims/right_dead = SubResource( 81 )
-anims/right_idle = SubResource( 82 )
-anims/right_walk = SubResource( 83 )
-anims/up_attack = SubResource( 84 )
-anims/up_dead = SubResource( 85 )
-anims/up_idle = SubResource( 86 )
-anims/up_walk = SubResource( 87 )
-
-[node name="AnimationTree" type="AnimationTree" parent="obj_player"]
-tree_root = SubResource( 114 )
-anim_player = NodePath("../player_anim")
-parameters/playback = SubResource( 115 )
-parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
-parameters/Death/blend_position = Vector2( 0.239115, -0.547945 )
-parameters/Idle/blend_position = Vector2( 0, 0 )
-parameters/Run/blend_position = Vector2( 0, 0 )
-
-[node name="HitboxPivot" type="Position2D" parent="obj_player"]
-position = Vector2( 0, 5.101 )
-rotation = 1.5708
-
-[node name="SwordHitbox" parent="obj_player/HitboxPivot" instance=ExtResource( 22 )]
-position = Vector2( 8, 0 )
-collision_mask = 8
-script = ExtResource( 49 )
-
-[node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
-position = Vector2( 3.37391, 0.250439 )
-shape = SubResource( 116 )
-disabled = true
-
-[node name="Area2D" type="Area2D" parent="obj_player"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/Area2D"]
-position = Vector2( 0.238064, 9.31003 )
-shape = SubResource( 117 )
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="obj_player"]
-stream = ExtResource( 7 )
-volume_db = -10.097
-
-[node name="Hurtbox" parent="obj_player" instance=ExtResource( 24 )]
-collision_layer = 4
-
-[node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
-position = Vector2( 0.391045, 5.71347 )
-shape = SubResource( 118 )
-
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
-stream = ExtResource( 47 )
+[node name="Enemy skeleton" parent="." instance=ExtResource( 23 )]
+position = Vector2( -100.026, 409.238 )
 
 [node name="Torches Front Player" type="Node2D" parent="."]
-visible = false
 
 [node name="torch5" type="StaticBody2D" parent="Torches Front Player"]
 position = Vector2( -3.30243, 73.48 )
@@ -5802,6 +5561,244 @@ position = Vector2( 0, 2.57212 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches Front Player/torch31/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 48 )
+
+[node name="obj_player" type="KinematicBody2D" parent="."]
+position = Vector2( -158.676, 344.69 )
+z_as_relative = false
+collision_layer = 2
+script = ExtResource( 12 )
+
+[node name="Timer" type="Timer" parent="obj_player"]
+
+[node name="Sprite" type="Sprite" parent="obj_player"]
+position = Vector2( 0, 3.31964 )
+scale = Vector2( 0.40462, 0.431326 )
+texture = ExtResource( 11 )
+hframes = 25
+
+[node name="UI Layer Only" type="CanvasLayer" parent="obj_player/Sprite"]
+
+[node name="Money Bag" type="Control" parent="obj_player/Sprite/UI Layer Only"]
+margin_left = 13.2823
+margin_top = -0.269234
+margin_right = 41.2823
+margin_bottom = 9.73077
+rect_scale = Vector2( 5.2, 4.52 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+position = Vector2( 1.8916, 4.73267 )
+scale = Vector2( 0.12214, 0.119944 )
+texture = ExtResource( 17 )
+
+[node name="Label" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+anchor_left = 0.000132113
+anchor_right = 0.000132113
+margin_left = 4.73078
+margin_top = 2.61816
+margin_right = 22.7308
+margin_bottom = 8.61816
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 65 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "*"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Count" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+margin_left = 10.4161
+margin_top = 2.54916
+margin_right = 24.4161
+margin_bottom = 9.54916
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 66 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "00"
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+visible = false
+position = Vector2( 33.3884, 594.248 )
+scale = Vector2( 0.313704, 0.25302 )
+texture = ExtResource( 33 )
+
+[node name="Label2" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+visible = false
+margin_left = 36.8544
+margin_top = 590.417
+margin_right = 43.8544
+margin_bottom = 598.417
+custom_fonts/font = SubResource( 67 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Key_count" type="Label" parent="obj_player/Sprite/UI Layer Only/Money Bag"]
+visible = false
+margin_left = 45.5728
+margin_top = 590.851
+margin_right = 53.5728
+margin_bottom = 596.851
+custom_fonts/font = SubResource( 68 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "00"
+script = ExtResource( 34 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="obj_player/Sprite"]
+
+[node name="Pause" type="Control" parent="obj_player/Sprite/CanvasLayer"]
+pause_mode = 2
+visible = false
+margin_right = 186.0
+margin_bottom = 123.0
+rect_scale = Vector2( 5.52, 5 )
+script = ExtResource( 76 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorOverLay" type="ColorRect" parent="obj_player/Sprite/CanvasLayer/Pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -93.0
+margin_top = -61.5
+margin_right = 655.0
+margin_bottom = 538.5
+rect_scale = Vector2( 0.24822, 0.202859 )
+color = Color( 0.25098, 0.160784, 0, 0.709804 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause Logo" type="Label" parent="obj_player/Sprite/CanvasLayer/Pause"]
+margin_left = 20.4783
+margin_top = 10.8479
+margin_right = 165.478
+margin_bottom = 34.8479
+custom_fonts/font = SubResource( 69 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -2
+custom_constants/shadow_offset_y = 2
+text = "Pause Menu"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitGame" type="Button" parent="obj_player/Sprite/CanvasLayer/Pause"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 51.74
+margin_top = 80.1309
+margin_right = -55.26
+margin_bottom = -17.8691
+custom_fonts/font = SubResource( 70 )
+custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Quit Game"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
+scale = Vector2( 1, 1 )
+current = true
+zoom = Vector2( 0.18, 0.2 )
+drag_margin_left = 0.1
+drag_margin_right = 0.1
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
+position = Vector2( 0.475624, 10.4891 )
+shape = SubResource( 71 )
+
+[node name="Light2D" type="Light2D" parent="obj_player"]
+position = Vector2( 0.837524, 4.9165 )
+scale = Vector2( 0.087818, 0.0681612 )
+texture = ExtResource( 13 )
+texture_scale = 4.68
+color = Color( 1, 1, 1, 0.113725 )
+energy = 3.54
+shadow_enabled = true
+
+[node name="player_anim" type="AnimationPlayer" parent="obj_player"]
+anims/attack_down = SubResource( 72 )
+anims/down_dead = SubResource( 73 )
+anims/down_walk = SubResource( 74 )
+anims/idle_down = SubResource( 75 )
+anims/left_attack = SubResource( 76 )
+anims/left_dead = SubResource( 77 )
+anims/left_idle = SubResource( 78 )
+anims/left_walk = SubResource( 79 )
+anims/right_attack = SubResource( 80 )
+anims/right_dead = SubResource( 81 )
+anims/right_idle = SubResource( 82 )
+anims/right_walk = SubResource( 83 )
+anims/up_attack = SubResource( 84 )
+anims/up_dead = SubResource( 85 )
+anims/up_idle = SubResource( 86 )
+anims/up_walk = SubResource( 87 )
+
+[node name="AnimationTree" type="AnimationTree" parent="obj_player"]
+tree_root = SubResource( 114 )
+anim_player = NodePath("../player_anim")
+parameters/playback = SubResource( 115 )
+parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
+parameters/Death/blend_position = Vector2( 0.239115, -0.547945 )
+parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Run/blend_position = Vector2( 0, 0 )
+
+[node name="HitboxPivot" type="Position2D" parent="obj_player"]
+position = Vector2( 0, 5.101 )
+rotation = 1.5708
+
+[node name="SwordHitbox" parent="obj_player/HitboxPivot" instance=ExtResource( 22 )]
+position = Vector2( 8, 0 )
+collision_mask = 8
+script = ExtResource( 49 )
+
+[node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
+position = Vector2( 3.37391, 0.250439 )
+shape = SubResource( 117 )
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="obj_player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/Area2D"]
+position = Vector2( 0.238064, 9.31003 )
+shape = SubResource( 116 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="obj_player"]
+stream = ExtResource( 7 )
+volume_db = -10.097
+
+[node name="Hurtbox" parent="obj_player" instance=ExtResource( 24 )]
+collision_layer = 4
+
+[node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
+position = Vector2( 0.391045, 5.71347 )
+shape = SubResource( 118 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
+stream = ExtResource( 47 )
 [connection signal="frame_changed" from="Fake Walls/vertical_fake_wall/AnimatedSprite" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
 [connection signal="area_entered" from="Fake Walls/vertical_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/vertical_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="frame_changed" from="Fake Walls/horizontal_fake_wall/AnimatedSprite" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
@@ -5817,216 +5814,216 @@ shape = SubResource( 48 )
 [connection signal="body_entered" from="obj_door/Area2D" to="obj_door" method="_on_Area2D_body_entered"]
 [connection signal="frame_changed" from="spider_barrel/Barrel" to="spider_barrel" method="_on_Barrel_frame_changed"]
 [connection signal="area_entered" from="spider_barrel/Hurtbox" to="spider_barrel" method="_on_Hurtbox_area_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag" to="Bags/obj_bag" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag104" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag104" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag104" to="Bags/obj_bag104" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag2" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag2" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag2" to="Bags/obj_bag2" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag3" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag3" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag3" to="Bags/obj_bag3" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag4" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag4" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag4" to="Bags/obj_bag4" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag5" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag5" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag5" to="Bags/obj_bag5" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag6" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag6" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag6" to="Bags/obj_bag6" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag7" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag7" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag7" to="Bags/obj_bag7" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag8" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag8" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag8" to="Bags/obj_bag8" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag9" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag9" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag9" to="Bags/obj_bag9" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag10" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag10" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag10" to="Bags/obj_bag10" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag11" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag11" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag11" to="Bags/obj_bag11" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag12" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag12" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag12" to="Bags/obj_bag12" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag13" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag13" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag13" to="Bags/obj_bag13" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag14" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag14" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag14" to="Bags/obj_bag14" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag15" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag15" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag15" to="Bags/obj_bag15" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag16" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag16" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag16" to="Bags/obj_bag16" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag17" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag17" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag17" to="Bags/obj_bag17" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag18" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag18" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag18" to="Bags/obj_bag18" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag19" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag19" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag19" to="Bags/obj_bag19" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag20" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag20" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag20" to="Bags/obj_bag20" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag21" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag21" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag21" to="Bags/obj_bag21" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag22" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag22" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag22" to="Bags/obj_bag22" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag23" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag23" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag23" to="Bags/obj_bag23" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag24" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag24" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag24" to="Bags/obj_bag24" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag25" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag25" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag25" to="Bags/obj_bag25" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag26" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag26" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag26" to="Bags/obj_bag26" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag27" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag27" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag27" to="Bags/obj_bag27" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag28" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag28" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag28" to="Bags/obj_bag28" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag29" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag29" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag29" to="Bags/obj_bag29" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag30" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag30" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag30" to="Bags/obj_bag30" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag31" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag31" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag31" to="Bags/obj_bag31" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag32" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag32" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag32" to="Bags/obj_bag32" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag33" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag33" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag33" to="Bags/obj_bag33" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag34" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag34" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag34" to="Bags/obj_bag34" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag35" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag35" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag35" to="Bags/obj_bag35" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag36" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag36" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag36" to="Bags/obj_bag36" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag37" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag37" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag37" to="Bags/obj_bag37" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag38" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag38" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag38" to="Bags/obj_bag38" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag39" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag39" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag39" to="Bags/obj_bag39" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag40" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag40" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag40" to="Bags/obj_bag40" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag41" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag41" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag41" to="Bags/obj_bag41" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag42" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag42" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag42" to="Bags/obj_bag42" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag43" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag43" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag43" to="Bags/obj_bag43" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag44" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag44" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag44" to="Bags/obj_bag44" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag45" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag45" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag45" to="Bags/obj_bag45" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag46" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag46" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag46" to="Bags/obj_bag46" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag47" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag47" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag47" to="Bags/obj_bag47" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag48" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag48" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag48" to="Bags/obj_bag48" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag49" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag49" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag49" to="Bags/obj_bag49" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag50" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag50" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag50" to="Bags/obj_bag50" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag51" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag51" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag51" to="Bags/obj_bag51" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag52" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag52" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag52" to="Bags/obj_bag52" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag53" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag53" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag53" to="Bags/obj_bag53" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag54" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag54" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag54" to="Bags/obj_bag54" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag55" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag55" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag55" to="Bags/obj_bag55" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag56" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag56" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag56" to="Bags/obj_bag56" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag57" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag57" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag57" to="Bags/obj_bag57" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag58" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag58" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag58" to="Bags/obj_bag58" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag59" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag59" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag59" to="Bags/obj_bag59" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag60" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag60" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag60" to="Bags/obj_bag60" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag61" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag61" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag61" to="Bags/obj_bag61" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag62" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag62" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag62" to="Bags/obj_bag62" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag63" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag63" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag63" to="Bags/obj_bag63" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag64" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag64" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag64" to="Bags/obj_bag64" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag65" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag65" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag65" to="Bags/obj_bag65" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag66" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag66" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag66" to="Bags/obj_bag66" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag67" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag67" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag67" to="Bags/obj_bag67" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag68" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag68" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag68" to="Bags/obj_bag68" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag69" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag69" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag69" to="Bags/obj_bag69" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag70" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag70" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag70" to="Bags/obj_bag70" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag71" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag71" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag71" to="Bags/obj_bag71" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag72" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag72" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag72" to="Bags/obj_bag72" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag73" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag73" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag73" to="Bags/obj_bag73" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag74" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag74" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag74" to="Bags/obj_bag74" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag75" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag75" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag75" to="Bags/obj_bag75" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag76" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag76" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag76" to="Bags/obj_bag76" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag77" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag77" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag77" to="Bags/obj_bag77" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag78" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag78" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag78" to="Bags/obj_bag78" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag79" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag79" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag79" to="Bags/obj_bag79" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag80" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag80" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag80" to="Bags/obj_bag80" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag81" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag81" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag81" to="Bags/obj_bag81" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag82" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag82" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag82" to="Bags/obj_bag82" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag83" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag83" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag83" to="Bags/obj_bag83" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag84" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag84" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag84" to="Bags/obj_bag84" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag85" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag85" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag85" to="Bags/obj_bag85" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag86" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag86" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag86" to="Bags/obj_bag86" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag87" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag87" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag87" to="Bags/obj_bag87" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag88" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag88" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag88" to="Bags/obj_bag88" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag89" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag89" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag89" to="Bags/obj_bag89" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag90" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag90" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag90" to="Bags/obj_bag90" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag91" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag91" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag91" to="Bags/obj_bag91" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag92" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag92" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag92" to="Bags/obj_bag92" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag93" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag93" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag93" to="Bags/obj_bag93" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag94" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag94" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag94" to="Bags/obj_bag94" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag95" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag95" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag95" to="Bags/obj_bag95" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag96" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag96" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag96" to="Bags/obj_bag96" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag97" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag97" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag97" to="Bags/obj_bag97" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag98" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag98" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag98" to="Bags/obj_bag98" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag99" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag99" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag99" to="Bags/obj_bag99" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag100" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag100" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag100" to="Bags/obj_bag100" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag101" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag101" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag101" to="Bags/obj_bag101" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag102" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag102" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag102" to="Bags/obj_bag102" method="_on_obj_bag_body_entered"]
-[connection signal="bagsCollected" from="Bags/obj_bag103" to="obj_player/Money Bag/Count" method="_on_obj_bag_collected"]
+[connection signal="bagsCollected" from="Bags/obj_bag103" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="Bags/obj_bag103" to="Bags/obj_bag103" method="_on_obj_bag_body_entered"]
 [connection signal="timeout" from="obj_player/Timer" to="obj_player" method="_on_Timer_timeout"]
-[connection signal="pressed" from="obj_player/Sprite/Pause/QuitGame" to="obj_player/Sprite/Pause" method="_on_QuitGame_pressed"]
+[connection signal="pressed" from="obj_player/Sprite/CanvasLayer/Pause/QuitGame" to="obj_player/Sprite/CanvasLayer/Pause" method="_on_QuitGame_pressed"]
 [connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player" method="_on_Hurtbox_area_entered"]
 
 [editable path="Path2D/PathFollow2D/Hurtbox"]
