@@ -106,7 +106,7 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 5 )
 
 [node name="spider_attackup2" type="Sprite" parent="."]
-position = Vector2( 926.705, 199.768 )
+position = Vector2( 927.786, 199.768 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 texture = ExtResource( 6 )
