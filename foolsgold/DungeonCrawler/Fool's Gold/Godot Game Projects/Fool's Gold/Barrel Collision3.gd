@@ -25,7 +25,7 @@ var health = 2
 onready var spider = $Barrel
 onready var hitbox = $Hitbox
 onready var sprite = $Barrel
-onready var playerdetection = $PlayerDetection
+onready var enemy_detect = $enemy_detect
 onready var hurtbox = $Hurtbox
 onready var controller = $Wander
 
@@ -61,7 +61,7 @@ func _physics_process(delta):
 				velocity = Vector2(0, 0)
 				#$Barrel.play("dead")
 		SPIDERCHASE:
-			var player = playerdetection.player
+			var player = enemy_detect.player
 			if player != null:
 				#$Barrel.play("walk")
 				accelerate_towards_point(player.global_position, delta)
@@ -89,7 +89,7 @@ func accelerate_towards_point(point, delta):
 	sprite.flip_h = velocity.x > 0
 	
 func find_player():
-	if playerdetection.can_see_player():
+	if enemy_detect.can_see_player():
 		state = SPIDERCHASE
 
 func _on_Hurtbox_area_entered(area):

@@ -66,6 +66,7 @@
 [ext_resource path="res://Art Assets/Fake Walls/Horizontal Walls/Horizontal Fake Wall part 4.png" type="Texture" id=64]
 [ext_resource path="res://Haert Counter/Heart.tscn" type="PackedScene" id=65]
 [ext_resource path="res://Art Assets/Full Heart.png" type="Texture" id=66]
+[ext_resource path="res://Enemy/spider_detect.tscn" type="PackedScene" id=67]
 [ext_resource path="res://wall_collision.gd" type="Script" id=69]
 [ext_resource path="res://Barrel Collision3.gd" type="Script" id=70]
 [ext_resource path="res://spider attack/spider_attackup3.png" type="Texture" id=71]
@@ -75,7 +76,6 @@
 [ext_resource path="res://spider attack/spider_attackup2.png" type="Texture" id=75]
 [ext_resource path="res://Pause.gd" type="Script" id=76]
 [ext_resource path="res://Font/dogicapixelbold.ttf" type="DynamicFontData" id=77]
-[ext_resource path="res://Enemy/PlayerDetection.tscn" type="PackedScene" id=78]
 [ext_resource path="res://Wander.tscn" type="PackedScene" id=79]
 
 [sub_resource type="OccluderPolygon2D" id=1]
@@ -427,14 +427,14 @@ _data = {
 
 [sub_resource type="SpriteFrames" id=26]
 animations = [ {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "alive",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
 "loop": false,
 "name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "alive",
 "speed": 5.0
 } ]
 
@@ -523,14 +523,14 @@ extents = Vector2( 15.6504, 18.1411 )
 
 [sub_resource type="SpriteFrames" id=43]
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "barrel",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 74 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 75 ) ],
 "loop": true,
 "name": "spider",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "barrel",
 "speed": 5.0
 } ]
 
@@ -2834,12 +2834,6 @@ collision_layer = 8
 position = Vector2( -27.8997, -6.63 )
 shape = SubResource( 45 )
 
-[node name="PlayerDetection" parent="spider_barrel" instance=ExtResource( 78 )]
-position = Vector2( -4.37152, -7.83569 )
-
-[node name="CollisionShape2D" parent="spider_barrel/PlayerDetection" index="0"]
-position = Vector2( 4.22614, 3.98987 )
-
 [node name="Hitbox" parent="spider_barrel" instance=ExtResource( 22 )]
 position = Vector2( -0.135681, 0 )
 collision_mask = 4
@@ -2850,6 +2844,8 @@ position = Vector2( 0.104736, -3.00061 )
 shape = SubResource( 46 )
 
 [node name="Wander" parent="spider_barrel" instance=ExtResource( 79 )]
+
+[node name="enemy_detect" parent="spider_barrel" instance=ExtResource( 67 )]
 
 [node name="Barrel Collision" type="StaticBody2D" parent="."]
 position = Vector2( -168.817, 377.485 )
@@ -3221,10 +3217,10 @@ position = Vector2( 0, 2.57212 )
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 42 )
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="Path2D/PathFollow2D/Hitbox" to="obj_player" method="_on_Hitbox_body_entered"]
 [connection signal="body_entered" from="Key" to="Key" method="_on_Key_body_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
@@ -3248,8 +3244,6 @@ shape = SubResource( 42 )
 [editable path="Path2D/PathFollow2D/Hitbox"]
 
 [editable path="spider_barrel/Hurtbox"]
-
-[editable path="spider_barrel/PlayerDetection"]
 
 [editable path="spider_barrel/Hitbox"]
 
