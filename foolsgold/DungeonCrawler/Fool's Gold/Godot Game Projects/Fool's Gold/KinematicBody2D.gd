@@ -52,6 +52,16 @@ func move_state(delta):
 	input_vector.x = Input.get_action_strength("ui_d") - Input.get_action_strength("ui_a")
 	input_vector.y = Input.get_action_strength("ui_s") - Input.get_action_strength("ui_w")
 	input_vector = input_vector.normalized()
+	
+	if Input.get_action_strength("ui_d") or Input.get_action_strength("ui_a"):
+		var MusicNode = $walking_sound
+		MusicNode.play()
+	
+	else:
+		var MusicNode = $walking_sound
+		MusicNode.stop()
+
+	
 	# gives speed and animations
 	if input_vector != Vector2.ZERO:
 		kill_direction = input_vector
