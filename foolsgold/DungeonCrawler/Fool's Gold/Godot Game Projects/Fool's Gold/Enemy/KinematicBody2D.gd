@@ -7,6 +7,7 @@ export var RANGE = 4
 
 enum {
 	BARREL,
+	SPIDERIDLE,
 	SPIDERWANDER,
 	SPIDERDEAD,
 	SPIDERCHASE
@@ -42,6 +43,13 @@ func _physics_process(delta):
 	match state:
 		BARREL:
 			pass
+		SPIDERIDLE:
+			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+			spider.play("idle")
+			find_player()
+			
+			if controller.time_left() == 0:
+				update_state()
 		
 		SPIDERWANDER:
 			
@@ -78,8 +86,12 @@ func _physics_process(delta):
 		queue_free()
 	
 
+func new_state(state_list):
+	state_list.shuffle()
+	return state_list.pop_front()
 	
 func update_state():
+	state = new_state([SPIDERIDLE, SPIDERWANDER])
 	controller.start_wander_timer(rand_range(1, 3))
 
 func accelerate_towards_point(point, delta):

@@ -20,14 +20,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "barrel",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "barrel",
 "speed": 5.0
 } ]
 
@@ -68,6 +68,7 @@ position = Vector2( -0.291992, 0 )
 shape = SubResource( 4 )
 
 [node name="enemy_detect" parent="." instance=ExtResource( 11 )]
+collision_layer = 0
 
 [node name="Wander" parent="." instance=ExtResource( 13 )]
 [connection signal="frame_changed" from="AnimatedSprite" to="." method="_on_AnimatedSprite_frame_changed"]

@@ -70,6 +70,7 @@ func _physics_process(delta):
 				state = IDLE
 			sprite.flip_h = velocity.x > 0
 	velocity = move_and_slide(velocity)
+	
 	if velocity != Vector2.ZERO:
 		kill_direction = velocity.normalized()
 		enemy_hitbox.knockback_vector = velocity.normalized()

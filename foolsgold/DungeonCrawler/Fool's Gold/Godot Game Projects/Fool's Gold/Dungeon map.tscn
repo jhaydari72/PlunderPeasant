@@ -1161,6 +1161,7 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Map Layout"]
+visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Rat" type="Node2D" parent="."]
@@ -2837,6 +2838,10 @@ occluder = SubResource( 49 )
 [node name="Enemy skeleton" parent="." instance=ExtResource( 23 )]
 position = Vector2( -100.026, 409.238 )
 
+[node name="Spider_barrel" parent="." instance=ExtResource( 67 )]
+position = Vector2( -200.526, 382.747 )
+scale = Vector2( 0.25, 0.25 )
+
 [node name="Fake Walls" type="Node2D" parent="."]
 
 [node name="vertical_fake_wall" type="StaticBody2D" parent="Fake Walls"]
@@ -3123,10 +3128,6 @@ shape = SubResource( 109 )
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 47 )
 
-[node name="Spider_barrel" parent="." instance=ExtResource( 67 )]
-position = Vector2( -234.368, 408.822 )
-scale = Vector2( 0.25, 0.25 )
-
 [node name="torch5" type="StaticBody2D" parent="."]
 position = Vector2( -3.30243, 73.48 )
 scale = Vector2( 0.5, 0.5 )
@@ -3190,8 +3191,8 @@ shape = SubResource( 42 )
 
 [editable path="Path2D/PathFollow2D/Hitbox"]
 
+[editable path="Spider_barrel"]
+
 [editable path="obj_player/HitboxPivot/SwordHitbox"]
 
 [editable path="obj_player/Hurtbox"]
-
-[editable path="Spider_barrel"]
