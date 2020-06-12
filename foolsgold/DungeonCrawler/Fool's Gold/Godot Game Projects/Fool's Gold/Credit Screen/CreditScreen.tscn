@@ -1,13 +1,33 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Font/dogicapixelbold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Credit Screen/Button.gd" type="Script" id=2]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Top Right Wall.png" type="Texture" id=3]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Bottom Right Wall.png" type="Texture" id=4]
+[ext_resource path="res://Art Assets/Torch/torch_lit_v1.png" type="Texture" id=5]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Top Left Wall.png" type="Texture" id=6]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Bottom Left Wall.png" type="Texture" id=7]
+[ext_resource path="res://Art Assets/Banner.png" type="Texture" id=8]
+[ext_resource path="res://Art Assets/Full Heart.png" type="Texture" id=9]
+[ext_resource path="res://Key Counter/key_static_v1.png" type="Texture" id=10]
+[ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=11]
+[ext_resource path="res://Art Assets/Spider Wed.png" type="Texture" id=12]
+[ext_resource path="res://spider attack/spider_attackup2.png" type="Texture" id=13]
+[ext_resource path="res://skele anims/enemy_left1.png" type="Texture" id=14]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=7]
+size = 85
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
 size = 45
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 15
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
 size = 15
 font_data = ExtResource( 1 )
 
@@ -23,14 +43,6 @@ font_data = ExtResource( 1 )
 size = 15
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=6]
-size = 15
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=7]
-size = 85
-font_data = ExtResource( 1 )
-
 [node name="CreditScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -40,20 +52,35 @@ __meta__ = {
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -143.962
-margin_top = -57.0542
+margin_top = -57.8287
 margin_right = 1136.04
-margin_bottom = 662.946
+margin_bottom = 662.172
 color = Color( 0.192157, 0.12549, 0.00784314, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Cupine Army" type="Label" parent="ColorRect"]
+margin_left = 213.829
+margin_top = 106.909
+margin_right = 1084.83
+margin_bottom = 171.909
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -9
+custom_constants/shadow_offset_y = 9
+text = "Cupine Army"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Button" type="Button" parent="."]
-margin_left = 361.739
-margin_top = 474.172
-margin_right = 666.739
-margin_bottom = 559.172
-custom_fonts/font = SubResource( 1 )
+margin_left = 97.0345
+margin_top = 420.601
+margin_right = 402.035
+margin_bottom = 505.601
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
@@ -64,27 +91,85 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Justin" type="Label" parent="."]
-margin_left = 32.2711
-margin_top = 243.973
-margin_right = 633.271
-margin_bottom = 270.973
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = -3
-custom_constants/shadow_offset_y = 3
-text = "Justin Bertrand-Haydari- Scriptor"
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Top Left Wall" type="Sprite" parent="Walls"]
+position = Vector2( 620.873, 274.017 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 6 )
+
+[node name="Top Right Wall" type="Sprite" parent="Walls"]
+position = Vector2( 808.813, 274.054 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 3 )
+
+[node name="Bottom Left Wall" type="Sprite" parent="Walls"]
+position = Vector2( 620.873, 462.947 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 7 )
+
+[node name="Bottom Right Wall" type="Sprite" parent="Walls"]
+position = Vector2( 808.32, 463.174 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="key_static_v1" type="Sprite" parent="Objects"]
+position = Vector2( 623.267, 291.365 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 10 )
+
+[node name="Banner" type="Sprite" parent="Objects"]
+position = Vector2( 850.515, 218.638 )
+scale = Vector2( 3.39353, 2.95185 )
+texture = ExtResource( 8 )
+
+[node name="Full Heart" type="Sprite" parent="Objects"]
+position = Vector2( 601.781, 449.809 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="torch_lit_v1" type="Sprite" parent="Objects"]
+position = Vector2( 873.423, 414.325 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="Spider Wed" type="Sprite" parent="Objects"]
+position = Vector2( 695.807, 215.981 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 12 )
+
+[node name="enemy_left1" type="Sprite" parent="Objects"]
+position = Vector2( 787.476, 347.51 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 14 )
+
+[node name="spider_attackup2" type="Sprite" parent="Objects"]
+position = Vector2( 711.482, 229.197 )
+texture = ExtResource( 13 )
+
+[node name="Barrel" type="Sprite" parent="Objects"]
+position = Vector2( 675.829, 240.569 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 11 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 40.2945
+margin_top = -27.4963
+margin_right = 485.294
+margin_bottom = 98.5037
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="alix" type="Label" parent="."]
-margin_left = 31.6007
-margin_top = 213.761
-margin_right = 489.601
-margin_bottom = 229.761
-custom_fonts/font = SubResource( 3 )
+[node name="alix" type="Label" parent="VBoxContainer"]
+margin_top = -70.0
+margin_right = 445.0
+margin_bottom = -57.0
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = -3
@@ -94,12 +179,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Jose" type="Label" parent="."]
-margin_left = 32.2989
-margin_top = 278.148
-margin_right = 628.299
-margin_bottom = 294.148
-custom_fonts/font = SubResource( 4 )
+[node name="Justin" type="Label" parent="VBoxContainer"]
+margin_top = -30.0
+margin_right = 445.0
+margin_bottom = -17.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = -3
+custom_constants/shadow_offset_y = 3
+text = "Justin Bertrand-Haydari- Scriptor"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jose" type="Label" parent="VBoxContainer"]
+margin_top = 10.0
+margin_right = 445.0
+margin_bottom = 23.0
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = -3
@@ -109,12 +207,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Toby" type="Label" parent="."]
-margin_left = 29.3656
-margin_top = 303.882
-margin_right = 414.366
-margin_bottom = 319.882
-custom_fonts/font = SubResource( 5 )
+[node name="Toby" type="Label" parent="VBoxContainer"]
+margin_top = 51.0
+margin_right = 445.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = -3
@@ -124,12 +221,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Vernon" type="Label" parent="."]
-margin_left = 29.4006
-margin_top = 333.212
-margin_right = 443.401
-margin_bottom = 349.212
-custom_fonts/font = SubResource( 6 )
+[node name="Vernon" type="Label" parent="VBoxContainer"]
+margin_top = 90.0
+margin_right = 445.0
+margin_bottom = 103.0
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = -3
@@ -138,16 +234,4 @@ text = "Vernon Stewart - Artist"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Cupine Army" type="Label" parent="."]
-margin_left = 83.1023
-margin_top = 52.3754
-margin_right = 954.102
-margin_bottom = 117.375
-custom_fonts/font = SubResource( 7 )
-custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
-custom_constants/shadow_offset_x = -9
-custom_constants/shadow_offset_y = 9
-text = "Cupine Army"
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

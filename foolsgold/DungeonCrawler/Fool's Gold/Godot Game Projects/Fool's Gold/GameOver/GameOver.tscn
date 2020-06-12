@@ -1,8 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://GameOver/Button.gd" type="Script" id=1]
 [ext_resource path="res://Font/dogicapixelbold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://GameOver/MainMenu.gd" type="Script" id=3]
+[ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=4]
+[ext_resource path="res://skele anims/skeleton_dead.png" type="Texture" id=5]
+[ext_resource path="res://spider attack/spider_attackup2.png" type="Texture" id=6]
+[ext_resource path="res://skele anims/skeleton_anim_v1.png" type="Texture" id=7]
+[ext_resource path="res://money_bag.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -78,5 +83,32 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="money_bag" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.54902 )
+position = Vector2( 89.4756, 493.007 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 8 )
+
+[node name="skeleton_anim_v1" type="Sprite" parent="."]
+position = Vector2( 117.162, 428.056 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 7 )
+
+[node name="Barrel" type="Sprite" parent="."]
+position = Vector2( 910.011, 446.514 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="skeleton_dead" type="Sprite" parent="."]
+position = Vector2( 862.744, 443.129 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 5 )
+
+[node name="spider_attackup2" type="Sprite" parent="."]
+position = Vector2( 926.705, 199.768 )
+rotation = -3.14159
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
 [connection signal="pressed" from="Try Again" to="Try Again" method="_on_Button_pressed"]
 [connection signal="pressed" from="MainMenu" to="MainMenu" method="_on_MainMenu_pressed"]

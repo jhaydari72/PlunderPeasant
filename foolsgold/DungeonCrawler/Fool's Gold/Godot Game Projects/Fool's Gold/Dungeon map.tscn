@@ -1165,7 +1165,6 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Map Layout"]
-visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Rat" type="Node2D" parent="."]
@@ -1781,15 +1780,15 @@ __meta__ = {
 }
 
 [node name="key" type="Sprite" parent="obj_player/Sprite/UI Layer Only/Key Icon"]
-position = Vector2( 24.0821, 88.0242 )
+position = Vector2( 24.3758, 78.6667 )
 scale = Vector2( 1, 0.75 )
 texture = ExtResource( 33 )
 
 [node name="Label3" type="Label" parent="obj_player/Sprite/UI Layer Only/Key Icon"]
-margin_left = 38.1766
-margin_top = 78.3391
-margin_right = 52.1766
-margin_bottom = 92.3391
+margin_left = 38.7109
+margin_top = 70.2376
+margin_right = 52.7109
+margin_bottom = 84.2376
 rect_scale = Vector2( 1.25, 1.25 )
 custom_fonts/font = SubResource( 51 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
@@ -1799,10 +1798,10 @@ __meta__ = {
 }
 
 [node name="Count3" type="Label" parent="obj_player/Sprite/UI Layer Only/Key Icon"]
-margin_left = 63.6853
-margin_top = 77.8339
-margin_right = 91.6853
-margin_bottom = 91.8339
+margin_left = 64.5538
+margin_top = 68.6107
+margin_right = 92.5538
+margin_bottom = 82.6107
 rect_scale = Vector2( 1.25, 1.25 )
 custom_fonts/font = SubResource( 52 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
@@ -1888,7 +1887,7 @@ position = Vector2( 0.837524, 4.9165 )
 scale = Vector2( 0.087818, 0.0681612 )
 texture = ExtResource( 13 )
 texture_scale = 4.68
-color = Color( 1, 1, 1, 0.113725 )
+color = Color( 1, 1, 1, 0.160784 )
 energy = 3.54
 shadow_enabled = true
 
@@ -1991,10 +1990,10 @@ position = Vector2( 0, 2.57212 )
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 110 )
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="Path2D/PathFollow2D/Hitbox" to="obj_player" method="_on_Hitbox_body_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="obj_door/Area2D" to="obj_door" method="_on_Area2D_body_entered"]
