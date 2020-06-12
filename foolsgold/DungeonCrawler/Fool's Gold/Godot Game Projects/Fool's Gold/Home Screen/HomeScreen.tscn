@@ -64,19 +64,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 43.0683
-margin_top = 282.225
-margin_right = 425.068
-margin_bottom = 466.225
-rect_scale = Vector2( 1.25, 1.25 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PlayButton" type="Button" parent="VBoxContainer"]
-margin_right = 381.0
-margin_bottom = 66.0
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 53.3596
+margin_top = 296.192
+margin_right = 434.36
+margin_bottom = 362.192
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
 custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
@@ -88,10 +80,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MenuButton" type="Button" parent="VBoxContainer"]
-margin_top = 70.0
-margin_right = 381.0
-margin_bottom = 111.0
+[node name="MenuButton" type="Button" parent="."]
+margin_left = 49.6841
+margin_top = 407.926
+margin_right = 430.684
+margin_bottom = 448.926
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -103,10 +96,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CreditsButton" type="Button" parent="VBoxContainer"]
-margin_top = 115.0
-margin_right = 381.0
-margin_bottom = 156.0
+[node name="CreditsButton" type="Button" parent="."]
+margin_left = 44.5385
+margin_top = 479.965
+margin_right = 425.538
+margin_bottom = 520.965
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -128,7 +122,7 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 8 )
 
 [node name="LIghting " type="Sprite" parent="Node2D"]
-modulate = Color( 1, 1, 1, 0.113725 )
+modulate = Color( 1, 1, 1, 0.172549 )
 position = Vector2( -2.07629, 2.3226 )
 scale = Vector2( 0.333333, 0.333333 )
 texture = ExtResource( 6 )
@@ -139,7 +133,7 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 5 )
 
 [node name="money_bag2" type="Sprite" parent="Node2D"]
-position = Vector2( 24.5184, 37.4097 )
+position = Vector2( 36.525, 35.4495 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 5 )
 
@@ -149,8 +143,8 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 5 )
 
 [node name="maze_spr_color_v1" type="Sprite" parent="Node2D"]
-position = Vector2( 5.11955, 36.9065 )
+position = Vector2( 3.1593, 37.3966 )
 texture = ExtResource( 7 )
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="VBoxContainer/PlayButton" method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/MenuButton" to="VBoxContainer/MenuButton" method="_on_MenuButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/CreditsButton" to="VBoxContainer/CreditsButton" method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="MenuButton" to="MenuButton" method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="CreditsButton" to="CreditsButton" method="_on_CreditsButton_pressed"]
