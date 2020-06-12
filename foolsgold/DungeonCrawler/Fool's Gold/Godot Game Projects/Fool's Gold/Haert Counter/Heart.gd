@@ -19,6 +19,4 @@ func _on_Timer_timeout():
 	emit_signal("heartCount")
 	queue_free()
 
-
-func _on_Heart_heartCount():
-	pass # Replace with function body.
+#hearts
