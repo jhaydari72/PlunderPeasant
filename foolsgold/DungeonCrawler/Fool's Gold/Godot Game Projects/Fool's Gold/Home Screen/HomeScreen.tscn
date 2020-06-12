@@ -13,15 +13,15 @@
 size = 100
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=2]
 size = 80
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 45
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 45
 font_data = ExtResource( 3 )
 
@@ -75,9 +75,9 @@ __meta__ = {
 }
 
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
-margin_right = 382.0
+margin_right = 381.0
 margin_bottom = 66.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
 custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 1, 0.0862745, 1 )
@@ -90,9 +90,9 @@ __meta__ = {
 
 [node name="MenuButton" type="Button" parent="VBoxContainer"]
 margin_top = 70.0
-margin_right = 382.0
+margin_right = 381.0
 margin_bottom = 111.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
@@ -105,9 +105,9 @@ __meta__ = {
 
 [node name="CreditsButton" type="Button" parent="VBoxContainer"]
 margin_top = 115.0
-margin_right = 382.0
+margin_right = 381.0
 margin_bottom = 156.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
@@ -150,7 +150,6 @@ texture = ExtResource( 5 )
 
 [node name="maze_spr_color_v1" type="Sprite" parent="Node2D"]
 position = Vector2( 5.11955, 36.9065 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 7 )
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="VBoxContainer/PlayButton" method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/MenuButton" to="VBoxContainer/MenuButton" method="_on_MenuButton_pressed"]

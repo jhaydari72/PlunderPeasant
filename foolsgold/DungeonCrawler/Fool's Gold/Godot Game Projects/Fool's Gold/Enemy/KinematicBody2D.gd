@@ -70,7 +70,7 @@ func _physics_process(delta):
 		SPIDERCHASE:
 			var player = enemy_detect.player
 			if player != null:
-				#$Barrel.play("walk")
+				spider.play("attack")
 				accelerate_towards_point(player.global_position, delta)
 			else:
 				state = SPIDERWANDER

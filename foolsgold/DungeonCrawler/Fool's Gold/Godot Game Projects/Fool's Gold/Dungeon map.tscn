@@ -1114,14 +1114,14 @@ color_ramp = SubResource( 104 )
 
 [sub_resource type="SpriteFrames" id=108]
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
 "speed": 5.0
 } ]
 
@@ -1990,10 +1990,10 @@ position = Vector2( 0, 2.57212 )
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 110 )
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="Path2D/PathFollow2D/Hitbox" to="obj_player" method="_on_Hitbox_body_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="obj_door/Area2D" to="obj_door" method="_on_Area2D_body_entered"]
