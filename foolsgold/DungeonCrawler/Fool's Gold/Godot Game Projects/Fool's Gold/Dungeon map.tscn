@@ -427,14 +427,14 @@ _data = {
 
 [sub_resource type="SpriteFrames" id=26]
 animations = [ {
-"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
-"loop": false,
-"name": "dead",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "alive",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "dead",
 "speed": 5.0
 } ]
 
@@ -523,14 +523,14 @@ extents = Vector2( 15.6504, 18.1411 )
 
 [sub_resource type="SpriteFrames" id=43]
 animations = [ {
-"frames": [ ExtResource( 74 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 75 ) ],
-"loop": true,
-"name": "spider",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "barrel",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 74 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 75 ) ],
+"loop": true,
+"name": "spider",
 "speed": 5.0
 } ]
 
@@ -584,7 +584,7 @@ animations = [ {
 extents = Vector2( 4.10583, 3.08548 )
 
 [sub_resource type="RectangleShape2D" id=56]
-extents = Vector2( 31.6195, 10.031 )
+extents = Vector2( 31.6195, 11.1862 )
 
 [sub_resource type="SpriteFrames" id=57]
 animations = [ {
@@ -600,7 +600,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=58]
-extents = Vector2( 4.56714, 3.91049 )
+extents = Vector2( 24.0307, 3.91049 )
 
 [sub_resource type="DynamicFont" id=59]
 size = 8
@@ -2909,7 +2909,7 @@ position = Vector2( -927.545, 254.858 )
 script = ExtResource( 29 )
 
 [node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
-position = Vector2( 637.026, 93.6361 )
+position = Vector2( 693.835, 96.3341 )
 shape = SubResource( 53 )
 script = ExtResource( 69 )
 
@@ -2924,12 +2924,16 @@ animation = "closed"
 position = Vector2( 30.7342, -15.1919 )
 shape = SubResource( 55 )
 
+[node name="Timer" type="Timer" parent="Fake Walls/vertical_fake_wall"]
+wait_time = 0.8
+one_shot = true
+
 [node name="horizontal_fake_wall" type="StaticBody2D" parent="Fake Walls"]
 position = Vector2( 352.243, 62.905 )
 script = ExtResource( 28 )
 
 [node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall"]
-position = Vector2( 160.399, 329.792 )
+position = Vector2( 160.149, 331.044 )
 shape = SubResource( 56 )
 script = ExtResource( 69 )
 
@@ -2942,8 +2946,11 @@ animation = "closed"
 [node name="Area2D" type="Area2D" parent="Fake Walls/horizontal_fake_wall/AnimatedSprite"]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D"]
-position = Vector2( 26.451, -30.8046 )
+position = Vector2( 1.18776, -31.5795 )
 shape = SubResource( 58 )
+
+[node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall"]
+wait_time = 0.4
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
 position = Vector2( -101.959, 339.674 )
@@ -3217,8 +3224,8 @@ position = Vector2( 0, 2.57212 )
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 42 )
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="Path2D/PathFollow2D/Hitbox" to="obj_player" method="_on_Hitbox_body_entered"]
@@ -3231,10 +3238,11 @@ shape = SubResource( 42 )
 [connection signal="heartCount" from="Heart" to="Heart" method="_on_Heart_heartCount"]
 [connection signal="bagsCollected" from="obj_bag" to="obj_player/Sprite/UI Layer Only/Money Bag/Count" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="obj_bag" to="obj_bag" method="_on_obj_bag_body_entered"]
-[connection signal="frame_changed" from="Fake Walls/vertical_fake_wall/AnimatedSprite" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
 [connection signal="area_entered" from="Fake Walls/vertical_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/vertical_fake_wall" method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="Fake Walls/vertical_fake_wall/Timer" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="frame_changed" from="Fake Walls/horizontal_fake_wall/AnimatedSprite" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
 [connection signal="area_entered" from="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/horizontal_fake_wall" method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="timeout" from="obj_player/Timer" to="obj_player" method="_on_Timer_timeout"]
 [connection signal="pressed" from="obj_player/Sprite/CanvasLayer/Pause/QuitGame" to="obj_player/Sprite/CanvasLayer/Pause" method="_on_QuitGame_pressed"]
 [connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player" method="_on_Hurtbox_area_entered"]
