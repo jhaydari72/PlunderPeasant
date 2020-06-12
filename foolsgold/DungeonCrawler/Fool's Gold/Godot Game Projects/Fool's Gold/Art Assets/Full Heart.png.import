@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LIghting .png-07e664e8ee5d4908201856b7ac9fdd2f.stex"
+path="res://.import/Full Heart.png-2961ea4c7b7c720ebeedc46c2d3a75c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LIghting .png"
-dest_files=[ "res://.import/LIghting .png-07e664e8ee5d4908201856b7ac9fdd2f.stex" ]
+source_file="res://Art Assets/Full Heart.png"
+dest_files=[ "res://.import/Full Heart.png-2961ea4c7b7c720ebeedc46c2d3a75c7.stex" ]
 
 [params]
 
