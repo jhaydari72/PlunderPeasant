@@ -581,7 +581,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=55]
-extents = Vector2( 4.10583, 3.08548 )
+extents = Vector2( 5.2825, 17.0907 )
 
 [sub_resource type="RectangleShape2D" id=56]
 extents = Vector2( 31.6195, 11.1862 )
@@ -2919,9 +2919,10 @@ frames = SubResource( 54 )
 animation = "closed"
 
 [node name="Area2D" type="Area2D" parent="Fake Walls/vertical_fake_wall/AnimatedSprite"]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall/AnimatedSprite/Area2D"]
-position = Vector2( 30.7342, -15.1919 )
+position = Vector2( 30.7342, -2.17389 )
 shape = SubResource( 55 )
 
 [node name="Timer" type="Timer" parent="Fake Walls/vertical_fake_wall"]
@@ -2944,6 +2945,7 @@ frames = SubResource( 57 )
 animation = "closed"
 
 [node name="Area2D" type="Area2D" parent="Fake Walls/horizontal_fake_wall/AnimatedSprite"]
+collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D"]
 position = Vector2( 1.18776, -31.5795 )
@@ -3224,9 +3226,9 @@ position = Vector2( 0, 2.57212 )
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 42 )
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="Path2D/PathFollow2D/Hitbox" to="obj_player" method="_on_Hitbox_body_entered"]
 [connection signal="body_entered" from="Key" to="Key" method="_on_Key_body_entered"]
