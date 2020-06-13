@@ -1,4 +1,4 @@
-[gd_scene load_steps=182 format=2]
+[gd_scene load_steps=185 format=2]
 
 [ext_resource path="res://Art Assets/Tile map/Updated Titles/Left Middle Wall.png" type="Texture" id=1]
 [ext_resource path="res://Art Assets/Tile map/Updated Titles/Top Right Wall.png" type="Texture" id=2]
@@ -69,6 +69,8 @@
 [ext_resource path="res://Enemy/KinematicBody2D.tscn" type="PackedScene" id=67]
 [ext_resource path="res://Audio/250354__rucisko__gravel-steps.wav" type="AudioStream" id=68]
 [ext_resource path="res://wall_collision.gd" type="Script" id=69]
+[ext_resource path="res://lighting2 (1).png" type="Texture" id=70]
+[ext_resource path="res://Art Assets/knight_1.png" type="Texture" id=71]
 [ext_resource path="res://Pause.gd" type="Script" id=76]
 [ext_resource path="res://Font/dogicapixelbold.ttf" type="DynamicFontData" id=77]
 
@@ -421,14 +423,14 @@ _data = {
 
 [sub_resource type="SpriteFrames" id=26]
 animations = [ {
-"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
-"loop": false,
-"name": "dead",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "alive",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "dead",
 "speed": 5.0
 } ]
 
@@ -523,6 +525,9 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=46]
 extents = Vector2( 24.0307, 3.91049 )
+
+[sub_resource type="RectangleShape2D" id=111]
+extents = Vector2( 3.43204, 14.564 )
 
 [sub_resource type="DynamicFont" id=47]
 size = 8
@@ -1115,14 +1120,14 @@ color_ramp = SubResource( 104 )
 
 [sub_resource type="SpriteFrames" id=108]
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
 "speed": 5.0
 } ]
 
@@ -1138,10 +1143,10 @@ position = Vector2( 2.82852, 2.15314 )
 [node name="Map Layout" type="Node2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Map Layout"]
-margin_left = -966.505
-margin_top = -282.688
-margin_right = 1373.49
-margin_bottom = 995.314
+margin_left = -965.809
+margin_top = -284.312
+margin_right = 1374.19
+margin_bottom = 993.69
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1166,7 +1171,7 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Map Layout"]
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
 
 [node name="Rat" type="Node2D" parent="."]
 position = Vector2( -260.367, 277.652 )
@@ -1675,8 +1680,23 @@ shape = SubResource( 46 )
 [node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall"]
 wait_time = 0.4
 
+[node name="blocker" type="Node2D" parent="."]
+position = Vector2( -0.0106049, 486.002 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="blocker"]
+
+[node name="Sprite" type="Sprite" parent="blocker/StaticBody2D"]
+position = Vector2( 29.0278, 36.7206 )
+scale = Vector2( 0.400738, 0.410696 )
+texture = ExtResource( 71 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blocker/StaticBody2D"]
+position = Vector2( 29.0103, 35.7274 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 111 )
+
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -101.959, 339.674 )
+position = Vector2( 10.0069, 463.65 )
 z_as_relative = false
 collision_layer = 2
 script = ExtResource( 12 )
@@ -1884,11 +1904,11 @@ position = Vector2( 0.475624, 10.4891 )
 shape = SubResource( 55 )
 
 [node name="Light2D" type="Light2D" parent="obj_player"]
-position = Vector2( 0.837524, 4.9165 )
-scale = Vector2( 0.087818, 0.0681612 )
-texture = ExtResource( 13 )
+position = Vector2( 0.0219727, 5.62988 )
+scale = Vector2( 0.050522, 0.0428034 )
+texture = ExtResource( 70 )
 texture_scale = 4.68
-color = Color( 1, 1, 1, 0.160784 )
+color = Color( 0.988235, 1, 0.647059, 0.160784 )
 energy = 3.54
 shadow_enabled = true
 
@@ -1994,8 +2014,8 @@ position = Vector2( 0, 2.57212 )
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 110 )
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
 [connection signal="body_entered" from="Path2D/PathFollow2D/Hitbox" to="obj_player" method="_on_Hitbox_body_entered"]
