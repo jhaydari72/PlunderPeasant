@@ -124,5 +124,5 @@ func _on_Heart_body_entered(_body):
 	health = health + 1
 
 
-func _on_Key_body_entered(body):
+func _on_Key_body_entered(_body):
 	Key += 1
