@@ -122,3 +122,7 @@ func _on_Timer_timeout():
 
 func _on_Heart_body_entered(_body):
 	health = health + 1
+
+
+func _on_Key_body_entered(body):
+	Key += 1

@@ -1120,14 +1120,14 @@ color_ramp = SubResource( 105 )
 
 [sub_resource type="SpriteFrames" id=109]
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
 "speed": 5.0
 } ]
 
@@ -1171,6 +1171,7 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Map Layout"]
+visible = false
 color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
 
 [node name="Rat" type="Node2D" parent="."]
@@ -1629,7 +1630,7 @@ position = Vector2( -168.817, 377.485 )
 scale = Vector2( 0.291128, 0.329089 )
 
 [node name="Key" parent="PickUp" instance=ExtResource( 35 )]
-position = Vector2( 116.629, -79.5387 )
+position = Vector2( 4054.87, -372.956 )
 scale = Vector2( 0.343491, 0.303869 )
 
 [node name="Heart" parent="PickUp" instance=ExtResource( 65 )]
@@ -1704,7 +1705,7 @@ position = Vector2( 29.0103, 35.7274 )
 shape = SubResource( 47 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -45.0712, 339.35 )
+position = Vector2( 1007.34, 189.633 )
 z_as_relative = false
 collision_layer = 2
 script = ExtResource( 12 )
@@ -2036,6 +2037,7 @@ shape = SubResource( 111 )
 [connection signal="area_entered" from="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/horizontal_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="PickUp/Key" to="PickUp/Key" method="_on_Key_body_entered"]
+[connection signal="body_entered" from="PickUp/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="keycollected" from="PickUp/Key" to="obj_player/Sprite/UI Layer Only/Key Icon/Count3" method="_on_Key_keycollected"]
 [connection signal="body_entered" from="PickUp/Heart" to="PickUp/Heart" method="_on_Heart_body_entered"]
 [connection signal="body_entered" from="PickUp/Heart" to="obj_player" method="_on_Heart_body_entered"]
