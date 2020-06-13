@@ -53,7 +53,7 @@ func move_state(delta):
 	input_vector.y = Input.get_action_strength("ui_s") - Input.get_action_strength("ui_w")
 	input_vector = input_vector.normalized()
 	
-	if Input.get_action_strength("ui_d") or Input.get_action_strength("ui_a"):
+	if input_vector.x != 0 or input_vector.y != 0:
 		var MusicNode = $walking_sound
 		MusicNode.play()
 	
@@ -118,3 +118,7 @@ func _on_Timer_timeout():
 	value = get_tree().change_scene("res://GameOver/GameOver.tscn")
 	return value
 
+
+
+func _on_Heart_body_entered(_body):
+	health = health + 1
