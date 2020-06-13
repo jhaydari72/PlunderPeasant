@@ -7,7 +7,8 @@
 [ext_resource path="res://skele anims/skeleton_dead.png" type="Texture" id=5]
 [ext_resource path="res://spider attack/spider_attackup2.png" type="Texture" id=6]
 [ext_resource path="res://skele anims/skeleton_anim_v1.png" type="Texture" id=7]
-[ext_resource path="res://money_bag.png" type="Texture" id=8]
+[ext_resource path="res://Art Assets/money_bag.png" type="Texture" id=8]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 100

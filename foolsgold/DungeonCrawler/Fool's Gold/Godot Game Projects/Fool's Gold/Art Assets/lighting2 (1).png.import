@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/New Door Closed.png-1baae9533889754b7d4154d66f768e23.stex"
+path="res://.import/lighting2 (1).png-a5081b4dd7a0d948f2d397c835520789.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://New Door Closed.png"
-dest_files=[ "res://.import/New Door Closed.png-1baae9533889754b7d4154d66f768e23.stex" ]
+source_file="res://Art Assets/lighting2 (1).png"
+dest_files=[ "res://.import/lighting2 (1).png-a5081b4dd7a0d948f2d397c835520789.stex" ]
 
 [params]
 

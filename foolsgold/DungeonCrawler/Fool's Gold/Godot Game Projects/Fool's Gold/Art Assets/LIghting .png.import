@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/maze_spr_color_v1.png-92a09941a7528f097ed2523d92c38dda.stex"
+path="res://.import/LIghting .png-2182ecc0420ba4de8a0c0dc6fa9fe1a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maze_spr_color_v1.png"
-dest_files=[ "res://.import/maze_spr_color_v1.png-92a09941a7528f097ed2523d92c38dda.stex" ]
+source_file="res://Art Assets/LIghting .png"
+dest_files=[ "res://.import/LIghting .png-2182ecc0420ba4de8a0c0dc6fa9fe1a6.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/New Door Opening.png-06fc60fa61ba9b3c4e082723fde9e139.stex"
+path="res://.import/maze_spr_color_v1.png-4d4e2e980db67d5ad50653e38b733955.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://New Door Opening.png"
-dest_files=[ "res://.import/New Door Opening.png-06fc60fa61ba9b3c4e082723fde9e139.stex" ]
+source_file="res://Art Assets/maze_spr_color_v1.png"
+dest_files=[ "res://.import/maze_spr_color_v1.png-4d4e2e980db67d5ad50653e38b733955.stex" ]
 
 [params]
 
