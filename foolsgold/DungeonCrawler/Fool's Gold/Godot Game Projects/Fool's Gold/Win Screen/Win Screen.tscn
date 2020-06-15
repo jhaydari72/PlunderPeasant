@@ -12,11 +12,11 @@ font_data = ExtResource( 1 )
 size = 32
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 32
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 32
 font_data = ExtResource( 1 )
 
@@ -35,6 +35,9 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 172.104
@@ -67,6 +70,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label3" type="Label" parent="."]
+margin_left = 489.128
+margin_top = 357.799
+margin_right = 529.128
+margin_bottom = 381.799
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
+custom_constants/shadow_offset_x = -4
+custom_constants/shadow_offset_y = 4
+text = "/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Yes" type="Button" parent="."]
 margin_left = 337.693
 margin_top = 352.665
@@ -79,16 +96,6 @@ custom_colors/font_color_pressed = Color( 0, 1, 0.0862745, 1 )
 text = "Yes"
 flat = true
 script = ExtResource( 2 )
-
-[node name="Label" type="Label" parent="Yes"]
-margin_left = 151.436
-margin_top = 5.13342
-margin_right = 191.436
-margin_bottom = 29.1334
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "/"
 
 [node name="No" type="Button" parent="."]
 margin_left = 575.969
