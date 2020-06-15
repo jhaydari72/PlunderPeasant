@@ -1,4 +1,4 @@
-[gd_scene load_steps=151 format=2]
+[gd_scene load_steps=153 format=2]
 
 [ext_resource path="res://Level Two/Map Layout.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blockers/blocker.tscn" type="PackedScene" id=2]
@@ -161,6 +161,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 8.45757, 9.14499 )
 
+[sub_resource type="RectangleShape2D" id=89]
+extents = Vector2( 3.66394, 10 )
+
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 37.0501, 11.1862 )
 
@@ -178,7 +181,9 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=16]
-extents = Vector2( 6.80966, 8.3262 )
+extents = Vector2( 8.4812, 9.30612 )
+
+[sub_resource type="RectangleShape2D" id=88]
 
 [sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 19.2795, 25.6042 )
@@ -187,7 +192,7 @@ extents = Vector2( 19.2795, 25.6042 )
 polygon = PoolVector2Array( -223.825, 362.715, -31.7883, 362.755, -31.7093, 369.667, -223.874, 369.864 )
 
 [sub_resource type="OccluderPolygon2D" id=19]
-polygon = PoolVector2Array( 537.281, 324.929, 544.073, 324.816, 544.104, 190.781, 537.375, 190.783 )
+polygon = PoolVector2Array( 537.281, 324.929, 544.22, 324.861, 544.289, 190.778, 537.375, 190.783 )
 
 [sub_resource type="OccluderPolygon2D" id=20]
 polygon = PoolVector2Array( 185.042, 189.87, 191.993, 189.906, 191.958, 320.294, 184.935, 320.294 )
@@ -1210,7 +1215,7 @@ texture = ExtResource( 50 )
 [node name="Fake Walls" type="Node2D" parent="."]
 
 [node name="vertical_fake_wall" type="StaticBody2D" parent="Fake Walls"]
-position = Vector2( -927.545, 254.858 )
+position = Vector2( -927.423, 254.719 )
 script = ExtResource( 29 )
 
 [node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
@@ -1235,18 +1240,23 @@ collision_mask = 2
 position = Vector2( 133.357, 0.0988455 )
 shape = SubResource( 13 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
+position = Vector2( 700.259, 118.267 )
+shape = SubResource( 89 )
+
 [node name="horizontal_fake_wall" type="StaticBody2D" parent="Fake Walls"]
-position = Vector2( 352.243, 62.905 )
+position = Vector2( 352.38, 63.1519 )
 script = ExtResource( 28 )
 
 [node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall"]
+visible = false
 position = Vector2( 160.149, 331.044 )
 shape = SubResource( 14 )
 script = ExtResource( 69 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall"]
-position = Vector2( 156.678, 350.678 )
-scale = Vector2( 0.901764, 0.969241 )
+position = Vector2( 150.748, 350.958 )
+scale = Vector2( 1.10545, 0.976683 )
 frames = SubResource( 15 )
 animation = "closed"
 
@@ -1259,11 +1269,11 @@ scale = Vector2( 0.901764, 0.969241 )
 collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall/Area2D"]
-position = Vector2( 4.25533, -32.5308 )
+position = Vector2( 103.268, 0.189453 )
 shape = SubResource( 16 )
 
 [node name="horizontal_fake_wall2" type="StaticBody2D" parent="Fake Walls"]
-position = Vector2( 160.718, -66.8175 )
+position = Vector2( 160.054, -172.281 )
 script = ExtResource( 28 )
 
 [node name="Area2D" type="Area2D" parent="Fake Walls/horizontal_fake_wall2"]
@@ -1272,7 +1282,7 @@ scale = Vector2( 1.10958, 0.969241 )
 collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2/Area2D"]
-position = Vector2( 24.6778, -46.483 )
+position = Vector2( 26.1117, -18.4741 )
 shape = SubResource( 16 )
 
 [node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2"]
@@ -1281,13 +1291,17 @@ shape = SubResource( 14 )
 script = ExtResource( 69 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall2"]
-position = Vector2( 162.987, 350.678 )
-scale = Vector2( 1.10958, 0.969241 )
+position = Vector2( 160.185, 350.678 )
+scale = Vector2( 1.00077, 0.969241 )
 frames = SubResource( 15 )
 animation = "closed"
 
 [node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall2"]
 wait_time = 0.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2"]
+position = Vector2( 132.452, 329.81 )
+shape = SubResource( 88 )
 
 [node name="Barrel Collision" type="StaticBody2D" parent="."]
 position = Vector2( -259.494, 396.484 )
@@ -1361,7 +1375,7 @@ scale = Vector2( 0.25, 0.25 )
 [node name="Knight" parent="." instance=ExtResource( 2 )]
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -98.8997, 342.725 )
+position = Vector2( -185.275, 343.48 )
 z_as_relative = false
 collision_layer = 2
 script = ExtResource( 12 )
@@ -1682,7 +1696,7 @@ position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 87 )
 
 [node name="torch6" type="StaticBody2D" parent="."]
-position = Vector2( 251.09, 36.7248 )
+position = Vector2( 252.86, -40.9634 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
@@ -1719,6 +1733,125 @@ position = Vector2( 0, 2.57212 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="torch6/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 87 )
+
+[node name="torch7" type="StaticBody2D" parent="."]
+position = Vector2( 324.341, -12.759 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="torch7"]
+position = Vector2( 47.1101, 448.145 )
+scale = Vector2( 0.168953, 0.162966 )
+texture = ExtResource( 13 )
+texture_scale = 6.15
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="torch7/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 84 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="torch7"]
+position = Vector2( 50.6324, 450.899 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 85 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch7"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 86 )
+
+[node name="Area2D" type="Area2D" parent="torch7"]
+position = Vector2( 0, 2.57212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch7/Area2D"]
+position = Vector2( -99.9693, 391.247 )
+shape = SubResource( 87 )
+
+[node name="torch8" type="StaticBody2D" parent="."]
+position = Vector2( 579.793, 187.36 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="torch8"]
+visible = false
+position = Vector2( 47.1101, 448.145 )
+scale = Vector2( 0.168953, 0.162966 )
+texture = ExtResource( 13 )
+texture_scale = 6.15
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="torch8/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 84 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="torch8"]
+position = Vector2( 50.6324, 450.899 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 85 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch8"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 86 )
+
+[node name="Area2D" type="Area2D" parent="torch8"]
+position = Vector2( 0, 2.57212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch8/Area2D"]
+position = Vector2( 42.0999, 451.24 )
+shape = SubResource( 87 )
+
+[node name="torch9" type="StaticBody2D" parent="."]
+position = Vector2( 451.844, 226.858 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="torch9"]
+visible = false
+position = Vector2( 47.1101, 448.145 )
+scale = Vector2( 0.168953, 0.162966 )
+texture = ExtResource( 13 )
+texture_scale = 6.15
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="torch9/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 84 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="torch9"]
+position = Vector2( 50.6324, 450.899 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 85 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch9"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 86 )
+
+[node name="Area2D" type="Area2D" parent="torch9"]
+position = Vector2( 0, 2.57212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch9/Area2D"]
+position = Vector2( 299.528, 372.389 )
+shape = SubResource( 87 )
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
@@ -1731,6 +1864,7 @@ shape = SubResource( 87 )
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2/wall_collision" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="PickUp/Key" to="PickUp/Key" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="PickUp/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="keycollected" from="PickUp/Key" to="obj_player/Sprite/UI Layer Only/Key Icon/Count3" method="_on_Key_keycollected"]

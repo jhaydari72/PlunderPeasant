@@ -14,7 +14,10 @@ func _input(_event):
 		var bodies = $Area2D.get_overlapping_bodies()
 		for b in bodies:
 			if b.name == "obj_player":
-				$AnimatedSprite.play("open")
 				timer.start()
 
 
+
+
+func _on_Timer_timeout():
+	$AnimatedSprite.play("open")
