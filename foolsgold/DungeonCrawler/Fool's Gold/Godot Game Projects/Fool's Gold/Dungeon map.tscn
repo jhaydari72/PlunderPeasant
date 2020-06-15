@@ -99,14 +99,14 @@ _data = {
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
-"loop": false,
-"name": "dead",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "alive",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "dead",
 "speed": 5.0
 } ]
 
@@ -159,10 +159,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 5.2825, 17.0907 )
+extents = Vector2( 8.45757, 9.14499 )
 
 [sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 31.6195, 11.1862 )
+extents = Vector2( 37.0501, 11.1862 )
 
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
@@ -178,7 +178,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=16]
-extents = Vector2( 24.0307, 3.91049 )
+extents = Vector2( 6.80966, 8.3262 )
 
 [sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 19.2795, 25.6042 )
@@ -187,19 +187,19 @@ extents = Vector2( 19.2795, 25.6042 )
 polygon = PoolVector2Array( -223.825, 362.715, -31.7883, 362.755, -31.7093, 369.667, -223.874, 369.864 )
 
 [sub_resource type="OccluderPolygon2D" id=19]
-polygon = PoolVector2Array( 538.501, 324.775, 544.073, 324.816, 544.104, 190.781, 538.222, 190.796 )
+polygon = PoolVector2Array( 537.281, 324.929, 544.073, 324.816, 544.104, 190.781, 537.375, 190.783 )
 
 [sub_resource type="OccluderPolygon2D" id=20]
 polygon = PoolVector2Array( 185.042, 189.87, 191.993, 189.906, 191.958, 320.294, 184.935, 320.294 )
 
 [sub_resource type="OccluderPolygon2D" id=21]
-polygon = PoolVector2Array( 760.993, 181.663, 767.92, 181.795, 767.986, 390.789, 761.191, 390.855, 761.191, 383.796 )
+polygon = PoolVector2Array( 760.993, 181.663, 767.92, 181.795, 767.986, 390.789, 760.999, 390.931, 761.047, 383.899 )
 
 [sub_resource type="OccluderPolygon2D" id=22]
-polygon = PoolVector2Array( 762.019, 63.9857, 767.981, 64.0155, 767.976, 128.207, 761.224, 128.004 )
+polygon = PoolVector2Array( 761.227, 64.0758, 767.981, 64.0155, 767.976, 128.207, 761.224, 128.004 )
 
 [sub_resource type="OccluderPolygon2D" id=23]
-polygon = PoolVector2Array( 32.1895, 510.787, 32.1943, 308.815, 25.166, 308.863, 26.2545, 510.757 )
+polygon = PoolVector2Array( 32.1895, 510.787, 32.1943, 308.815, 25.166, 308.863, 25.2589, 510.712 )
 
 [sub_resource type="DynamicFont" id=24]
 size = 8
@@ -900,16 +900,16 @@ position = Vector2( 2.38139, 3.80061 )
 scale = Vector2( 1.5, 1.5 )
 shape = SubResource( 9 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="entrance_door" type="StaticBody2D" parent="."]
 position = Vector2( -149.359, -208.361 )
 scale = Vector2( 2, 1 )
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+[node name="Sprite" type="Sprite" parent="entrance_door"]
 position = Vector2( 52.2871, 540.539 )
 scale = Vector2( 0.353352, 0.359864 )
 texture = ExtResource( 30 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entrance_door"]
 position = Vector2( 52.1439, 541.369 )
 scale = Vector2( 1, 0.1 )
 shape = SubResource( 10 )
@@ -1223,16 +1223,17 @@ position = Vector2( 671.651, 96.0985 )
 frames = SubResource( 12 )
 animation = "closed"
 
-[node name="Area2D" type="Area2D" parent="Fake Walls/vertical_fake_wall/AnimatedSprite"]
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall/AnimatedSprite/Area2D"]
-position = Vector2( 30.7342, -2.17389 )
-shape = SubResource( 13 )
-
 [node name="Timer" type="Timer" parent="Fake Walls/vertical_fake_wall"]
 wait_time = 0.8
 one_shot = true
+
+[node name="Area2D" type="Area2D" parent="Fake Walls/vertical_fake_wall"]
+position = Vector2( 755.218, 94.5251 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall/Area2D"]
+position = Vector2( 133.357, 0.0988455 )
+shape = SubResource( 13 )
 
 [node name="horizontal_fake_wall" type="StaticBody2D" parent="Fake Walls"]
 position = Vector2( 352.243, 62.905 )
@@ -1249,14 +1250,43 @@ scale = Vector2( 0.901764, 0.969241 )
 frames = SubResource( 15 )
 animation = "closed"
 
-[node name="Area2D" type="Area2D" parent="Fake Walls/horizontal_fake_wall/AnimatedSprite"]
+[node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall"]
+wait_time = 0.4
+
+[node name="Area2D" type="Area2D" parent="Fake Walls/horizontal_fake_wall"]
+position = Vector2( 156.678, 350.678 )
+scale = Vector2( 0.901764, 0.969241 )
 collision_mask = 2
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D"]
-position = Vector2( 1.18776, -31.5795 )
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall/Area2D"]
+position = Vector2( 4.25533, -32.5308 )
 shape = SubResource( 16 )
 
-[node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall"]
+[node name="horizontal_fake_wall2" type="StaticBody2D" parent="Fake Walls"]
+position = Vector2( 160.718, -66.8175 )
+script = ExtResource( 28 )
+
+[node name="Area2D" type="Area2D" parent="Fake Walls/horizontal_fake_wall2"]
+position = Vector2( 85.423, 374.439 )
+scale = Vector2( 1.10958, 0.969241 )
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2/Area2D"]
+position = Vector2( 24.6778, -46.483 )
+shape = SubResource( 16 )
+
+[node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2"]
+position = Vector2( 161.61, 330.704 )
+shape = SubResource( 14 )
+script = ExtResource( 69 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall2"]
+position = Vector2( 162.987, 350.678 )
+scale = Vector2( 1.10958, 0.969241 )
+frames = SubResource( 15 )
+animation = "closed"
+
+[node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall2"]
 wait_time = 0.4
 
 [node name="Barrel Collision" type="StaticBody2D" parent="."]
@@ -1328,10 +1358,10 @@ position = Vector2( -100.026, 409.238 )
 position = Vector2( -200.526, 382.747 )
 scale = Vector2( 0.25, 0.25 )
 
-[node name="blocker" parent="." instance=ExtResource( 2 )]
+[node name="Knight" parent="." instance=ExtResource( 2 )]
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -123.804, 341.363 )
+position = Vector2( -98.8997, 342.725 )
 z_as_relative = false
 collision_layer = 2
 script = ExtResource( 12 )
@@ -1539,6 +1569,7 @@ position = Vector2( 0.475624, 10.4891 )
 shape = SubResource( 32 )
 
 [node name="Light2D" type="Light2D" parent="obj_player"]
+visible = false
 position = Vector2( 0.0219727, 5.62988 )
 scale = Vector2( 0.0549075, 0.0348862 )
 texture = ExtResource( 70 )
@@ -1612,7 +1643,7 @@ stream = ExtResource( 47 )
 stream = ExtResource( 68 )
 
 [node name="torch5" type="StaticBody2D" parent="."]
-position = Vector2( 184.093, -2.42237 )
+position = Vector2( -60.5366, 124.019 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )
 
@@ -1649,6 +1680,45 @@ position = Vector2( 0, 2.57212 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="torch5/Area2D"]
 position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 87 )
+
+[node name="torch6" type="StaticBody2D" parent="."]
+position = Vector2( 251.09, 36.7248 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="torch6"]
+position = Vector2( 47.1101, 448.145 )
+scale = Vector2( 0.168953, 0.162966 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="torch6/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 84 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="torch6"]
+position = Vector2( 50.6324, 450.899 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 85 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch6"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 86 )
+
+[node name="Area2D" type="Area2D" parent="torch6"]
+position = Vector2( 0, 2.57212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch6/Area2D"]
+position = Vector2( 44.0324, 448.119 )
+shape = SubResource( 87 )
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
@@ -1657,11 +1727,10 @@ shape = SubResource( 87 )
 [connection signal="body_entered" from="Path2D/PathFollow2D/Hitbox" to="obj_player" method="_on_Hitbox_body_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="obj_door/Area2D" to="obj_door" method="_on_Area2D_body_entered"]
-[connection signal="area_entered" from="Fake Walls/vertical_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/vertical_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="timeout" from="Fake Walls/vertical_fake_wall/Timer" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_Timer_timeout"]
-[connection signal="frame_changed" from="Fake Walls/horizontal_fake_wall/AnimatedSprite" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_AnimatedSprite_frame_changed"]
-[connection signal="area_entered" from="Fake Walls/horizontal_fake_wall/AnimatedSprite/Area2D" to="Fake Walls/horizontal_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2/wall_collision" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="PickUp/Key" to="PickUp/Key" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="PickUp/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="keycollected" from="PickUp/Key" to="obj_player/Sprite/UI Layer Only/Key Icon/Count3" method="_on_Key_keycollected"]
