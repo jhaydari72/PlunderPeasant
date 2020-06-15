@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/165181__theonlypkmnmaster__step-sound.wav-5a46029d5a183d967629c9c64960b87d.sample"
+
+[deps]
+
+source_file="res://Audio/165181__theonlypkmnmaster__step-sound.wav"
+dest_files=[ "res://.import/165181__theonlypkmnmaster__step-sound.wav-5a46029d5a183d967629c9c64960b87d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

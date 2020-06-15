@@ -3,6 +3,7 @@
 [ext_resource path="res://Level Two/Map Layout.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blockers/blocker.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Audio/388340__phlair__dungeon-ambiance.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/165181__theonlypkmnmaster__step-sound.wav" type="AudioStream" id=4]
 [ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=5]
 [ext_resource path="res://Audio/hit_sound_mixdown.wav" type="AudioStream" id=7]
 [ext_resource path="res://Count2.gd" type="Script" id=8]
@@ -51,7 +52,6 @@
 [ext_resource path="res://Haert Counter/Heart.tscn" type="PackedScene" id=65]
 [ext_resource path="res://Art Assets/Full Heart.png" type="Texture" id=66]
 [ext_resource path="res://Enemy/KinematicBody2D.tscn" type="PackedScene" id=67]
-[ext_resource path="res://Audio/250354__rucisko__gravel-steps.wav" type="AudioStream" id=68]
 [ext_resource path="res://wall_collision.gd" type="Script" id=69]
 [ext_resource path="res://Art Assets/lighting2 (1).png" type="Texture" id=70]
 [ext_resource path="res://Pause.gd" type="Script" id=76]
@@ -1791,7 +1791,7 @@ shape = SubResource( 84 )
 stream = ExtResource( 47 )
 
 [node name="walking_sound" type="AudioStreamPlayer2D" parent="obj_player"]
-stream = ExtResource( 68 )
+stream = ExtResource( 4 )
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="obj_door/Area2D" to="obj_door" method="_on_Area2D_body_entered"]
