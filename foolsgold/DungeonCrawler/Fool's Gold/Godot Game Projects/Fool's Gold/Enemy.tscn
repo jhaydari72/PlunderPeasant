@@ -16,8 +16,8 @@
 [ext_resource path="res://skele attack/attack_right1.png" type="Texture" id=15]
 [ext_resource path="res://skele attack/attack_right4.png" type="Texture" id=16]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2.23993, 9.84857 )
+[sub_resource type="CircleShape2D" id=5]
+radius = 4.91821
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -31,14 +31,14 @@ animations = [ {
 "name": "dead",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 15 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -47,7 +47,7 @@ radius = 8.15225
 height = 14.4803
 
 [sub_resource type="CapsuleShape2D" id=4]
-radius = 4.33533
+radius = 5.98788
 height = 7.37469
 
 [node name="Enemy" type="KinematicBody2D"]
@@ -55,7 +55,8 @@ position = Vector2( 7.69143, -5.86014 )
 script = ExtResource( 2 )
 
 [node name="collision" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+position = Vector2( 0.833534, 6.90645 )
+shape = SubResource( 5 )
 script = ExtResource( 7 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
@@ -67,21 +68,23 @@ animation = "attack"
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( 0.595383, 1.48846 )
 shape = SubResource( 3 )
 
 [node name="enemy_hitbox" parent="." instance=ExtResource( 8 )]
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="enemy_hitbox" index="0"]
+position = Vector2( 0.714458, 3.92953 )
 shape = SubResource( 4 )
 
 [node name="PlayerDetection" parent="." instance=ExtResource( 10 )]
 
 [node name="Wander" parent="." instance=ExtResource( 12 )]
-[connection signal="area_entered" from="Hurtbox" to="enemy_hitbox" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="collision" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="PlayerDetection" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Hurtbox" to="collision" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="enemy_hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
 [editable path="Hurtbox"]
