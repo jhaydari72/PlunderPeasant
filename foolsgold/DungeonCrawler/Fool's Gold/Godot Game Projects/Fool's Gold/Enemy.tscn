@@ -26,14 +26,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
 "loop": false,
 "name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 16 ) ],
@@ -78,9 +78,9 @@ shape = SubResource( 4 )
 [node name="PlayerDetection" parent="." instance=ExtResource( 10 )]
 
 [node name="Wander" parent="." instance=ExtResource( 12 )]
-[connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="enemy_hitbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="PlayerDetection" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="collision" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
