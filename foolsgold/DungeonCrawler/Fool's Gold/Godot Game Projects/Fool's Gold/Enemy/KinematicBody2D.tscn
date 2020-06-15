@@ -12,7 +12,8 @@
 [ext_resource path="res://spider attack/spider_attackup2.png" type="Texture" id=10]
 [ext_resource path="res://Enemy/spider_detect.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=12]
-[ext_resource path="res://Wander.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Enemy/Wander.tscn" type="PackedScene" id=13]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
