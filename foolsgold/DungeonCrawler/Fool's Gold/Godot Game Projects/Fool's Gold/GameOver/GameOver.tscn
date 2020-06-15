@@ -37,9 +37,9 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="GameOver" type="Label" parent="."]
 margin_left = 44.39
-margin_top = 101.589
+margin_top = 100.815
 margin_right = 957.39
-margin_bottom = 177.589
+margin_bottom = 176.815
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
 custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
