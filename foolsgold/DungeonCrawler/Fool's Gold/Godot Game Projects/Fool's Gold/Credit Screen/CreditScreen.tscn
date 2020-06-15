@@ -55,7 +55,7 @@ margin_left = -143.962
 margin_top = -57.8287
 margin_right = 1136.04
 margin_bottom = 662.172
-color = Color( 0.192157, 0.12549, 0.00784314, 1 )
+color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -76,14 +76,14 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 97.0345
-margin_top = 420.601
-margin_right = 402.035
-margin_bottom = 505.601
+margin_left = 61.8548
+margin_top = 449.382
+margin_right = 366.855
+margin_bottom = 534.382
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 0.0862745, 1 )
 text = "Go Back"
 flat = true
 script = ExtResource( 2 )
@@ -154,81 +154,76 @@ position = Vector2( 675.829, 240.569 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 11 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 40.2945
-margin_top = -27.4963
-margin_right = 485.294
-margin_bottom = 98.5037
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="alix" type="Label" parent="VBoxContainer"]
-margin_right = 445.0
-margin_bottom = 13.0
+[node name="alix" type="Label" parent="."]
+margin_left = 32.5944
+margin_top = 197.197
+margin_right = 477.594
+margin_bottom = 210.197
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = -3
-custom_constants/shadow_offset_y = 3
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -2
+custom_constants/shadow_offset_y = 2
 text = "Alixandar Dukes- Scriptor"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Justin" type="Label" parent="VBoxContainer"]
-margin_top = 17.0
-margin_right = 445.0
-margin_bottom = 30.0
+[node name="Justin" type="Label" parent="."]
+margin_left = 32.5944
+margin_top = 250.943
+margin_right = 477.594
+margin_bottom = 263.943
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = -3
-custom_constants/shadow_offset_y = 3
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -2
+custom_constants/shadow_offset_y = 2
 text = "Justin Bertrand-Haydari- Scriptor"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Jose" type="Label" parent="VBoxContainer"]
-margin_top = 34.0
-margin_right = 445.0
-margin_bottom = 47.0
+[node name="Jose" type="Label" parent="."]
+margin_left = 32.5944
+margin_top = 299.51
+margin_right = 477.594
+margin_bottom = 312.51
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = -3
-custom_constants/shadow_offset_y = 3
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -2
+custom_constants/shadow_offset_y = 2
 text = "Jose Santa Maria- Scriptor/Artist"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Toby" type="Label" parent="VBoxContainer"]
-margin_top = 51.0
-margin_right = 445.0
-margin_bottom = 64.0
+[node name="Toby" type="Label" parent="."]
+margin_left = 32.5944
+margin_top = 350.325
+margin_right = 477.594
+margin_bottom = 363.325
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = -3
-custom_constants/shadow_offset_y = 3
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -2
+custom_constants/shadow_offset_y = 2
 text = "Toby Williams - Artist"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Vernon" type="Label" parent="VBoxContainer"]
-margin_top = 68.0
-margin_right = 445.0
-margin_bottom = 81.0
+[node name="Vernon" type="Label" parent="."]
+margin_left = 32.5944
+margin_top = 395.51
+margin_right = 477.594
+margin_bottom = 408.51
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = -3
-custom_constants/shadow_offset_y = 3
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -2
+custom_constants/shadow_offset_y = 2
 text = "Vernon Stewart - Artist"
 __meta__ = {
 "_edit_use_anchors_": false

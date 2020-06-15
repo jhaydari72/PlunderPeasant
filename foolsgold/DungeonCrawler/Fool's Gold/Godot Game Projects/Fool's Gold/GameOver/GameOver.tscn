@@ -9,7 +9,6 @@
 [ext_resource path="res://skele anims/skeleton_anim_v1.png" type="Texture" id=7]
 [ext_resource path="res://Art Assets/money_bag.png" type="Texture" id=8]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 100
 font_data = ExtResource( 2 )
@@ -34,7 +33,7 @@ margin_left = -231.195
 margin_top = -84.1464
 margin_right = 1301.8
 margin_bottom = 803.854
-color = Color( 0.192157, 0.12549, 0.00784314, 1 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="GameOver" type="Label" parent="."]
 margin_left = 44.39
@@ -60,8 +59,8 @@ margin_right = 708.573
 margin_bottom = 331.593
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 0.0862745, 1 )
 text = "Try Again"
 flat = true
 script = ExtResource( 1 )
@@ -71,14 +70,15 @@ __meta__ = {
 
 [node name="MainMenu" type="Button" parent="."]
 margin_left = 228.993
-margin_top = 391.71
+margin_top = 390.936
 margin_right = 820.993
-margin_bottom = 432.71
+margin_bottom = 431.936
+rect_pivot_offset = Vector2( 1487.26, 84.4128 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-text = "Return To Menu"
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 0.0862745, 1 )
+text = "Main Menu"
 flat = true
 script = ExtResource( 3 )
 __meta__ = {

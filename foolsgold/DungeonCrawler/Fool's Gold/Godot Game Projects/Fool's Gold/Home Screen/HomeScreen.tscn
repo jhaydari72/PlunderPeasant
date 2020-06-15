@@ -44,16 +44,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -141.61
-margin_top = -45.7857
-margin_right = 1138.39
-margin_bottom = 674.214
-color = Color( 0.0941176, 0.0666667, 0.0196078, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 732.026, 408.678 )
 scale = Vector2( 3, 3 )
@@ -226,8 +216,8 @@ margin_right = 418.655
 margin_bottom = 372.832
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 0.0862745, 1 )
 text = "Controls!"
 flat = true
 script = ExtResource( 1 )
@@ -242,8 +232,8 @@ margin_right = 399.314
 margin_bottom = 440.255
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 0.0862745, 1 )
 text = "Credits!"
 flat = true
 script = ExtResource( 4 )
