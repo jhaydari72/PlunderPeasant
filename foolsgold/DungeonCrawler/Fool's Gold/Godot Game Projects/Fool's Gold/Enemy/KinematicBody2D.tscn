@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Enemy/KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Enemy/CollisionShape2D.gd" type="Script" id=2]
+[ext_resource path="res://Enemy/CollisionShape2D2.gd" type="Script" id=3]
 [ext_resource path="res://hit and hurt/Hitbox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://hit and hurt/Hurtbox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://spider attack/spider_attackup3.png" type="Texture" id=6]
@@ -40,6 +41,9 @@ radius = 10.1349
 [sub_resource type="CircleShape2D" id=4]
 radius = 26.214
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 19.4824, 25.4282 )
+
 [node name="Spider_barrel" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -71,6 +75,11 @@ shape = SubResource( 4 )
 collision_layer = 0
 
 [node name="Wander" parent="." instance=ExtResource( 13 )]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource( 5 )
+script = ExtResource( 3 )
+[connection signal="frame_changed" from="AnimatedSprite" to="CollisionShape2D2" method="_on_AnimatedSprite_frame_changed"]
 [connection signal="frame_changed" from="AnimatedSprite" to="." method="_on_AnimatedSprite_frame_changed"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
