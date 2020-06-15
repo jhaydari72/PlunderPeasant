@@ -57,11 +57,6 @@ func move_state(delta):
 		var MusicNode = $walking_sound
 		MusicNode.play()
 	
-	else:
-		var MusicNode = $walking_sound
-		MusicNode.stop()
-
-	
 	# gives speed and animations
 	if input_vector != Vector2.ZERO:
 		kill_direction = input_vector

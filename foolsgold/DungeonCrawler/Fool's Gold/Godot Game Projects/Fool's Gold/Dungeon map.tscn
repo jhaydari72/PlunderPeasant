@@ -1792,6 +1792,8 @@ stream = ExtResource( 47 )
 
 [node name="walking_sound" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 4 )
+volume_db = 10.097
+pitch_scale = 2.0
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="obj_door/Area2D" to="obj_door" method="_on_Area2D_body_entered"]
