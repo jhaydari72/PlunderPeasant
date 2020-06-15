@@ -1,11 +1,10 @@
-[gd_scene load_steps=153 format=2]
+[gd_scene load_steps=141 format=2]
 
 [ext_resource path="res://Level Two/Map Layout.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blockers/blocker.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=5]
 [ext_resource path="res://Audio/hit_sound_mixdown.wav" type="AudioStream" id=7]
 [ext_resource path="res://Count2.gd" type="Script" id=8]
-[ext_resource path="res://skele anims/skeleton_anim_v1.png" type="Texture" id=10]
 [ext_resource path="res://Player anims/playerSS.png" type="Texture" id=11]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=12]
 [ext_resource path="res://Art Assets/LIghting .png" type="Texture" id=13]
@@ -15,7 +14,6 @@
 [ext_resource path="res://Art Assets/money_bag.png" type="Texture" id=17]
 [ext_resource path="res://Money Machine/obj_bag.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Count.gd" type="Script" id=19]
-[ext_resource path="res://Path2D.gd" type="Script" id=20]
 [ext_resource path="res://Font/dogicapixel.ttf" type="DynamicFontData" id=21]
 [ext_resource path="res://hit and hurt/Hitbox.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=23]
@@ -26,15 +24,10 @@
 [ext_resource path="res://false_wall.gd" type="Script" id=28]
 [ext_resource path="res://false_wall2.gd" type="Script" id=29]
 [ext_resource path="res://Art Assets/New Door Closed.png" type="Texture" id=30]
-[ext_resource path="res://PathFollow2D.gd" type="Script" id=31]
-[ext_resource path="res://skele anims/skeleton_dead.png" type="Texture" id=32]
 [ext_resource path="res://Key Counter/key_static_v1.png" type="Texture" id=33]
 [ext_resource path="res://Count3.gd" type="Script" id=34]
 [ext_resource path="res://Key Counter/obj_key.tscn" type="PackedScene" id=35]
-[ext_resource path="res://skele anims/skeleton_fall.png" type="Texture" id=36]
 [ext_resource path="res://obj_door.gd" type="Script" id=37]
-[ext_resource path="res://obj_enemy.gd" type="Script" id=38]
-[ext_resource path="res://CollisionShape2D.gd" type="Script" id=39]
 [ext_resource path="res://Art Assets/New Door Opening.png" type="Texture" id=45]
 [ext_resource path="res://door_collision.gd" type="Script" id=46]
 [ext_resource path="res://Audio/463351__ddragonpearl__hit-1.wav" type="AudioStream" id=47]
@@ -92,35 +85,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 180.0, 180.0 ]
 }
 
-[sub_resource type="Curve2D" id=2]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 446.034, 36.9063, 0, 0, 0, 0, 267.017, 41.0312, 0, 0, 0, 0, 447.04, 36.9063 )
-}
-
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ ExtResource( 36 ), ExtResource( 32 ) ],
-"loop": false,
-"name": "dead",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "alive",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 3.42169, 12.7206 )
-
-[sub_resource type="CapsuleShape2D" id=5]
-radius = 7.82721
-height = 12.0289
-
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 3.74698, 12.5364 )
-
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 45 ) ],
 "loop": true,
@@ -133,19 +98,19 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 12.5046, 10 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 12.6926, 10.9488 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 4.51196, 59.8682 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 10, 32.1574 )
 
-[sub_resource type="SpriteFrames" id=12]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ ExtResource( 53 ), ExtResource( 59 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 58 ) ],
 "loop": false,
@@ -158,16 +123,16 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 8.45757, 9.14499 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 3.66394, 10 )
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 37.0501, 11.1862 )
 
-[sub_resource type="SpriteFrames" id=16]
+[sub_resource type="SpriteFrames" id=11]
 animations = [ {
 "frames": [ ExtResource( 61 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 64 ) ],
 "loop": false,
@@ -180,65 +145,114 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 8.4812, 9.30612 )
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=13]
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 19.2795, 25.6042 )
 
-[sub_resource type="OccluderPolygon2D" id=20]
+[sub_resource type="OccluderPolygon2D" id=15]
 polygon = PoolVector2Array( -223.825, 362.715, -31.7883, 362.755, -31.7093, 369.667, -223.874, 369.864 )
 
-[sub_resource type="OccluderPolygon2D" id=21]
+[sub_resource type="OccluderPolygon2D" id=16]
 polygon = PoolVector2Array( 537.281, 324.929, 544.22, 324.861, 544.289, 190.778, 537.375, 190.783 )
 
-[sub_resource type="OccluderPolygon2D" id=22]
+[sub_resource type="OccluderPolygon2D" id=17]
 polygon = PoolVector2Array( 185.042, 189.87, 191.993, 189.906, 191.958, 320.294, 184.935, 320.294 )
 
-[sub_resource type="OccluderPolygon2D" id=23]
+[sub_resource type="OccluderPolygon2D" id=18]
 polygon = PoolVector2Array( 760.993, 181.663, 767.92, 181.795, 767.986, 390.789, 760.999, 390.931, 761.047, 383.899 )
 
-[sub_resource type="OccluderPolygon2D" id=24]
+[sub_resource type="OccluderPolygon2D" id=19]
 polygon = PoolVector2Array( 761.227, 64.0758, 767.981, 64.0155, 767.976, 128.207, 761.224, 128.004 )
 
-[sub_resource type="OccluderPolygon2D" id=25]
+[sub_resource type="OccluderPolygon2D" id=20]
 polygon = PoolVector2Array( 32.1895, 510.787, 32.1943, 308.815, 25.166, 308.863, 25.2589, 510.712 )
 
-[sub_resource type="DynamicFont" id=26]
+[sub_resource type="Gradient" id=77]
+offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.769531, 0.519354, 0.165329, 1, 0.652344, 0.0311148, 0, 1, 1, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=78]
+gradient = SubResource( 77 )
+
+[sub_resource type="Curve" id=79]
+_data = [ Vector2( 0.00632912, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.336364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=80]
+curve = SubResource( 79 )
+
+[sub_resource type="ParticlesMaterial" id=81]
+emission_shape = 2
+emission_box_extents = Vector3( 2, 5, 1 )
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 15.0
+initial_velocity_random = 1.0
+angular_velocity = 200.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 20.0
+angle = 45.0
+scale = 2.0
+scale_curve = SubResource( 80 )
+color_ramp = SubResource( 78 )
+
+[sub_resource type="SpriteFrames" id=82]
+animations = [ {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=83]
+extents = Vector2( 2.2953, 6.27969 )
+
+[sub_resource type="RectangleShape2D" id=84]
+extents = Vector2( 15.6504, 18.1411 )
+
+[sub_resource type="DynamicFont" id=21]
 size = 8
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 8
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 8
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=24]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=25]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=26]
 font_data = ExtResource( 21 )
 
 [sub_resource type="DynamicFont" id=27]
-size = 8
-font_data = ExtResource( 21 )
+font_data = ExtResource( 77 )
 
 [sub_resource type="DynamicFont" id=28]
 size = 8
-font_data = ExtResource( 21 )
-
-[sub_resource type="DynamicFont" id=29]
-font_data = ExtResource( 21 )
-
-[sub_resource type="DynamicFont" id=30]
-font_data = ExtResource( 21 )
-
-[sub_resource type="DynamicFont" id=31]
-font_data = ExtResource( 21 )
-
-[sub_resource type="DynamicFont" id=32]
 font_data = ExtResource( 77 )
 
-[sub_resource type="DynamicFont" id=33]
-size = 8
-font_data = ExtResource( 77 )
-
-[sub_resource type="CapsuleShape2D" id=34]
+[sub_resource type="CapsuleShape2D" id=29]
 radius = 3.83072
 height = 0.751036
 
-[sub_resource type="Animation" id=35]
+[sub_resource type="Animation" id=30]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -291,7 +305,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=36]
+[sub_resource type="Animation" id=31]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -305,7 +319,7 @@ tracks/0/keys = {
 "values": [ 2, 3, 4 ]
 }
 
-[sub_resource type="Animation" id=37]
+[sub_resource type="Animation" id=32]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -321,7 +335,7 @@ tracks/0/keys = {
 "values": [ 19, 20, 19, 20 ]
 }
 
-[sub_resource type="Animation" id=38]
+[sub_resource type="Animation" id=33]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -337,7 +351,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=39]
+[sub_resource type="Animation" id=34]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -390,7 +404,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=40]
+[sub_resource type="Animation" id=35]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -404,7 +418,7 @@ tracks/0/keys = {
 "values": [ 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=41]
+[sub_resource type="Animation" id=36]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -420,7 +434,7 @@ tracks/0/keys = {
 "values": [ 5 ]
 }
 
-[sub_resource type="Animation" id=42]
+[sub_resource type="Animation" id=37]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -436,7 +450,7 @@ tracks/0/keys = {
 "values": [ 21, 5, 21, 5 ]
 }
 
-[sub_resource type="Animation" id=43]
+[sub_resource type="Animation" id=38]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -489,7 +503,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=44]
+[sub_resource type="Animation" id=39]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -503,7 +517,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10 ]
 }
 
-[sub_resource type="Animation" id=45]
+[sub_resource type="Animation" id=40]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -519,7 +533,7 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=46]
+[sub_resource type="Animation" id=41]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -535,7 +549,7 @@ tracks/0/keys = {
 "values": [ 22, 8, 22, 8 ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=42]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -588,7 +602,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=43]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -602,7 +616,7 @@ tracks/0/keys = {
 "values": [ 15, 16, 17, 18 ]
 }
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id=44]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -618,7 +632,7 @@ tracks/0/keys = {
 "values": [ 13 ]
 }
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id=45]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -634,198 +648,150 @@ tracks/0/keys = {
 "values": [ 23, 24, 23, 24 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=51]
+[sub_resource type="AnimationNodeAnimation" id=46]
 animation = "attack_down"
 
-[sub_resource type="AnimationNodeAnimation" id=52]
+[sub_resource type="AnimationNodeAnimation" id=47]
 animation = "right_attack"
 
-[sub_resource type="AnimationNodeAnimation" id=53]
+[sub_resource type="AnimationNodeAnimation" id=48]
 animation = "left_attack"
 
-[sub_resource type="AnimationNodeAnimation" id=54]
+[sub_resource type="AnimationNodeAnimation" id=49]
 animation = "up_attack"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=55]
-blend_point_0/node = SubResource( 51 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=50]
+blend_point_0/node = SubResource( 46 )
 blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 52 )
+blend_point_1/node = SubResource( 47 )
 blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 53 )
+blend_point_2/node = SubResource( 48 )
 blend_point_2/pos = Vector2( -1, 0 )
-blend_point_3/node = SubResource( 54 )
+blend_point_3/node = SubResource( 49 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=56]
+[sub_resource type="AnimationNodeAnimation" id=51]
 animation = "down_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=57]
+[sub_resource type="AnimationNodeAnimation" id=52]
 animation = "right_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=58]
+[sub_resource type="AnimationNodeAnimation" id=53]
 animation = "up_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=59]
+[sub_resource type="AnimationNodeAnimation" id=54]
 animation = "left_dead"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=60]
-blend_point_0/node = SubResource( 56 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=55]
+blend_point_0/node = SubResource( 51 )
 blend_point_0/pos = Vector2( -0.00142753, 0.989446 )
-blend_point_1/node = SubResource( 57 )
+blend_point_1/node = SubResource( 52 )
 blend_point_1/pos = Vector2( 0.998572, -0.00263858 )
-blend_point_2/node = SubResource( 58 )
+blend_point_2/node = SubResource( 53 )
 blend_point_2/pos = Vector2( -0.00142753, -0.989446 )
-blend_point_3/node = SubResource( 59 )
+blend_point_3/node = SubResource( 54 )
 blend_point_3/pos = Vector2( -0.999286, 0.0079155 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=61]
+[sub_resource type="AnimationNodeAnimation" id=56]
 animation = "left_idle"
 
-[sub_resource type="AnimationNodeAnimation" id=62]
+[sub_resource type="AnimationNodeAnimation" id=57]
 animation = "idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id=63]
+[sub_resource type="AnimationNodeAnimation" id=58]
 animation = "right_idle"
 
-[sub_resource type="AnimationNodeAnimation" id=64]
+[sub_resource type="AnimationNodeAnimation" id=59]
 animation = "up_idle"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=65]
-blend_point_0/node = SubResource( 61 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=60]
+blend_point_0/node = SubResource( 56 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 62 )
+blend_point_1/node = SubResource( 57 )
 blend_point_1/pos = Vector2( 0, 1 )
-blend_point_2/node = SubResource( 63 )
+blend_point_2/node = SubResource( 58 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 64 )
+blend_point_3/node = SubResource( 59 )
 blend_point_3/pos = Vector2( 0, -1 )
 snap = Vector2( 0.01, 0.01 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=66]
+[sub_resource type="AnimationNodeAnimation" id=61]
 animation = "down_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=67]
+[sub_resource type="AnimationNodeAnimation" id=62]
 animation = "left_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=68]
+[sub_resource type="AnimationNodeAnimation" id=63]
 animation = "right_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=69]
+[sub_resource type="AnimationNodeAnimation" id=64]
 animation = "up_walk"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=70]
-blend_point_0/node = SubResource( 66 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=65]
+blend_point_0/node = SubResource( 61 )
 blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 67 )
+blend_point_1/node = SubResource( 62 )
 blend_point_1/pos = Vector2( -1, 0 )
-blend_point_2/node = SubResource( 68 )
+blend_point_2/node = SubResource( 63 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 69 )
+blend_point_3/node = SubResource( 64 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=66]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=67]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=68]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=69]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=70]
+
 [sub_resource type="AnimationNodeStateMachineTransition" id=71]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=72]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=73]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=74]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=75]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=76]
-
-[sub_resource type="AnimationNodeStateMachine" id=77]
-states/Attack/node = SubResource( 55 )
+[sub_resource type="AnimationNodeStateMachine" id=72]
+states/Attack/node = SubResource( 50 )
 states/Attack/position = Vector2( 508, 204 )
-states/Death/node = SubResource( 60 )
+states/Death/node = SubResource( 55 )
 states/Death/position = Vector2( 342, 100 )
-states/Idle/node = SubResource( 65 )
+states/Idle/node = SubResource( 60 )
 states/Idle/position = Vector2( 495, 100 )
-states/Run/node = SubResource( 70 )
+states/Run/node = SubResource( 65 )
 states/Run/position = Vector2( 657, 100 )
-transitions = [ "Idle", "Run", SubResource( 71 ), "Run", "Idle", SubResource( 72 ), "Idle", "Attack", SubResource( 73 ), "Attack", "Idle", SubResource( 74 ), "Death", "Idle", SubResource( 75 ), "Idle", "Death", SubResource( 76 ) ]
+transitions = [ "Idle", "Run", SubResource( 66 ), "Run", "Idle", SubResource( 67 ), "Idle", "Attack", SubResource( 68 ), "Attack", "Idle", SubResource( 69 ), "Death", "Idle", SubResource( 70 ), "Idle", "Death", SubResource( 71 ) ]
 start_node = "Idle"
 graph_offset = Vector2( 0, 26.5131 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=78]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=73]
 
-[sub_resource type="CapsuleShape2D" id=79]
+[sub_resource type="CapsuleShape2D" id=74]
 radius = 3.12059
 height = 12.0896
 
-[sub_resource type="RectangleShape2D" id=80]
+[sub_resource type="RectangleShape2D" id=75]
 extents = Vector2( 4.63716, 4.92157 )
 
-[sub_resource type="CapsuleShape2D" id=81]
+[sub_resource type="CapsuleShape2D" id=76]
 radius = 5.87592
 height = 6.42819
-
-[sub_resource type="Gradient" id=82]
-offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
-colors = PoolColorArray( 1, 1, 1, 1, 0.769531, 0.519354, 0.165329, 1, 0.652344, 0.0311148, 0, 1, 1, 0, 0, 1 )
-
-[sub_resource type="GradientTexture" id=83]
-gradient = SubResource( 82 )
-
-[sub_resource type="Curve" id=84]
-_data = [ Vector2( 0.00632912, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.336364 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=85]
-curve = SubResource( 84 )
-
-[sub_resource type="ParticlesMaterial" id=86]
-emission_shape = 2
-emission_box_extents = Vector3( 2, 5, 1 )
-flag_disable_z = true
-spread = 0.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 15.0
-initial_velocity_random = 1.0
-angular_velocity = 200.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-linear_accel = 20.0
-angle = 45.0
-scale = 2.0
-scale_curve = SubResource( 85 )
-color_ramp = SubResource( 83 )
-
-[sub_resource type="SpriteFrames" id=87]
-animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=88]
-extents = Vector2( 2.2953, 6.27969 )
-
-[sub_resource type="RectangleShape2D" id=89]
-extents = Vector2( 15.6504, 18.1411 )
 
 [node name="Dungeon map" type="Node2D"]
 position = Vector2( 2.82852, 2.15314 )
 
 [node name="Map Layout" parent="." instance=ExtResource( 1 )]
 
-[node name="CanvasModulate" parent="Map Layout" index="3"]
-visible = false
+[node name="TileMap" parent="Map Layout" index="1"]
+tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 2, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 4, 0, 16, 4, 0, 131069, 2, 0, 131070, 3, 0, 131071, 3, 0, 65536, 1, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 4, 0, 65541, 8, 0, 65542, 2, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 2, 0, 65547, 10, 0, 65548, 8, 0, 65549, 3, 0, 65550, 4, 0, 65551, 5, 0, 65552, 5, 0, 196605, 1, 0, 196606, 2, 0, 196607, 8, 0, 131072, 8, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 5, 0, 131077, 8, 0, 131078, 1, 0, 131079, 2, 0, 131080, 2, 0, 131081, 3, 0, 131082, 1, 0, 131083, 5, 0, 131084, 8, 0, 131085, 2, 0, 131086, 3, 0, 131087, 5, 0, 131088, 5, 0, 262141, 1, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 10, 0, 196611, 5, 0, 196612, 5, 0, 196613, 8, 0, 196614, 1, 0, 196615, 1, 0, 196616, 10, 0, 196617, 8, 0, 196618, 1, 0, 196619, 10, 0, 196620, 8, 0, 196621, 1, 0, 196622, 8, 0, 196623, 5, 0, 196624, 5, 0, 327676, 2, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 4, 0, 262145, 8, 0, 262146, 10, 0, 262147, 8, 0, 262148, 5, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0, 262152, 10, 0, 262153, 8, 0, 262154, 1, 0, 262155, 10, 0, 262156, 8, 0, 262157, 1, 0, 262158, 8, 0, 262159, 5, 0, 262160, 5, 0, 393212, 1, 0, 393213, 9, 0, 393214, 9, 0, 393215, 9, 0, 327680, 10, 0, 327681, 8, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 8, 0, 327690, 1, 0, 327691, 10, 0, 327692, 8, 0, 327693, 0, 0, 327694, 7, 0, 327695, 6, 0, 327696, 5, 0, 458748, 0, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 10, 0, 393217, 3, 0, 393218, 4, 0, 393219, 8, 0, 393220, 2, 0, 393221, 4, 0, 393222, 8, 0, 393223, 2, 0, 393224, 5, 0, 393225, 8, 0, 393226, 1, 0, 393227, 2, 0, 393228, 8, 0, 393229, 8, 0, 393230, 8, 0, 393231, 8, 0, 393232, 5, 0, 458752, 10, 0, 458753, 5, 0, 458754, 5, 0, 458755, 8, 0, 458756, 0, 0, 458757, 7, 0, 458758, 8, 0, 458759, 1, 0, 458760, 4, 0, 458761, 8, 0, 458762, 2, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 4, 0, 458768, 5, 0, 524288, 1, 0, 524289, 5, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 2, 0, 524296, 8, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 8, 0, 524304, 5, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0 )
 
 [node name="Rat" type="Node2D" parent="."]
-modulate = Color( 1, 1, 0, 1 )
+modulate = Color( 1, 1, 1, 0.54902 )
 position = Vector2( -153.962, 285.714 )
 rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Rat Attack" parent="Rat" instance=ExtResource( 52 )]
 modulate = Color( 1, 0.560784, 0, 1 )
@@ -837,64 +803,321 @@ scale = Vector2( 0.5, 0.5 )
 autoplay = "rat_animation"
 anims/rat_animation = SubResource( 1 )
 
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2( 3.5, 7.21212 )
-scale = Vector2( 0.994318, 0.969697 )
-curve = SubResource( 2 )
-script = ExtResource( 20 )
+[node name="Backgound" type="Node2D" parent="."]
+position = Vector2( -45.6961, 236.747 )
+scale = Vector2( 0.25, 0.25 )
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 446.034, 36.9063 )
-rotation = -0.0113611
-rotate = false
-script = ExtResource( 31 )
+[node name="Banner2" type="Node2D" parent="Backgound"]
+position = Vector2( 182.784, -946.988 )
+scale = Vector2( 4, 4 )
 
-[node name="obj_enemy" type="KinematicBody2D" parent="Path2D/PathFollow2D"]
-rotation = 9.31322e-10
-collision_layer = 0
-script = ExtResource( 38 )
+[node name="Banner" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( -265.526, 268.617 )
+texture = ExtResource( 50 )
 
-[node name="Sprite" type="AnimatedSprite" parent="Path2D/PathFollow2D/obj_enemy"]
-position = Vector2( 3.44867, -0.985462 )
-rotation = 9.31322e-10
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 3 )
-animation = "alive"
+[node name="Banner2" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( -114.395, 332.23 )
+texture = ExtResource( 50 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/obj_enemy"]
-position = Vector2( 4.22879, -0.742015 )
-shape = SubResource( 4 )
-script = ExtResource( 39 )
+[node name="Banner3" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( -79.8937, 375.525 )
+texture = ExtResource( 50 )
 
-[node name="Hurtbox" parent="Path2D/PathFollow2D" instance=ExtResource( 24 )]
-rotation = 9.31322e-10
-collision_layer = 8
+[node name="Banner4" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( -156.275, 268.627 )
+texture = ExtResource( 50 )
 
-[node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hurtbox" index="0"]
-position = Vector2( 4.21185, -0.822247 )
-shape = SubResource( 5 )
+[node name="Banner5" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( -116.304, 205.568 )
+texture = ExtResource( 50 )
 
-[node name="Hitbox" parent="Path2D/PathFollow2D" instance=ExtResource( 22 )]
-collision_mask = 4
+[node name="Banner6" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( -39.2027, 268.784 )
+texture = ExtResource( 50 )
 
-[node name="CollisionShape2D" parent="Path2D/PathFollow2D/Hitbox" index="0"]
-position = Vector2( 4.14258, -0.811954 )
-shape = SubResource( 6 )
+[node name="Banner7" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( -115.117, 76.5525 )
+texture = ExtResource( 50 )
+
+[node name="Banner8" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 56.0326, 205.262 )
+texture = ExtResource( 50 )
+
+[node name="Banner9" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 107.668, 396.618 )
+texture = ExtResource( 50 )
+
+[node name="Banner10" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 246.089, 503.715 )
+texture = ExtResource( 50 )
+
+[node name="Banner11" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 314.755, 396.841 )
+texture = ExtResource( 50 )
+
+[node name="Banner12" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 232.948, 333.268 )
+texture = ExtResource( 50 )
+
+[node name="Banner13" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 442.821, 332.863 )
+texture = ExtResource( 50 )
+
+[node name="Banner14" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 547.899, 140.908 )
+texture = ExtResource( 50 )
+
+[node name="Banner15" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 326.032, 503.732 )
+texture = ExtResource( 50 )
+
+[node name="Banner16" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 498.669, 460.981 )
+texture = ExtResource( 50 )
+
+[node name="Banner17" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 723.255, 524.724 )
+texture = ExtResource( 50 )
+
+[node name="Banner18" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 690.642, 461.352 )
+texture = ExtResource( 50 )
+
+[node name="Banner19" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 862.789, 460.657 )
+texture = ExtResource( 50 )
+
+[node name="Banner20" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 862.34, 524.283 )
+texture = ExtResource( 50 )
+
+[node name="Banner21" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 938.02, 375.55 )
+texture = ExtResource( 50 )
+
+[node name="Banner22" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 869.385, 375.818 )
+texture = ExtResource( 50 )
+
+[node name="Banner23" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 897.127, 140.561 )
+texture = ExtResource( 50 )
+
+[node name="Banner24" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 883.487, 76.2226 )
+texture = ExtResource( 50 )
+
+[node name="Banner25" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 882.097, 12.2543 )
+texture = ExtResource( 50 )
+
+[node name="Banner26" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 561.111, 12.2463 )
+texture = ExtResource( 50 )
+
+[node name="Banner27" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 461.044, 75.9238 )
+texture = ExtResource( 50 )
+
+[node name="Banner28" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 315.179, 13.3094 )
+texture = ExtResource( 50 )
+
+[node name="Banner29" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 119.611, 12.581 )
+texture = ExtResource( 50 )
+
+[node name="Banner30" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 187.296, 141.429 )
+texture = ExtResource( 50 )
+
+[node name="Banner31" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 156.823, 76.9717 )
+texture = ExtResource( 50 )
+
+[node name="Banner32" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 462.453, 524.056 )
+texture = ExtResource( 50 )
+
+[node name="Banner33" type="Sprite" parent="Backgound/Banner2"]
+position = Vector2( 638.37, 77.0061 )
+texture = ExtResource( 50 )
+
+[node name="Spiderweb" type="Node2D" parent="Backgound"]
+position = Vector2( 182.784, -946.988 )
+scale = Vector2( 4, 4 )
+
+[node name="Spider Wed" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( -246.994, 268.326 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed2" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( -211.524, 333.096 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed3" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( -131.428, 376.481 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed4" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( -2.53841, 267.724 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed5" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 115.791, 395.438 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed6" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 246.265, 395.438 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed7" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 285.279, 504.382 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed8" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 509.239, 460.4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed9" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 442.253, 396.358 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed10" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 338.094, 502.726 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed11" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 557.27, 524.073 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed12" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 722.157, 461.504 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed13" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 731.175, 524.073 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed14" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 874.163, 461.504 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed15" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 905.08, 523.337 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed16" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 948.527, 375.99 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed17" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 710.137, 396.424 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed18" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 812.498, 374.809 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed19" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 823.713, 140.112 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed20" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 890.544, 76.3809 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed21" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 893.45, 12.6497 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed22" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 719.69, 11.6811 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed23" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 627.125, 76.4584 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed24" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 492.785, 11.6811 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed25" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 499.226, 141.052 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed26" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 372.464, 77.076 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed27" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 304.208, 13.1005 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed28" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 232.86, 77.076 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed29" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 103.719, 12.6248 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed30" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 46.165, 77.3139 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed31" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 48.3054, 204.552 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed32" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( -121.979, 140.1 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed33" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 62.0994, 140.338 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed34" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( -69.8948, 75.1734 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed35" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 125.122, 332.567 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed36" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 242.706, 331.85 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed37" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 406.176, 331.85 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed38" type="Sprite" parent="Backgound/Spiderweb"]
+position = Vector2( 452.779, 140.777 )
+texture = ExtResource( 51 )
+
+[node name="Knight" parent="Backgound" instance=ExtResource( 2 )]
+position = Vector2( 216.651, 1048.34 )
+scale = Vector2( 2.75, 2 )
 
 [node name="obj_door" type="StaticBody2D" parent="."]
-position = Vector2( 1019.19, 18.7781 )
+position = Vector2( 1020.48, 13.3966 )
+scale = Vector2( 0.25, 0.4 )
 script = ExtResource( 37 )
 
 [node name="Sprite" type="AnimatedSprite" parent="obj_door"]
 position = Vector2( 3.32959, -1.42697 )
 scale = Vector2( 1.71553, 1 )
-frames = SubResource( 7 )
+frames = SubResource( 2 )
 animation = "closed"
 
 [node name="door_collision" type="CollisionShape2D" parent="obj_door"]
 position = Vector2( 3.72278, -3.64516 )
 scale = Vector2( 2.5, 2 )
-shape = SubResource( 8 )
+shape = SubResource( 3 )
 script = ExtResource( 46 )
 
 [node name="Area2D" type="Area2D" parent="obj_door"]
@@ -903,11 +1126,13 @@ scale = Vector2( 1.5, 1.5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_door/Area2D"]
 position = Vector2( 2.38139, 3.80061 )
 scale = Vector2( 1.5, 1.5 )
-shape = SubResource( 9 )
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="obj_door"]
+wait_time = 0.4
 
 [node name="entrance_door" type="StaticBody2D" parent="."]
-position = Vector2( -149.359, -208.361 )
-scale = Vector2( 2, 1 )
+position = Vector2( -104.41, -207.792 )
 
 [node name="Sprite" type="Sprite" parent="entrance_door"]
 position = Vector2( 52.2871, 540.539 )
@@ -917,300 +1142,12 @@ texture = ExtResource( 30 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrance_door"]
 position = Vector2( 52.1439, 541.369 )
 scale = Vector2( 1, 0.1 )
-shape = SubResource( 10 )
+shape = SubResource( 5 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 48 )
 volume_db = 6.049
 autoplay = true
-
-[node name="Spiderweb" type="Node2D" parent="."]
-
-[node name="Spider Wed" type="Sprite" parent="Spiderweb"]
-position = Vector2( -246.994, 268.326 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed2" type="Sprite" parent="Spiderweb"]
-position = Vector2( -211.524, 333.096 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed3" type="Sprite" parent="Spiderweb"]
-position = Vector2( -131.428, 376.481 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed4" type="Sprite" parent="Spiderweb"]
-position = Vector2( -2.53841, 267.724 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed5" type="Sprite" parent="Spiderweb"]
-position = Vector2( 115.791, 395.438 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed6" type="Sprite" parent="Spiderweb"]
-position = Vector2( 246.265, 395.438 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed7" type="Sprite" parent="Spiderweb"]
-position = Vector2( 285.279, 504.382 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed8" type="Sprite" parent="Spiderweb"]
-position = Vector2( 509.239, 460.4 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed9" type="Sprite" parent="Spiderweb"]
-position = Vector2( 442.253, 396.358 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed10" type="Sprite" parent="Spiderweb"]
-position = Vector2( 338.094, 502.726 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed11" type="Sprite" parent="Spiderweb"]
-position = Vector2( 557.27, 524.073 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed12" type="Sprite" parent="Spiderweb"]
-position = Vector2( 722.157, 461.504 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed13" type="Sprite" parent="Spiderweb"]
-position = Vector2( 731.175, 524.073 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed14" type="Sprite" parent="Spiderweb"]
-position = Vector2( 874.163, 461.504 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed15" type="Sprite" parent="Spiderweb"]
-position = Vector2( 905.08, 523.337 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed16" type="Sprite" parent="Spiderweb"]
-position = Vector2( 948.527, 375.99 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed17" type="Sprite" parent="Spiderweb"]
-position = Vector2( 710.137, 396.424 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed18" type="Sprite" parent="Spiderweb"]
-position = Vector2( 812.498, 374.809 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed19" type="Sprite" parent="Spiderweb"]
-position = Vector2( 823.713, 140.112 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed20" type="Sprite" parent="Spiderweb"]
-position = Vector2( 890.544, 76.3809 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed21" type="Sprite" parent="Spiderweb"]
-position = Vector2( 893.45, 12.6497 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed22" type="Sprite" parent="Spiderweb"]
-position = Vector2( 719.69, 11.6811 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed23" type="Sprite" parent="Spiderweb"]
-position = Vector2( 627.125, 76.4584 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed24" type="Sprite" parent="Spiderweb"]
-position = Vector2( 492.785, 11.6811 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed25" type="Sprite" parent="Spiderweb"]
-position = Vector2( 499.226, 141.052 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed26" type="Sprite" parent="Spiderweb"]
-position = Vector2( 372.464, 77.076 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed27" type="Sprite" parent="Spiderweb"]
-position = Vector2( 304.208, 13.1005 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed28" type="Sprite" parent="Spiderweb"]
-position = Vector2( 232.86, 77.076 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed29" type="Sprite" parent="Spiderweb"]
-position = Vector2( 103.719, 12.6248 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed30" type="Sprite" parent="Spiderweb"]
-position = Vector2( 46.165, 77.3139 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed31" type="Sprite" parent="Spiderweb"]
-position = Vector2( 48.3054, 204.552 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed32" type="Sprite" parent="Spiderweb"]
-position = Vector2( -121.979, 140.1 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed33" type="Sprite" parent="Spiderweb"]
-position = Vector2( 62.0994, 140.338 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed34" type="Sprite" parent="Spiderweb"]
-position = Vector2( -69.8948, 75.1734 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed35" type="Sprite" parent="Spiderweb"]
-position = Vector2( 125.122, 332.567 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed36" type="Sprite" parent="Spiderweb"]
-position = Vector2( 242.706, 331.85 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed37" type="Sprite" parent="Spiderweb"]
-position = Vector2( 406.176, 331.85 )
-texture = ExtResource( 51 )
-
-[node name="Spider Wed38" type="Sprite" parent="Spiderweb"]
-position = Vector2( 452.779, 140.777 )
-texture = ExtResource( 51 )
-
-[node name="Banner2" type="Node2D" parent="."]
-
-[node name="Banner" type="Sprite" parent="Banner2"]
-position = Vector2( -265.526, 268.617 )
-texture = ExtResource( 50 )
-
-[node name="Banner2" type="Sprite" parent="Banner2"]
-position = Vector2( -114.395, 332.23 )
-texture = ExtResource( 50 )
-
-[node name="Banner3" type="Sprite" parent="Banner2"]
-position = Vector2( -79.8937, 375.525 )
-texture = ExtResource( 50 )
-
-[node name="Banner4" type="Sprite" parent="Banner2"]
-position = Vector2( -156.275, 268.627 )
-texture = ExtResource( 50 )
-
-[node name="Banner5" type="Sprite" parent="Banner2"]
-position = Vector2( -116.304, 205.568 )
-texture = ExtResource( 50 )
-
-[node name="Banner6" type="Sprite" parent="Banner2"]
-position = Vector2( -39.2027, 268.784 )
-texture = ExtResource( 50 )
-
-[node name="Banner7" type="Sprite" parent="Banner2"]
-position = Vector2( -115.117, 76.5525 )
-texture = ExtResource( 50 )
-
-[node name="Banner8" type="Sprite" parent="Banner2"]
-position = Vector2( 56.0326, 205.262 )
-texture = ExtResource( 50 )
-
-[node name="Banner9" type="Sprite" parent="Banner2"]
-position = Vector2( 107.668, 396.618 )
-texture = ExtResource( 50 )
-
-[node name="Banner10" type="Sprite" parent="Banner2"]
-position = Vector2( 246.089, 503.715 )
-texture = ExtResource( 50 )
-
-[node name="Banner11" type="Sprite" parent="Banner2"]
-position = Vector2( 314.755, 396.841 )
-texture = ExtResource( 50 )
-
-[node name="Banner12" type="Sprite" parent="Banner2"]
-position = Vector2( 232.948, 333.268 )
-texture = ExtResource( 50 )
-
-[node name="Banner13" type="Sprite" parent="Banner2"]
-position = Vector2( 442.821, 332.863 )
-texture = ExtResource( 50 )
-
-[node name="Banner14" type="Sprite" parent="Banner2"]
-position = Vector2( 547.899, 140.908 )
-texture = ExtResource( 50 )
-
-[node name="Banner15" type="Sprite" parent="Banner2"]
-position = Vector2( 326.032, 503.732 )
-texture = ExtResource( 50 )
-
-[node name="Banner16" type="Sprite" parent="Banner2"]
-position = Vector2( 498.669, 460.981 )
-texture = ExtResource( 50 )
-
-[node name="Banner17" type="Sprite" parent="Banner2"]
-position = Vector2( 723.255, 524.724 )
-texture = ExtResource( 50 )
-
-[node name="Banner18" type="Sprite" parent="Banner2"]
-position = Vector2( 690.642, 461.352 )
-texture = ExtResource( 50 )
-
-[node name="Banner19" type="Sprite" parent="Banner2"]
-position = Vector2( 862.789, 460.657 )
-texture = ExtResource( 50 )
-
-[node name="Banner20" type="Sprite" parent="Banner2"]
-position = Vector2( 862.34, 524.283 )
-texture = ExtResource( 50 )
-
-[node name="Banner21" type="Sprite" parent="Banner2"]
-position = Vector2( 938.02, 375.55 )
-texture = ExtResource( 50 )
-
-[node name="Banner22" type="Sprite" parent="Banner2"]
-position = Vector2( 869.385, 375.818 )
-texture = ExtResource( 50 )
-
-[node name="Banner23" type="Sprite" parent="Banner2"]
-position = Vector2( 897.127, 140.561 )
-texture = ExtResource( 50 )
-
-[node name="Banner24" type="Sprite" parent="Banner2"]
-position = Vector2( 883.487, 76.2226 )
-texture = ExtResource( 50 )
-
-[node name="Banner25" type="Sprite" parent="Banner2"]
-position = Vector2( 882.097, 12.2543 )
-texture = ExtResource( 50 )
-
-[node name="Banner26" type="Sprite" parent="Banner2"]
-position = Vector2( 561.111, 12.2463 )
-texture = ExtResource( 50 )
-
-[node name="Banner27" type="Sprite" parent="Banner2"]
-position = Vector2( 461.044, 75.9238 )
-texture = ExtResource( 50 )
-
-[node name="Banner28" type="Sprite" parent="Banner2"]
-position = Vector2( 315.179, 13.3094 )
-texture = ExtResource( 50 )
-
-[node name="Banner29" type="Sprite" parent="Banner2"]
-position = Vector2( 119.611, 12.581 )
-texture = ExtResource( 50 )
-
-[node name="Banner30" type="Sprite" parent="Banner2"]
-position = Vector2( 187.296, 141.429 )
-texture = ExtResource( 50 )
-
-[node name="Banner31" type="Sprite" parent="Banner2"]
-position = Vector2( 156.823, 76.9717 )
-texture = ExtResource( 50 )
-
-[node name="Banner32" type="Sprite" parent="Banner2"]
-position = Vector2( 462.453, 524.056 )
-texture = ExtResource( 50 )
-
-[node name="Banner33" type="Sprite" parent="Banner2"]
-position = Vector2( 638.37, 77.0061 )
-texture = ExtResource( 50 )
 
 [node name="Fake Walls" type="Node2D" parent="."]
 
@@ -1220,12 +1157,12 @@ script = ExtResource( 29 )
 
 [node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
 position = Vector2( 693.835, 96.3341 )
-shape = SubResource( 11 )
+shape = SubResource( 6 )
 script = ExtResource( 69 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/vertical_fake_wall"]
 position = Vector2( 671.651, 96.0985 )
-frames = SubResource( 12 )
+frames = SubResource( 7 )
 animation = "closed"
 
 [node name="Timer" type="Timer" parent="Fake Walls/vertical_fake_wall"]
@@ -1238,11 +1175,11 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall/Area2D"]
 position = Vector2( 133.357, 0.0988455 )
-shape = SubResource( 13 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
 position = Vector2( 700.259, 118.267 )
-shape = SubResource( 14 )
+shape = SubResource( 9 )
 
 [node name="horizontal_fake_wall" type="StaticBody2D" parent="Fake Walls"]
 position = Vector2( 352.38, 63.1519 )
@@ -1251,13 +1188,13 @@ script = ExtResource( 28 )
 [node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall"]
 visible = false
 position = Vector2( 160.149, 331.044 )
-shape = SubResource( 15 )
+shape = SubResource( 10 )
 script = ExtResource( 69 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall"]
 position = Vector2( 150.748, 350.958 )
 scale = Vector2( 1.10545, 0.976683 )
-frames = SubResource( 16 )
+frames = SubResource( 11 )
 animation = "closed"
 
 [node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall"]
@@ -1270,7 +1207,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall/Area2D"]
 position = Vector2( 103.268, 0.189453 )
-shape = SubResource( 17 )
+shape = SubResource( 12 )
 
 [node name="horizontal_fake_wall2" type="StaticBody2D" parent="Fake Walls"]
 position = Vector2( 160.054, -172.281 )
@@ -1283,17 +1220,17 @@ collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2/Area2D"]
 position = Vector2( 26.1117, -18.4741 )
-shape = SubResource( 17 )
+shape = SubResource( 12 )
 
 [node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2"]
 position = Vector2( 161.61, 330.704 )
-shape = SubResource( 15 )
+shape = SubResource( 10 )
 script = ExtResource( 69 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall2"]
 position = Vector2( 160.185, 350.678 )
 scale = Vector2( 1.00077, 0.969241 )
-frames = SubResource( 16 )
+frames = SubResource( 11 )
 animation = "closed"
 
 [node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall2"]
@@ -1301,35 +1238,35 @@ wait_time = 0.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2"]
 position = Vector2( 132.452, 329.81 )
-shape = SubResource( 18 )
+shape = SubResource( 13 )
 
 [node name="Barrel Collision" type="StaticBody2D" parent="."]
-position = Vector2( -259.494, 396.484 )
-scale = Vector2( 0.291128, 0.329089 )
+position = Vector2( 19.6071, 514.092 )
+scale = Vector2( 0.25, 0.25 )
 
 [node name="Barrel" type="Sprite" parent="Barrel Collision"]
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrel Collision"]
 position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 19 )
+shape = SubResource( 14 )
 
 [node name="PickUp" type="Node2D" parent="."]
 position = Vector2( -168.817, 377.485 )
 scale = Vector2( 0.291128, 0.329089 )
 
 [node name="Key" parent="PickUp" instance=ExtResource( 35 )]
-position = Vector2( 4054.87, -372.956 )
-scale = Vector2( 0.343491, 0.303869 )
+position = Vector2( 2536.98, -841.631 )
+scale = Vector2( 0.286233, 0.282913 )
 
 [node name="Heart" parent="PickUp" instance=ExtResource( 65 )]
-position = Vector2( 203.842, -236.477 )
-scale = Vector2( 2.57619, 2.27902 )
+position = Vector2( -322.427, -85.8154 )
+scale = Vector2( 0.75, 1 )
 
 [node name="obj_bag" parent="PickUp" instance=ExtResource( 18 )]
 modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
-position = Vector2( 244.377, -207.921 )
-scale = Vector2( 1.50819, 1.49278 )
+position = Vector2( -138.871, 84.6459 )
+scale = Vector2( 0.75, 1 )
 
 [node name="LightOccluder" type="Node2D" parent="."]
 position = Vector2( -250.12, 288.487 )
@@ -1338,45 +1275,244 @@ scale = Vector2( 0.40462, 0.431326 )
 [node name="LightOccluder2D" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 618.161, -668.837 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 20 )
+occluder = SubResource( 15 )
 
 [node name="LightOccluder2D6" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 618.161, -668.837 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 21 )
+occluder = SubResource( 16 )
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 539.624, -671.599 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 22 )
+occluder = SubResource( 17 )
 
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 539.624, -671.599 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 23 )
+occluder = SubResource( 18 )
 
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 539.624, -671.599 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 24 )
+occluder = SubResource( 19 )
 
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 618.161, -668.837 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 25 )
+occluder = SubResource( 20 )
 
-[node name="Enemy skeleton" parent="." instance=ExtResource( 23 )]
-position = Vector2( -100.026, 409.238 )
+[node name="torch5" type="StaticBody2D" parent="."]
+position = Vector2( -45.6961, 236.747 )
+scale = Vector2( 0.25, 0.25 )
+script = ExtResource( 15 )
 
-[node name="Spider_barrel" parent="." instance=ExtResource( 67 )]
-position = Vector2( -200.526, 382.747 )
+[node name="torch_light" type="Light2D" parent="torch5"]
+position = Vector2( 47.1101, 448.145 )
+scale = Vector2( 0.168953, 0.162966 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="torch5/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 81 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="torch5"]
+position = Vector2( 50.6324, 450.899 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 82 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch5"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 83 )
+
+[node name="Area2D" type="Area2D" parent="torch5"]
+position = Vector2( 0, 2.57212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch5/Area2D"]
+position = Vector2( 44.0324, 448.119 )
+shape = SubResource( 84 )
+
+[node name="torch6" type="StaticBody2D" parent="."]
+position = Vector2( 252.86, -40.9634 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="torch6"]
+position = Vector2( 47.1101, 448.145 )
+scale = Vector2( 0.168953, 0.162966 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="torch6/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 81 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="torch6"]
+position = Vector2( 50.6324, 450.899 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 82 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch6"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 83 )
+
+[node name="Area2D" type="Area2D" parent="torch6"]
+position = Vector2( 0, 2.57212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch6/Area2D"]
+position = Vector2( 44.0324, 448.119 )
+shape = SubResource( 84 )
+
+[node name="torch7" type="StaticBody2D" parent="."]
+position = Vector2( 324.341, -12.759 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="torch7"]
+position = Vector2( 47.1101, 448.145 )
+scale = Vector2( 0.168953, 0.162966 )
+texture = ExtResource( 13 )
+texture_scale = 6.15
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="torch7/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 81 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="torch7"]
+position = Vector2( 50.6324, 450.899 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 82 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch7"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 83 )
+
+[node name="Area2D" type="Area2D" parent="torch7"]
+position = Vector2( 0, 2.57212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch7/Area2D"]
+position = Vector2( -99.9693, 391.247 )
+shape = SubResource( 84 )
+
+[node name="torch8" type="StaticBody2D" parent="."]
+position = Vector2( 579.793, 187.36 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="torch8"]
+visible = false
+position = Vector2( 47.1101, 448.145 )
+scale = Vector2( 0.168953, 0.162966 )
+texture = ExtResource( 13 )
+texture_scale = 6.15
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="torch8/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 81 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="torch8"]
+position = Vector2( 50.6324, 450.899 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 82 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch8"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 83 )
+
+[node name="Area2D" type="Area2D" parent="torch8"]
+position = Vector2( 0, 2.57212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch8/Area2D"]
+position = Vector2( 42.0999, 451.24 )
+shape = SubResource( 84 )
+
+[node name="torch9" type="StaticBody2D" parent="."]
+position = Vector2( 451.844, 226.858 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="torch9"]
+visible = false
+position = Vector2( 47.1101, 448.145 )
+scale = Vector2( 0.168953, 0.162966 )
+texture = ExtResource( 13 )
+texture_scale = 6.15
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="torch9/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 81 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="torch9"]
+position = Vector2( 50.6324, 450.899 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 82 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch9"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 83 )
+
+[node name="Area2D" type="Area2D" parent="torch9"]
+position = Vector2( 0, 2.57212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torch9/Area2D"]
+position = Vector2( 299.528, 372.389 )
+shape = SubResource( 84 )
+
+[node name="Enemies assets" type="Node2D" parent="."]
+position = Vector2( -72.3937, 303.225 )
 scale = Vector2( 0.25, 0.25 )
 
-[node name="Knight" parent="." instance=ExtResource( 2 )]
+[node name="Spider_barrel" parent="Enemies assets" instance=ExtResource( 67 )]
+position = Vector2( -710.905, 0 )
+
+[node name="Enemy skeleton" parent="Enemies assets" instance=ExtResource( 23 )]
+position = Vector2( -761.163, 324.37 )
+scale = Vector2( 2, 3 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -185.275, 343.48 )
-scale = Vector2( 0.65, 0.65 )
+position = Vector2( -64.3937, 341.363 )
+scale = Vector2( 0.65, 0.6 )
 z_as_relative = false
 collision_layer = 2
 script = ExtResource( 12 )
@@ -1414,7 +1550,7 @@ margin_top = 3.0
 margin_right = 11.9963
 margin_bottom = 9.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 21 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "*"
 __meta__ = {
@@ -1427,7 +1563,7 @@ margin_top = 2.54916
 margin_right = 24.4161
 margin_bottom = 9.54916
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 19 )
@@ -1453,7 +1589,7 @@ margin_top = 29.7573
 margin_right = 46.5061
 margin_bottom = 43.7573
 rect_scale = Vector2( 2.5, 2.5 )
-custom_fonts/font = SubResource( 28 )
+custom_fonts/font = SubResource( 23 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "*"
 align = 1
@@ -1465,7 +1601,7 @@ margin_top = 39.5697
 margin_right = 92.6583
 margin_bottom = 53.5697
 rect_scale = Vector2( 1.25, 1.25 )
-custom_fonts/font = SubResource( 29 )
+custom_fonts/font = SubResource( 24 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 8 )
@@ -1491,7 +1627,7 @@ margin_top = 70.2376
 margin_right = 52.7109
 margin_bottom = 84.2376
 rect_scale = Vector2( 1.25, 1.25 )
-custom_fonts/font = SubResource( 30 )
+custom_fonts/font = SubResource( 25 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "*"
 __meta__ = {
@@ -1504,7 +1640,7 @@ margin_top = 68.6107
 margin_right = 92.5538
 margin_bottom = 82.6107
 rect_scale = Vector2( 1.25, 1.25 )
-custom_fonts/font = SubResource( 31 )
+custom_fonts/font = SubResource( 26 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 34 )
@@ -1542,7 +1678,7 @@ margin_left = 20.4783
 margin_top = 10.8479
 margin_right = 165.478
 margin_bottom = 34.8479
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 27 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
 custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
 custom_constants/shadow_offset_x = -2
@@ -1561,7 +1697,7 @@ margin_left = 51.74
 margin_top = 80.1309
 margin_right = -55.26
 margin_bottom = -17.8691
-custom_fonts/font = SubResource( 33 )
+custom_fonts/font = SubResource( 28 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
@@ -1581,10 +1717,9 @@ editor_draw_drag_margin = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
 position = Vector2( 0.0196913, 10.5635 )
-shape = SubResource( 34 )
+shape = SubResource( 29 )
 
 [node name="Light2D" type="Light2D" parent="obj_player"]
-visible = false
 position = Vector2( 0.0219727, 5.62988 )
 scale = Vector2( 0.0549075, 0.0348862 )
 texture = ExtResource( 70 )
@@ -1594,27 +1729,27 @@ energy = 4.0
 shadow_enabled = true
 
 [node name="player_anim" type="AnimationPlayer" parent="obj_player"]
-anims/attack_down = SubResource( 35 )
-anims/down_dead = SubResource( 36 )
-anims/down_walk = SubResource( 37 )
-anims/idle_down = SubResource( 38 )
-anims/left_attack = SubResource( 39 )
-anims/left_dead = SubResource( 40 )
-anims/left_idle = SubResource( 41 )
-anims/left_walk = SubResource( 42 )
-anims/right_attack = SubResource( 43 )
-anims/right_dead = SubResource( 44 )
-anims/right_idle = SubResource( 45 )
-anims/right_walk = SubResource( 46 )
-anims/up_attack = SubResource( 47 )
-anims/up_dead = SubResource( 48 )
-anims/up_idle = SubResource( 49 )
-anims/up_walk = SubResource( 50 )
+anims/attack_down = SubResource( 30 )
+anims/down_dead = SubResource( 31 )
+anims/down_walk = SubResource( 32 )
+anims/idle_down = SubResource( 33 )
+anims/left_attack = SubResource( 34 )
+anims/left_dead = SubResource( 35 )
+anims/left_idle = SubResource( 36 )
+anims/left_walk = SubResource( 37 )
+anims/right_attack = SubResource( 38 )
+anims/right_dead = SubResource( 39 )
+anims/right_idle = SubResource( 40 )
+anims/right_walk = SubResource( 41 )
+anims/up_attack = SubResource( 42 )
+anims/up_dead = SubResource( 43 )
+anims/up_idle = SubResource( 44 )
+anims/up_walk = SubResource( 45 )
 
 [node name="AnimationTree" type="AnimationTree" parent="obj_player"]
-tree_root = SubResource( 77 )
+tree_root = SubResource( 72 )
 anim_player = NodePath("../player_anim")
-parameters/playback = SubResource( 78 )
+parameters/playback = SubResource( 73 )
 parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
 parameters/Death/blend_position = Vector2( 0.239115, -0.547945 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
@@ -1631,14 +1766,14 @@ script = ExtResource( 49 )
 
 [node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
 position = Vector2( 3.37391, 0.250439 )
-shape = SubResource( 79 )
+shape = SubResource( 74 )
 disabled = true
 
 [node name="Area2D" type="Area2D" parent="obj_player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/Area2D"]
 position = Vector2( 0.0261497, 8.78049 )
-shape = SubResource( 80 )
+shape = SubResource( 75 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 7 )
@@ -1649,218 +1784,17 @@ collision_layer = 4
 
 [node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
 position = Vector2( 0.13018, 5.83029 )
-shape = SubResource( 81 )
+shape = SubResource( 76 )
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 47 )
 
 [node name="walking_sound" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 68 )
-
-[node name="torch5" type="StaticBody2D" parent="."]
-position = Vector2( -60.5366, 124.019 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="torch5"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-texture_scale = 5.0
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="torch5/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 86 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="torch5"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 87 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch5"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 88 )
-
-[node name="Area2D" type="Area2D" parent="torch5"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch5/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 89 )
-
-[node name="torch6" type="StaticBody2D" parent="."]
-position = Vector2( 252.86, -40.9634 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="torch6"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-texture_scale = 5.0
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="torch6/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 86 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="torch6"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 87 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch6"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 88 )
-
-[node name="Area2D" type="Area2D" parent="torch6"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch6/Area2D"]
-position = Vector2( 44.0324, 448.119 )
-shape = SubResource( 89 )
-
-[node name="torch7" type="StaticBody2D" parent="."]
-position = Vector2( 324.341, -12.759 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="torch7"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-texture_scale = 6.15
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="torch7/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 86 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="torch7"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 87 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch7"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 88 )
-
-[node name="Area2D" type="Area2D" parent="torch7"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch7/Area2D"]
-position = Vector2( -99.9693, 391.247 )
-shape = SubResource( 89 )
-
-[node name="torch8" type="StaticBody2D" parent="."]
-position = Vector2( 579.793, 187.36 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="torch8"]
-visible = false
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-texture_scale = 6.15
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="torch8/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 86 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="torch8"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 87 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch8"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 88 )
-
-[node name="Area2D" type="Area2D" parent="torch8"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch8/Area2D"]
-position = Vector2( 42.0999, 451.24 )
-shape = SubResource( 89 )
-
-[node name="torch9" type="StaticBody2D" parent="."]
-position = Vector2( 451.844, 226.858 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="torch9"]
-visible = false
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-texture_scale = 6.15
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="torch9/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 86 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="torch9"]
-position = Vector2( 50.6324, 450.899 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 87 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch9"]
-position = Vector2( 55.328, 457.012 )
-shape = SubResource( 88 )
-
-[node name="Area2D" type="Area2D" parent="torch9"]
-position = Vector2( 0, 2.57212 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="torch9/Area2D"]
-position = Vector2( 299.528, 372.389 )
-shape = SubResource( 89 )
 [connection signal="body_entered" from="Rat/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/Hitbox" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy/CollisionShape2D" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Path2D/PathFollow2D/Hurtbox" to="Path2D/PathFollow2D/obj_enemy" method="_on_Hurtbox_area_entered"]
-[connection signal="body_entered" from="Path2D/PathFollow2D/Hitbox" to="obj_player" method="_on_Hitbox_body_entered"]
 [connection signal="frame_changed" from="obj_door/Sprite" to="obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="obj_door/Area2D" to="obj_door" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="obj_door/Timer" to="obj_door" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/vertical_fake_wall/Timer" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall" method="_on_Timer_timeout"]
@@ -1881,13 +1815,7 @@ shape = SubResource( 89 )
 
 [editable path="Map Layout"]
 
-[editable path="Path2D/PathFollow2D/Hurtbox"]
-
-[editable path="Path2D/PathFollow2D/Hitbox"]
-
 [editable path="PickUp/Heart"]
-
-[editable path="Spider_barrel"]
 
 [editable path="obj_player/HitboxPivot/SwordHitbox"]
 
