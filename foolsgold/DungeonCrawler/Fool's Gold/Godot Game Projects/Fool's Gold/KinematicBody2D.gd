@@ -121,3 +121,9 @@ func _on_Heart_body_entered(_body):
 
 func _on_Key_body_entered(_body):
 	Key += 1
+
+
+func _on_Ghost_body_entered(body):
+	if body.name == "obj_player":
+		health -= 1
+		
