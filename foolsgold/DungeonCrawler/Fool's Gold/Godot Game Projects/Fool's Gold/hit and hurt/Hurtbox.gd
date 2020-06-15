@@ -35,3 +35,8 @@ func _on_Hurtbox_invincibility_started():
 
 func _on_Hurtbox_invincibility_ended():
 	monitorable = true
+
+
+func _on_Hurtbox_area_entered(_area):
+	timer.start()
+	queue_free()
