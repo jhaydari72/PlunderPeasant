@@ -53,10 +53,6 @@ func move_state(delta):
 	input_vector.y = Input.get_action_strength("ui_s") - Input.get_action_strength("ui_w")
 	input_vector = input_vector.normalized()
 	
-	if input_vector.x != 0 or input_vector.y != 0:
-		var MusicNode = $walking_sound
-		MusicNode.play()
-	
 	# gives speed and animations
 	if input_vector != Vector2.ZERO:
 		kill_direction = input_vector
@@ -67,11 +63,20 @@ func move_state(delta):
 		animationTree.set("parameters/Death/blend_position", input_vector)
 		animationState.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+		
+		
 	else:
 		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
 	velocity = move_and_slide(velocity)
+	
+	if Input.is_action_pressed("ui_d"):
+		var MusicNode = $walking_sound
+		MusicNode.play()
+	else:
+		var MusicNode = $walking_sound
+		MusicNode.stop()
 	
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
