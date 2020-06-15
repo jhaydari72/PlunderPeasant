@@ -203,14 +203,14 @@ color_ramp = SubResource( 22 )
 
 [sub_resource type="SpriteFrames" id=26]
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
 "speed": 5.0
 } ]
 
@@ -1104,12 +1104,22 @@ position = Vector2( 216.651, 1048.34 )
 scale = Vector2( 2.75, 2 )
 
 [node name="obj_door" type="StaticBody2D" parent="."]
-position = Vector2( 1020.48, 13.3966 )
-scale = Vector2( 0.25, 0.4 )
+position = Vector2( -62.0896, 268.847 )
+scale = Vector2( 0.2, 0.35 )
 script = ExtResource( 37 )
 
+[node name="ColorRect" type="ColorRect" parent="obj_door"]
+margin_left = -20.009
+margin_top = -18.0472
+margin_right = 26.991
+margin_bottom = 17.9528
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sprite" type="AnimatedSprite" parent="obj_door"]
-position = Vector2( 3.32959, -1.42697 )
+position = Vector2( 3.57208, -1.42697 )
 scale = Vector2( 1.71553, 1 )
 frames = SubResource( 2 )
 animation = "closed"
@@ -1256,7 +1266,7 @@ position = Vector2( -168.817, 377.485 )
 scale = Vector2( 0.291128, 0.329089 )
 
 [node name="Key" parent="PickUp" instance=ExtResource( 35 )]
-position = Vector2( 2536.98, -841.631 )
+position = Vector2( 255.68, -289.042 )
 scale = Vector2( 0.286233, 0.282913 )
 
 [node name="Heart" parent="PickUp" instance=ExtResource( 65 )]
@@ -1799,15 +1809,15 @@ pitch_scale = 2.0
 [connection signal="body_entered" from="obj_door/Area2D" to="obj_door" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="obj_door/Timer" to="obj_door" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/vertical_fake_wall/Timer" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2/wall_collision" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2/wall_collision" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="PickUp/Key" to="PickUp/Key" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="PickUp/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="keycollected" from="PickUp/Key" to="obj_player/Sprite/UI Layer Only/Key Icon/Count3" method="_on_Key_keycollected"]
-[connection signal="body_entered" from="PickUp/Heart" to="PickUp/Heart" method="_on_Heart_body_entered"]
 [connection signal="body_entered" from="PickUp/Heart" to="obj_player" method="_on_Heart_body_entered"]
+[connection signal="body_entered" from="PickUp/Heart" to="PickUp/Heart" method="_on_Heart_body_entered"]
 [connection signal="heartCount" from="PickUp/Heart" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Heart_heartCount"]
 [connection signal="bagsCollected" from="PickUp/obj_bag" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="PickUp/obj_bag" to="PickUp/obj_bag" method="_on_obj_bag_body_entered"]

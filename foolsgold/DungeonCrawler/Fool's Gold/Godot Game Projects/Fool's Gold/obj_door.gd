@@ -18,5 +18,5 @@ func _on_Area2D_body_entered(body):
 
 
 func _on_Timer_timeout():
-	value = get_tree().change_scene("res://Home Screen/HomeScreen.tscn")
+	value = get_tree().change_scene("res://Level Two/Second Level.tscn")
 	return value
