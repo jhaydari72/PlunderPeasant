@@ -19,3 +19,7 @@ func _on_QuitGame_pressed():
 	visible = new_pause_state
 	return value
 	
+
+
+func _on_Continue_pressed():
+	pass # Replace with function body.
