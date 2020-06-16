@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Next Level Screen.gd" type="Script" id=1]
+[ext_resource path="res://Font/dogicapixelbold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="Next Level Screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 61.6704
+margin_top = 77.8364
+margin_right = 974.67
+margin_bottom = 153.836
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
+custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
+custom_constants/shadow_offset_x = -9
+custom_constants/shadow_offset_y = 9
+text = "Next Level..."
+align = 1
+valign = 1
+
+[node name="Next Level " type="Button" parent="."]
+margin_left = 347.399
+margin_top = 272.994
+margin_right = 647.399
+margin_bottom = 302.994
+custom_fonts/font = SubResource( 2 )
+text = "Continue"
+flat = true
+
+[node name="Main Menu" type="Button" parent="."]
+margin_left = 354.455
+margin_top = 349.665
+margin_right = 638.455
+margin_bottom = 379.665
+custom_fonts/font = SubResource( 3 )
+text = "Main Menu"
+flat = true
+[connection signal="pressed" from="Next Level " to="." method="_on_Next_Level__pressed"]
+[connection signal="pressed" from="Main Menu" to="." method="_on_Main_Menu_pressed"]
