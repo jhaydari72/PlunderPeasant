@@ -1712,6 +1712,7 @@ script = ExtResource( 34 )
 
 [node name="Pause" type="Control" parent="obj_player/Sprite/CanvasLayer"]
 pause_mode = 2
+visible = false
 margin_right = 186.0
 margin_bottom = 123.0
 rect_scale = Vector2( 5.52, 5 )
@@ -1780,6 +1781,9 @@ custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 0, 1, 0.0862745, 1 )
 text = "Continue"
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Camera2D" type="Camera2D" parent="obj_player/Sprite"]
 current = true
@@ -1877,11 +1881,11 @@ pitch_scale = 2.0
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2/wall_collision" method="_on_Timer_timeout"]
-[connection signal="body_entered" from="PickUp/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="PickUp/Key" to="PickUp/Key" method="_on_Key_body_entered"]
+[connection signal="body_entered" from="PickUp/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="keycollected" from="PickUp/Key" to="obj_player/Sprite/UI Layer Only/Key Icon/Count3" method="_on_Key_keycollected"]
-[connection signal="body_entered" from="PickUp/Heart" to="obj_player" method="_on_Heart_body_entered"]
 [connection signal="body_entered" from="PickUp/Heart" to="PickUp/Heart" method="_on_Heart_body_entered"]
+[connection signal="body_entered" from="PickUp/Heart" to="obj_player" method="_on_Heart_body_entered"]
 [connection signal="heartCount" from="PickUp/Heart" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Heart_heartCount"]
 [connection signal="bagsCollected" from="PickUp/obj_bag" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="PickUp/obj_bag" to="PickUp/obj_bag" method="_on_obj_bag_body_entered"]
