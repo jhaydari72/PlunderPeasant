@@ -5,18 +5,19 @@ const ACCELERATION = 500
 const MAX_SPEED = 50
 const FRICTION = 500
  
-
+signal dead
 
 enum {
 	MOVE,
 	ATTACK,
-	DEATH
+	DEATH,
+	HIT
 }
 var state = MOVE
 var Key = 0
 var velocity = Vector2.ZERO
 var kill_direction = Vector2.LEFT
-var health = 5
+var health = 4
 var value = null
 var knockback = Vector2.ZERO
 
@@ -43,6 +44,8 @@ func _physics_process(delta):
 			move_state(delta)
 		ATTACK:
 			attack_state(delta)
+		HIT:
+			get_hit(delta)
 
 #movement states
 func move_state(delta):
@@ -61,6 +64,7 @@ func move_state(delta):
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationTree.set("parameters/Attack/blend_position", input_vector)
 		animationTree.set("parameters/Death/blend_position", input_vector)
+		animationTree.set("parameters/Get_hit/blend_position", input_vector)
 		animationState.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 		
@@ -83,12 +87,24 @@ func move_state(delta):
 		var MusicNode = $AudioStreamPlayer2D
 		MusicNode.play()
 
-	if health == 0:
+	if health <= 0:
+		emit_signal("dead")
 		animationState.travel("Death")
 		state = DEATH
 		$Timer.start()
 		var MusicNode = $AudioStreamPlayer2D2
 		MusicNode.play()
+	
+
+
+func get_hit(_delta):
+	animationState.travel("Get_hit")
+	if health <= 0:
+		state = DEATH
+	
+	
+func hit_animation_finished():
+	state = MOVE
 	
 func attack_state(_delta):
 	velocity = Vector2.ZERO
@@ -102,7 +118,7 @@ func _on_Hurtbox_area_entered(area):
 	health -= 1
 	hurtbox.start_invincibility(1)
 	knockback = area.knockback_vector * 200
-	
+	state = HIT
 	
 
 func _on_Timer_timeout():

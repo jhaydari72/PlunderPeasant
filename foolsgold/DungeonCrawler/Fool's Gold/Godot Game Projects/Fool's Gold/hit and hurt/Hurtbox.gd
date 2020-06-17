@@ -43,3 +43,7 @@ func _on_Hurtbox_invincibility_ended():
 func _on_Hurtbox_area_entered(_area):
 	timer.start()
 	queue_free()
+
+
+func _on_obj_player_dead():
+	queue_free()
