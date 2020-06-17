@@ -87,7 +87,7 @@ func move_state(delta):
 		var MusicNode = $AudioStreamPlayer2D
 		MusicNode.play()
 
-	if health <= 0:
+	if health < 1:
 		emit_signal("dead")
 		animationState.travel("Death")
 		state = DEATH
@@ -99,7 +99,8 @@ func move_state(delta):
 
 func get_hit(_delta):
 	animationState.travel("Get_hit")
-	if health <= 0:
+	if health < 1:
+		emit_signal("dead")
 		state = DEATH
 	
 	
