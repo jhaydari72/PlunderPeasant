@@ -100,7 +100,7 @@ func attack_animation_finished():
 
 func _on_Hurtbox_area_entered(area):
 	health -= 1
-	hurtbox.start_invincibility(0.3)
+	hurtbox.start_invincibility(1)
 	knockback = area.knockback_vector * 200
 	
 	
