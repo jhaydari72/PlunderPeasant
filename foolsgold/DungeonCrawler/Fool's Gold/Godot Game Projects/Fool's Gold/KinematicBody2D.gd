@@ -96,7 +96,7 @@ func move_state(delta):
 		MusicNode.play()
 	
 
-
+#new get hit state
 func get_hit(_delta):
 	animationState.travel("Get_hit")
 	if health < 1:
