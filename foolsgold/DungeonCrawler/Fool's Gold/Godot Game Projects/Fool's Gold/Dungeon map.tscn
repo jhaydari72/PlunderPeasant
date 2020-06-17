@@ -340,10 +340,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=33]
-extents = Vector2( 3.37317, 26.3292 )
+extents = Vector2( 4.36072, 7.92664 )
 
 [sub_resource type="RectangleShape2D" id=34]
-extents = Vector2( 13.6205, 26.1803 )
+extents = Vector2( 21.2715, 26.1803 )
 
 [sub_resource type="DynamicFont" id=35]
 size = 8
@@ -961,8 +961,8 @@ height = 12.0896
 extents = Vector2( 4.63716, 4.92157 )
 
 [sub_resource type="CapsuleShape2D" id=91]
-radius = 5.26741
-height = 1.73117
+radius = 4.39743
+height = 5.69391
 
 [node name="Dungeon map" type="Node2D"]
 position = Vector2( 2.82852, 2.15314 )
@@ -975,7 +975,7 @@ tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 
 
 [node name="CanvasModulate" parent="Map Layout" index="3"]
 modulate = Color( 0, 0, 0, 1 )
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
 
 [node name="Backgound" type="Node2D" parent="."]
 position = Vector2( -45.6961, 236.747 )
@@ -1641,7 +1641,6 @@ position = Vector2( -654.979, -282.084 )
 position = Vector2( 753.381, 213.938 )
 
 [node name="Spider_barrel" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-visible = false
 modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( -727.847, 9.3927 )
 scale = Vector2( 0.75, 0.85 )
@@ -1961,14 +1960,14 @@ frames = SubResource( 32 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch5"]
-position = Vector2( 60.9432, 451.14 )
+position = Vector2( 54.8029, 456.696 )
 shape = SubResource( 33 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch5"]
 position = Vector2( 0, 2.57212 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch5/Area2D"]
-position = Vector2( 44.0324, 448.119 )
+position = Vector2( 49.5061, 454.552 )
 shape = SubResource( 34 )
 
 [node name="torch6" type="StaticBody2D" parent="Torches behind player"]
@@ -2127,7 +2126,7 @@ shape = SubResource( 33 )
 position = Vector2( 0, 2.57212 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch9/Area2D"]
-position = Vector2( 44.0324, 448.119 )
+position = Vector2( 44.8279, 458.063 )
 shape = SubResource( 34 )
 
 [node name="torch10" type="StaticBody2D" parent="Torches behind player"]
@@ -2166,7 +2165,7 @@ shape = SubResource( 33 )
 position = Vector2( 0, 2.57212 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch10/Area2D"]
-position = Vector2( 44.0324, 448.119 )
+position = Vector2( 44.4302, 454.483 )
 shape = SubResource( 34 )
 
 [node name="torch11" type="StaticBody2D" parent="Torches behind player"]
@@ -2205,7 +2204,7 @@ shape = SubResource( 33 )
 position = Vector2( 0, 2.57212 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch11/Area2D"]
-position = Vector2( 44.0324, 448.119 )
+position = Vector2( 44.4275, 457.837 )
 shape = SubResource( 34 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
@@ -2504,7 +2503,7 @@ volume_db = -10.097
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
-position = Vector2( 0.0724407, 8.77665 )
+position = Vector2( 0.0216289, 8.48234 )
 shape = SubResource( 91 )
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
@@ -2523,7 +2522,6 @@ scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 15 )
 
 [node name="torch_light" type="Light2D" parent="Torhces in front of player/torch6"]
-visible = false
 position = Vector2( 47.1101, 448.145 )
 scale = Vector2( 0.168953, 0.162966 )
 texture = ExtResource( 13 )
@@ -2558,7 +2556,7 @@ position = Vector2( 44.0324, 448.119 )
 shape = SubResource( 34 )
 
 [node name="torch7" type="StaticBody2D" parent="Torhces in front of player"]
-position = Vector2( 8.41102, 285.057 )
+position = Vector2( 10.2675, 285.136 )
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 15 )
 
@@ -2743,6 +2741,7 @@ shape = SubResource( 34 )
 [connection signal="pressed" from="obj_player/Sprite/CanvasLayer/Pause/Continue" to="obj_player/Sprite/CanvasLayer/Pause" method="_on_Continue_pressed"]
 [connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="obj_player/Hurtbox" to="obj_player" method="_on_Hurtbox_area_entered"]
+[connection signal="invincibility_ended" from="obj_player/Hurtbox" to="obj_player/Hurtbox" method="_on_Hurtbox_invincibility_ended"]
 
 [editable path="Map Layout"]
 

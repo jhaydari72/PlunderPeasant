@@ -100,18 +100,11 @@ func attack_animation_finished():
 
 func _on_Hurtbox_area_entered(area):
 	health -= 1
-	hurtbox.start_invincibility(0.3)
+	hurtbox.start_invincibility(1)
 	knockback = area.knockback_vector * 200
 	
 	
 
-#This function will make the player take damage from the rats
-
-
-		
-	
-	
-	
 func _on_Timer_timeout():
 	value = get_tree().change_scene("res://GameOver/GameOver.tscn")
 	return value
