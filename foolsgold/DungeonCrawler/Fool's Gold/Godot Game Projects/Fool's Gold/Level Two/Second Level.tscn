@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player Scene/obj_player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Level Two/Map Layout.tscn" type="PackedScene" id=2]
@@ -7,6 +7,14 @@
 [ext_resource path="res://Blockers/Barrel Collision.tscn" type="PackedScene" id=5]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 2.58932
+height = 10.9732
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 6.13159
+height = 0.423706
 
 [node name="Second Level" type="Node2D"]
 
@@ -2487,6 +2495,18 @@ visible = true
 [node name="AnimationTree" parent="obj_player" index="5"]
 parameters/playback = SubResource( 1 )
 
+[node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
+position = Vector2( 3.74994, -0.208252 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
+position = Vector2( 0.347168, 9.16647 )
+shape = SubResource( 3 )
+
 [editable path="Map Layout"]
 
 [editable path="obj_player"]
+
+[editable path="obj_player/HitboxPivot/SwordHitbox"]
+
+[editable path="obj_player/Hurtbox"]
