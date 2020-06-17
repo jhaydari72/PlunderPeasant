@@ -83,7 +83,7 @@ func move_state(delta):
 		var MusicNode = $AudioStreamPlayer2D
 		MusicNode.play()
 
-	if health <= 0:
+	if health == 0:
 		animationState.travel("Death")
 		state = DEATH
 		$Timer.start()
@@ -100,7 +100,7 @@ func attack_animation_finished():
 
 func _on_Hurtbox_area_entered(area):
 	health -= 1
-	hurtbox.start_invincibility(0.5)
+	hurtbox.start_invincibility(0.3)
 	knockback = area.knockback_vector * 200
 	
 	
@@ -127,8 +127,3 @@ func _on_Heart_body_entered(_body):
 func _on_Key_body_entered(_body):
 	Key += 1
 
-
-func _on_Ghost_body_entered(body):
-	if body.name == "obj_player":
-		health -= 1
-		

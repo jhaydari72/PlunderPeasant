@@ -1562,8 +1562,7 @@ anims/rat_animation = SubResource( 11 )
 position = Vector2( 198.56, -217.935 )
 
 [node name="Ghost" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
-position = Vector2( -512.867, 93.648 )
-scale = Vector2( 0.612045, 0.806023 )
+position = Vector2( -527.285, 81.3022 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost"]
 autoplay = "Ghost Animation"
@@ -2598,7 +2597,6 @@ shape = SubResource( 34 )
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2/wall_collision" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Enemies assets/Rat Sprite/Rat Attack" to="obj_player" method="_on_Rat_Attack_Player"]
 [connection signal="body_entered" from="Enemies assets/Rat Sprite/Rat Attack2" to="obj_player" method="_on_Rat_Attack_Player"]
-[connection signal="body_entered" from="Enemies assets/Ghost Sprite/Ghost" to="obj_player" method="_on_Ghost_body_entered"]
 [connection signal="frame_changed" from="Doors/obj_door/Sprite" to="Doors/obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="Doors/obj_door/Area2D" to="Doors/obj_door" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Doors/obj_door/Timer" to="Doors/obj_door" method="_on_Timer_timeout"]
