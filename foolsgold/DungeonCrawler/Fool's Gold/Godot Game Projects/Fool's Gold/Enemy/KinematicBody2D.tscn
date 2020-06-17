@@ -14,7 +14,6 @@
 [ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=12]
 [ext_resource path="res://Enemy/Wander.tscn" type="PackedScene" id=13]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 7 ) ],
@@ -22,14 +21,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "attack",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
 "name": "barrel",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "attack",
 "speed": 5.0
 } ]
 
@@ -37,7 +36,7 @@ animations = [ {
 extents = Vector2( 11.2558, 11.3136 )
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 10.1349
+radius = 12.2634
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 26.214
@@ -83,6 +82,7 @@ script = ExtResource( 3 )
 [connection signal="frame_changed" from="AnimatedSprite" to="CollisionShape2D2" method="_on_AnimatedSprite_frame_changed"]
 [connection signal="frame_changed" from="AnimatedSprite" to="." method="_on_AnimatedSprite_frame_changed"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="invincibility_ended" from="Hurtbox" to="Hurtbox" method="_on_Hurtbox_invincibility_ended"]
 
 [editable path="Hitbox"]
 

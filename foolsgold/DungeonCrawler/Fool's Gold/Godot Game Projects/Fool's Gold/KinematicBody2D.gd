@@ -105,13 +105,6 @@ func _on_Hurtbox_area_entered(area):
 	
 	
 
-#This function will make the player take damage from the rats
-
-
-		
-	
-	
-	
 func _on_Timer_timeout():
 	value = get_tree().change_scene("res://GameOver/GameOver.tscn")
 	return value
