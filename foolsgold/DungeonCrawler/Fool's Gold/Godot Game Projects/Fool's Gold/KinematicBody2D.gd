@@ -107,9 +107,7 @@ func _on_Hurtbox_area_entered(area):
 
 #This function will make the player take damage from the rats
 
-func _on_Rat_Attack_Player(body):
-	if body.name == "obj_player":
-		health -= 1
+
 		
 	
 	
