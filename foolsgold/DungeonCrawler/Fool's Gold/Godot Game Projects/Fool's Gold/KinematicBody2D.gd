@@ -17,7 +17,7 @@ var state = MOVE
 var Key = 0
 var velocity = Vector2.ZERO
 var kill_direction = Vector2.LEFT
-var health = 4
+var health = 4  
 var value = null
 var knockback = Vector2.ZERO
 
