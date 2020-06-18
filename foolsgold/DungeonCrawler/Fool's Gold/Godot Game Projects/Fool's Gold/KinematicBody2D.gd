@@ -18,7 +18,7 @@ var state = MOVE
 var Key = 0
 var velocity = Vector2.ZERO
 var kill_direction = Vector2.LEFT
-var health = 4
+var health = 2.857
 var value = null
 var knockback = Vector2.ZERO
 
@@ -121,6 +121,7 @@ func _on_Hurtbox_area_entered(area):
 	hurtbox.start_invincibility(1)
 	knockback = area.knockback_vector * 200
 	emit_signal("health_loss")
+	print("not me!")
 	state = HIT
 	
 	
