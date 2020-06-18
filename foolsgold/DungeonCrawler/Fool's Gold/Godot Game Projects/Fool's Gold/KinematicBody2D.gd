@@ -6,6 +6,7 @@ const MAX_SPEED = 50
 const FRICTION = 500
  
 signal dead
+signal health_loss
 
 enum {
 	MOVE,
@@ -17,7 +18,7 @@ var state = MOVE
 var Key = 0
 var velocity = Vector2.ZERO
 var kill_direction = Vector2.LEFT
-var health = 4  
+var health = 4
 var value = null
 var knockback = Vector2.ZERO
 
@@ -119,7 +120,9 @@ func _on_Hurtbox_area_entered(area):
 	health -= 1
 	hurtbox.start_invincibility(1)
 	knockback = area.knockback_vector * 200
+	emit_signal("health_loss")
 	state = HIT
+	
 	
 
 func _on_Timer_timeout():
@@ -129,7 +132,7 @@ func _on_Timer_timeout():
 
 
 func _on_Heart_body_entered(_body):
-	health = health + 1
+	health += 1
 
 
 func _on_Key_body_entered(_body):
