@@ -328,14 +328,14 @@ color_ramp = SubResource( 28 )
 
 [sub_resource type="SpriteFrames" id=32]
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
 "speed": 5.0
 } ]
 
@@ -2114,7 +2114,6 @@ position = Vector2( 436.384, 517.664 )
 shape = SubResource( 34 )
 
 [node name="torch6" type="StaticBody2D" parent="Torches behind player"]
-visible = false
 position = Vector2( -109.116, 219.631 )
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 15 )
@@ -2839,8 +2838,8 @@ position = Vector2( -44.0562, 528.051 )
 shape = SubResource( 34 )
 [connection signal="timeout" from="Fake Walls/vertical_fake_wall/Timer" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="Fake Walls/vertical_fake_wall/Area2D" to="Fake Walls/vertical_fake_wall" method="_on_Area2D_area_entered"]
-[connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="Fake Walls/horizontal_fake_wall/Area2D" to="Fake Walls/horizontal_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Fake Walls/horizontal_fake_wall2/Area2D" to="Fake Walls/horizontal_fake_wall2" method="_on_Area2D_area_entered"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2/wall_collision" method="_on_Timer_timeout"]
