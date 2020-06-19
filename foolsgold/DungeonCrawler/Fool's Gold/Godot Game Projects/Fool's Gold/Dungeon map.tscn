@@ -1563,6 +1563,7 @@ modulate = Color( 0.835294, 0.835294, 0.835294, 1 )
 tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 2, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 4, 0, 16, 4, 0, 131069, 2, 0, 131070, 3, 0, 131071, 3, 0, 65536, 1, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 4, 0, 65541, 8, 0, 65542, 2, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 2, 0, 65547, 10, 0, 65548, 8, 0, 65549, 3, 0, 65550, 4, 0, 65551, 5, 0, 65552, 5, 0, 196605, 1, 0, 196606, 2, 0, 196607, 8, 0, 131072, 8, 0, 131073, 3, 0, 131074, 4, 0, 131075, 4, 0, 131076, 5, 0, 131077, 8, 0, 131078, 1, 0, 131079, 2, 0, 131080, 2, 0, 131081, 3, 0, 131082, 1, 0, 131083, 5, 0, 131084, 8, 0, 131085, 2, 0, 131086, 3, 0, 131087, 5, 0, 131088, 5, 0, 262141, 1, 0, 262142, 3, 0, 262143, 3, 0, 196608, 3, 0, 196609, 3, 0, 196610, 10, 0, 196611, 5, 0, 196612, 5, 0, 196613, 8, 0, 196614, 1, 0, 196615, 1, 0, 196616, 10, 0, 196617, 8, 0, 196618, 1, 0, 196619, 10, 0, 196620, 8, 0, 196621, 1, 0, 196622, 8, 0, 196623, 5, 0, 196624, 5, 0, 327676, 2, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 4, 0, 262145, 8, 0, 262146, 10, 0, 262147, 8, 0, 262148, 5, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0, 262152, 10, 0, 262153, 8, 0, 262154, 1, 0, 262155, 10, 0, 262156, 8, 0, 262157, 1, 0, 262158, 8, 0, 262159, 5, 0, 262160, 5, 0, 393212, 1, 0, 393213, 9, 0, 393214, 9, 0, 393215, 9, 0, 327680, 10, 0, 327681, 8, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 8, 0, 327690, 1, 0, 327691, 10, 0, 327692, 8, 0, 327693, 0, 0, 327694, 7, 0, 327695, 6, 0, 327696, 5, 0, 458748, 0, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 10, 0, 393217, 3, 0, 393218, 4, 0, 393219, 8, 0, 393220, 2, 0, 393221, 4, 0, 393222, 8, 0, 393223, 2, 0, 393224, 5, 0, 393225, 8, 0, 393226, 1, 0, 393227, 2, 0, 393228, 8, 0, 393229, 8, 0, 393230, 8, 0, 393231, 8, 0, 393232, 5, 0, 458752, 10, 0, 458753, 5, 0, 458754, 5, 0, 458755, 8, 0, 458756, 0, 0, 458757, 7, 0, 458758, 8, 0, 458759, 1, 0, 458760, 4, 0, 458761, 8, 0, 458762, 2, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 4, 0, 458768, 5, 0, 524288, 1, 0, 524289, 5, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 2, 0, 524296, 8, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 8, 0, 524304, 5, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0 )
 
 [node name="CanvasModulate" parent="Map Layout" index="3"]
+visible = false
 modulate = Color( 0, 0, 0, 1 )
 color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
 
@@ -6861,6 +6862,1253 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch18/Area2D"]
 position = Vector2( 161.22, 151.561 )
 shape = SubResource( 52 )
+
+[node name="torch19" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 1035.01, 416.931 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch19"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch19/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch19"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch19"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch19"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch19/Area2D"]
+position = Vector2( -84.5858, 459.151 )
+shape = SubResource( 52 )
+
+[node name="torch20" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 1035.25, 320.328 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch20"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch20/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch20"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch20"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch20"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch20/Area2D"]
+position = Vector2( -58.1417, 506.309 )
+shape = SubResource( 52 )
+
+[node name="torch21" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 1035.14, 229.352 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch21"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch21/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch21"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch21"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch21"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch21/Area2D"]
+position = Vector2( -58.1417, 506.309 )
+shape = SubResource( 52 )
+
+[node name="torch22" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 1035.11, 138.548 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch22"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch22/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch22"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch22"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch22"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch22/Area2D"]
+position = Vector2( -58.1417, 506.309 )
+shape = SubResource( 52 )
+
+[node name="torch23" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 1035.17, 53.8637 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch23"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch23/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch23"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch23"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch23"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch23/Area2D"]
+position = Vector2( -58.1417, 506.309 )
+shape = SubResource( 52 )
+
+[node name="torch24" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 1035.15, -48.0937 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch24"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch24/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch24"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch24"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch24"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch24/Area2D"]
+position = Vector2( -58.1417, 506.309 )
+shape = SubResource( 52 )
+
+[node name="torch25" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 971.034, 87.7272 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch25"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch25/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch25"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch25"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch25"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch25/Area2D"]
+position = Vector2( -54.7239, 172.53 )
+shape = SubResource( 52 )
+
+[node name="torch26" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 971.13, 168.751 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch26"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch26/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch26"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch26"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch26"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch26/Area2D"]
+position = Vector2( -50.7379, -149.01 )
+shape = SubResource( 52 )
+
+[node name="torch27" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 970.956, 241.047 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch27"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch27/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch27"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch27"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch27"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch27/Area2D"]
+position = Vector2( -52.7308, -434.012 )
+shape = SubResource( 52 )
+
+[node name="torch28" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 786.019, 57.086 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch28"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch28/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch28"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch28"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch28"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch28/Area2D"]
+position = Vector2( -68.4224, 562.756 )
+shape = SubResource( 52 )
+
+[node name="torch29" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 786.017, 170.662 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch29"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch29/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch29"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch29"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch29"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch29/Area2D"]
+position = Vector2( -68.4224, 562.756 )
+shape = SubResource( 52 )
+
+[node name="torch30" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 715.167, -4.12415 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch30"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch30/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch30"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch30"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch30"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch30/Area2D"]
+position = Vector2( -46.3392, 380.201 )
+shape = SubResource( 52 )
+
+[node name="torch31" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 715.012, 80.4316 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch31"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch31/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch31"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch31"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch31"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch31/Area2D"]
+position = Vector2( -46.3392, 380.201 )
+shape = SubResource( 52 )
+
+[node name="torch32" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 715.003, 164.16 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch32"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch32/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch32"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch32"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch32"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch32/Area2D"]
+position = Vector2( -46.3392, 380.201 )
+shape = SubResource( 52 )
+
+[node name="torch33" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 715.077, 249.186 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch33"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch33/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch33"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch33"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch33"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch33/Area2D"]
+position = Vector2( -46.3392, 380.201 )
+shape = SubResource( 52 )
+
+[node name="torch34" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 657.96, 102.591 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch34"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch34/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch34"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch34"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch34"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch34/Area2D"]
+position = Vector2( -46.3392, 380.201 )
+shape = SubResource( 52 )
+
+[node name="torch35" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 658.029, 197.415 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch35"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch35/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch35"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch35"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch35"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch35/Area2D"]
+position = Vector2( -46.3392, 380.201 )
+shape = SubResource( 52 )
+
+[node name="torch36" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 658.173, 301.006 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch36"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch36/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch36"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch36"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch36"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch36/Area2D"]
+position = Vector2( -46.3392, 380.201 )
+shape = SubResource( 52 )
+
+[node name="torch37" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 594.023, 376.741 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch37"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch37/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch37"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch37"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch37"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch37/Area2D"]
+position = Vector2( -46.3392, 380.201 )
+shape = SubResource( 52 )
+
+[node name="torch38" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 594.104, 289.066 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch38"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch38/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch38"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch38"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch38"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch38/Area2D"]
+position = Vector2( -63.8218, 403.977 )
+shape = SubResource( 52 )
+
+[node name="torch39" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 593.99, 151.495 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch39"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch39/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch39"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch39"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch39"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch39/Area2D"]
+position = Vector2( -72.9129, 535.447 )
+shape = SubResource( 52 )
+
+[node name="torch40" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 523.096, 165.934 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch40"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch40/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch40"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch40"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch40"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch40/Area2D"]
+position = Vector2( -45.3328, 332.194 )
+shape = SubResource( 52 )
+
+[node name="torch41" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 338.071, 69.5086 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch41"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch41/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch41"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch41"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch41"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch41/Area2D"]
+position = Vector2( -70.7271, 267.732 )
+shape = SubResource( 52 )
+
+[node name="torch42" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 338.026, 138.52 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch42"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch42/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch42"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch42"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch42"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch42/Area2D"]
+position = Vector2( -65.1328, 418.781 )
+shape = SubResource( 52 )
+
+[node name="torch43" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 402.187, 139.314 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch43"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch43/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch43"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch43"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch43"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch43/Area2D"]
+position = Vector2( -59.4249, 504.4 )
+shape = SubResource( 52 )
+
+[node name="torch44" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 466.012, 124.012 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch44"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch44/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch44"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch44"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch44"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch44/Area2D"]
+position = Vector2( -57.157, 536.798 )
+shape = SubResource( 52 )
+
+[node name="torch45" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 267.17, 42.9217 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch45"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch45/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch45"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch45"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch45"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch45/Area2D"]
+position = Vector2( -56.1488, 390.537 )
+shape = SubResource( 52 )
+
+[node name="torch46" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 267.188, 133.989 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch46"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch46/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch46"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch46"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch46"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch46/Area2D"]
+position = Vector2( -53.4915, 346.026 )
+shape = SubResource( 52 )
+
+[node name="torch47" type="StaticBody2D" parent="Torhces in front of player"]
+position = Vector2( 139.027, 179.834 )
+scale = Vector2( 0.25, 0.25 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="torch_light" type="Light2D" parent="Torhces in front of player/torch47"]
+position = Vector2( 47.1101, 444.4 )
+scale = Vector2( 0.168953, 0.158701 )
+texture = ExtResource( 13 )
+texture_scale = 5.0
+shadow_enabled = true
+script = ExtResource( 16 )
+
+[node name="flame" type="Particles2D" parent="Torhces in front of player/torch47/torch_light"]
+show_behind_parent = true
+position = Vector2( 0.755707, -32.498 )
+rotation = -1.5708
+scale = Vector2( 10.2223, 9.10934 )
+amount = 50
+process_material = SubResource( 49 )
+script = ExtResource( 25 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch47"]
+position = Vector2( 50.6324, 450.691 )
+scale = Vector2( 1.53905, 1.66589 )
+frames = SubResource( 50 )
+animation = "off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch47"]
+position = Vector2( 55.328, 457.012 )
+shape = SubResource( 51 )
+
+[node name="Area2D" type="Area2D" parent="Torhces in front of player/torch47"]
+position = Vector2( 0, 2.57212 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch47/Area2D"]
+position = Vector2( -45.5172, 324.382 )
+shape = SubResource( 52 )
 [connection signal="timeout" from="Fake Walls/vertical_fake_wall/Timer" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="Fake Walls/vertical_fake_wall/Area2D" to="Fake Walls/vertical_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
@@ -7049,6 +8297,35 @@ shape = SubResource( 52 )
 [connection signal="area_entered" from="Torhces in front of player/torch16/Area2D" to="Torhces in front of player/torch16" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torhces in front of player/torch17/Area2D" to="Torhces in front of player/torch17" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torhces in front of player/torch18/Area2D" to="Torhces in front of player/torch18" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch19/Area2D" to="Torhces in front of player/torch19" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch20/Area2D" to="Torhces in front of player/torch20" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch21/Area2D" to="Torhces in front of player/torch21" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch22/Area2D" to="Torhces in front of player/torch22" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch23/Area2D" to="Torhces in front of player/torch23" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch24/Area2D" to="Torhces in front of player/torch24" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch25/Area2D" to="Torhces in front of player/torch25" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch26/Area2D" to="Torhces in front of player/torch26" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch27/Area2D" to="Torhces in front of player/torch27" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch28/Area2D" to="Torhces in front of player/torch28" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch29/Area2D" to="Torhces in front of player/torch29" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch30/Area2D" to="Torhces in front of player/torch30" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch31/Area2D" to="Torhces in front of player/torch31" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch32/Area2D" to="Torhces in front of player/torch32" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch33/Area2D" to="Torhces in front of player/torch33" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch34/Area2D" to="Torhces in front of player/torch34" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch35/Area2D" to="Torhces in front of player/torch35" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch36/Area2D" to="Torhces in front of player/torch36" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch37/Area2D" to="Torhces in front of player/torch37" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch38/Area2D" to="Torhces in front of player/torch38" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch39/Area2D" to="Torhces in front of player/torch39" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch40/Area2D" to="Torhces in front of player/torch40" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch41/Area2D" to="Torhces in front of player/torch41" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch42/Area2D" to="Torhces in front of player/torch42" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch43/Area2D" to="Torhces in front of player/torch43" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch44/Area2D" to="Torhces in front of player/torch44" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch45/Area2D" to="Torhces in front of player/torch45" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch46/Area2D" to="Torhces in front of player/torch46" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Torhces in front of player/torch47/Area2D" to="Torhces in front of player/torch47" method="_on_Area2D_area_entered"]
 
 [editable path="Map Layout"]
 
