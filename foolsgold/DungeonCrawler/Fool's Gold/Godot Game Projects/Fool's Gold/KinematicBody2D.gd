@@ -78,12 +78,12 @@ func move_state(delta):
 	
 	velocity = move_and_slide(velocity)
 	
-	if Input.is_action_pressed("ui_d"):
-		var MusicNode = $walking_sound
-		MusicNode.play()
-	else:
-		var MusicNode = $walking_sound
-		MusicNode.stop()
+	#if Input.is_action_pressed("ui_d"):
+		#var MusicNode = $walking_sound
+		#MusicNode.play()
+	#else:
+		#var MusicNode = $walking_sound
+		#MusicNode.stop()
 	
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK

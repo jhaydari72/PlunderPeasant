@@ -1666,14 +1666,14 @@ color_ramp = SubResource( 86 )
 
 [sub_resource type="SpriteFrames" id=90]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
