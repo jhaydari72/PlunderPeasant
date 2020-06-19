@@ -18,7 +18,6 @@ var state = MOVE
 var Key = 0
 var velocity = Vector2.ZERO
 var kill_direction = Vector2.LEFT
-var health = 2.857
 var value = null
 var knockback = Vector2.ZERO
 
@@ -29,6 +28,7 @@ onready var animationState = animationTree.get("parameters/playback")
 onready var swordhitbox = $HitboxPivot/SwordHitbox
 onready var time = $Timer
 onready var hurtbox = $Hurtbox
+onready var heart_count = $"Sprite/UI Layer Only/Heart Icon/Count2"
 
 func _ready():
 	randomize()
@@ -45,8 +45,10 @@ func _physics_process(delta):
 			move_state(delta)
 		ATTACK:
 			attack_state(delta)
+			dead()
 		HIT:
 			get_hit(delta)
+			dead()
 
 #movement states
 func move_state(delta):
@@ -87,22 +89,13 @@ func move_state(delta):
 		state = ATTACK
 		var MusicNode = $AudioStreamPlayer2D
 		MusicNode.play()
-
-	if health < 1:
-		emit_signal("dead")
-		animationState.travel("Death")
-		state = DEATH
-		$Timer.start()
-		var MusicNode = $AudioStreamPlayer2D2
-		MusicNode.play()
+	dead()
+	
 	
 
 #new get hit state
 func get_hit(_delta):
 	animationState.travel("Get_hit")
-	if health < 1:
-		emit_signal("dead")
-		state = DEATH
 	
 	
 func hit_animation_finished():
@@ -117,7 +110,6 @@ func attack_animation_finished():
 
 
 func _on_Hurtbox_area_entered(area):
-	health -= 1
 	hurtbox.start_invincibility(1)
 	knockback = area.knockback_vector * 200
 	emit_signal("health_loss")
@@ -129,10 +121,16 @@ func _on_Timer_timeout():
 	value = get_tree().change_scene("res://GameOver/GameOver.tscn")
 	return value
 
+func dead():
+	if heart_count.hearts == 0:
+		emit_signal("dead")
+		animationState.travel("Death")
+		state = DEATH
+		$Timer.start()
+		var MusicNode = $AudioStreamPlayer2D2
+		MusicNode.play()
 
 
-func _on_Heart_body_entered(_body):
-	health += 1
 
 
 func _on_Key_body_entered(_body):
