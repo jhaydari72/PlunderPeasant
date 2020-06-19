@@ -1692,6 +1692,246 @@ position = Vector2( -133.839, 123.297 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 51 )
 
+[node name="Spider Wed25" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2797.17, 1149.91 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed26" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3170.27, 1150.31 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed27" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3520.7, 1149.51 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed28" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3852.83, 1146.33 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed29" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 4081.95, 893.353 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed30" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3715.61, 893.353 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed31" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3342.1, 892.955 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed32" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2888.25, 893.751 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed33" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3964.55, 554.207 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed34" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3570.77, 553.809 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed35" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3042.67, 637.605 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed36" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3853.08, -386.772 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed37" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3633.71, -386.087 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed38" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3825.89, -641.427 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed39" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3533.32, -641.786 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed40" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3842.3, -898.094 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed41" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3473.49, -897.338 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed42" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 3046.87, -898.094 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed43" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2744.94, -897.338 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed44" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2536.73, -897.716 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed45" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2252.19, -897.338 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed46" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 1937.8, -897.716 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed47" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 1646.83, -897.716 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed48" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 1340.75, -897.338 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed49" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 1071.71, -898.472 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed50" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 801.523, -898.094 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed51" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 497.71, -898.85 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed52" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 190.496, -898.472 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed53" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( -604.669, -641.944 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed54" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( -292.423, -641.944 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed55" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 13.0607, -641.944 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed56" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 421.779, -641.816 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed57" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 755.067, -642.572 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed58" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 1176.02, -641.438 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed59" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 1686.85, -640.838 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed60" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2040.6, -642.037 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed61" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2324.19, -643.237 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed62" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2786.46, -641.438 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed63" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2486.08, -384.823 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed64" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2200.08, -385.423 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed65" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2022.01, -385.423 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed66" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 984.759, -386.022 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed67" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 662.192, -384.823 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed68" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 409.175, -385.422 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed69" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( -367.628, -385.826 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed70" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( -348.694, -131.483 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed71" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( -47.6481, -130.221 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed72" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 355.009, -129.59 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
 [node name="Banner Layers" type="Node2D" parent="Backgound"]
 
 [node name="Banner" type="Sprite" parent="Backgound/Banner Layers"]
