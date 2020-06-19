@@ -1,4 +1,4 @@
-[gd_scene load_steps=171 format=2]
+[gd_scene load_steps=178 format=2]
 
 [ext_resource path="res://Level Two/Map Layout.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blockers/blocker.tscn" type="PackedScene" id=2]
@@ -244,6 +244,34 @@ tracks/1/keys = {
 "values": [ -90.0, -90.0, 90.0, 90.0 ]
 }
 
+[sub_resource type="Animation" id=120]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 383.569, -178.631 ), Vector2( 496.649, -178.631 ), Vector2( 502.771, -178.631 ), Vector2( 388.942, -178.631 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -90.0, -90.0, 90.0, 90.0 ]
+}
+
 [sub_resource type="Animation" id=15]
 length = 4.0
 loop = true
@@ -370,6 +398,172 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1099.4, 1025.45 ), Vector2( 1260.82, 1211.53 ), Vector2( 1416.84, 1025.45 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=114]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 718.902, 644.918 ), Vector2( 999.444, 644.918 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=115]
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 720.353, 680.599 ), Vector2( 999.444, 680.599 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=116]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 720.353, 680.599 ), Vector2( 999.444, 729.242 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=117]
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1230.52, 330.162 ), Vector2( 1230.52, 548.866 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=118]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1230.52, 330.162 ), Vector2( 1075.9, 548.866 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=119]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1230.52, 330.162 ), Vector2( 1377.67, 548.866 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:scale")
@@ -1374,7 +1568,7 @@ tile_data = PoolIntArray( 0, 2, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 
 
 [node name="CanvasModulate" parent="Map Layout" index="3"]
 modulate = Color( 0, 0, 0, 1 )
-color = Color( 0.0352941, 0.0352941, 0.0352941, 0.784314 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="Backgound" type="Node2D" parent="."]
 position = Vector2( -45.6961, 236.747 )
@@ -1422,6 +1616,51 @@ position = Vector2( 1516.91, 638.966 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 51 )
 
+[node name="Spider Wed16" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 616.591, 378.139 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed17" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 920.024, 381.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed18" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 1369.25, 381.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed19" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 1695.14, 381.636 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed20" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2023.51, 381.418 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed21" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 1952.85, 637.607 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed22" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2266.69, 893.026 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed23" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 1955.56, 1151.83 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
+[node name="Spider Wed24" type="Sprite" parent="Backgound/Spider Web Layers"]
+position = Vector2( 2449.59, 1149.17 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 51 )
+
 [node name="Spider Wed2" type="Sprite" parent="Backgound/Spider Web Layers"]
 position = Vector2( -279.249, 382.677 )
 scale = Vector2( 4, 4 )
@@ -1460,7 +1699,22 @@ texture = ExtResource( 51 )
 [node name="Banner Layers" type="Node2D" parent="Backgound"]
 
 [node name="Banner" type="Sprite" parent="Backgound/Banner Layers"]
-position = Vector2( 8.26763, 382.677 )
+position = Vector2( 671.635, 383.032 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 50 )
+
+[node name="Banner15" type="Sprite" parent="Backgound/Banner Layers"]
+position = Vector2( 1015.44, 383.032 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 50 )
+
+[node name="Banner16" type="Sprite" parent="Backgound/Banner Layers"]
+position = Vector2( 1725.14, 383.032 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 50 )
+
+[node name="Banner17" type="Sprite" parent="Backgound/Banner Layers"]
+position = Vector2( 2279.58, 381.636 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 50 )
 
@@ -1491,6 +1745,31 @@ texture = ExtResource( 50 )
 
 [node name="Banner13" type="Sprite" parent="Backgound/Banner Layers"]
 position = Vector2( 1191.17, 1068.9 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 50 )
+
+[node name="Banner14" type="Sprite" parent="Backgound/Banner Layers"]
+position = Vector2( 1322.29, 383.032 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 50 )
+
+[node name="Banner18" type="Sprite" parent="Backgound/Banner Layers"]
+position = Vector2( 1999.72, 638.968 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 50 )
+
+[node name="Banner19" type="Sprite" parent="Backgound/Banner Layers"]
+position = Vector2( 2207.53, 899.129 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 50 )
+
+[node name="Banner20" type="Sprite" parent="Backgound/Banner Layers"]
+position = Vector2( 2005.56, 1151.83 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 50 )
+
+[node name="Banner21" type="Sprite" parent="Backgound/Banner Layers"]
+position = Vector2( 2406.29, 1151.83 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 50 )
 
@@ -1699,6 +1978,61 @@ scale = Vector2( 0.75, 0.8 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision58"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision70" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 629.787, 401.606 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision70"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision70"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision71" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 628.893, 434.232 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision71"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision71"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision72" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 628.893, 462.043 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision72"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision72"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision73" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 628.893, 490.427 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision73"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision73"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision74" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 627.998, 520.054 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision74"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision74"]
 position = Vector2( -0.894531, 0.0560303 )
 shape = SubResource( 1 )
 
@@ -2285,17 +2619,6 @@ texture = ExtResource( 5 )
 position = Vector2( -0.894531, 0.0560303 )
 shape = SubResource( 1 )
 
-[node name="Barrel Collision70" type="StaticBody2D" parent="Backgound/Barrels"]
-position = Vector2( 1398.01, 1186.6 )
-
-[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision70"]
-scale = Vector2( 0.75, 0.8 )
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision70"]
-position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 1 )
-
 [node name="Fake Walls" type="Node2D" parent="."]
 
 [node name="vertical_fake_wall" type="StaticBody2D" parent="Fake Walls"]
@@ -2496,6 +2819,15 @@ scale = Vector2( 0.5, 0.5 )
 autoplay = "rat_animation"
 anims/rat_animation = SubResource( 14 )
 
+[node name="Rat Attack6" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
+position = Vector2( 451.719, -178.631 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack6"]
+autoplay = "rat_animation"
+anims/rat_animation = SubResource( 120 )
+
 [node name="Ghost Sprite" type="Node2D" parent="Enemies assets"]
 position = Vector2( 198.56, -217.935 )
 
@@ -2537,6 +2869,54 @@ scale = Vector2( 0.592979, 0.79649 )
 autoplay = "Ghost Animation"
 "anims/Ghost Animation" = SubResource( 19 )
 
+[node name="Ghost9" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
+position = Vector2( 908.499, 644.918 )
+scale = Vector2( 0.675824, 0.837912 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost9"]
+autoplay = "Ghost Animation"
+"anims/Ghost Animation" = SubResource( 114 )
+
+[node name="Ghost10" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
+position = Vector2( 739.217, 680.599 )
+scale = Vector2( 0.898613, 0.949306 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost10"]
+autoplay = "Ghost Animation"
+"anims/Ghost Animation" = SubResource( 115 )
+
+[node name="Ghost11" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
+position = Vector2( 767.791, 688.867 )
+scale = Vector2( 0.660051, 0.830026 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost11"]
+autoplay = "Ghost Animation"
+"anims/Ghost Animation" = SubResource( 116 )
+
+[node name="Ghost12" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
+position = Vector2( 1230.52, 500.315 )
+scale = Vector2( 0.665989, 0.832994 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost12"]
+autoplay = "Ghost Animation"
+"anims/Ghost Animation" = SubResource( 117 )
+
+[node name="Ghost13" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
+position = Vector2( 1153.09, 439.684 )
+scale = Vector2( 0.998448, 0.999224 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost13"]
+autoplay = "Ghost Animation"
+"anims/Ghost Animation" = SubResource( 118 )
+
+[node name="Ghost14" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
+position = Vector2( 1332.51, 481.737 )
+scale = Vector2( 0.693061, 0.846531 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost14"]
+autoplay = "Ghost Animation"
+"anims/Ghost Animation" = SubResource( 119 )
+
 [node name="Skeleton Sprite" type="Node2D" parent="Enemies assets"]
 position = Vector2( 741.397, 232.875 )
 
@@ -2575,6 +2955,9 @@ position = Vector2( 772.319, 216.156 )
 
 [node name="Enemy12" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
 position = Vector2( 701.036, 437.296 )
+
+[node name="Enemy13" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
+position = Vector2( 274.331, -18.937 )
 
 [node name="Spider Sprite" type="Node2D" parent="Enemies assets"]
 modulate = Color( 0.729412, 0.627451, 0.627451, 1 )
@@ -2646,6 +3029,11 @@ scale = Vector2( 0.75, 0.85 )
 [node name="Spider_barrel8" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
 modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( 706.218, 719.586 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel9" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( -19.4871, 74.87 )
 scale = Vector2( 0.75, 0.85 )
 
 [node name="Doors" type="Node2D" parent="."]
@@ -3403,7 +3791,7 @@ position = Vector2( -52.7377, 597.845 )
 shape = SubResource( 45 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -81.7481, 342.664 )
+position = Vector2( 63.4711, 339.955 )
 scale = Vector2( 0.65, 0.6 )
 z_as_relative = false
 collision_layer = 2
@@ -4014,11 +4402,11 @@ shape = SubResource( 45 )
 [connection signal="frame_changed" from="Doors/obj_door/Sprite" to="Doors/obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="Doors/obj_door/Area2D" to="Doors/obj_door" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Doors/obj_door/Timer" to="Doors/obj_door" method="_on_Timer_timeout"]
-[connection signal="body_entered" from="PickUp/Key2/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="PickUp/Key2/Key" to="PickUp/Key2/Key" method="_on_Key_body_entered"]
+[connection signal="body_entered" from="PickUp/Key2/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="keycollected" from="PickUp/Key2/Key" to="obj_player/Sprite/UI Layer Only/Key Icon/Count3" method="_on_Key_keycollected"]
-[connection signal="body_entered" from="PickUp/Hearts/Heart" to="obj_player" method="_on_Heart_body_entered"]
 [connection signal="body_entered" from="PickUp/Hearts/Heart" to="PickUp/Hearts/Heart" method="_on_Heart_body_entered"]
+[connection signal="body_entered" from="PickUp/Hearts/Heart" to="obj_player" method="_on_Heart_body_entered"]
 [connection signal="heartCount" from="PickUp/Hearts/Heart" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Heart_heartCount"]
 [connection signal="body_entered" from="PickUp/Hearts/Heart6" to="obj_player" method="_on_Heart_body_entered"]
 [connection signal="body_entered" from="PickUp/Hearts/Heart6" to="PickUp/Hearts/Heart6" method="_on_Heart_body_entered"]
