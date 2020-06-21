@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Home Screen/ControlButton.gd" type="Script" id=1]
 [ext_resource path="res://Home Screen/PlayButton.gd" type="Script" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Art Assets/LIghting .png" type="Texture" id=6]
 [ext_resource path="res://Art Assets/maze_spr_color_v1.png" type="Texture" id=7]
 [ext_resource path="res://Art Assets/New Door Opening.png" type="Texture" id=8]
-[ext_resource path="res://skele anims/enemy_left1.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -53,40 +52,35 @@ __meta__ = {
 }
 
 [node name="New Door Opening" type="Sprite" parent="Node2D"]
-position = Vector2( 41.2882, -17.74 )
+position = Vector2( -18.7693, -13.5499 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 8 )
 
-[node name="enemy_left1" type="Sprite" parent="Node2D"]
-position = Vector2( 14.8901, 15.1436 )
-scale = Vector2( 1.41148, 1.64008 )
-texture = ExtResource( 11 )
-
 [node name="money_bag4" type="Sprite" parent="Node2D"]
 modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
-position = Vector2( -95.5034, 41.57 )
+position = Vector2( -55.9306, 40.6389 )
 scale = Vector2( 0.605927, 0.773564 )
 texture = ExtResource( 5 )
 
 [node name="money_bag5" type="Sprite" parent="Node2D"]
 modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
-position = Vector2( -87.8631, 47.4221 )
+position = Vector2( -46.8936, 46.2582 )
 scale = Vector2( 0.605927, 0.773564 )
 texture = ExtResource( 5 )
 
 [node name="money_bag8" type="Sprite" parent="Node2D"]
 modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
-position = Vector2( -46.8982, 45.9591 )
+position = Vector2( -64.5896, 47.5886 )
 scale = Vector2( 0.605927, 0.773564 )
 texture = ExtResource( 5 )
 
 [node name="maze_spr_color_v1" type="Sprite" parent="Node2D"]
-position = Vector2( -68.2041, 17.5644 )
-scale = Vector2( 0.9492, 1.44196 )
+position = Vector2( -18.8544, 14.0727 )
+scale = Vector2( 1.25473, 1.58745 )
 texture = ExtResource( 7 )
 
 [node name="LIghting " type="Sprite" parent="Node2D/maze_spr_color_v1"]
-modulate = Color( 1, 1, 1, 0.172549 )
+modulate = Color( 1, 1, 1, 0.380392 )
 position = Vector2( 13.4939, 6.45277 )
 scale = Vector2( 0.351173, 0.231167 )
 texture = ExtResource( 6 )
