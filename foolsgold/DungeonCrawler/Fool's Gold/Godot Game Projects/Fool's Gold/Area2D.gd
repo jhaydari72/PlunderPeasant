@@ -17,3 +17,7 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D_body_exited(_body):
 	player = null
+
+
+func _on_Spider_barrel_heart_mode():
+	queue_free()

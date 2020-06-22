@@ -5,6 +5,8 @@ export var SPEED = 50
 export var FRICTION = 500
 export var RANGE = 4
 
+signal heart_mode
+
 enum {
 	BARREL,
 	SPIDERIDLE,
@@ -75,10 +77,15 @@ func _physics_process(delta):
 		SPIDERCHASE:
 			var player = enemy_detect.player
 			if player != null:
-				spider.play("attack")
+				#spider.play("attack")
 				accelerate_towards_point(player.global_position, delta)
 			else:
 				state = SPIDERWANDER
+				
+		HEART:
+			spider.play("heart")
+			emit_signal("heart_mode")
+	
 	velocity = move_and_slide(velocity)
 	
 	
@@ -109,17 +116,13 @@ func find_player():
 		state = SPIDERCHASE
 
 func _on_Hurtbox_area_entered(area):
-	spider.play("idle")
+	var my_random_number = rng.randf_range(1.0, 3.0)
 	health -= 1
 	knockback = area.knockback_vector * 200
+	if my_random_number <= 2.0:
+		state = SPIDERIDLE
+	else:
+		state = HEART
 
 
-func _on_AnimatedSprite_frame_changed():
-	find_player()
 
-func Hearts():
-	var my_random_number = rng.randf_range(1.0, 2.0)
-	if my_random_number == 1.0:
-		match state:
-			BARREL:
-				pass
