@@ -1,5 +1,6 @@
 extends Control
 
+#Beginning splash screen
 
 var value = null
 
