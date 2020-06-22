@@ -6,6 +6,7 @@ export var FRICTION = 500
 export var RANGE = 4
 
 signal heart_mode
+signal dead
 
 enum {
 	BARREL,
@@ -71,13 +72,14 @@ func _physics_process(delta):
 				update_state()
 		
 		SPIDERDEAD:
-			if is_dead == true:
-				velocity = Vector2(0, 0)
-				#$Barrel.play("dead")
+			spider.play("dead")
+			emit_signal("dead")
+			velocity = Vector2(0, 0)
+				
 		SPIDERCHASE:
 			var player = enemy_detect.player
 			if player != null:
-				#spider.play("attack")
+				spider.play("attack")
 				accelerate_towards_point(player.global_position, delta)
 			else:
 				state = SPIDERWANDER
@@ -95,7 +97,8 @@ func _physics_process(delta):
 	
 	#kills spider
 	if health == 0:
-		queue_free()
+		state = SPIDERDEAD
+		
 	
 
 func new_state(state_list):
@@ -120,13 +123,12 @@ func _on_Hurtbox_area_entered(area):
 	
 	health -= 1
 	knockback = area.knockback_vector * 200
-	
-	if my_random_number <= 2.0:
-		state = SPIDERIDLE
-	else:
-		state = HEART
+	if health == 1:
+		if my_random_number <= 2.0:
+			state = SPIDERIDLE
+		else:
+			state = HEART
 
 
 func _on_Area2D_health_up():
-	health -= 1
 	queue_free()

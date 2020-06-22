@@ -87,11 +87,11 @@ shape = SubResource( 4 )
 
 [node name="Wander" parent="." instance=ExtResource( 12 )]
 [connection signal="timeout" from="collision/Timer2" to="collision" method="_on_Timer_timeout"]
-[connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="PlayerDetection" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="enemy_hitbox" method="_on_Hurtbox_area_entered"]
-[connection signal="area_entered" from="Hurtbox" to="collision" method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_Hurtbox_area_entered"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Hurtbox" to="collision" method="_on_Hurtbox_area_entered"]
 
 [editable path="Hurtbox"]
 
