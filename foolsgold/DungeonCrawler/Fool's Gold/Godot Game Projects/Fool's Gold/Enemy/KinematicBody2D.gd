@@ -20,6 +20,7 @@ var is_dead = false
 var knockback = Vector2.ZERO
 var kill_direction = Vector2.LEFT
 var health = 2
+var rng = RandomNumberGenerator.new()
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -29,11 +30,14 @@ onready var hitbox = $Hitbox
 onready var enemy_detect = $enemy_detect
 onready var hurtbox = $Hurtbox
 onready var controller = $Wander
+onready var Heart = $Hearts
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	state = BARREL
 	hitbox.knockback_vector = velocity
+	rng.randomize()
+	
 
 
 
@@ -112,3 +116,10 @@ func _on_Hurtbox_area_entered(area):
 
 func _on_AnimatedSprite_frame_changed():
 	find_player()
+
+func Hearts():
+	var my_random_number = rng.randf_range(1.0, 2.0)
+	if my_random_number == 1.0:
+		match state:
+			BARREL:
+				pass

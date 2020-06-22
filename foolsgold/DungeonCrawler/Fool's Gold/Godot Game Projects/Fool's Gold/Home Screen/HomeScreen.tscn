@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Home Screen/ControlButton.gd" type="Script" id=1]
 [ext_resource path="res://Home Screen/PlayButton.gd" type="Script" id=2]
@@ -8,6 +8,13 @@
 [ext_resource path="res://Art Assets/LIghting .png" type="Texture" id=6]
 [ext_resource path="res://Art Assets/maze_spr_color_v1.png" type="Texture" id=7]
 [ext_resource path="res://Art Assets/New Door Opening.png" type="Texture" id=8]
+[ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=9]
+[ext_resource path="res://Art Assets/Rat.png" type="Texture" id=10]
+[ext_resource path="res://skele anims/enemy_left1.png" type="Texture" id=11]
+[ext_resource path="res://spider attack/spider_attackup2.png" type="Texture" id=12]
+[ext_resource path="res://Art Assets/Fake Walls/Horizontal Walls/Horizontal Fake Wall.png" type="Texture" id=13]
+[ext_resource path="res://Art Assets/Tile map/Updated Titles/Center Title.png" type="Texture" id=14]
+[ext_resource path="res://Art Assets/Torch/torch_lit_v1.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -41,49 +48,133 @@ __meta__ = {
 position = Vector2( 732.026, 408.678 )
 scale = Vector2( 3, 3 )
 
-[node name="ColorRect2" type="ColorRect" parent="Node2D"]
-margin_left = -259.0
-margin_top = -147.0
-margin_right = 136.0
-margin_bottom = 93.0
-color = Color( 0, 0, 0, 1 )
+[node name="Center Title" type="Sprite" parent="Node2D"]
+position = Vector2( -81.793, 83.1858 )
+scale = Vector2( 6.03843, 4.00324 )
+texture = ExtResource( 14 )
+
+[node name="Horizontal Fake Wall" type="Sprite" parent="Node2D"]
+position = Vector2( -73.9532, 135.848 )
+scale = Vector2( 5.5648, 7.94941 )
+texture = ExtResource( 13 )
+
+[node name="enemy_left2" type="Sprite" parent="Node2D"]
+position = Vector2( 54.7171, 6.85306 )
+scale = Vector2( 1.41148, 1.64008 )
+texture = ExtResource( 11 )
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+margin_left = 2.0
+margin_top = -59.0
+margin_right = 85.0
+margin_bottom = 48.0
+color = Color( 0, 0, 0, 0.827451 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="New Door Opening" type="Sprite" parent="Node2D"]
-position = Vector2( -18.7693, -13.5499 )
+position = Vector2( 42.2193, -9.12706 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 8 )
 
+[node name="money_bag2" type="Sprite" parent="Node2D"]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( -71.282, 37.506 )
+scale = Vector2( 0.605927, 0.773564 )
+texture = ExtResource( 5 )
+
+[node name="money_bag3" type="Sprite" parent="Node2D"]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( -55.6764, 37.3434 )
+scale = Vector2( 0.605927, 0.773564 )
+texture = ExtResource( 5 )
+
+[node name="money_bag" type="Sprite" parent="Node2D"]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( -86.8877, 37.1809 )
+scale = Vector2( 0.605927, 0.773564 )
+texture = ExtResource( 5 )
+
+[node name="Barrel" type="Sprite" parent="Node2D"]
+position = Vector2( 76.2725, 36.6364 )
+texture = ExtResource( 9 )
+
+[node name="Rat" type="Sprite" parent="Node2D/Barrel"]
+position = Vector2( 0.650208, -11.054 )
+rotation = 1.5708
+texture = ExtResource( 10 )
+
+[node name="Rat2" type="Sprite" parent="Node2D/Barrel/Rat"]
+position = Vector2( -8.2905, -4.55164 )
+texture = ExtResource( 10 )
+
+[node name="maze_spr_color_v1" type="Sprite" parent="Node2D"]
+position = Vector2( -68.2041, 17.5644 )
+scale = Vector2( 0.9492, 1.44196 )
+texture = ExtResource( 7 )
+
+[node name="LIghting " type="Sprite" parent="Node2D/maze_spr_color_v1"]
+modulate = Color( 1, 1, 1, 0.172549 )
+position = Vector2( 13.4939, 6.45277 )
+scale = Vector2( 0.351173, 0.231167 )
+texture = ExtResource( 6 )
+
 [node name="money_bag4" type="Sprite" parent="Node2D"]
 modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
-position = Vector2( -55.9306, 40.6389 )
+position = Vector2( -95.5034, 41.57 )
 scale = Vector2( 0.605927, 0.773564 )
 texture = ExtResource( 5 )
 
 [node name="money_bag5" type="Sprite" parent="Node2D"]
 modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
-position = Vector2( -46.8936, 46.2582 )
+position = Vector2( -87.8631, 47.4221 )
 scale = Vector2( 0.605927, 0.773564 )
 texture = ExtResource( 5 )
 
 [node name="money_bag8" type="Sprite" parent="Node2D"]
 modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
-position = Vector2( -64.5896, 47.5886 )
+position = Vector2( -46.8982, 45.9591 )
 scale = Vector2( 0.605927, 0.773564 )
 texture = ExtResource( 5 )
 
-[node name="maze_spr_color_v1" type="Sprite" parent="Node2D"]
-position = Vector2( -18.8544, 14.0727 )
-scale = Vector2( 1.25473, 1.58745 )
-texture = ExtResource( 7 )
+[node name="money_bag7" type="Sprite" parent="Node2D"]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( -56.6517, 48.56 )
+scale = Vector2( 0.605927, 0.773564 )
+texture = ExtResource( 5 )
 
-[node name="LIghting " type="Sprite" parent="Node2D/maze_spr_color_v1"]
-modulate = Color( 1, 1, 1, 0.380392 )
-position = Vector2( 13.4939, 6.45277 )
-scale = Vector2( 0.351173, 0.231167 )
-texture = ExtResource( 6 )
+[node name="money_bag6" type="Sprite" parent="Node2D"]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( -71.9323, 49.8605 )
+scale = Vector2( 0.605927, 0.773564 )
+texture = ExtResource( 5 )
+
+[node name="enemy_left1" type="Sprite" parent="Node2D"]
+position = Vector2( 14.8901, 15.1436 )
+scale = Vector2( 1.41148, 1.64008 )
+texture = ExtResource( 11 )
+
+[node name="spider_attackup2" type="Sprite" parent="Node2D"]
+position = Vector2( 55.6923, -62.7222 )
+rotation = 3.14159
+scale = Vector2( 0.75, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="torch_lit_v1" type="Sprite" parent="Node2D"]
+position = Vector2( -26.751, -12.2974 )
+scale = Vector2( 1.53475, 1.72842 )
+texture = ExtResource( 15 )
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D"]
+margin_left = -259.0
+margin_top = -147.0
+margin_right = 136.0
+margin_bottom = -69.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 19.3698
@@ -103,9 +194,9 @@ __meta__ = {
 }
 
 [node name="PlayButton" type="Button" parent="."]
-margin_left = 22.8865
+margin_left = 22.3731
 margin_top = 227.866
-margin_right = 403.887
+margin_right = 403.374
 margin_bottom = 293.866
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )

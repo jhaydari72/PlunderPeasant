@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Fool's Gold"
-run/main_scene="res://Splash/Fool's Gold SplashScreen.tscn"
+run/main_scene="res://Home Screen/HomeScreen.tscn"
 config/icon="res://icon.png"
 
 [display]
