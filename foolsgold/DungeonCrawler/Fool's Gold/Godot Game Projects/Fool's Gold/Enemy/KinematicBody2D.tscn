@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Enemy/KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Enemy/CollisionShape2D.gd" type="Script" id=2]
@@ -14,17 +14,13 @@
 [ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=12]
 [ext_resource path="res://Enemy/Wander.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Art Assets/Full Heart.png" type="Texture" id=14]
+[ext_resource path="res://Enemy/Area2D.gd" type="Script" id=15]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "heart",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ) ],
@@ -36,10 +32,17 @@ animations = [ {
 "loop": true,
 "name": "barrel",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "heart",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 11.2558, 11.3136 )
+
+[sub_resource type="RectangleShape2D" id=6]
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 12.2634
@@ -62,7 +65,15 @@ position = Vector2( 0.128525, -3.98391 )
 shape = SubResource( 2 )
 script = ExtResource( 2 )
 
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, -3.78472 )
+shape = SubResource( 6 )
+
 [node name="Hitbox" parent="." instance=ExtResource( 4 )]
+visible = false
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
@@ -78,16 +89,26 @@ position = Vector2( -0.291992, 0 )
 shape = SubResource( 4 )
 
 [node name="enemy_detect" parent="." instance=ExtResource( 11 )]
+visible = false
 collision_layer = 0
 
+[node name="CollisionShape2D" parent="enemy_detect" index="0"]
+visible = false
+
 [node name="Wander" parent="." instance=ExtResource( 13 )]
+visible = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 5 )
 script = ExtResource( 3 )
-[connection signal="heart_mode" from="." to="enemy_detect" method="_on_Spider_barrel_heart_mode"]
+[connection signal="heart_mode" from="." to="CollisionShape2D" method="_on_Spider_barrel_heart_mode"]
 [connection signal="heart_mode" from="." to="Hitbox" method="_on_Spider_barrel_heart_mode"]
+[connection signal="heart_mode" from="." to="enemy_detect" method="_on_Spider_barrel_heart_mode"]
+[connection signal="heart_mode" from="." to="Hurtbox" method="_on_Spider_barrel_heart_mode"]
 [connection signal="frame_changed" from="AnimatedSprite" to="CollisionShape2D2" method="_on_AnimatedSprite_frame_changed"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="health_up" from="Area2D" to="." method="_on_Area2D_health_up"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="Hurtbox" method="_on_Hurtbox_invincibility_ended"]
 

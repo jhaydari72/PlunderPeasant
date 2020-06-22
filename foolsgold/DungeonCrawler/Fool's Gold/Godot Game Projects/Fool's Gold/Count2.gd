@@ -25,3 +25,7 @@ func _on_Heart_heartCount():
 func _on_obj_player_health_loss():
 	hearts -= 1
 	_ready()
+
+
+func _on_Area2D_health_up():
+	hearts += 1

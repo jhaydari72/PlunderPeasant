@@ -1666,14 +1666,14 @@ color_ramp = SubResource( 86 )
 
 [sub_resource type="SpriteFrames" id=90]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -7154,7 +7154,7 @@ modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( -727.847, 9.3927 )
 scale = Vector2( 0.75, 0.85 )
 
-[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel" index="3"]
+[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel" index="4"]
 visible = true
 
 [node name="Spider_barrel2" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
@@ -7162,7 +7162,7 @@ modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( -1290.08, 175.769 )
 scale = Vector2( 0.75, 0.85 )
 
-[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel2" index="3"]
+[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel2" index="4"]
 visible = true
 
 [node name="Spider_barrel3" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
@@ -7173,25 +7173,22 @@ scale = Vector2( 0.75, 0.85 )
 [node name="CollisionShape2D" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="1"]
 position = Vector2( -0.0185697, -4.11379 )
 
-[node name="Hitbox" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="2"]
+[node name="Hitbox" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="3"]
 position = Vector2( 0.294067, -0.518921 )
 
-[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="3"]
+[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="4"]
 visible = true
 position = Vector2( 0.147095, -4.02393 )
 
-[node name="enemy_detect" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="4"]
+[node name="enemy_detect" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="5"]
 position = Vector2( 0.147095, -4.02393 )
-
-[node name="CollisionShape2D2" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="6"]
-visible = false
 
 [node name="Spider_barrel4" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
 modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( -463.942, -71.1619 )
 scale = Vector2( 0.75, 0.85 )
 
-[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel4" index="3"]
+[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel4" index="4"]
 visible = true
 
 [node name="Spider_barrel5" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
@@ -7199,7 +7196,7 @@ modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( -430.381, 254.082 )
 scale = Vector2( 0.75, 0.85 )
 
-[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel5" index="3"]
+[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel5" index="4"]
 visible = true
 
 [node name="Spider_barrel6" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
@@ -12579,6 +12576,38 @@ shape = SubResource( 92 )
 [connection signal="area_entered" from="Fake Walls/horizontal_fake_wall/Area2D" to="Fake Walls/horizontal_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Fake Walls/horizontal_fake_wall2/Area2D" to="Fake Walls/horizontal_fake_wall2" method="_on_Area2D_area_entered"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2/wall_collision" method="_on_Timer_timeout"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel2/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel3/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel4/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel5/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel6/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel7/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel8/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel9/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel28/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel29/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel30/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel31/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel32/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel10/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel11/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel12/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel13/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel14/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel15/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel16/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel17/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel18/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel19/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel20/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel21/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel22/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel23/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel24/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel25/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel26/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel27/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
 [connection signal="frame_changed" from="Doors/obj_door/Sprite" to="Doors/obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="Doors/obj_door/Area2D" to="Doors/obj_door" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Doors/obj_door/Timer" to="Doors/obj_door" method="_on_Timer_timeout"]
@@ -12710,6 +12739,60 @@ shape = SubResource( 92 )
 [editable path="Enemies assets/Spider Sprite/Spider_barrel4"]
 
 [editable path="Enemies assets/Spider Sprite/Spider_barrel5"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel6"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel7"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel8"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel9"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel28"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel29"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel30"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel31"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel32"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel10"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel11"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel12"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel13"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel14"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel15"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel16"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel17"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel18"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel19"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel20"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel21"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel22"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel23"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel24"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel25"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel26"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel27"]
 
 [editable path="obj_player/HitboxPivot/SwordHitbox"]
 

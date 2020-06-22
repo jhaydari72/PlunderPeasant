@@ -117,12 +117,16 @@ func find_player():
 
 func _on_Hurtbox_area_entered(area):
 	var my_random_number = rng.randf_range(1.0, 3.0)
+	
 	health -= 1
 	knockback = area.knockback_vector * 200
+	
 	if my_random_number <= 2.0:
 		state = SPIDERIDLE
 	else:
 		state = HEART
 
 
-
+func _on_Area2D_health_up():
+	health -= 1
+	queue_free()

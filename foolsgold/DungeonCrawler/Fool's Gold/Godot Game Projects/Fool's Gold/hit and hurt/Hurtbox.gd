@@ -47,3 +47,7 @@ func _on_Hurtbox_area_entered(_area):
 
 func _on_obj_player_dead():
 	queue_free()
+
+
+func _on_Spider_barrel_heart_mode():
+	queue_free()
