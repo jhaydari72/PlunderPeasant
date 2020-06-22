@@ -23,6 +23,7 @@ onready var sprite = $Sprite
 onready var playerdetection = $PlayerDetection
 onready var hurtbox = $Hurtbox
 onready var controller = $Wander
+onready var MusicNode = $AudioStreamPlayer2D
 
 func _ready():
 	state = new_state([IDLE, WANDER])
@@ -98,4 +99,4 @@ func _on_Hurtbox_area_entered(area):
 	knockback = area.knockback_vector * 200
 	is_dead = true
 	state = DEAD
-
+	MusicNode.play()
