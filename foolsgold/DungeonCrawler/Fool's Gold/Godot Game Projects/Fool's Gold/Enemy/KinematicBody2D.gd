@@ -30,7 +30,7 @@ onready var hitbox = $Hitbox
 onready var enemy_detect = $enemy_detect
 onready var hurtbox = $Hurtbox
 onready var controller = $Wander
-onready var Heart = $Hearts
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
