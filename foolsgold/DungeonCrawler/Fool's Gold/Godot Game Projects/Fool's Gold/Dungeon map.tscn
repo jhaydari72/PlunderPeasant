@@ -6,7 +6,7 @@
 [ext_resource path="res://Audio/165181__theonlypkmnmaster__step-sound.wav" type="AudioStream" id=4]
 [ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=5]
 [ext_resource path="res://Enemy/Ghost.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Audio/hit_sound_mixdown.wav" type="AudioStream" id=7]
+[ext_resource path="res://Audio/knife_sound_1_v1_mixdown.wav" type="AudioStream" id=7]
 [ext_resource path="res://Count2.gd" type="Script" id=8]
 [ext_resource path="res://Player anims/playerSS.png" type="Texture" id=11]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=12]
@@ -7154,16 +7154,10 @@ modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( -727.847, 9.3927 )
 scale = Vector2( 0.75, 0.85 )
 
-[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel" index="4"]
-visible = true
-
 [node name="Spider_barrel2" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
 modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( -1290.08, 175.769 )
 scale = Vector2( 0.75, 0.85 )
-
-[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel2" index="4"]
-visible = true
 
 [node name="Spider_barrel3" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
 modulate = Color( 1, 0.862745, 0.862745, 1 )
@@ -7177,7 +7171,6 @@ position = Vector2( -0.0185697, -4.11379 )
 position = Vector2( 0.294067, -0.518921 )
 
 [node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="4"]
-visible = true
 position = Vector2( 0.147095, -4.02393 )
 
 [node name="enemy_detect" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="5"]
@@ -7188,16 +7181,10 @@ modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( -463.942, -71.1619 )
 scale = Vector2( 0.75, 0.85 )
 
-[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel4" index="4"]
-visible = true
-
 [node name="Spider_barrel5" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
 modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( -430.381, 254.082 )
 scale = Vector2( 0.75, 0.85 )
-
-[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel5" index="4"]
-visible = true
 
 [node name="Spider_barrel6" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
 modulate = Color( 1, 0.862745, 0.862745, 1 )
