@@ -2513,7 +2513,6 @@ energy = 0.5
 shadow_gradient_length = 10.0
 
 [node name="CanvasModulate" parent="Map Layout" index="3"]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 color = Color( 0, 0, 0, 1 )
 
@@ -7524,6 +7523,13 @@ position = Vector2( 618.161, -668.837 )
 scale = Vector2( 2.47145, 2.31843 )
 occluder = SubResource( 84 )
 
+[node name="Fake_torch" parent="." instance=ExtResource( 9 )]
+position = Vector2( -162.274, 332.038 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CollisionShape2D" parent="Fake_torch" index="0"]
+position = Vector2( 1.90527, 24.5302 )
+
 [node name="Torches behind player" type="Node2D" parent="."]
 
 [node name="torch5" type="StaticBody2D" parent="Torches behind player"]
@@ -12310,9 +12316,6 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch47/Area2D"]
 position = Vector2( -45.5172, 324.382 )
 shape = SubResource( 92 )
-
-[node name="Fake_torch" parent="." instance=ExtResource( 9 )]
-position = Vector2( -167.055, 332.959 )
 [connection signal="body_entered" from="PickUp/Key2/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="PickUp/Key2/Key" to="PickUp/Key2/Key" method="_on_Key_body_entered"]
 [connection signal="keycollected" from="PickUp/Key2/Key" to="obj_player/Sprite/UI Layer Only/Key Icon/Count3" method="_on_Key_keycollected"]
@@ -12563,7 +12566,6 @@ position = Vector2( -167.055, 332.959 )
 [connection signal="bagsCollected" from="PickUp/Bags/obj_bag21" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="PickUp/Bags/obj_bag21" to="PickUp/Bags/obj_bag21" method="_on_obj_bag_body_entered"]
 [connection signal="timeout" from="Fake Walls/vertical_fake_wall/Timer" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_Timer_timeout"]
-[connection signal="area_entered" from="Fake Walls/vertical_fake_wall/Area2D" to="Fake Walls/vertical_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="Fake Walls/horizontal_fake_wall/Area2D" to="Fake Walls/horizontal_fake_wall" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Fake Walls/horizontal_fake_wall2/Area2D" to="Fake Walls/horizontal_fake_wall2" method="_on_Area2D_area_entered"]
@@ -12786,8 +12788,8 @@ position = Vector2( -167.055, 332.959 )
 
 [editable path="Enemies assets/Spider Sprite/Spider_barrel27"]
 
+[editable path="Fake_torch"]
+
 [editable path="obj_player/HitboxPivot/SwordHitbox"]
 
 [editable path="obj_player/Hurtbox"]
-
-[editable path="Fake_torch"]
