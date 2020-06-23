@@ -7,9 +7,10 @@ onready var timer = $Timer
 func _ready():
 	pass 
 
+
 	
 
 
-func _on_Fake_torch_turned_on():
+func _on_Fake_torch_light_on():
 	$AnimatedSprite.play("open")
 	timer.start()

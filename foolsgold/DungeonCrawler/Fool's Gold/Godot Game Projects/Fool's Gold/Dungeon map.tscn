@@ -12316,8 +12316,8 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch47/Area2D"]
 position = Vector2( -45.5172, 324.382 )
 shape = SubResource( 92 )
-[connection signal="body_entered" from="PickUp/Key2/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="PickUp/Key2/Key" to="PickUp/Key2/Key" method="_on_Key_body_entered"]
+[connection signal="body_entered" from="PickUp/Key2/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="keycollected" from="PickUp/Key2/Key" to="obj_player/Sprite/UI Layer Only/Key Icon/Count3" method="_on_Key_keycollected"]
 [connection signal="body_entered" from="PickUp/Hearts/Heart" to="PickUp/Hearts/Heart" method="_on_Heart_body_entered"]
 [connection signal="heartCount" from="PickUp/Hearts/Heart" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Heart_heartCount"]
@@ -12605,6 +12605,7 @@ shape = SubResource( 92 )
 [connection signal="frame_changed" from="Doors/obj_door/Sprite" to="Doors/obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="Doors/obj_door/Area2D" to="Doors/obj_door" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Doors/obj_door/Timer" to="Doors/obj_door" method="_on_Timer_timeout"]
+[connection signal="light_on" from="Fake_torch" to="Fake Walls/vertical_fake_wall" method="_on_Fake_torch_light_on"]
 [connection signal="area_entered" from="Torches behind player/torch5/Area2D" to="Torches behind player/torch5" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch13/Area2D" to="Torches behind player/torch13" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch14/Area2D" to="Torches behind player/torch14" method="_on_Area2D_area_entered"]
