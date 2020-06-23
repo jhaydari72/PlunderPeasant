@@ -35,9 +35,9 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 1 )
 
 [node name="Light2D" type="Light2D" parent="Rat"]
-scale = Vector2( 0.0175424, 0.0456126 )
+scale = Vector2( 0.367046, 0.374266 )
 texture = ExtResource( 3 )
-color = Color( 0.188235, 0.603922, 0, 1 )
+color = Color( 1, 0.447059, 0.00392157, 1 )
 energy = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
