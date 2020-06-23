@@ -1,16 +1,13 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://torchs/Area2D.gd" type="Script" id=1]
+[ext_resource path="res://torchs/Fake_torch.gd" type="Script" id=1]
 [ext_resource path="res://Art Assets/Torch/torch_lit_v2.png" type="Texture" id=2]
 [ext_resource path="res://Art Assets/Torch/torch_lit_v1.png" type="Texture" id=3]
 [ext_resource path="res://Art Assets/Torch/torch_unlit_v1.png" type="Texture" id=4]
 [ext_resource path="res://Art Assets/lighting2 (1).png" type="Texture" id=5]
 [ext_resource path="res://torchs/Light2D.gd" type="Script" id=6]
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 22.247, 20.245 )
-
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
@@ -23,18 +20,22 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Fake_torch" type="Area2D"]
-collision_layer = 16
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 22.247, 20.245 )
+
+[node name="Fake_torch" type="StaticBody2D"]
+collision_layer = 17
 script = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "off"
 
 [node name="Light2D" type="Light2D" parent="."]
 texture = ExtResource( 5 )
 script = ExtResource( 6 )
-[connection signal="area_entered" from="." to="." method="_on_Fake_torch_area_entered"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )

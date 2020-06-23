@@ -7524,11 +7524,11 @@ scale = Vector2( 2.47145, 2.31843 )
 occluder = SubResource( 84 )
 
 [node name="Fake_torch" parent="." instance=ExtResource( 9 )]
-position = Vector2( -162.274, 332.038 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( -163.341, 332.665 )
+scale = Vector2( 0.40462, 0.431326 )
 
-[node name="CollisionShape2D" parent="Fake_torch" index="0"]
-position = Vector2( 1.90527, 24.5302 )
+[node name="CollisionShape2D" parent="Fake_torch/Area2D" index="0"]
+position = Vector2( 2.33969, 30.7275 )
 
 [node name="Torches behind player" type="Node2D" parent="."]
 
