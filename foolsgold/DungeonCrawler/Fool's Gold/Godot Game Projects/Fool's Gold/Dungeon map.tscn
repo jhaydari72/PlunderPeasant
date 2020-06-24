@@ -1,4 +1,4 @@
-[gd_scene load_steps=219 format=2]
+[gd_scene load_steps=218 format=2]
 
 [ext_resource path="res://Level Two/Map Layout.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blockers/blocker.tscn" type="PackedScene" id=2]
@@ -509,9 +509,6 @@ animations = [ {
 "name": "closed",
 "speed": 5.0
 } ]
-
-[sub_resource type="RectangleShape2D" id=31]
-extents = Vector2( 20.1264, 19.0604 )
 
 [sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 3.66394, 10 )
@@ -1667,14 +1664,14 @@ color_ramp = SubResource( 86 )
 
 [sub_resource type="SpriteFrames" id=90]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -6668,15 +6665,6 @@ animation = "closed"
 wait_time = 0.8
 one_shot = true
 
-[node name="Area2D" type="Area2D" parent="Fake Walls/vertical_fake_wall"]
-position = Vector2( 755.218, 94.5251 )
-collision_layer = 16
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall/Area2D"]
-position = Vector2( -24.8882, 0.341088 )
-shape = SubResource( 31 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
 position = Vector2( 700.259, 118.267 )
 shape = SubResource( 32 )
@@ -7524,53 +7512,19 @@ scale = Vector2( 2.47145, 2.31843 )
 occluder = SubResource( 84 )
 
 [node name="Fake_torch" parent="." instance=ExtResource( 9 )]
-position = Vector2( -163.341, 332.665 )
+position = Vector2( -187.335, 334.034 )
 scale = Vector2( 0.40462, 0.431326 )
+
+[node name="Light2D" parent="Fake_torch" index="1"]
+visible = true
+
+[node name="Area2D" parent="Fake_torch" index="2"]
+visible = true
 
 [node name="CollisionShape2D" parent="Fake_torch/Area2D" index="0"]
 position = Vector2( 2.33969, 30.7275 )
 
 [node name="Torches behind player" type="Node2D" parent="."]
-
-[node name="torch5" type="StaticBody2D" parent="Torches behind player"]
-position = Vector2( -200.818, 219.631 )
-scale = Vector2( 0.25, 0.25 )
-script = ExtResource( 15 )
-
-[node name="torch_light" type="Light2D" parent="Torches behind player/torch5"]
-position = Vector2( 47.1101, 448.145 )
-scale = Vector2( 0.168953, 0.162966 )
-texture = ExtResource( 13 )
-texture_scale = 5.0
-shadow_enabled = true
-script = ExtResource( 16 )
-
-[node name="flame" type="Particles2D" parent="Torches behind player/torch5/torch_light"]
-show_behind_parent = true
-position = Vector2( 0.755707, -32.498 )
-rotation = -1.5708
-scale = Vector2( 10.2223, 9.10934 )
-amount = 50
-process_material = SubResource( 89 )
-script = ExtResource( 25 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch5"]
-position = Vector2( 50.6324, 450.691 )
-scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 90 )
-animation = "off"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch5"]
-position = Vector2( 49.048, 457.012 )
-shape = SubResource( 91 )
-
-[node name="Area2D" type="Area2D" parent="Torches behind player/torch5"]
-position = Vector2( 0, 2.57212 )
-collision_layer = 16
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch5/Area2D"]
-position = Vector2( 436.384, 517.664 )
-shape = SubResource( 92 )
 
 [node name="torch13" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 112.955, 283.971 )
@@ -12606,7 +12560,6 @@ shape = SubResource( 92 )
 [connection signal="body_entered" from="Doors/obj_door/Area2D" to="Doors/obj_door" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Doors/obj_door/Timer" to="Doors/obj_door" method="_on_Timer_timeout"]
 [connection signal="light_on" from="Fake_torch" to="Fake Walls/vertical_fake_wall" method="_on_Fake_torch_light_on"]
-[connection signal="area_entered" from="Torches behind player/torch5/Area2D" to="Torches behind player/torch5" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch13/Area2D" to="Torches behind player/torch13" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch14/Area2D" to="Torches behind player/torch14" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch15/Area2D" to="Torches behind player/torch15" method="_on_Area2D_area_entered"]

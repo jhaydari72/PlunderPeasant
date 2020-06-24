@@ -10,14 +10,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -69,7 +69,7 @@ visible = false
 texture = ExtResource( 5 )
 script = ExtResource( 6 )
 
-[node name="Particles2D" type="Particles2D" parent="."]
+[node name="Particles2D" type="Particles2D" parent="Light2D"]
 show_behind_parent = true
 position = Vector2( -1.59699, -4.53608 )
 amount = 50
