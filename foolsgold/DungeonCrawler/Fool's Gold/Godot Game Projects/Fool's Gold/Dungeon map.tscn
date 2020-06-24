@@ -525,10 +525,10 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 3.66394, 10 )
 
-[sub_resource type="RectangleShape2D" id=159]
+[sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 10.7963, 21.7814 )
 
-[sub_resource type="SpriteFrames" id=160]
+[sub_resource type="SpriteFrames" id=33]
 animations = [ {
 "frames": [ ExtResource( 53 ), ExtResource( 59 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 58 ) ],
 "loop": false,
@@ -541,13 +541,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=161]
+[sub_resource type="RectangleShape2D" id=34]
 extents = Vector2( 3.85233, 2.71524 )
 
-[sub_resource type="RectangleShape2D" id=162]
+[sub_resource type="RectangleShape2D" id=35]
 extents = Vector2( 7.99921, 32.0507 )
 
-[sub_resource type="SpriteFrames" id=163]
+[sub_resource type="SpriteFrames" id=36]
 animations = [ {
 "frames": [ ExtResource( 20 ), ExtResource( 59 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 58 ) ],
 "loop": false,
@@ -560,13 +560,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=164]
+[sub_resource type="RectangleShape2D" id=37]
 extents = Vector2( 3.6748, 3.90611 )
 
-[sub_resource type="RectangleShape2D" id=32]
+[sub_resource type="RectangleShape2D" id=38]
 extents = Vector2( 31.5205, 11.1035 )
 
-[sub_resource type="SpriteFrames" id=33]
+[sub_resource type="SpriteFrames" id=39]
 animations = [ {
 "frames": [ ExtResource( 61 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 64 ) ],
 "loop": false,
@@ -579,13 +579,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=179]
+[sub_resource type="RectangleShape2D" id=40]
 extents = Vector2( 10, 10.3184 )
 
-[sub_resource type="RectangleShape2D" id=165]
+[sub_resource type="RectangleShape2D" id=41]
 extents = Vector2( 33.6135, 10 )
 
-[sub_resource type="SpriteFrames" id=166]
+[sub_resource type="SpriteFrames" id=42]
 animations = [ {
 "frames": [ ExtResource( 61 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 64 ) ],
 "loop": false,
@@ -598,12 +598,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=180]
+[sub_resource type="RectangleShape2D" id=43]
 
-[sub_resource type="RectangleShape2D" id=167]
+[sub_resource type="RectangleShape2D" id=44]
 extents = Vector2( 32.1794, 10 )
 
-[sub_resource type="SpriteFrames" id=168]
+[sub_resource type="SpriteFrames" id=45]
 animations = [ {
 "frames": [ ExtResource( 61 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 64 ) ],
 "loop": false,
@@ -616,10 +616,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=181]
+[sub_resource type="RectangleShape2D" id=46]
 extents = Vector2( 7.76523, 10 )
 
-[sub_resource type="Animation" id=35]
+[sub_resource type="Animation" id=47]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -647,7 +647,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 180.0, 180.0 ]
 }
 
-[sub_resource type="Animation" id=36]
+[sub_resource type="Animation" id=48]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -675,7 +675,7 @@ tracks/1/keys = {
 "values": [ 180.0, 180.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=37]
+[sub_resource type="Animation" id=49]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -703,7 +703,7 @@ tracks/1/keys = {
 "values": [ -90.0, -90.0, 90.0, 90.0 ]
 }
 
-[sub_resource type="Animation" id=38]
+[sub_resource type="Animation" id=50]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -731,7 +731,7 @@ tracks/1/keys = {
 "values": [ 90.0, 90.0, -90.0, -90.0 ]
 }
 
-[sub_resource type="Animation" id=39]
+[sub_resource type="Animation" id=51]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -759,7 +759,7 @@ tracks/1/keys = {
 "values": [ -90.0, -90.0, 90.0, 90.0 ]
 }
 
-[sub_resource type="Animation" id=40]
+[sub_resource type="Animation" id=52]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -787,7 +787,7 @@ tracks/1/keys = {
 "values": [ -90.0, -90.0, 90.0, 90.0 ]
 }
 
-[sub_resource type="Animation" id=41]
+[sub_resource type="Animation" id=53]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -815,7 +815,7 @@ tracks/1/keys = {
 "values": [ -90.0, -90.0, 90.0, 90.0 ]
 }
 
-[sub_resource type="Animation" id=42]
+[sub_resource type="Animation" id=54]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -843,7 +843,7 @@ tracks/1/keys = {
 "values": [ -90.0, -90.0, 90.0, 90.0 ]
 }
 
-[sub_resource type="Animation" id=43]
+[sub_resource type="Animation" id=55]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -871,7 +871,7 @@ tracks/1/keys = {
 "values": [ -90.0, -90.0, 90.0, 90.0 ]
 }
 
-[sub_resource type="Animation" id=44]
+[sub_resource type="Animation" id=56]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -898,7 +898,7 @@ tracks/1/keys = {
 "values": [ -90.0, -90.0, 90.0, 90.0 ]
 }
 
-[sub_resource type="Animation" id=45]
+[sub_resource type="Animation" id=57]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -925,7 +925,7 @@ tracks/1/keys = {
 "values": [ 90.0, 90.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=46]
+[sub_resource type="Animation" id=58]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -953,7 +953,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=59]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -980,7 +980,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=60]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -1008,7 +1008,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id=61]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -1036,7 +1036,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id=62]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1064,7 +1064,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=51]
+[sub_resource type="Animation" id=63]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -1091,7 +1091,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=52]
+[sub_resource type="Animation" id=64]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -1119,7 +1119,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=53]
+[sub_resource type="Animation" id=65]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -1147,7 +1147,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=54]
+[sub_resource type="Animation" id=66]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -1175,7 +1175,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=55]
+[sub_resource type="Animation" id=67]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -1203,7 +1203,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=56]
+[sub_resource type="Animation" id=68]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -1231,7 +1231,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=57]
+[sub_resource type="Animation" id=69]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -1258,7 +1258,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=58]
+[sub_resource type="Animation" id=70]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1286,7 +1286,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=59]
+[sub_resource type="Animation" id=71]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -1314,7 +1314,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=60]
+[sub_resource type="Animation" id=72]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -1342,7 +1342,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=61]
+[sub_resource type="Animation" id=73]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -1370,7 +1370,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=62]
+[sub_resource type="Animation" id=74]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -1397,7 +1397,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=63]
+[sub_resource type="Animation" id=75]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1425,7 +1425,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=64]
+[sub_resource type="Animation" id=76]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1453,7 +1453,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=65]
+[sub_resource type="Animation" id=77]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1481,7 +1481,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=66]
+[sub_resource type="Animation" id=78]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1509,7 +1509,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=67]
+[sub_resource type="Animation" id=79]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1537,7 +1537,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=68]
+[sub_resource type="Animation" id=80]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1565,7 +1565,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=69]
+[sub_resource type="Animation" id=81]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1593,7 +1593,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=70]
+[sub_resource type="Animation" id=82]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1621,7 +1621,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=71]
+[sub_resource type="Animation" id=83]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1649,7 +1649,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=72]
+[sub_resource type="Animation" id=84]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -1677,7 +1677,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="SpriteFrames" id=73]
+[sub_resource type="SpriteFrames" id=85]
 animations = [ {
 "frames": [ ExtResource( 45 ) ],
 "loop": true,
@@ -1690,34 +1690,34 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=74]
+[sub_resource type="RectangleShape2D" id=86]
 extents = Vector2( 12.5046, 10 )
 
-[sub_resource type="RectangleShape2D" id=75]
+[sub_resource type="RectangleShape2D" id=87]
 extents = Vector2( 12.6926, 10.9488 )
 
-[sub_resource type="RectangleShape2D" id=76]
+[sub_resource type="RectangleShape2D" id=88]
 extents = Vector2( 4.51196, 59.8682 )
 
-[sub_resource type="OccluderPolygon2D" id=77]
+[sub_resource type="OccluderPolygon2D" id=89]
 polygon = PoolVector2Array( -223.825, 362.715, -31.7883, 362.755, -31.7093, 369.667, -223.874, 369.864 )
 
-[sub_resource type="OccluderPolygon2D" id=78]
+[sub_resource type="OccluderPolygon2D" id=90]
 polygon = PoolVector2Array( 537.281, 324.929, 544.22, 324.861, 544.289, 190.778, 537.375, 190.783 )
 
-[sub_resource type="OccluderPolygon2D" id=79]
+[sub_resource type="OccluderPolygon2D" id=91]
 polygon = PoolVector2Array( 185.042, 189.87, 191.993, 189.906, 191.958, 320.294, 184.935, 320.294 )
 
-[sub_resource type="OccluderPolygon2D" id=80]
+[sub_resource type="OccluderPolygon2D" id=92]
 polygon = PoolVector2Array( 760.993, 181.663, 767.92, 181.795, 767.986, 390.789, 760.999, 390.931, 761.047, 383.899 )
 
-[sub_resource type="OccluderPolygon2D" id=81]
+[sub_resource type="OccluderPolygon2D" id=93]
 polygon = PoolVector2Array( 761.227, 64.0758, 767.981, 64.0155, 767.976, 128.207, 761.224, 128.004 )
 
-[sub_resource type="OccluderPolygon2D" id=82]
+[sub_resource type="OccluderPolygon2D" id=94]
 polygon = PoolVector2Array( 32.1895, 510.787, 32.1943, 308.815, 25.166, 308.863, 25.2589, 510.712 )
 
-[sub_resource type="SpriteFrames" id=169]
+[sub_resource type="SpriteFrames" id=95]
 animations = [ {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
@@ -1730,10 +1730,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=170]
+[sub_resource type="RectangleShape2D" id=96]
 extents = Vector2( 21.7032, 20.2435 )
 
-[sub_resource type="SpriteFrames" id=171]
+[sub_resource type="SpriteFrames" id=97]
 animations = [ {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
@@ -1746,10 +1746,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=172]
+[sub_resource type="RectangleShape2D" id=98]
 extents = Vector2( 13.3575, 15.3924 )
 
-[sub_resource type="SpriteFrames" id=173]
+[sub_resource type="SpriteFrames" id=99]
 animations = [ {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
@@ -1762,10 +1762,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=174]
+[sub_resource type="RectangleShape2D" id=100]
 extents = Vector2( 16.6505, 15.1275 )
 
-[sub_resource type="SpriteFrames" id=175]
+[sub_resource type="SpriteFrames" id=101]
 animations = [ {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
@@ -1778,10 +1778,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=176]
+[sub_resource type="RectangleShape2D" id=102]
 extents = Vector2( 21.837, 19.1331 )
 
-[sub_resource type="SpriteFrames" id=177]
+[sub_resource type="SpriteFrames" id=103]
 animations = [ {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
@@ -1794,23 +1794,23 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=178]
+[sub_resource type="RectangleShape2D" id=104]
 extents = Vector2( 16.4995, 15.2457 )
 
-[sub_resource type="Gradient" id=83]
+[sub_resource type="Gradient" id=105]
 offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.769531, 0.519354, 0.165329, 1, 0.652344, 0.0311148, 0, 1, 1, 0, 0, 1 )
 
-[sub_resource type="GradientTexture" id=84]
-gradient = SubResource( 83 )
+[sub_resource type="GradientTexture" id=106]
+gradient = SubResource( 105 )
 
-[sub_resource type="Curve" id=85]
+[sub_resource type="Curve" id=107]
 _data = [ Vector2( 0.00632912, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.336364 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=86]
-curve = SubResource( 85 )
+[sub_resource type="CurveTexture" id=108]
+curve = SubResource( 107 )
 
-[sub_resource type="ParticlesMaterial" id=87]
+[sub_resource type="ParticlesMaterial" id=109]
 emission_shape = 2
 emission_box_extents = Vector3( 2, 5, 1 )
 flag_disable_z = true
@@ -1824,10 +1824,10 @@ orbit_velocity_random = 0.0
 linear_accel = 20.0
 angle = 45.0
 scale = 2.0
-scale_curve = SubResource( 86 )
-color_ramp = SubResource( 84 )
+scale_curve = SubResource( 108 )
+color_ramp = SubResource( 106 )
 
-[sub_resource type="SpriteFrames" id=88]
+[sub_resource type="SpriteFrames" id=110]
 animations = [ {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
@@ -1840,49 +1840,49 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=89]
+[sub_resource type="RectangleShape2D" id=111]
 extents = Vector2( 4.36072, 7.92664 )
 
-[sub_resource type="RectangleShape2D" id=90]
+[sub_resource type="RectangleShape2D" id=112]
 extents = Vector2( 105.492, 60.371 )
 
-[sub_resource type="DynamicFont" id=91]
+[sub_resource type="DynamicFont" id=113]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=92]
+[sub_resource type="DynamicFont" id=114]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=93]
+[sub_resource type="DynamicFont" id=115]
 size = 8
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=94]
+[sub_resource type="DynamicFont" id=116]
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=95]
+[sub_resource type="DynamicFont" id=117]
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=96]
+[sub_resource type="DynamicFont" id=118]
 font_data = ExtResource( 21 )
 
-[sub_resource type="DynamicFont" id=97]
+[sub_resource type="DynamicFont" id=119]
 font_data = ExtResource( 77 )
 
-[sub_resource type="DynamicFont" id=98]
-size = 8
-font_data = ExtResource( 77 )
-
-[sub_resource type="DynamicFont" id=99]
+[sub_resource type="DynamicFont" id=120]
 size = 8
 font_data = ExtResource( 77 )
 
-[sub_resource type="CapsuleShape2D" id=100]
+[sub_resource type="DynamicFont" id=121]
+size = 8
+font_data = ExtResource( 77 )
+
+[sub_resource type="CapsuleShape2D" id=122]
 radius = 3.83072
 height = 0.751036
 
-[sub_resource type="Animation" id=101]
+[sub_resource type="Animation" id=123]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:modulate")
 tracks/0/interp = 1
@@ -1934,7 +1934,7 @@ tracks/3/keys = {
 "values": [ true, true ]
 }
 
-[sub_resource type="Animation" id=102]
+[sub_resource type="Animation" id=124]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:modulate")
 tracks/0/interp = 1
@@ -1986,7 +1986,7 @@ tracks/3/keys = {
 "values": [ true, true ]
 }
 
-[sub_resource type="Animation" id=103]
+[sub_resource type="Animation" id=125]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:modulate")
 tracks/0/interp = 1
@@ -2038,7 +2038,7 @@ tracks/3/keys = {
 "values": [ true, true ]
 }
 
-[sub_resource type="Animation" id=104]
+[sub_resource type="Animation" id=126]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:modulate")
 tracks/0/interp = 1
@@ -2090,7 +2090,7 @@ tracks/3/keys = {
 "values": [ true, true ]
 }
 
-[sub_resource type="Animation" id=105]
+[sub_resource type="Animation" id=127]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -2143,7 +2143,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=106]
+[sub_resource type="Animation" id=128]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -2157,7 +2157,7 @@ tracks/0/keys = {
 "values": [ 2, 3, 4 ]
 }
 
-[sub_resource type="Animation" id=107]
+[sub_resource type="Animation" id=129]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -2173,7 +2173,7 @@ tracks/0/keys = {
 "values": [ 19, 20, 19, 20 ]
 }
 
-[sub_resource type="Animation" id=108]
+[sub_resource type="Animation" id=130]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -2189,7 +2189,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=109]
+[sub_resource type="Animation" id=131]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -2242,7 +2242,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=110]
+[sub_resource type="Animation" id=132]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -2256,7 +2256,7 @@ tracks/0/keys = {
 "values": [ 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=111]
+[sub_resource type="Animation" id=133]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -2272,7 +2272,7 @@ tracks/0/keys = {
 "values": [ 5 ]
 }
 
-[sub_resource type="Animation" id=112]
+[sub_resource type="Animation" id=134]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -2288,7 +2288,7 @@ tracks/0/keys = {
 "values": [ 21, 5, 21, 5 ]
 }
 
-[sub_resource type="Animation" id=113]
+[sub_resource type="Animation" id=135]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -2341,7 +2341,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=114]
+[sub_resource type="Animation" id=136]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -2355,7 +2355,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10 ]
 }
 
-[sub_resource type="Animation" id=115]
+[sub_resource type="Animation" id=137]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -2371,7 +2371,7 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=116]
+[sub_resource type="Animation" id=138]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -2387,7 +2387,7 @@ tracks/0/keys = {
 "values": [ 22, 8, 22, 8 ]
 }
 
-[sub_resource type="Animation" id=117]
+[sub_resource type="Animation" id=139]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -2440,7 +2440,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=118]
+[sub_resource type="Animation" id=140]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -2454,7 +2454,7 @@ tracks/0/keys = {
 "values": [ 15, 16, 17, 18 ]
 }
 
-[sub_resource type="Animation" id=119]
+[sub_resource type="Animation" id=141]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -2470,7 +2470,7 @@ tracks/0/keys = {
 "values": [ 13 ]
 }
 
-[sub_resource type="Animation" id=120]
+[sub_resource type="Animation" id=142]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -2486,163 +2486,163 @@ tracks/0/keys = {
 "values": [ 23, 24, 23, 24 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=121]
+[sub_resource type="AnimationNodeAnimation" id=143]
 animation = "attack_down"
 
-[sub_resource type="AnimationNodeAnimation" id=122]
+[sub_resource type="AnimationNodeAnimation" id=144]
 animation = "right_attack"
 
-[sub_resource type="AnimationNodeAnimation" id=123]
+[sub_resource type="AnimationNodeAnimation" id=145]
 animation = "left_attack"
 
-[sub_resource type="AnimationNodeAnimation" id=124]
+[sub_resource type="AnimationNodeAnimation" id=146]
 animation = "up_attack"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=125]
-blend_point_0/node = SubResource( 121 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=147]
+blend_point_0/node = SubResource( 143 )
 blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 122 )
+blend_point_1/node = SubResource( 144 )
 blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 123 )
+blend_point_2/node = SubResource( 145 )
 blend_point_2/pos = Vector2( -1, 0 )
-blend_point_3/node = SubResource( 124 )
+blend_point_3/node = SubResource( 146 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=126]
+[sub_resource type="AnimationNodeAnimation" id=148]
 animation = "down_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=127]
+[sub_resource type="AnimationNodeAnimation" id=149]
 animation = "right_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=128]
+[sub_resource type="AnimationNodeAnimation" id=150]
 animation = "up_dead"
 
-[sub_resource type="AnimationNodeAnimation" id=129]
+[sub_resource type="AnimationNodeAnimation" id=151]
 animation = "left_dead"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=130]
-blend_point_0/node = SubResource( 126 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=152]
+blend_point_0/node = SubResource( 148 )
 blend_point_0/pos = Vector2( -0.00142753, 0.989446 )
-blend_point_1/node = SubResource( 127 )
+blend_point_1/node = SubResource( 149 )
 blend_point_1/pos = Vector2( 0.998572, -0.00263858 )
-blend_point_2/node = SubResource( 128 )
+blend_point_2/node = SubResource( 150 )
 blend_point_2/pos = Vector2( -0.00142753, -0.989446 )
-blend_point_3/node = SubResource( 129 )
+blend_point_3/node = SubResource( 151 )
 blend_point_3/pos = Vector2( -0.999286, 0.0079155 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=131]
+[sub_resource type="AnimationNodeAnimation" id=153]
 animation = "PLayerDown"
 
-[sub_resource type="AnimationNodeAnimation" id=132]
+[sub_resource type="AnimationNodeAnimation" id=154]
 animation = "PLayerUp"
 
-[sub_resource type="AnimationNodeAnimation" id=133]
+[sub_resource type="AnimationNodeAnimation" id=155]
 animation = "PLayerRight"
 
-[sub_resource type="AnimationNodeAnimation" id=134]
+[sub_resource type="AnimationNodeAnimation" id=156]
 animation = "PLayerLeft"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=135]
-blend_point_0/node = SubResource( 131 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=157]
+blend_point_0/node = SubResource( 153 )
 blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 132 )
+blend_point_1/node = SubResource( 154 )
 blend_point_1/pos = Vector2( 0, -1 )
-blend_point_2/node = SubResource( 133 )
+blend_point_2/node = SubResource( 155 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 134 )
+blend_point_3/node = SubResource( 156 )
 blend_point_3/pos = Vector2( -1, 0 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=136]
+[sub_resource type="AnimationNodeAnimation" id=158]
 animation = "left_idle"
 
-[sub_resource type="AnimationNodeAnimation" id=137]
+[sub_resource type="AnimationNodeAnimation" id=159]
 animation = "idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id=138]
+[sub_resource type="AnimationNodeAnimation" id=160]
 animation = "right_idle"
 
-[sub_resource type="AnimationNodeAnimation" id=139]
+[sub_resource type="AnimationNodeAnimation" id=161]
 animation = "up_idle"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=140]
-blend_point_0/node = SubResource( 136 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=162]
+blend_point_0/node = SubResource( 158 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 137 )
+blend_point_1/node = SubResource( 159 )
 blend_point_1/pos = Vector2( 0, 1 )
-blend_point_2/node = SubResource( 138 )
+blend_point_2/node = SubResource( 160 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 139 )
+blend_point_3/node = SubResource( 161 )
 blend_point_3/pos = Vector2( 0, -1 )
 snap = Vector2( 0.01, 0.01 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=141]
+[sub_resource type="AnimationNodeAnimation" id=163]
 animation = "down_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=142]
+[sub_resource type="AnimationNodeAnimation" id=164]
 animation = "left_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=143]
+[sub_resource type="AnimationNodeAnimation" id=165]
 animation = "right_walk"
 
-[sub_resource type="AnimationNodeAnimation" id=144]
+[sub_resource type="AnimationNodeAnimation" id=166]
 animation = "up_walk"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=145]
-blend_point_0/node = SubResource( 141 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=167]
+blend_point_0/node = SubResource( 163 )
 blend_point_0/pos = Vector2( 0, 1 )
-blend_point_1/node = SubResource( 142 )
+blend_point_1/node = SubResource( 164 )
 blend_point_1/pos = Vector2( -1, 0 )
-blend_point_2/node = SubResource( 143 )
+blend_point_2/node = SubResource( 165 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 144 )
+blend_point_3/node = SubResource( 166 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=146]
+[sub_resource type="AnimationNodeStateMachineTransition" id=168]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=147]
+[sub_resource type="AnimationNodeStateMachineTransition" id=169]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=148]
+[sub_resource type="AnimationNodeStateMachineTransition" id=170]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=149]
+[sub_resource type="AnimationNodeStateMachineTransition" id=171]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=150]
+[sub_resource type="AnimationNodeStateMachineTransition" id=172]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=151]
+[sub_resource type="AnimationNodeStateMachineTransition" id=173]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=152]
+[sub_resource type="AnimationNodeStateMachineTransition" id=174]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=153]
+[sub_resource type="AnimationNodeStateMachineTransition" id=175]
 
-[sub_resource type="AnimationNodeStateMachine" id=154]
-states/Attack/node = SubResource( 125 )
+[sub_resource type="AnimationNodeStateMachine" id=176]
+states/Attack/node = SubResource( 147 )
 states/Attack/position = Vector2( 508, 204 )
-states/Death/node = SubResource( 130 )
+states/Death/node = SubResource( 152 )
 states/Death/position = Vector2( 342, 100 )
-states/Get_hit/node = SubResource( 135 )
+states/Get_hit/node = SubResource( 157 )
 states/Get_hit/position = Vector2( 524, 44.5131 )
-states/Idle/node = SubResource( 140 )
+states/Idle/node = SubResource( 162 )
 states/Idle/position = Vector2( 495, 100 )
-states/Run/node = SubResource( 145 )
+states/Run/node = SubResource( 167 )
 states/Run/position = Vector2( 657, 100 )
-transitions = [ "Idle", "Run", SubResource( 146 ), "Run", "Idle", SubResource( 147 ), "Idle", "Attack", SubResource( 148 ), "Attack", "Idle", SubResource( 149 ), "Death", "Idle", SubResource( 150 ), "Idle", "Death", SubResource( 151 ), "Get_hit", "Idle", SubResource( 152 ), "Idle", "Get_hit", SubResource( 153 ) ]
+transitions = [ "Idle", "Run", SubResource( 168 ), "Run", "Idle", SubResource( 169 ), "Idle", "Attack", SubResource( 170 ), "Attack", "Idle", SubResource( 171 ), "Death", "Idle", SubResource( 172 ), "Idle", "Death", SubResource( 173 ), "Get_hit", "Idle", SubResource( 174 ), "Idle", "Get_hit", SubResource( 175 ) ]
 start_node = "Idle"
 graph_offset = Vector2( 0, 26.5131 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=155]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=177]
 
-[sub_resource type="CapsuleShape2D" id=156]
+[sub_resource type="CapsuleShape2D" id=178]
 radius = 3.12059
 height = 12.0896
 
-[sub_resource type="RectangleShape2D" id=157]
+[sub_resource type="RectangleShape2D" id=179]
 extents = Vector2( 4.63716, 4.92157 )
 
-[sub_resource type="CapsuleShape2D" id=158]
+[sub_resource type="CapsuleShape2D" id=180]
 radius = 4.39743
 height = 5.69391
 
@@ -6806,33 +6806,33 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall2"]
 position = Vector2( 341.513, 468.35 )
-shape = SubResource( 159 )
+shape = SubResource( 32 )
 script = ExtResource( 69 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/vertical_fake_wall2"]
 position = Vector2( 320.231, 468.347 )
 scale = Vector2( 1, 0.673834 )
-frames = SubResource( 160 )
+frames = SubResource( 33 )
 animation = "closed"
 
 [node name="Timer" type="Timer" parent="Fake Walls/vertical_fake_wall2"]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall2"]
 position = Vector2( 348.474, 487.341 )
-shape = SubResource( 161 )
+shape = SubResource( 34 )
 
 [node name="vertical_fake_wall3" type="StaticBody2D" parent="Fake Walls"]
 script = ExtResource( 31 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall3"]
 position = Vector2( 671.257, 158.795 )
-shape = SubResource( 162 )
+shape = SubResource( 35 )
 script = ExtResource( 32 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/vertical_fake_wall3"]
 position = Vector2( 647.224, 158.777 )
 scale = Vector2( 1, 1.00216 )
-frames = SubResource( 163 )
+frames = SubResource( 36 )
 animation = "open"
 frame = 7
 
@@ -6842,7 +6842,7 @@ one_shot = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall3"]
 position = Vector2( 675.601, 186.874 )
-shape = SubResource( 164 )
+shape = SubResource( 37 )
 
 [node name="horizontal_fake_wall" type="StaticBody2D" parent="Fake Walls"]
 position = Vector2( 364.813, 63.8506 )
@@ -6850,13 +6850,13 @@ script = ExtResource( 28 )
 
 [node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall"]
 position = Vector2( 142.616, 330.079 )
-shape = SubResource( 32 )
+shape = SubResource( 38 )
 script = ExtResource( 69 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall"]
 position = Vector2( 144.471, 350.582 )
 scale = Vector2( 0.90929, 0.988436 )
-frames = SubResource( 33 )
+frames = SubResource( 39 )
 animation = "closed"
 
 [node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall"]
@@ -6864,20 +6864,20 @@ wait_time = 0.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall"]
 position = Vector2( 115.585, 329.303 )
-shape = SubResource( 179 )
+shape = SubResource( 40 )
 
 [node name="horizontal_fake_wall2" type="StaticBody2D" parent="Fake Walls"]
 script = ExtResource( 36 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2"]
 position = Vector2( 574.667, 136.796 )
-shape = SubResource( 165 )
+shape = SubResource( 41 )
 script = ExtResource( 32 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall2"]
 position = Vector2( 575.847, 158.78 )
 scale = Vector2( 1.01959, 1 )
-frames = SubResource( 166 )
+frames = SubResource( 42 )
 animation = "closed"
 
 [node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall2"]
@@ -6886,7 +6886,7 @@ one_shot = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2"]
 position = Vector2( 544.578, 136.712 )
-shape = SubResource( 180 )
+shape = SubResource( 43 )
 
 [node name="horizontal_fake_wall3" type="StaticBody2D" parent="Fake Walls"]
 position = Vector2( 320.292, 204.61 )
@@ -6894,13 +6894,13 @@ script = ExtResource( 38 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall3"]
 position = Vector2( 0.0135193, -21.9256 )
-shape = SubResource( 167 )
+shape = SubResource( 44 )
 script = ExtResource( 32 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall3"]
 position = Vector2( -0.0284271, 0 )
 scale = Vector2( 1.00117, 1 )
-frames = SubResource( 168 )
+frames = SubResource( 45 )
 animation = "closed"
 
 [node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall3"]
@@ -6909,7 +6909,7 @@ one_shot = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall3"]
 position = Vector2( -28.8252, -22.0833 )
-shape = SubResource( 181 )
+shape = SubResource( 46 )
 
 [node name="Knight Layers" type="Node2D" parent="."]
 position = Vector2( -38.709, 234.323 )
@@ -7007,7 +7007,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 35 )
+anims/rat_animation = SubResource( 47 )
 
 [node name="Rat Attack2" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
 position = Vector2( 42.1152, 81.2932 )
@@ -7016,7 +7016,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack2"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 36 )
+anims/rat_animation = SubResource( 48 )
 
 [node name="Rat Attack3" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
 position = Vector2( 539.787, 172.78 )
@@ -7025,7 +7025,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack3"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 37 )
+anims/rat_animation = SubResource( 49 )
 
 [node name="Rat Attack4" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
 position = Vector2( 598.155, 191.242 )
@@ -7034,7 +7034,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack4"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 38 )
+anims/rat_animation = SubResource( 50 )
 
 [node name="Rat Attack5" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
 position = Vector2( 537.707, 210.223 )
@@ -7043,7 +7043,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack5"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 39 )
+anims/rat_animation = SubResource( 51 )
 
 [node name="Rat Attack6" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
 position = Vector2( 451.719, -178.631 )
@@ -7052,7 +7052,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack6"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 40 )
+anims/rat_animation = SubResource( 52 )
 
 [node name="Rat Attack7" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
 position = Vector2( 1589.12, -92.75 )
@@ -7061,7 +7061,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack7"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 41 )
+anims/rat_animation = SubResource( 53 )
 
 [node name="Rat Attack8" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
 position = Vector2( 1603.8, -72.9222 )
@@ -7070,7 +7070,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack8"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 42 )
+anims/rat_animation = SubResource( 54 )
 
 [node name="Rat Attack9" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
 position = Vector2( 2402.64, 169.295 )
@@ -7079,7 +7079,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack9"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 43 )
+anims/rat_animation = SubResource( 55 )
 
 [node name="Rat Attack10" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
 position = Vector2( 2323.05, 210.063 )
@@ -7088,7 +7088,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack10"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 44 )
+anims/rat_animation = SubResource( 56 )
 
 [node name="Rat Attack11" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
 position = Vector2( 2313.16, 253.32 )
@@ -7097,7 +7097,7 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack11"]
 autoplay = "rat_animation"
-anims/rat_animation = SubResource( 45 )
+anims/rat_animation = SubResource( 57 )
 
 [node name="Ghost Sprite" type="Node2D" parent="Enemies assets"]
 position = Vector2( 198.56, -217.935 )
@@ -7108,7 +7108,7 @@ scale = Vector2( 0.632723, 0.816361 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost25"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 46 )
+"anims/Ghost Animation" = SubResource( 58 )
 
 [node name="Ghost26" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 2010.53, 957.548 )
@@ -7116,14 +7116,14 @@ scale = Vector2( 0.7935, 0.89675 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost26"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 47 )
+"anims/Ghost Animation" = SubResource( 59 )
 
 [node name="Ghost27" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 2060.72, 903.11 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost27"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 48 )
+"anims/Ghost Animation" = SubResource( 60 )
 
 [node name="Ghost28" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 1934.02, 618.884 )
@@ -7131,7 +7131,7 @@ scale = Vector2( 0.556796, 0.778398 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost28"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 49 )
+"anims/Ghost Animation" = SubResource( 61 )
 
 [node name="Ghost29" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 1984.45, 671.529 )
@@ -7139,7 +7139,7 @@ scale = Vector2( 0.60413, 0.802065 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost29"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 50 )
+"anims/Ghost Animation" = SubResource( 62 )
 
 [node name="Ghost30" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 1919.89, 604.142 )
@@ -7147,14 +7147,14 @@ scale = Vector2( 0.890071, 0.945036 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost30"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 51 )
+"anims/Ghost Animation" = SubResource( 63 )
 
 [node name="Ghost" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( -527.285, 81.3022 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 52 )
+"anims/Ghost Animation" = SubResource( 64 )
 
 [node name="Ghost5" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 36.9442, 684.232 )
@@ -7162,14 +7162,14 @@ scale = Vector2( 0.556341, 0.778171 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost5"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 53 )
+"anims/Ghost Animation" = SubResource( 65 )
 
 [node name="Ghost6" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( -24.4038, 816.978 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost6"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 54 )
+"anims/Ghost Animation" = SubResource( 66 )
 
 [node name="Ghost7" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 118.744, 747.813 )
@@ -7177,7 +7177,7 @@ scale = Vector2( 0.753263, 0.876632 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost7"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 55 )
+"anims/Ghost Animation" = SubResource( 67 )
 
 [node name="Ghost8" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 1353.34, 1101.19 )
@@ -7185,7 +7185,7 @@ scale = Vector2( 0.592979, 0.79649 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost8"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 56 )
+"anims/Ghost Animation" = SubResource( 68 )
 
 [node name="Ghost9" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 908.499, 644.918 )
@@ -7193,7 +7193,7 @@ scale = Vector2( 0.675824, 0.837912 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost9"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 57 )
+"anims/Ghost Animation" = SubResource( 69 )
 
 [node name="Ghost10" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 739.217, 680.599 )
@@ -7201,7 +7201,7 @@ scale = Vector2( 0.898613, 0.949306 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost10"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 58 )
+"anims/Ghost Animation" = SubResource( 70 )
 
 [node name="Ghost11" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 767.791, 688.867 )
@@ -7209,7 +7209,7 @@ scale = Vector2( 0.660051, 0.830026 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost11"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 59 )
+"anims/Ghost Animation" = SubResource( 71 )
 
 [node name="Ghost12" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 1230.52, 500.315 )
@@ -7217,7 +7217,7 @@ scale = Vector2( 0.665989, 0.832994 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost12"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 60 )
+"anims/Ghost Animation" = SubResource( 72 )
 
 [node name="Ghost13" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 1153.09, 439.684 )
@@ -7225,7 +7225,7 @@ scale = Vector2( 0.998448, 0.999224 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost13"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 61 )
+"anims/Ghost Animation" = SubResource( 73 )
 
 [node name="Ghost14" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 1332.51, 481.737 )
@@ -7233,7 +7233,7 @@ scale = Vector2( 0.693061, 0.846531 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost14"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 62 )
+"anims/Ghost Animation" = SubResource( 74 )
 
 [node name="Ghost15" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 2638.66, -583.919 )
@@ -7241,7 +7241,7 @@ scale = Vector2( 0.538095, 0.769047 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost15"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 63 )
+"anims/Ghost Animation" = SubResource( 75 )
 
 [node name="Ghost16" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 2711.31, -660.503 )
@@ -7249,7 +7249,7 @@ scale = Vector2( 0.578236, 0.789118 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost16"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 64 )
+"anims/Ghost Animation" = SubResource( 76 )
 
 [node name="Ghost17" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 2582.29, -583.4 )
@@ -7257,7 +7257,7 @@ scale = Vector2( 0.876535, 0.938268 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost17"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 65 )
+"anims/Ghost Animation" = SubResource( 77 )
 
 [node name="Ghost18" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 3086.59, -410.625 )
@@ -7265,7 +7265,7 @@ scale = Vector2( 0.64084, 0.82042 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost18"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 66 )
+"anims/Ghost Animation" = SubResource( 78 )
 
 [node name="Ghost19" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 3270.47, -432.485 )
@@ -7273,7 +7273,7 @@ scale = Vector2( 0.564277, 0.782139 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost19"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 67 )
+"anims/Ghost Animation" = SubResource( 79 )
 
 [node name="Ghost20" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 3275.47, -354.047 )
@@ -7281,7 +7281,7 @@ scale = Vector2( 0.701356, 0.850678 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost20"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 68 )
+"anims/Ghost Animation" = SubResource( 80 )
 
 [node name="Ghost21" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 3624.04, 540.45 )
@@ -7289,7 +7289,7 @@ scale = Vector2( 0.682524, 0.841262 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost21"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 69 )
+"anims/Ghost Animation" = SubResource( 81 )
 
 [node name="Ghost24" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 3461.23, 627.285 )
@@ -7297,7 +7297,7 @@ scale = Vector2( 0.656656, 0.828328 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost24"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 70 )
+"anims/Ghost Animation" = SubResource( 82 )
 
 [node name="Ghost22" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 3573.97, 680.892 )
@@ -7305,7 +7305,7 @@ scale = Vector2( 0.935702, 0.967851 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost22"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 71 )
+"anims/Ghost Animation" = SubResource( 83 )
 
 [node name="Ghost23" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( 3548.72, 702.141 )
@@ -7313,7 +7313,7 @@ scale = Vector2( 0.627555, 0.813778 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost23"]
 autoplay = "Ghost Animation"
-"anims/Ghost Animation" = SubResource( 72 )
+"anims/Ghost Animation" = SubResource( 84 )
 
 [node name="Spider Sprite" type="Node2D" parent="Enemies assets"]
 modulate = Color( 0.729412, 0.627451, 0.627451, 1 )
@@ -7619,13 +7619,13 @@ __meta__ = {
 [node name="Sprite" type="AnimatedSprite" parent="Doors/obj_door"]
 position = Vector2( 3.57208, -1.42697 )
 scale = Vector2( 1.71553, 1 )
-frames = SubResource( 73 )
+frames = SubResource( 85 )
 animation = "closed"
 
 [node name="door_collision" type="CollisionShape2D" parent="Doors/obj_door"]
 position = Vector2( 3.72278, -3.64516 )
 scale = Vector2( 2.5, 2 )
-shape = SubResource( 74 )
+shape = SubResource( 86 )
 script = ExtResource( 46 )
 
 [node name="Area2D" type="Area2D" parent="Doors/obj_door"]
@@ -7635,7 +7635,7 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/obj_door/Area2D"]
 position = Vector2( 2.38139, 3.80061 )
 scale = Vector2( 1.5, 1.5 )
-shape = SubResource( 75 )
+shape = SubResource( 87 )
 
 [node name="Timer" type="Timer" parent="Doors/obj_door"]
 wait_time = 0.4
@@ -7651,7 +7651,7 @@ texture = ExtResource( 30 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/entrance_door"]
 position = Vector2( 52.1439, 541.369 )
 scale = Vector2( 1, 0.1 )
-shape = SubResource( 76 )
+shape = SubResource( 88 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
@@ -7665,32 +7665,32 @@ scale = Vector2( 0.40462, 0.431326 )
 [node name="LightOccluder2D" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 618.161, -668.837 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 77 )
+occluder = SubResource( 89 )
 
 [node name="LightOccluder2D6" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 618.161, -668.837 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 78 )
+occluder = SubResource( 90 )
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 539.624, -671.599 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 79 )
+occluder = SubResource( 91 )
 
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 539.624, -671.599 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 80 )
+occluder = SubResource( 92 )
 
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 539.624, -671.599 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 81 )
+occluder = SubResource( 93 )
 
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="LightOccluder"]
 position = Vector2( 618.161, -668.837 )
 scale = Vector2( 2.47145, 2.31843 )
-occluder = SubResource( 82 )
+occluder = SubResource( 94 )
 
 [node name="Fake_torch" parent="." instance=ExtResource( 9 )]
 position = Vector2( -187.335, 334.034 )
@@ -7716,7 +7716,7 @@ collision_mask = 2
 script = ExtResource( 40 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="fake_torch2"]
-frames = SubResource( 169 )
+frames = SubResource( 95 )
 animation = "off"
 
 [node name="Light2D" type="Light2D" parent="fake_torch2"]
@@ -7732,7 +7732,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fake_torch2/Area2D"]
 position = Vector2( 5.82605, 1.67773 )
-shape = SubResource( 170 )
+shape = SubResource( 96 )
 
 [node name="fake_torch3" type="StaticBody2D" parent="."]
 position = Vector2( 727.353, 151.586 )
@@ -7742,7 +7742,7 @@ collision_mask = 2
 script = ExtResource( 41 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="fake_torch3"]
-frames = SubResource( 171 )
+frames = SubResource( 97 )
 animation = "off"
 
 [node name="Light2D" type="Light2D" parent="fake_torch3"]
@@ -7755,7 +7755,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fake_torch3/Area2D"]
 position = Vector2( -7.69238, 1.69687 )
-shape = SubResource( 172 )
+shape = SubResource( 98 )
 
 [node name="fake_torch4" type="StaticBody2D" parent="."]
 position = Vector2( 536.6, 333.692 )
@@ -7763,7 +7763,7 @@ scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 42 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="fake_torch4"]
-frames = SubResource( 173 )
+frames = SubResource( 99 )
 animation = "off"
 
 [node name="Light2D" type="Light2D" parent="fake_torch4"]
@@ -7776,7 +7776,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fake_torch4/Area2D"]
 position = Vector2( -2.33923, 13.1578 )
-shape = SubResource( 174 )
+shape = SubResource( 100 )
 
 [node name="fake_torch5" type="StaticBody2D" parent="."]
 position = Vector2( 606.229, 111.782 )
@@ -7784,7 +7784,7 @@ scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 43 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="fake_torch5"]
-frames = SubResource( 175 )
+frames = SubResource( 101 )
 animation = "off"
 
 [node name="Light2D" type="Light2D" parent="fake_torch5"]
@@ -7797,7 +7797,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fake_torch5/Area2D"]
 position = Vector2( -9.68555, 0 )
-shape = SubResource( 176 )
+shape = SubResource( 102 )
 
 [node name="fake_torch6" type="StaticBody2D" parent="."]
 position = Vector2( 350.3, 156.649 )
@@ -7809,7 +7809,7 @@ texture = ExtResource( 70 )
 script = ExtResource( 39 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="fake_torch6"]
-frames = SubResource( 177 )
+frames = SubResource( 103 )
 animation = "off"
 
 [node name="Area2D" type="Area2D" parent="fake_torch6"]
@@ -7818,7 +7818,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fake_torch6/Area2D"]
 position = Vector2( -11.8303, 1.39175 )
-shape = SubResource( 178 )
+shape = SubResource( 104 )
 
 [node name="Torches behind player" type="Node2D" parent="."]
 
@@ -7841,18 +7841,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch13"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch13"]
 position = Vector2( 49.048, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch13"]
 position = Vector2( 0, 2.57212 )
@@ -7861,7 +7861,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch13/Area2D"]
 position = Vector2( -80.8871, 543.874 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch14" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 231.124, 391.765 )
@@ -7882,18 +7882,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch14"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch14"]
 position = Vector2( 49.048, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch14"]
 position = Vector2( 0, 2.57212 )
@@ -7902,7 +7902,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch14/Area2D"]
 position = Vector2( 242.117, 636.57 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch15" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 312.173, 392.408 )
@@ -7923,18 +7923,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch15"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch15"]
 position = Vector2( 49.048, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch15"]
 position = Vector2( 0, 2.57212 )
@@ -7943,7 +7943,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch15/Area2D"]
 position = Vector2( -550.348, 597.598 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch6" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -109.116, 219.631 )
@@ -7964,18 +7964,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch6"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch6"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch6"]
 position = Vector2( 0, 2.57212 )
@@ -7984,7 +7984,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch6/Area2D"]
 position = Vector2( 40.0453, 513.622 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch7" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -202.388, 264.021 )
@@ -8006,18 +8006,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch7"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch7"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch7"]
 position = Vector2( 0, 2.57212 )
@@ -8026,7 +8026,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch7/Area2D"]
 position = Vector2( -14.0309, 550.992 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch8" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -90.1638, 264.021 )
@@ -8048,18 +8048,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch8"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch8"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch8"]
 position = Vector2( 0, 2.57212 )
@@ -8068,7 +8068,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch8/Area2D"]
 position = Vector2( -34.858, 550.361 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch9" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -273.672, 156.628 )
@@ -8089,18 +8089,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch9"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch9"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch9"]
 position = Vector2( 0, 2.57212 )
@@ -8109,7 +8109,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch9/Area2D"]
 position = Vector2( 46.7213, 666.333 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch10" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -116.063, 157.271 )
@@ -8132,18 +8132,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch10"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch10"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch10"]
 position = Vector2( 0, 2.57212 )
@@ -8152,7 +8152,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch10/Area2D"]
 position = Vector2( 12.8741, 593.961 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch11" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -5.51474, 155.076 )
@@ -8173,18 +8173,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch11"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch11"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch11"]
 position = Vector2( 0, 2.57212 )
@@ -8193,7 +8193,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch11/Area2D"]
 position = Vector2( -52.7377, 597.845 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch12" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 308.067, 284.044 )
@@ -8214,18 +8214,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch12"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch12"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch12"]
 position = Vector2( 0, 2.57212 )
@@ -8234,7 +8234,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch12/Area2D"]
 position = Vector2( 44.4817, 726.325 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch16" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 246.078, 283.909 )
@@ -8255,18 +8255,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch16"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch16"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch16"]
 position = Vector2( 0, 2.57212 )
@@ -8275,7 +8275,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch16/Area2D"]
 position = Vector2( 290.387, 725.993 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch17" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 185.928, 219.963 )
@@ -8296,18 +8296,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch17"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch17"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch17"]
 position = Vector2( 0, 2.57212 )
@@ -8316,7 +8316,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch17/Area2D"]
 position = Vector2( 23.1417, 650.365 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch18" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 86.2897, 220.415 )
@@ -8337,18 +8337,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch18"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch18"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch18"]
 position = Vector2( 0, 2.57212 )
@@ -8357,7 +8357,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch18/Area2D"]
 position = Vector2( 105.727, 590.306 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch19" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 262.404, 219.862 )
@@ -8378,18 +8378,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch19"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch19"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch19"]
 position = Vector2( 0, 2.57212 )
@@ -8398,7 +8398,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch19/Area2D"]
 position = Vector2( 10.6767, 553.618 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch20" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 349.71, 219.57 )
@@ -8419,18 +8419,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch20"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch20"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch20"]
 position = Vector2( 0, 2.57212 )
@@ -8439,7 +8439,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch20/Area2D"]
 position = Vector2( 0.235779, 559.325 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch21" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 433.803, 219.278 )
@@ -8460,18 +8460,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch21"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch21"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch21"]
 position = Vector2( 0, 2.57212 )
@@ -8480,7 +8480,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch21/Area2D"]
 position = Vector2( 0.235779, 559.325 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch23" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 464.92, 411.79 )
@@ -8501,18 +8501,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch23"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch23"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch23"]
 position = Vector2( 0, 2.57212 )
@@ -8521,7 +8521,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch23/Area2D"]
 position = Vector2( 173.698, 430.868 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch24" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 569.561, 411.541 )
@@ -8542,18 +8542,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch24"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch24"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch24"]
 position = Vector2( 0, 2.57212 )
@@ -8562,7 +8562,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch24/Area2D"]
 position = Vector2( 39.2756, 547.25 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch25" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 660.436, 411.541 )
@@ -8583,18 +8583,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch25"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch25"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch25"]
 position = Vector2( 0, 2.57212 )
@@ -8603,7 +8603,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch25/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch26" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 741.799, 411.291 )
@@ -8624,18 +8624,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch26"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch26"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch26"]
 position = Vector2( 0, 2.57212 )
@@ -8644,7 +8644,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch26/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch27" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 819.406, 411.291 )
@@ -8665,18 +8665,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch27"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch27"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch27"]
 position = Vector2( 0, 2.57212 )
@@ -8685,7 +8685,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch27/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch28" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 912.285, 411.291 )
@@ -8706,18 +8706,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch28"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch28"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch28"]
 position = Vector2( 0, 2.57212 )
@@ -8726,7 +8726,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch28/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch29" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 944.83, 347.953 )
@@ -8747,18 +8747,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch29"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch29"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch29"]
 position = Vector2( 0, 2.57212 )
@@ -8767,7 +8767,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch29/Area2D"]
 position = Vector2( 45.2436, 606.946 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch30" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 858.46, 347.953 )
@@ -8788,18 +8788,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch30"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch30"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch30"]
 position = Vector2( 0, 2.57212 )
@@ -8808,7 +8808,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch30/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch31" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 791.618, 347.452 )
@@ -8829,18 +8829,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch31"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch31"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch31"]
 position = Vector2( 0, 2.57212 )
@@ -8849,7 +8849,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch31/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch32" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 716.264, 347.452 )
@@ -8870,18 +8870,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch32"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch32"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch32"]
 position = Vector2( 0, 2.57212 )
@@ -8890,7 +8890,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch32/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch33" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 632.147, 347.452 )
@@ -8911,18 +8911,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch33"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch33"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch33"]
 position = Vector2( 0, 2.57212 )
@@ -8931,7 +8931,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch33/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch34" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 719.745, 284.09 )
@@ -8952,18 +8952,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch34"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch34"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch34"]
 position = Vector2( 0, 2.57212 )
@@ -8972,7 +8972,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch34/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch35" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 790.699, 263.359 )
@@ -8993,18 +8993,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch35"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch35"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch35"]
 position = Vector2( 0, 2.57212 )
@@ -9013,7 +9013,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch35/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch36" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 869.245, 262.775 )
@@ -9034,18 +9034,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch36"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch36"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch36"]
 position = Vector2( 0, 2.57212 )
@@ -9054,7 +9054,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch36/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch37" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 947.498, 263.067 )
@@ -9075,18 +9075,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch37"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch37"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch37"]
 position = Vector2( 0, 2.57212 )
@@ -9095,7 +9095,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch37/Area2D"]
 position = Vector2( 52.206, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch38" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 823.694, 28.3052 )
@@ -9116,18 +9116,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch38"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch38"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch38"]
 position = Vector2( 0, 2.57212 )
@@ -9136,7 +9136,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch38/Area2D"]
 position = Vector2( 532.488, 400.987 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch39" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 790.991, -36.225 )
@@ -9157,18 +9157,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch39"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch39"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch39"]
 position = Vector2( 0, 2.57212 )
@@ -9177,7 +9177,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch39/Area2D"]
 position = Vector2( 4.64178, 539.098 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch40" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 873.625, -36.225 )
@@ -9198,18 +9198,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch40"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch40"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch40"]
 position = Vector2( 0, 2.57212 )
@@ -9218,7 +9218,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch40/Area2D"]
 position = Vector2( -49.8829, 541.38 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch41" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 910.415, 27.7212 )
@@ -9239,18 +9239,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch41"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch41"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch41"]
 position = Vector2( 0, 2.57212 )
@@ -9259,7 +9259,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch41/Area2D"]
 position = Vector2( 187.938, 403.269 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch42" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 957.718, -100.463 )
@@ -9280,18 +9280,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch42"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch42"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch42"]
 position = Vector2( 0, 2.57212 )
@@ -9300,7 +9300,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch42/Area2D"]
 position = Vector2( 4.64178, 539.098 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch43" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 866.325, -100.171 )
@@ -9321,18 +9321,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch43"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch43"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch43"]
 position = Vector2( 0, 2.57212 )
@@ -9341,7 +9341,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch43/Area2D"]
 position = Vector2( 4.64178, 539.098 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch44" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 760.332, -100.463 )
@@ -9362,18 +9362,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch44"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch44"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch44"]
 position = Vector2( 0, 2.57212 )
@@ -9382,7 +9382,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch44/Area2D"]
 position = Vector2( 4.64178, 539.098 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch45" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 641.491, -99.5872 )
@@ -9403,18 +9403,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch45"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch45"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch45"]
 position = Vector2( 0, 2.57212 )
@@ -9423,7 +9423,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch45/Area2D"]
 position = Vector2( 171.696, 548.229 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch69" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 625.298, -38.1505 )
@@ -9444,18 +9444,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch69"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch69"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch69"]
 position = Vector2( 0, 2.57212 )
@@ -9464,7 +9464,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch69/Area2D"]
 position = Vector2( 185.932, 763.856 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch47" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 489.071, -35.933 )
@@ -9485,18 +9485,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch47"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch47"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch47"]
 position = Vector2( 0, 2.57212 )
@@ -9505,7 +9505,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch47/Area2D"]
 position = Vector2( -30.1616, 547.087 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch48" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 380.158, -35.9914 )
@@ -9526,18 +9526,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch48"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch48"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch48"]
 position = Vector2( 0, 2.57212 )
@@ -9546,7 +9546,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch48/Area2D"]
 position = Vector2( 31.3239, 640.683 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch49" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 427.461, 28.0132 )
@@ -9567,18 +9567,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch49"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch49"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch49"]
 position = Vector2( 0, 2.57212 )
@@ -9587,7 +9587,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch49/Area2D"]
 position = Vector2( 95.1296, 633.835 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch50" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 524.694, 27.7212 )
@@ -9608,18 +9608,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch50"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch50"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch50"]
 position = Vector2( 0, 2.57212 )
@@ -9628,7 +9628,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch50/Area2D"]
 position = Vector2( 203.019, 687.481 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch51" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 161.456, 27.4292 )
@@ -9649,18 +9649,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch51"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch51"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch51"]
 position = Vector2( 0, 2.57212 )
@@ -9669,7 +9669,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch51/Area2D"]
 position = Vector2( 109.051, 741.128 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch52" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 98.7658, 27.7066 )
@@ -9690,18 +9690,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch52"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch52"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch52"]
 position = Vector2( 0, 2.57212 )
@@ -9710,7 +9710,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch52/Area2D"]
 position = Vector2( -68.3865, 550.284 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch53" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 21.9281, 27.4292 )
@@ -9731,18 +9731,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch53"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch53"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch53"]
 position = Vector2( 0, 2.57212 )
@@ -9751,7 +9751,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch53/Area2D"]
 position = Vector2( -28.711, 544.862 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch54" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 23.0377, -36.371 )
@@ -9772,18 +9772,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch54"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch54"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch54"]
 position = Vector2( 0, 2.57212 )
@@ -9792,7 +9792,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch54/Area2D"]
 position = Vector2( -28.711, 544.862 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch55" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 117.074, -36.0936 )
@@ -9813,18 +9813,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch55"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch55"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch55"]
 position = Vector2( 0, 2.57212 )
@@ -9833,7 +9833,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch55/Area2D"]
 position = Vector2( -28.711, 544.862 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch56" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 211.664, -35.2614 )
@@ -9854,18 +9854,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch56"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch56"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch56"]
 position = Vector2( 0, 2.57212 )
@@ -9874,7 +9874,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch56/Area2D"]
 position = Vector2( -28.711, 544.862 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch57" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -6.36584, 91.5068 )
@@ -9895,18 +9895,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch57"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch57"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch57"]
 position = Vector2( 0, 2.57212 )
@@ -9915,7 +9915,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch57/Area2D"]
 position = Vector2( 156.441, 553.537 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch58" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -168.918, 92.0616 )
@@ -9936,18 +9936,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch58"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch58"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch58"]
 position = Vector2( 0, 2.57212 )
@@ -9956,7 +9956,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch58/Area2D"]
 position = Vector2( 156.441, 553.537 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch59" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -82.0939, 92.0616 )
@@ -9977,18 +9977,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch59"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch59"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch59"]
 position = Vector2( 0, 2.57212 )
@@ -9997,7 +9997,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch59/Area2D"]
 position = Vector2( 156.441, 553.537 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch60" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -182.51, -36.0936 )
@@ -10018,18 +10018,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch60"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch60"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch60"]
 position = Vector2( 0, 2.57212 )
@@ -10038,7 +10038,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch60/Area2D"]
 position = Vector2( -22.0984, 682.573 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch61" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -76.8234, -36.0936 )
@@ -10059,18 +10059,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch61"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch61"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch61"]
 position = Vector2( 0, 2.57212 )
@@ -10079,7 +10079,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch61/Area2D"]
 position = Vector2( -143.329, 554.621 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch62" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -141.178, 26.8744 )
@@ -10100,18 +10100,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch62"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch62"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch62"]
 position = Vector2( 0, 2.57212 )
@@ -10120,7 +10120,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch62/Area2D"]
 position = Vector2( 301.918, 450.524 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch63" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( -4.73961, -99.8008 )
@@ -10141,18 +10141,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch63"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch63"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch63"]
 position = Vector2( 0, 2.57212 )
@@ -10161,7 +10161,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch63/Area2D"]
 position = Vector2( 37.1189, 641.497 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch64" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 102.027, -100.124 )
@@ -10182,18 +10182,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch64"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch64"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch64"]
 position = Vector2( 0, 2.57212 )
@@ -10202,7 +10202,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch64/Area2D"]
 position = Vector2( -1.44409, 556.76 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch65" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 226.266, -100.448 )
@@ -10223,18 +10223,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch65"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch65"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch65"]
 position = Vector2( 0, 2.57212 )
@@ -10243,7 +10243,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch65/Area2D"]
 position = Vector2( -1.44409, 556.76 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch66" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 335.621, -100.448 )
@@ -10264,18 +10264,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch66"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch66"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch66"]
 position = Vector2( 0, 2.57212 )
@@ -10284,7 +10284,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch66/Area2D"]
 position = Vector2( -1.44409, 556.76 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch67" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 444.006, -100.124 )
@@ -10305,18 +10305,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch67"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch67"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch67"]
 position = Vector2( 0, 2.57212 )
@@ -10325,7 +10325,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch67/Area2D"]
 position = Vector2( -1.44409, 556.76 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch68" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 557.244, -100.448 )
@@ -10346,18 +10346,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torches behind player/torch68"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch68"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torches behind player/torch68"]
 position = Vector2( 0, 2.57212 )
@@ -10366,7 +10366,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch68/Area2D"]
 position = Vector2( -1.44409, 556.76 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
 position = Vector2( -158.244, 345.66 )
@@ -10408,7 +10408,7 @@ margin_top = 3.0
 margin_right = 11.9963
 margin_bottom = 9.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 91 )
+custom_fonts/font = SubResource( 113 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "*"
 __meta__ = {
@@ -10421,7 +10421,7 @@ margin_top = 2.54916
 margin_right = 24.4161
 margin_bottom = 9.54916
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 92 )
+custom_fonts/font = SubResource( 114 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 19 )
@@ -10447,7 +10447,7 @@ margin_top = 29.7573
 margin_right = 46.5061
 margin_bottom = 43.7573
 rect_scale = Vector2( 2.5, 2.5 )
-custom_fonts/font = SubResource( 93 )
+custom_fonts/font = SubResource( 115 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "*"
 align = 1
@@ -10462,7 +10462,7 @@ margin_top = 39.5697
 margin_right = 92.6583
 margin_bottom = 53.5697
 rect_scale = Vector2( 1.25, 1.25 )
-custom_fonts/font = SubResource( 94 )
+custom_fonts/font = SubResource( 116 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 8 )
@@ -10488,7 +10488,7 @@ margin_top = 70.2376
 margin_right = 52.7109
 margin_bottom = 84.2376
 rect_scale = Vector2( 1.25, 1.25 )
-custom_fonts/font = SubResource( 95 )
+custom_fonts/font = SubResource( 117 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "*"
 __meta__ = {
@@ -10501,7 +10501,7 @@ margin_top = 68.6107
 margin_right = 92.5538
 margin_bottom = 82.6107
 rect_scale = Vector2( 1.25, 1.25 )
-custom_fonts/font = SubResource( 96 )
+custom_fonts/font = SubResource( 118 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 text = "00"
 script = ExtResource( 34 )
@@ -10539,7 +10539,7 @@ margin_left = 20.4783
 margin_top = 10.8479
 margin_right = 165.478
 margin_bottom = 34.8479
-custom_fonts/font = SubResource( 97 )
+custom_fonts/font = SubResource( 119 )
 custom_colors/font_color = Color( 1, 0.854902, 0.0666667, 1 )
 custom_colors/font_color_shadow = Color( 0.788235, 0.388235, 0.0666667, 1 )
 custom_constants/shadow_offset_x = -2
@@ -10558,7 +10558,7 @@ margin_left = 56.6282
 margin_top = 77.8044
 margin_right = -50.3718
 margin_bottom = -33.1956
-custom_fonts/font = SubResource( 98 )
+custom_fonts/font = SubResource( 120 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 0, 1, 0.0862745, 1 )
@@ -10573,7 +10573,7 @@ margin_left = 60.9349
 margin_top = 57.2249
 margin_right = 133.935
 margin_bottom = 69.2249
-custom_fonts/font = SubResource( 99 )
+custom_fonts/font = SubResource( 121 )
 custom_colors/font_color = Color( 0.556863, 0.556863, 0.556863, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 0, 1, 0.0862745, 1 )
@@ -10593,7 +10593,7 @@ editor_draw_drag_margin = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player"]
 position = Vector2( 0.0196913, 10.5635 )
-shape = SubResource( 100 )
+shape = SubResource( 122 )
 
 [node name="Light2D" type="Light2D" parent="obj_player"]
 position = Vector2( 0.0197754, 5.62988 )
@@ -10611,31 +10611,31 @@ shadow_filter = 3
 shadow_filter_smooth = 11.1
 
 [node name="player_anim" type="AnimationPlayer" parent="obj_player"]
-anims/PLayerDown = SubResource( 101 )
-anims/PLayerLeft = SubResource( 102 )
-anims/PLayerRight = SubResource( 103 )
-anims/PLayerUp = SubResource( 104 )
-anims/attack_down = SubResource( 105 )
-anims/down_dead = SubResource( 106 )
-anims/down_walk = SubResource( 107 )
-anims/idle_down = SubResource( 108 )
-anims/left_attack = SubResource( 109 )
-anims/left_dead = SubResource( 110 )
-anims/left_idle = SubResource( 111 )
-anims/left_walk = SubResource( 112 )
-anims/right_attack = SubResource( 113 )
-anims/right_dead = SubResource( 114 )
-anims/right_idle = SubResource( 115 )
-anims/right_walk = SubResource( 116 )
-anims/up_attack = SubResource( 117 )
-anims/up_dead = SubResource( 118 )
-anims/up_idle = SubResource( 119 )
-anims/up_walk = SubResource( 120 )
+anims/PLayerDown = SubResource( 123 )
+anims/PLayerLeft = SubResource( 124 )
+anims/PLayerRight = SubResource( 125 )
+anims/PLayerUp = SubResource( 126 )
+anims/attack_down = SubResource( 127 )
+anims/down_dead = SubResource( 128 )
+anims/down_walk = SubResource( 129 )
+anims/idle_down = SubResource( 130 )
+anims/left_attack = SubResource( 131 )
+anims/left_dead = SubResource( 132 )
+anims/left_idle = SubResource( 133 )
+anims/left_walk = SubResource( 134 )
+anims/right_attack = SubResource( 135 )
+anims/right_dead = SubResource( 136 )
+anims/right_idle = SubResource( 137 )
+anims/right_walk = SubResource( 138 )
+anims/up_attack = SubResource( 139 )
+anims/up_dead = SubResource( 140 )
+anims/up_idle = SubResource( 141 )
+anims/up_walk = SubResource( 142 )
 
 [node name="AnimationTree" type="AnimationTree" parent="obj_player"]
-tree_root = SubResource( 154 )
+tree_root = SubResource( 176 )
 anim_player = NodePath("../player_anim")
-parameters/playback = SubResource( 155 )
+parameters/playback = SubResource( 177 )
 parameters/Attack/blend_position = Vector2( -0.00193048, -0.00862074 )
 parameters/Death/blend_position = Vector2( 0.239115, -0.547945 )
 parameters/Get_hit/blend_position = Vector2( 0, -0.00343645 )
@@ -10653,7 +10653,7 @@ script = ExtResource( 49 )
 
 [node name="CollisionShape2D" parent="obj_player/HitboxPivot/SwordHitbox" index="0"]
 position = Vector2( 3.37391, 0.250439 )
-shape = SubResource( 156 )
+shape = SubResource( 178 )
 disabled = true
 
 [node name="player_area" type="Area2D" parent="obj_player"]
@@ -10663,7 +10663,7 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obj_player/player_area"]
 position = Vector2( 0.0261497, 8.78049 )
-shape = SubResource( 157 )
+shape = SubResource( 179 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 7 )
@@ -10674,7 +10674,7 @@ collision_layer = 4
 
 [node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
 position = Vector2( 0.0216289, 8.48234 )
-shape = SubResource( 158 )
+shape = SubResource( 180 )
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="obj_player"]
 stream = ExtResource( 47 )
@@ -10705,18 +10705,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch6"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch6"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch6"]
 position = Vector2( 0, 2.57212 )
@@ -10725,7 +10725,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch6/Area2D"]
 position = Vector2( -185.065, 465.159 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch7" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 10.2675, 285.136 )
@@ -10746,18 +10746,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch7"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch7"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch7"]
 position = Vector2( 0, 2.57212 )
@@ -10766,7 +10766,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch7/Area2D"]
 position = Vector2( -46.2182, 387.531 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch8" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 10.2555, 375.427 )
@@ -10787,18 +10787,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch8"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch8"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch8"]
 position = Vector2( 0, 2.57212 )
@@ -10807,7 +10807,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch8/Area2D"]
 position = Vector2( -44.0562, 378.79 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch9" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 74.4852, 342.664 )
@@ -10830,18 +10830,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch9"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch9"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch9"]
 position = Vector2( 0, 2.57212 )
@@ -10850,7 +10850,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch9/Area2D"]
 position = Vector2( -44.0562, 528.051 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch10" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 74.8428, 442.01 )
@@ -10874,18 +10874,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch10"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch10"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch10"]
 position = Vector2( 0, 2.57212 )
@@ -10894,7 +10894,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch10/Area2D"]
 position = Vector2( -229.148, 353.974 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch11" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 139.418, 388.542 )
@@ -10917,18 +10917,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch11"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch11"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch11"]
 position = Vector2( 0, 2.57212 )
@@ -10937,7 +10937,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch11/Area2D"]
 position = Vector2( -56.8029, 344.54 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch12" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 210.167, 364.01 )
@@ -10960,18 +10960,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch12"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch12"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch12"]
 position = Vector2( 0, 2.57212 )
@@ -10980,7 +10980,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch12/Area2D"]
 position = Vector2( -69.2299, 537.019 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch14" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 402.022, 272.491 )
@@ -11003,18 +11003,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch14"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch14"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch14"]
 position = Vector2( 0, 2.57212 )
@@ -11023,7 +11023,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch14/Area2D"]
 position = Vector2( -72.3143, 574.03 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch15" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 330.933, 328.025 )
@@ -11046,18 +11046,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch15"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch15"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch15"]
 position = Vector2( 0, 2.57212 )
@@ -11066,7 +11066,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch15/Area2D"]
 position = Vector2( -47.0523, 566.806 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch16" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 209.992, 279.353 )
@@ -11089,18 +11089,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch16"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch16"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch16"]
 position = Vector2( 0, 2.57212 )
@@ -11109,7 +11109,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch16/Area2D"]
 position = Vector2( -69.0526, 572.846 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch17" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 523.289, 304.296 )
@@ -11132,18 +11132,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch17"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch17"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch17"]
 position = Vector2( 0, 2.57212 )
@@ -11152,7 +11152,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch17/Area2D"]
 position = Vector2( -69.7706, 311.866 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch18" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 466.063, 343.577 )
@@ -11175,18 +11175,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch18"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch18"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch18"]
 position = Vector2( 0, 2.57212 )
@@ -11195,7 +11195,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch18/Area2D"]
 position = Vector2( 161.22, 151.561 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch19" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 1035.01, 416.931 )
@@ -11218,18 +11218,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch19"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch19"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch19"]
 position = Vector2( 0, 2.57212 )
@@ -11238,7 +11238,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch19/Area2D"]
 position = Vector2( -84.5858, 459.151 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch20" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 1035.25, 320.328 )
@@ -11261,18 +11261,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch20"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch20"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch20"]
 position = Vector2( 0, 2.57212 )
@@ -11281,7 +11281,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch20/Area2D"]
 position = Vector2( -58.1417, 506.309 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch21" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 1035.14, 229.352 )
@@ -11304,18 +11304,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch21"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch21"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch21"]
 position = Vector2( 0, 2.57212 )
@@ -11324,7 +11324,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch21/Area2D"]
 position = Vector2( -58.1417, 506.309 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch22" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 1035.11, 138.548 )
@@ -11347,18 +11347,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch22"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch22"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch22"]
 position = Vector2( 0, 2.57212 )
@@ -11367,7 +11367,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch22/Area2D"]
 position = Vector2( -58.1417, 506.309 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch23" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 1035.17, 53.8637 )
@@ -11390,18 +11390,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch23"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch23"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch23"]
 position = Vector2( 0, 2.57212 )
@@ -11410,7 +11410,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch23/Area2D"]
 position = Vector2( -58.1417, 506.309 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch24" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 1035.15, -48.0937 )
@@ -11433,18 +11433,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch24"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch24"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch24"]
 position = Vector2( 0, 2.57212 )
@@ -11453,7 +11453,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch24/Area2D"]
 position = Vector2( -58.1417, 506.309 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch25" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 971.034, 87.7272 )
@@ -11476,18 +11476,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch25"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch25"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch25"]
 position = Vector2( 0, 2.57212 )
@@ -11496,7 +11496,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch25/Area2D"]
 position = Vector2( -54.7239, 172.53 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch26" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 971.13, 168.751 )
@@ -11519,18 +11519,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch26"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch26"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch26"]
 position = Vector2( 0, 2.57212 )
@@ -11539,7 +11539,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch26/Area2D"]
 position = Vector2( -50.7379, -149.01 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch27" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 970.956, 241.047 )
@@ -11562,18 +11562,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch27"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch27"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch27"]
 position = Vector2( 0, 2.57212 )
@@ -11582,7 +11582,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch27/Area2D"]
 position = Vector2( -52.7308, -434.012 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch28" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 786.019, 57.086 )
@@ -11605,18 +11605,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch28"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch28"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch28"]
 position = Vector2( 0, 2.57212 )
@@ -11625,7 +11625,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch28/Area2D"]
 position = Vector2( -68.4224, 562.756 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch29" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 786.017, 170.662 )
@@ -11648,18 +11648,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch29"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch29"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch29"]
 position = Vector2( 0, 2.57212 )
@@ -11668,7 +11668,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch29/Area2D"]
 position = Vector2( -68.4224, 562.756 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch30" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 715.167, -4.12415 )
@@ -11691,18 +11691,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch30"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch30"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch30"]
 position = Vector2( 0, 2.57212 )
@@ -11711,7 +11711,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch30/Area2D"]
 position = Vector2( -46.3392, 380.201 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch48" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 658.029, -6.53728 )
@@ -11734,18 +11734,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch48"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch48"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch48"]
 position = Vector2( 0, 2.57212 )
@@ -11754,7 +11754,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch48/Area2D"]
 position = Vector2( 55.3795, 608.542 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch32" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 715.003, 164.16 )
@@ -11777,18 +11777,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch32"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch32"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch32"]
 position = Vector2( 0, 2.57212 )
@@ -11797,7 +11797,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch32/Area2D"]
 position = Vector2( -46.3392, 380.201 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch33" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 715.077, 249.186 )
@@ -11820,18 +11820,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch33"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch33"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch33"]
 position = Vector2( 0, 2.57212 )
@@ -11840,7 +11840,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch33/Area2D"]
 position = Vector2( -46.3392, 380.201 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch34" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 657.96, 102.591 )
@@ -11863,18 +11863,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch34"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch34"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch34"]
 position = Vector2( 0, 2.57212 )
@@ -11883,7 +11883,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch34/Area2D"]
 position = Vector2( 55.3278, 172.029 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch35" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 658.029, 197.415 )
@@ -11906,18 +11906,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch35"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch35"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch35"]
 position = Vector2( 0, 2.57212 )
@@ -11926,7 +11926,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch35/Area2D"]
 position = Vector2( -46.3392, 380.201 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch36" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 658.173, 301.006 )
@@ -11949,18 +11949,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch36"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch36"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch36"]
 position = Vector2( 0, 2.57212 )
@@ -11969,7 +11969,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch36/Area2D"]
 position = Vector2( -46.3392, 380.201 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch37" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 594.023, 376.741 )
@@ -11992,18 +11992,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch37"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch37"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch37"]
 position = Vector2( 0, 2.57212 )
@@ -12012,7 +12012,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch37/Area2D"]
 position = Vector2( -46.3392, 380.201 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch38" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 594.104, 289.066 )
@@ -12035,18 +12035,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch38"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch38"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch38"]
 position = Vector2( 0, 2.57212 )
@@ -12055,7 +12055,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch38/Area2D"]
 position = Vector2( -63.8218, 403.977 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch39" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 593.99, 151.495 )
@@ -12078,18 +12078,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch39"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch39"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch39"]
 position = Vector2( 0, 2.57212 )
@@ -12098,7 +12098,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch39/Area2D"]
 position = Vector2( -72.9129, 535.447 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch40" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 523.096, 165.934 )
@@ -12121,18 +12121,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch40"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch40"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch40"]
 position = Vector2( 0, 2.57212 )
@@ -12141,7 +12141,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch40/Area2D"]
 position = Vector2( -45.3328, 332.194 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch42" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 338.026, 138.52 )
@@ -12164,18 +12164,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch42"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch42"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch42"]
 position = Vector2( 0, 2.57212 )
@@ -12184,7 +12184,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch42/Area2D"]
 position = Vector2( -65.1328, 418.781 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch43" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 402.187, 139.314 )
@@ -12207,18 +12207,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch43"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch43"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch43"]
 position = Vector2( 0, 2.57212 )
@@ -12227,7 +12227,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch43/Area2D"]
 position = Vector2( -59.4249, 504.4 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch44" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 466.012, 124.012 )
@@ -12250,18 +12250,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch44"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch44"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch44"]
 position = Vector2( 0, 2.57212 )
@@ -12270,7 +12270,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch44/Area2D"]
 position = Vector2( -57.157, 536.798 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch45" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 267.17, 42.9217 )
@@ -12293,18 +12293,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch45"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch45"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch45"]
 position = Vector2( 0, 2.57212 )
@@ -12313,7 +12313,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch45/Area2D"]
 position = Vector2( -56.1488, 390.537 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch46" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 267.188, 133.989 )
@@ -12336,18 +12336,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch46"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch46"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch46"]
 position = Vector2( 0, 2.57212 )
@@ -12356,7 +12356,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch46/Area2D"]
 position = Vector2( -53.4915, 346.026 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 
 [node name="torch47" type="StaticBody2D" parent="Torhces in front of player"]
 position = Vector2( 139.061, 179.864 )
@@ -12379,18 +12379,18 @@ position = Vector2( 0.755707, -32.498 )
 rotation = -1.5708
 scale = Vector2( 10.2223, 9.10934 )
 amount = 50
-process_material = SubResource( 87 )
+process_material = SubResource( 109 )
 script = ExtResource( 25 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Torhces in front of player/torch47"]
 position = Vector2( 50.6324, 450.691 )
 scale = Vector2( 1.53905, 1.66589 )
-frames = SubResource( 88 )
+frames = SubResource( 110 )
 animation = "off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch47"]
 position = Vector2( 55.328, 457.012 )
-shape = SubResource( 89 )
+shape = SubResource( 111 )
 
 [node name="Area2D" type="Area2D" parent="Torhces in front of player/torch47"]
 position = Vector2( 0, 2.57212 )
@@ -12399,7 +12399,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch47/Area2D"]
 position = Vector2( -45.5172, 324.382 )
-shape = SubResource( 90 )
+shape = SubResource( 112 )
 [connection signal="body_entered" from="PickUp/Key2/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="PickUp/Key2/Key" to="PickUp/Key2/Key" method="_on_Key_body_entered"]
 [connection signal="keycollected" from="PickUp/Key2/Key" to="obj_player/Sprite/UI Layer Only/Key Icon/Count3" method="_on_Key_keycollected"]
@@ -12691,17 +12691,11 @@ shape = SubResource( 90 )
 [connection signal="body_entered" from="Doors/obj_door/Area2D" to="Doors/obj_door" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Doors/obj_door/Timer" to="Doors/obj_door" method="_on_Timer_timeout"]
 [connection signal="light_on" from="Fake_torch" to="Fake Walls/vertical_fake_wall" method="_on_Fake_torch_light_on"]
-[connection signal="area_entered" from="Fake_torch/Area2D" to="Fake_torch" method="_on_Area2D_area_entered"]
 [connection signal="light_on2" from="fake_torch2" to="Fake Walls/vertical_fake_wall2" method="_on_fake_torch2_light_on2"]
-[connection signal="area_entered" from="fake_torch2/Area2D" to="fake_torch2" method="_on_Area2D_area_entered"]
 [connection signal="light_on3" from="fake_torch3" to="Fake Walls/vertical_fake_wall3" method="_on_fake_torch3_light_on3"]
-[connection signal="area_entered" from="fake_torch3/Area2D" to="fake_torch3" method="_on_Area2D_area_entered"]
 [connection signal="light_on4" from="fake_torch4" to="Fake Walls/horizontal_fake_wall" method="_on_fake_torch4_light_on4"]
-[connection signal="area_entered" from="fake_torch4/Area2D" to="fake_torch4" method="_on_Area2D_area_entered"]
 [connection signal="light_on5" from="fake_torch5" to="Fake Walls/horizontal_fake_wall2" method="_on_fake_torch5_light_on5"]
-[connection signal="area_entered" from="fake_torch5/Area2D" to="fake_torch5" method="_on_Area2D_area_entered"]
 [connection signal="light_on6" from="fake_torch6" to="Fake Walls/horizontal_fake_wall3" method="_on_fake_torch6_light_on6"]
-[connection signal="area_entered" from="fake_torch6/Area2D" to="fake_torch6" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch13/Area2D" to="Torches behind player/torch13" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch14/Area2D" to="Torches behind player/torch14" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch15/Area2D" to="Torches behind player/torch15" method="_on_Area2D_area_entered"]
