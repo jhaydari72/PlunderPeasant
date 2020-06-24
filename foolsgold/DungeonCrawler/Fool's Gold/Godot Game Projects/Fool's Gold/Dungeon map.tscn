@@ -11069,7 +11069,7 @@ position = Vector2( -1.44409, 556.76 )
 shape = SubResource( 112 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( 411.6, 104.781 )
+position = Vector2( -76.8234, 339.84 )
 scale = Vector2( 0.65, 0.6 )
 z_as_relative = false
 collision_layer = 2
