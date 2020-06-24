@@ -21,5 +21,4 @@ func _on_Spider_barrel_dead():
 
 
 func _on_Timer2_timeout():
-	print("hello")
 	queue_free()
