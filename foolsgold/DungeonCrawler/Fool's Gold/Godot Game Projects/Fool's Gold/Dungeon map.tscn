@@ -1,4 +1,4 @@
-[gd_scene load_steps=251 format=2]
+[gd_scene load_steps=255 format=2]
 
 [ext_resource path="res://Level Two/Map Layout.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blockers/blocker.tscn" type="PackedScene" id=2]
@@ -772,7 +772,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1, 1.1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 383.569, -178.631 ), Vector2( 496.649, -178.631 ), Vector2( 502.771, -178.631 ), Vector2( 388.942, -178.631 ) ]
+"values": [ Vector2( 369.823, -322.305 ), Vector2( 369.8, -264.003 ), Vector2( 369.823, -260.166 ), Vector2( 502.086, -260.166 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:rotation_degrees")
@@ -784,7 +784,62 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 1.1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -90.0, -90.0, 90.0, 90.0 ]
+"values": [ 0.0, 0.0, -90.0, -90.0 ]
+}
+
+[sub_resource type="Animation" id=181]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 338.452, -336.569 ), Vector2( 337.982, -264.003 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=182]
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 313.838, -336.568 ), Vector2( 313.86, -265.368 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=53]
@@ -1077,6 +1132,60 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1905.99, 589.63 ), Vector2( 2116.78, 809.653 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.6, 0.7, 1, 1.1, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=183]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1258.47, -529.822 ), Vector2( 1480.87, -668.367 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.6, 0.7, 1, 1.1, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=184]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1258.47, -529.822 ), Vector2( 1492.21, -531.716 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:scale")
@@ -1716,86 +1825,6 @@ polygon = PoolVector2Array( 761.227, 64.0758, 767.981, 64.0155, 767.976, 128.207
 
 [sub_resource type="OccluderPolygon2D" id=94]
 polygon = PoolVector2Array( 32.1895, 510.787, 32.1943, 308.815, 25.166, 308.863, 25.2589, 510.712 )
-
-[sub_resource type="SpriteFrames" id=95]
-animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=96]
-extents = Vector2( 21.7032, 20.2435 )
-
-[sub_resource type="SpriteFrames" id=97]
-animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=98]
-extents = Vector2( 13.3575, 15.3924 )
-
-[sub_resource type="SpriteFrames" id=99]
-animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=100]
-extents = Vector2( 16.6505, 15.1275 )
-
-[sub_resource type="SpriteFrames" id=101]
-animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=102]
-extents = Vector2( 21.837, 19.1331 )
-
-[sub_resource type="SpriteFrames" id=103]
-animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "on",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=104]
-extents = Vector2( 16.4995, 15.2457 )
 
 [sub_resource type="Gradient" id=105]
 offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
@@ -2646,8 +2675,88 @@ extents = Vector2( 4.63716, 4.92157 )
 radius = 4.39743
 height = 5.69391
 
+[sub_resource type="SpriteFrames" id=95]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=96]
+extents = Vector2( 21.7032, 20.2435 )
+
+[sub_resource type="SpriteFrames" id=97]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=98]
+extents = Vector2( 13.3575, 15.3924 )
+
+[sub_resource type="SpriteFrames" id=99]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=100]
+extents = Vector2( 16.6505, 15.1275 )
+
+[sub_resource type="SpriteFrames" id=101]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=102]
+extents = Vector2( 21.837, 19.1331 )
+
+[sub_resource type="SpriteFrames" id=103]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=104]
+extents = Vector2( 16.4995, 15.2457 )
+
 [node name="Dungeon map" type="Node2D"]
-position = Vector2( -0.581819, -10.3798 )
+position = Vector2( -39.2908, -20.5995 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
@@ -3367,6 +3476,292 @@ scale = Vector2( 0.75, 0.8 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision228"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision249" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( -661.27, -286.551 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision249"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision249"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision250" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( -616.127, -286.382 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision250"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision250"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision251" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( -575.066, -286.551 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision251"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision251"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision252" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( -532.965, -286.438 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision252"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision252"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision265" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 869.499, -851.844 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision265"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision265"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision266" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 869.499, -822.607 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision266"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision266"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision269" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 1167.01, -784.873 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision269"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision269"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision272" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 1351.42, -472.564 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision272"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision272"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision273" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 1572.05, -613.614 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision273"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision273"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision274" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 1375.42, 285.788 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision274"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision274"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision270" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 1167.01, -753.88 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision270"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision270"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision271" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 1167.01, -720.698 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision271"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision271"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision267" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 869.499, -791.961 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision267"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision267"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision268" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 868.542, -763.034 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision268"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision268"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision253" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( -476.149, -391.172 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision253"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision253"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision254" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( -520.803, -390.444 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision254"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision254"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision255" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( -563.933, -390.444 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision255"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision255"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision256" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( -609.321, -390.109 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision256"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision256"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision257" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 425.515, -847.069 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision257"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision257"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision258" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 425.515, -817.617 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision258"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision258"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision259" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 425.515, -787.622 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision259"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision259"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision260" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 425.515, -753.937 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision260"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision260"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision261" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 640.152, -792.017 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision261"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision261"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision262" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 640.152, -762.022 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision262"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision262"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision263" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 639.258, -736.422 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision263"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision263"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
+[node name="Barrel Collision264" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 640.152, -711.813 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision264"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision264"]
 position = Vector2( -0.894531, 0.0560303 )
 shape = SubResource( 1 )
 
@@ -5834,6 +6229,17 @@ texture = ExtResource( 5 )
 position = Vector2( -0.894531, 0.0560303 )
 shape = SubResource( 1 )
 
+[node name="Barrel Collision123" type="StaticBody2D" parent="Backgound/Barrels"]
+position = Vector2( 292.644, -79.0615 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision123"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision123"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
 [node name="Barrel Collision34" type="StaticBody2D" parent="Backgound/Barrels"]
 position = Vector2( 101.365, 408.632 )
 
@@ -6300,6 +6706,166 @@ autoplay = "Heart Animation"
 [node name="obj_bag58" parent="PickUp/Bags" instance=ExtResource( 18 )]
 modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
 position = Vector2( 3713.49, -804.903 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag119" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 2114.37, -671.713 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag120" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 2170.79, -670.155 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag121" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 2080.59, -664.532 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag122" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 2180.58, -664.532 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag123" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 2102.4, -660.172 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag124" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 2583.05, -882.987 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag125" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 2612.41, -842.549 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag126" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 2640.08, -874.454 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag127" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 2523.92, -855.163 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag128" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 2569.21, -815.096 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag103" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 847.098, -1060.87 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag104" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 884.58, -1075.59 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag109" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 884.58, -1075.59 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag105" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 920.32, -1060.46 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag110" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 1029.85, -1050.27 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag111" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 1030.85, -1007.77 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag112" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 1081.57, -988.28 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag113" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 1120.08, -1016.51 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag114" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 1118.79, -1052.81 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag115" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 1288.64, -1059.67 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag116" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 1288.64, -1040.49 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag117" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 1288.64, -1021.51 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag118" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 1288.64, -1004.43 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag106" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 841.27, -1021.51 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag107" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 920.32, -1021.51 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag108" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( 879.623, -1002.2 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag97" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( -108.083, -455.941 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag98" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( -84.0825, -455.941 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag99" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( -60.0825, -455.941 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag100" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( -99.0587, -439.361 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag101" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( -72.3192, -439.361 )
+scale = Vector2( 0.75, 1 )
+
+[node name="obj_bag102" parent="PickUp/Bags" instance=ExtResource( 18 )]
+modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
+position = Vector2( -90.2523, -423.941 )
 scale = Vector2( 0.75, 1 )
 
 [node name="obj_bag76" parent="PickUp/Bags" instance=ExtResource( 18 )]
@@ -6919,6 +7485,194 @@ scale = Vector2( 0.25, 0.25 )
 position = Vector2( -290.477, 312.904 )
 scale = Vector2( 2.75, 2.17992 )
 
+[node name="Knight20" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( -240.677, 490.411 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight21" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 149.688, 56.3751 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight22" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 306.7, 569.887 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight23" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 635.449, 572.703 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight24" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 594.226, 312.904 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight25" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 942.076, 313.526 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight26" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 1215.2, 311.464 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight27" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 1548.73, 310.684 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight28" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 1167.37, 572.703 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight29" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 1322.29, 569.886 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight30" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 1848.06, 572.244 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight31" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 2058.73, 821.292 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight32" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 1904.52, 1079.79 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight33" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 2530.8, 1080.77 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight34" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 2961.25, 1086.78 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight35" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 2814.72, 825.748 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight36" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 3344.43, 1088.94 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight37" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 3176.08, 825.748 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight38" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 3747.94, 1085.22 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight39" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 3919.81, 826.832 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight40" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 3803.98, 487.644 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight41" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 3477.46, 487.475 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight42" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 2917.19, 572.244 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight43" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 3432.46, -449.789 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight44" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 3656.6, -448.614 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight45" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 3935.55, -963.441 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight46" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 4239.22, -963.441 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight47" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 4097.58, -963.441 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight48" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 3641.24, -711.813 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight49" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 3451, -963.441 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight50" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 2818.1, -963.441 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight51" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 2007.61, -708.948 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight52" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 1465.8, -963.441 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight53" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 1059.9, -960.869 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight54" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 2372.47, -960.869 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight55" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 1941.77, -963.441 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight56" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 655.705, -960.869 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight57" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 135.878, -963.441 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight58" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 408.721, -710.124 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight59" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 1040.56, -710.588 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight60" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 811.25, -449.789 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight61" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 386.478, -448.614 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight62" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( 343.831, -189.796 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight63" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( -126.354, -189.001 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight64" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( -426.642, -459.442 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight65" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( -607.839, -706.376 )
+scale = Vector2( 2.75, 2.17992 )
+
+[node name="Knight66" parent="Knight Layers" instance=ExtResource( 2 )]
+position = Vector2( -172.147, -709.432 )
+scale = Vector2( 2.75, 2.17992 )
+
 [node name="Knight10" parent="Knight Layers" instance=ExtResource( 2 )]
 position = Vector2( 703.697, 1050.86 )
 scale = Vector2( 2.75, 2.17992 )
@@ -7046,13 +7800,28 @@ autoplay = "rat_animation"
 anims/rat_animation = SubResource( 51 )
 
 [node name="Rat Attack6" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
-position = Vector2( 451.719, -178.631 )
-rotation = 1.5708
+position = Vector2( 369.823, -322.305 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack6"]
 autoplay = "rat_animation"
 anims/rat_animation = SubResource( 52 )
+
+[node name="Rat Attack12" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
+position = Vector2( 338.039, -272.909 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack12"]
+autoplay = "rat_animation"
+anims/rat_animation = SubResource( 181 )
+
+[node name="Rat Attack13" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
+position = Vector2( 313.86, -265.585 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies assets/Rat Sprite/Rat Attack13"]
+autoplay = "rat_animation"
+anims/rat_animation = SubResource( 182 )
 
 [node name="Rat Attack7" parent="Enemies assets/Rat Sprite" instance=ExtResource( 52 )]
 position = Vector2( 1589.12, -92.75 )
@@ -7148,6 +7917,22 @@ scale = Vector2( 0.890071, 0.945036 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost30"]
 autoplay = "Ghost Animation"
 "anims/Ghost Animation" = SubResource( 63 )
+
+[node name="Ghost31" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
+position = Vector2( 1480.87, -668.367 )
+scale = Vector2( 0.5, 0.75 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost31"]
+autoplay = "Ghost Animation"
+"anims/Ghost Animation" = SubResource( 183 )
+
+[node name="Ghost32" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
+position = Vector2( 1472.24, -531.555 )
+scale = Vector2( 0.642396, 0.821198 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies assets/Ghost Sprite/Ghost32"]
+autoplay = "Ghost Animation"
+"anims/Ghost Animation" = SubResource( 184 )
 
 [node name="Ghost" parent="Enemies assets/Ghost Sprite" instance=ExtResource( 6 )]
 position = Vector2( -527.285, 81.3022 )
@@ -7324,6 +8109,16 @@ modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( -727.847, 9.3927 )
 scale = Vector2( 0.75, 0.85 )
 
+[node name="Spider_barrel33" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( -1130.6, -776.096 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel34" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( -1300.07, -879.598 )
+scale = Vector2( 0.75, 0.85 )
+
 [node name="Spider_barrel2" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
 modulate = Color( 1, 0.862745, 0.862745, 1 )
 position = Vector2( -1290.08, 175.769 )
@@ -7458,7 +8253,12 @@ scale = Vector2( 0.75, 0.85 )
 
 [node name="Spider_barrel21" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
 modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2718.18, -316.802 )
+position = Vector2( 2503.98, -553.316 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel35" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2503.98, -553.316 )
 scale = Vector2( 0.75, 0.85 )
 
 [node name="Spider_barrel22" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
@@ -7496,6 +8296,33 @@ position = Vector2( 741.397, 232.875 )
 
 [node name="Enemy" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
 position = Vector2( -1013.44, 216.156 )
+
+[node name="Enemy36" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
+position = Vector2( -888.357, -751.458 )
+
+[node name="Enemy37" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
+position = Vector2( -555.759, -837.223 )
+
+[node name="Enemy38" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
+position = Vector2( -129.108, -763.127 )
+
+[node name="Enemy39" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
+position = Vector2( 67.0284, -1053.87 )
+
+[node name="Enemy40" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
+position = Vector2( 796.126, -309.167 )
+
+[node name="Enemy41" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
+position = Vector2( 1038.35, -274.392 )
+
+[node name="Enemy42" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
+position = Vector2( 1335.11, -270.314 )
+
+[node name="Enemy43" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
+position = Vector2( 1371.12, -794.809 )
+
+[node name="Enemy44" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
+position = Vector2( 1102.24, -627.335 )
 
 [node name="Enemy2" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
 position = Vector2( -972.201, 158.293 )
@@ -7692,135 +8519,8 @@ position = Vector2( 618.161, -668.837 )
 scale = Vector2( 2.47145, 2.31843 )
 occluder = SubResource( 94 )
 
-[node name="Fake_torch" parent="." instance=ExtResource( 9 )]
-position = Vector2( -187.335, 334.034 )
-scale = Vector2( 0.40462, 0.431326 )
-collision_layer = 1
-
-[node name="Light2D" parent="Fake_torch" index="1"]
-visible = true
-
-[node name="Area2D" parent="Fake_torch" index="2"]
-visible = true
-collision_layer = 16
-collision_mask = 2
-
-[node name="CollisionShape2D" parent="Fake_torch/Area2D" index="0"]
-position = Vector2( 2.33969, 30.7275 )
-
-[node name="fake_torch2" type="StaticBody2D" parent="."]
-position = Vector2( 414.418, 472.638 )
-scale = Vector2( 0.5, 0.5 )
-collision_layer = 16
-collision_mask = 2
-script = ExtResource( 40 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="fake_torch2"]
-frames = SubResource( 95 )
-animation = "off"
-
-[node name="Light2D" type="Light2D" parent="fake_torch2"]
-position = Vector2( 0.340576, -6.10352e-05 )
-scale = Vector2( 0.549092, 0.515036 )
-texture = ExtResource( 70 )
-script = ExtResource( 39 )
-
-[node name="Area2D" type="Area2D" parent="fake_torch2"]
-position = Vector2( -19.2924, -2.91052 )
-collision_layer = 16
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fake_torch2/Area2D"]
-position = Vector2( 5.82605, 1.67773 )
-shape = SubResource( 96 )
-
-[node name="fake_torch3" type="StaticBody2D" parent="."]
-position = Vector2( 727.353, 151.586 )
-scale = Vector2( 0.5, 0.5 )
-collision_layer = 16
-collision_mask = 2
-script = ExtResource( 41 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="fake_torch3"]
-frames = SubResource( 97 )
-animation = "off"
-
-[node name="Light2D" type="Light2D" parent="fake_torch3"]
-texture = ExtResource( 70 )
-script = ExtResource( 39 )
-
-[node name="Area2D" type="Area2D" parent="fake_torch3"]
-collision_layer = 16
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fake_torch3/Area2D"]
-position = Vector2( -7.69238, 1.69687 )
-shape = SubResource( 98 )
-
-[node name="fake_torch4" type="StaticBody2D" parent="."]
-position = Vector2( 536.6, 333.692 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 42 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="fake_torch4"]
-frames = SubResource( 99 )
-animation = "off"
-
-[node name="Light2D" type="Light2D" parent="fake_torch4"]
-texture = ExtResource( 70 )
-script = ExtResource( 39 )
-
-[node name="Area2D" type="Area2D" parent="fake_torch4"]
-collision_layer = 16
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fake_torch4/Area2D"]
-position = Vector2( -2.33923, 13.1578 )
-shape = SubResource( 100 )
-
-[node name="fake_torch5" type="StaticBody2D" parent="."]
-position = Vector2( 606.229, 111.782 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 43 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="fake_torch5"]
-frames = SubResource( 101 )
-animation = "off"
-
-[node name="Light2D" type="Light2D" parent="fake_torch5"]
-texture = ExtResource( 70 )
-script = ExtResource( 39 )
-
-[node name="Area2D" type="Area2D" parent="fake_torch5"]
-collision_layer = 16
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fake_torch5/Area2D"]
-position = Vector2( -9.68555, 0 )
-shape = SubResource( 102 )
-
-[node name="fake_torch6" type="StaticBody2D" parent="."]
-position = Vector2( 350.3, 156.649 )
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 44 )
-
-[node name="Light2D" type="Light2D" parent="fake_torch6"]
-texture = ExtResource( 70 )
-script = ExtResource( 39 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="fake_torch6"]
-frames = SubResource( 103 )
-animation = "off"
-
-[node name="Area2D" type="Area2D" parent="fake_torch6"]
-collision_layer = 16
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fake_torch6/Area2D"]
-position = Vector2( -11.8303, 1.39175 )
-shape = SubResource( 104 )
-
 [node name="Torches behind player" type="Node2D" parent="."]
+visible = false
 
 [node name="torch13" type="StaticBody2D" parent="Torches behind player"]
 position = Vector2( 112.955, 283.971 )
@@ -10369,7 +11069,7 @@ position = Vector2( -1.44409, 556.76 )
 shape = SubResource( 112 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -158.244, 345.66 )
+position = Vector2( 411.6, 104.781 )
 scale = Vector2( 0.65, 0.6 )
 z_as_relative = false
 collision_layer = 2
@@ -10386,6 +11086,7 @@ hframes = 25
 [node name="UI Layer Only" type="CanvasLayer" parent="obj_player/Sprite"]
 
 [node name="Bag Icon" type="Control" parent="obj_player/Sprite/UI Layer Only"]
+visible = false
 margin_left = 13.2823
 margin_top = -0.269234
 margin_right = 41.2823
@@ -10430,6 +11131,7 @@ __meta__ = {
 }
 
 [node name="Heart Icon" type="Control" parent="obj_player/Sprite/UI Layer Only"]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
@@ -10471,6 +11173,7 @@ __meta__ = {
 }
 
 [node name="Key Icon" type="Control" parent="obj_player/Sprite/UI Layer Only"]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
@@ -12400,8 +13103,127 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch47/Area2D"]
 position = Vector2( -45.5172, 324.382 )
 shape = SubResource( 112 )
-[connection signal="body_entered" from="PickUp/Key2/Key" to="obj_player" method="_on_Key_body_entered"]
+
+[node name="Fake Torches " type="Node2D" parent="."]
+
+[node name="Fake_torch" parent="Fake Torches " instance=ExtResource( 9 )]
+position = Vector2( -187.335, 334.034 )
+scale = Vector2( 0.40462, 0.431326 )
+collision_layer = 1
+
+[node name="fake_torch2" type="StaticBody2D" parent="Fake Torches "]
+position = Vector2( 414.418, 472.638 )
+scale = Vector2( 0.5, 0.5 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 40 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Torches /fake_torch2"]
+frames = SubResource( 95 )
+animation = "off"
+
+[node name="Light2D" type="Light2D" parent="Fake Torches /fake_torch2"]
+position = Vector2( 0.340576, -6.10352e-05 )
+scale = Vector2( 0.549092, 0.515036 )
+texture = ExtResource( 70 )
+script = ExtResource( 39 )
+
+[node name="Area2D" type="Area2D" parent="Fake Torches /fake_torch2"]
+position = Vector2( -19.2924, -2.91052 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Torches /fake_torch2/Area2D"]
+position = Vector2( 5.82605, 1.67773 )
+shape = SubResource( 96 )
+
+[node name="fake_torch3" type="StaticBody2D" parent="Fake Torches "]
+position = Vector2( 727.353, 151.586 )
+scale = Vector2( 0.5, 0.5 )
+collision_layer = 16
+collision_mask = 2
+script = ExtResource( 41 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Torches /fake_torch3"]
+frames = SubResource( 97 )
+animation = "off"
+
+[node name="Light2D" type="Light2D" parent="Fake Torches /fake_torch3"]
+texture = ExtResource( 70 )
+script = ExtResource( 39 )
+
+[node name="Area2D" type="Area2D" parent="Fake Torches /fake_torch3"]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Torches /fake_torch3/Area2D"]
+position = Vector2( -7.69238, 1.69687 )
+shape = SubResource( 98 )
+
+[node name="fake_torch4" type="StaticBody2D" parent="Fake Torches "]
+position = Vector2( 536.6, 333.692 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 42 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Torches /fake_torch4"]
+frames = SubResource( 99 )
+animation = "off"
+
+[node name="Light2D" type="Light2D" parent="Fake Torches /fake_torch4"]
+texture = ExtResource( 70 )
+script = ExtResource( 39 )
+
+[node name="Area2D" type="Area2D" parent="Fake Torches /fake_torch4"]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Torches /fake_torch4/Area2D"]
+position = Vector2( -2.33923, 13.1578 )
+shape = SubResource( 100 )
+
+[node name="fake_torch5" type="StaticBody2D" parent="Fake Torches "]
+position = Vector2( 606.229, 111.782 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 43 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Torches /fake_torch5"]
+frames = SubResource( 101 )
+animation = "off"
+
+[node name="Light2D" type="Light2D" parent="Fake Torches /fake_torch5"]
+texture = ExtResource( 70 )
+script = ExtResource( 39 )
+
+[node name="Area2D" type="Area2D" parent="Fake Torches /fake_torch5"]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Torches /fake_torch5/Area2D"]
+position = Vector2( -9.68555, 0 )
+shape = SubResource( 102 )
+
+[node name="fake_torch6" type="StaticBody2D" parent="Fake Torches "]
+position = Vector2( 350.3, 156.649 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 44 )
+
+[node name="Light2D" type="Light2D" parent="Fake Torches /fake_torch6"]
+texture = ExtResource( 70 )
+script = ExtResource( 39 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Torches /fake_torch6"]
+frames = SubResource( 103 )
+animation = "off"
+
+[node name="Area2D" type="Area2D" parent="Fake Torches /fake_torch6"]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Torches /fake_torch6/Area2D"]
+position = Vector2( -11.8303, 1.39175 )
+shape = SubResource( 104 )
 [connection signal="body_entered" from="PickUp/Key2/Key" to="PickUp/Key2/Key" method="_on_Key_body_entered"]
+[connection signal="body_entered" from="PickUp/Key2/Key" to="obj_player" method="_on_Key_body_entered"]
 [connection signal="keycollected" from="PickUp/Key2/Key" to="obj_player/Sprite/UI Layer Only/Key Icon/Count3" method="_on_Key_keycollected"]
 [connection signal="body_entered" from="PickUp/Hearts/Heart" to="PickUp/Hearts/Heart" method="_on_Heart_body_entered"]
 [connection signal="heartCount" from="PickUp/Hearts/Heart" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Heart_heartCount"]
@@ -12459,6 +13281,70 @@ shape = SubResource( 112 )
 [connection signal="heartCount" from="PickUp/Hearts/Heart27" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Heart_heartCount"]
 [connection signal="bagsCollected" from="PickUp/Bags/obj_bag58" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="PickUp/Bags/obj_bag58" to="PickUp/Bags/obj_bag58" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag119" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag119" to="PickUp/Bags/obj_bag119" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag120" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag120" to="PickUp/Bags/obj_bag120" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag121" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag121" to="PickUp/Bags/obj_bag121" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag122" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag122" to="PickUp/Bags/obj_bag122" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag123" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag123" to="PickUp/Bags/obj_bag123" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag124" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag124" to="PickUp/Bags/obj_bag124" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag125" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag125" to="PickUp/Bags/obj_bag125" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag126" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag126" to="PickUp/Bags/obj_bag126" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag127" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag127" to="PickUp/Bags/obj_bag127" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag128" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag128" to="PickUp/Bags/obj_bag128" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag103" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag103" to="PickUp/Bags/obj_bag103" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag104" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag104" to="PickUp/Bags/obj_bag104" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag109" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag109" to="PickUp/Bags/obj_bag109" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag105" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag105" to="PickUp/Bags/obj_bag105" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag110" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag110" to="PickUp/Bags/obj_bag110" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag111" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag111" to="PickUp/Bags/obj_bag111" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag112" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag112" to="PickUp/Bags/obj_bag112" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag113" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag113" to="PickUp/Bags/obj_bag113" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag114" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag114" to="PickUp/Bags/obj_bag114" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag115" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag115" to="PickUp/Bags/obj_bag115" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag116" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag116" to="PickUp/Bags/obj_bag116" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag117" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag117" to="PickUp/Bags/obj_bag117" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag118" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag118" to="PickUp/Bags/obj_bag118" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag106" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag106" to="PickUp/Bags/obj_bag106" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag107" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag107" to="PickUp/Bags/obj_bag107" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag108" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag108" to="PickUp/Bags/obj_bag108" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag97" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag97" to="PickUp/Bags/obj_bag97" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag98" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag98" to="PickUp/Bags/obj_bag98" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag99" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag99" to="PickUp/Bags/obj_bag99" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag100" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag100" to="PickUp/Bags/obj_bag100" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag101" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag101" to="PickUp/Bags/obj_bag101" method="_on_obj_bag_body_entered"]
+[connection signal="bagsCollected" from="PickUp/Bags/obj_bag102" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
+[connection signal="body_entered" from="PickUp/Bags/obj_bag102" to="PickUp/Bags/obj_bag102" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="PickUp/Bags/obj_bag76" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="PickUp/Bags/obj_bag76" to="PickUp/Bags/obj_bag76" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="PickUp/Bags/obj_bag77" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
@@ -12656,6 +13542,8 @@ shape = SubResource( 112 )
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2/CollisionShape2D" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Fake Walls/horizontal_fake_wall3/Timer" to="Fake Walls/horizontal_fake_wall3/CollisionShape2D" method="_on_Timer_timeout"]
 [connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel33/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel34/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
 [connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel2/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
 [connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel3/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
 [connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel4/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
@@ -12681,6 +13569,7 @@ shape = SubResource( 112 )
 [connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel19/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
 [connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel20/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
 [connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel21/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
+[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel35/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
 [connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel22/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
 [connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel23/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
 [connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel24/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
@@ -12690,12 +13579,6 @@ shape = SubResource( 112 )
 [connection signal="frame_changed" from="Doors/obj_door/Sprite" to="Doors/obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="Doors/obj_door/Area2D" to="Doors/obj_door" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Doors/obj_door/Timer" to="Doors/obj_door" method="_on_Timer_timeout"]
-[connection signal="light_on" from="Fake_torch" to="Fake Walls/vertical_fake_wall" method="_on_Fake_torch_light_on"]
-[connection signal="light_on2" from="fake_torch2" to="Fake Walls/vertical_fake_wall2" method="_on_fake_torch2_light_on2"]
-[connection signal="light_on3" from="fake_torch3" to="Fake Walls/vertical_fake_wall3" method="_on_fake_torch3_light_on3"]
-[connection signal="light_on4" from="fake_torch4" to="Fake Walls/horizontal_fake_wall" method="_on_fake_torch4_light_on4"]
-[connection signal="light_on5" from="fake_torch5" to="Fake Walls/horizontal_fake_wall2" method="_on_fake_torch5_light_on5"]
-[connection signal="light_on6" from="fake_torch6" to="Fake Walls/horizontal_fake_wall3" method="_on_fake_torch6_light_on6"]
 [connection signal="area_entered" from="Torches behind player/torch13/Area2D" to="Torches behind player/torch13" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch14/Area2D" to="Torches behind player/torch14" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch15/Area2D" to="Torches behind player/torch15" method="_on_Area2D_area_entered"]
@@ -12805,10 +13688,20 @@ shape = SubResource( 112 )
 [connection signal="area_entered" from="Torhces in front of player/torch45/Area2D" to="Torhces in front of player/torch45" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torhces in front of player/torch46/Area2D" to="Torhces in front of player/torch46" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torhces in front of player/torch47/Area2D" to="Torhces in front of player/torch47" method="_on_Area2D_area_entered"]
+[connection signal="light_on" from="Fake Torches /Fake_torch" to="Fake Walls/vertical_fake_wall" method="_on_Fake_torch_light_on"]
+[connection signal="light_on2" from="Fake Torches /fake_torch2" to="Fake Walls/vertical_fake_wall2" method="_on_fake_torch2_light_on2"]
+[connection signal="light_on3" from="Fake Torches /fake_torch3" to="Fake Walls/vertical_fake_wall3" method="_on_fake_torch3_light_on3"]
+[connection signal="light_on4" from="Fake Torches /fake_torch4" to="Fake Walls/horizontal_fake_wall" method="_on_fake_torch4_light_on4"]
+[connection signal="light_on5" from="Fake Torches /fake_torch5" to="Fake Walls/horizontal_fake_wall2" method="_on_fake_torch5_light_on5"]
+[connection signal="light_on6" from="Fake Torches /fake_torch6" to="Fake Walls/horizontal_fake_wall3" method="_on_fake_torch6_light_on6"]
 
 [editable path="Map Layout"]
 
 [editable path="Enemies assets/Spider Sprite/Spider_barrel"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel33"]
+
+[editable path="Enemies assets/Spider Sprite/Spider_barrel34"]
 
 [editable path="Enemies assets/Spider Sprite/Spider_barrel2"]
 
@@ -12862,6 +13755,8 @@ shape = SubResource( 112 )
 
 [editable path="Enemies assets/Spider Sprite/Spider_barrel21"]
 
+[editable path="Enemies assets/Spider Sprite/Spider_barrel35"]
+
 [editable path="Enemies assets/Spider Sprite/Spider_barrel22"]
 
 [editable path="Enemies assets/Spider Sprite/Spider_barrel23"]
@@ -12873,8 +13768,6 @@ shape = SubResource( 112 )
 [editable path="Enemies assets/Spider Sprite/Spider_barrel26"]
 
 [editable path="Enemies assets/Spider Sprite/Spider_barrel27"]
-
-[editable path="Fake_torch"]
 
 [editable path="obj_player/HitboxPivot/SwordHitbox"]
 

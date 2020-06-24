@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Home Screen/ControlButton.gd" type="Script" id=1]
 [ext_resource path="res://Home Screen/PlayButton.gd" type="Script" id=2]
@@ -8,13 +8,7 @@
 [ext_resource path="res://Art Assets/LIghting .png" type="Texture" id=6]
 [ext_resource path="res://Art Assets/maze_spr_color_v1.png" type="Texture" id=7]
 [ext_resource path="res://Art Assets/New Door Opening.png" type="Texture" id=8]
-[ext_resource path="res://Art Assets/Barrel.png" type="Texture" id=9]
-[ext_resource path="res://Art Assets/Rat.png" type="Texture" id=10]
 [ext_resource path="res://skele anims/enemy_left1.png" type="Texture" id=11]
-[ext_resource path="res://spider attack/spider_attackup2.png" type="Texture" id=12]
-[ext_resource path="res://Art Assets/Fake Walls/Horizontal Walls/Horizontal Fake Wall.png" type="Texture" id=13]
-[ext_resource path="res://Art Assets/Tile map/Updated Titles/Center Title.png" type="Texture" id=14]
-[ext_resource path="res://Art Assets/Torch/torch_lit_v1.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -44,37 +38,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2( 732.026, 408.678 )
-scale = Vector2( 3, 3 )
-
-[node name="Center Title" type="Sprite" parent="Node2D"]
-position = Vector2( -81.793, 83.1858 )
-scale = Vector2( 6.03843, 4.00324 )
-texture = ExtResource( 14 )
-
-[node name="Horizontal Fake Wall" type="Sprite" parent="Node2D"]
-position = Vector2( -73.9532, 135.848 )
-scale = Vector2( 5.5648, 7.94941 )
-texture = ExtResource( 13 )
-
-[node name="enemy_left2" type="Sprite" parent="Node2D"]
-position = Vector2( 54.7171, 6.85306 )
-scale = Vector2( 1.41148, 1.64008 )
-texture = ExtResource( 11 )
-
-[node name="ColorRect" type="ColorRect" parent="Node2D"]
-margin_left = 2.0
-margin_top = -59.0
-margin_right = 85.0
-margin_bottom = 48.0
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.827451 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 732.026, 408.678 )
+scale = Vector2( 3, 3 )
+
 [node name="New Door Opening" type="Sprite" parent="Node2D"]
-position = Vector2( 42.2193, -9.12706 )
+position = Vector2( 34.3188, -0.648529 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 8 )
 
@@ -95,19 +72,6 @@ modulate = Color( 0.568627, 0.517647, 0.517647, 1 )
 position = Vector2( -86.8877, 37.1809 )
 scale = Vector2( 0.605927, 0.773564 )
 texture = ExtResource( 5 )
-
-[node name="Barrel" type="Sprite" parent="Node2D"]
-position = Vector2( 76.2725, 36.6364 )
-texture = ExtResource( 9 )
-
-[node name="Rat" type="Sprite" parent="Node2D/Barrel"]
-position = Vector2( 0.650208, -11.054 )
-rotation = 1.5708
-texture = ExtResource( 10 )
-
-[node name="Rat2" type="Sprite" parent="Node2D/Barrel/Rat"]
-position = Vector2( -8.2905, -4.55164 )
-texture = ExtResource( 10 )
 
 [node name="maze_spr_color_v1" type="Sprite" parent="Node2D"]
 position = Vector2( -68.2041, 17.5644 )
@@ -154,27 +118,6 @@ texture = ExtResource( 5 )
 position = Vector2( 14.8901, 15.1436 )
 scale = Vector2( 1.41148, 1.64008 )
 texture = ExtResource( 11 )
-
-[node name="spider_attackup2" type="Sprite" parent="Node2D"]
-position = Vector2( 55.6923, -62.7222 )
-rotation = 3.14159
-scale = Vector2( 0.75, 0.5 )
-texture = ExtResource( 12 )
-
-[node name="torch_lit_v1" type="Sprite" parent="Node2D"]
-position = Vector2( -26.751, -12.2974 )
-scale = Vector2( 1.53475, 1.72842 )
-texture = ExtResource( 15 )
-
-[node name="ColorRect2" type="ColorRect" parent="Node2D"]
-margin_left = -259.0
-margin_top = -147.0
-margin_right = 136.0
-margin_bottom = -69.0
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 19.3698
