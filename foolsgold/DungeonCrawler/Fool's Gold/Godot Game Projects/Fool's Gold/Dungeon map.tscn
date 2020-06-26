@@ -219,14 +219,14 @@ color_ramp = SubResource( 21 )
 
 [sub_resource type="SpriteFrames" id=25]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -2032,14 +2032,14 @@ color_ramp = SubResource( 116 )
 
 [sub_resource type="SpriteFrames" id=120]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -2075,14 +2075,14 @@ color_ramp = SubResource( 123 )
 
 [sub_resource type="SpriteFrames" id=127]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -2918,14 +2918,14 @@ color_ramp = SubResource( 198 )
 
 [sub_resource type="SpriteFrames" id=202]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -2962,14 +2962,14 @@ color_ramp = SubResource( 205 )
 
 [sub_resource type="SpriteFrames" id=209]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -3006,14 +3006,14 @@ color_ramp = SubResource( 212 )
 
 [sub_resource type="SpriteFrames" id=216]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "off",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "off",
 "speed": 5.0
 } ]
 
@@ -3049,6 +3049,7 @@ energy = 0.5
 shadow_gradient_length = 10.0
 
 [node name="CanvasModulate" parent="Map Layout" index="3"]
+visible = false
 modulate = Color( 0, 0, 0, 1 )
 color = Color( 0, 0, 0, 1 )
 
@@ -14115,7 +14116,7 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torhces in front of player/torch34/Area2D"]
-position = Vector2( -31.9454, 195.682 )
+position = Vector2( -33.4876, 400.276 )
 shape = SubResource( 27 )
 
 [node name="torch35" type="StaticBody2D" parent="Torhces in front of player"]
@@ -14672,6 +14673,7 @@ scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 43 )
 
 [node name="Light2D" type="Light2D" parent="Fake Torches /fake_torch5"]
+visible = false
 position = Vector2( 0, -0.485733 )
 texture = ExtResource( 70 )
 script = ExtResource( 39 )
