@@ -22,8 +22,8 @@ animations = [ {
 } ]
 
 [sub_resource type="Gradient" id=2]
-offsets = PoolRealArray( 0, 0.489796, 1 )
-colors = PoolColorArray( 0.410156, 0, 0, 1, 0.800781, 0.788269, 0, 1, 0.0706177, 0.695313, 0, 1 )
+offsets = PoolRealArray( 0, 0.489796, 0.985185 )
+colors = PoolColorArray( 0.411765, 0, 0, 1, 0.800781, 0.788269, 0, 1, 0.92549, 0.427451, 0.027451, 1 )
 
 [sub_resource type="GradientTexture" id=3]
 gradient = SubResource( 2 )
@@ -56,6 +56,7 @@ color_ramp = SubResource( 3 )
 extents = Vector2( 22.247, 20.245 )
 
 [node name="Fake_torch" type="StaticBody2D"]
+modulate = Color( 1, 0.619608, 0.619608, 1 )
 collision_layer = 17
 script = ExtResource( 1 )
 
@@ -65,7 +66,7 @@ frames = SubResource( 1 )
 animation = "off"
 
 [node name="Light2D" type="Light2D" parent="."]
-visible = false
+show_behind_parent = true
 texture = ExtResource( 5 )
 script = ExtResource( 6 )
 

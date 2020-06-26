@@ -35,7 +35,7 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 1 )
 
 [node name="Light2D" type="Light2D" parent="Rat"]
-scale = Vector2( 0.367046, 0.374266 )
+scale = Vector2( 0.232592, 0.261661 )
 texture = ExtResource( 3 )
 color = Color( 1, 0.447059, 0.00392157, 1 )
 energy = 2.0
