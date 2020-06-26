@@ -72,7 +72,120 @@
 [ext_resource path="res://Font/dogicapixelbold.ttf" type="DynamicFontData" id=77]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 19.2795, 25.6042 )
+extents = Vector2( 14.3688, 17.0042 )
+
+[sub_resource type="RectangleShape2D" id=87]
+extents = Vector2( 10, 32.1574 )
+
+[sub_resource type="SpriteFrames" id=88]
+animations = [ {
+"frames": [ ExtResource( 53 ), ExtResource( 59 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 58 ) ],
+"loop": false,
+"name": "open",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 53 ) ],
+"loop": false,
+"name": "closed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=89]
+extents = Vector2( 3.66394, 10 )
+
+[sub_resource type="RectangleShape2D" id=90]
+extents = Vector2( 10.7963, 21.7814 )
+
+[sub_resource type="SpriteFrames" id=91]
+animations = [ {
+"frames": [ ExtResource( 53 ), ExtResource( 59 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 58 ) ],
+"loop": false,
+"name": "open",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "closed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=92]
+extents = Vector2( 3.85233, 2.71524 )
+
+[sub_resource type="RectangleShape2D" id=93]
+extents = Vector2( 7.99921, 32.0507 )
+
+[sub_resource type="SpriteFrames" id=94]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 59 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 58 ) ],
+"loop": false,
+"name": "open",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "closed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=95]
+extents = Vector2( 3.6748, 3.90611 )
+
+[sub_resource type="RectangleShape2D" id=96]
+extents = Vector2( 31.5205, 11.1035 )
+
+[sub_resource type="SpriteFrames" id=97]
+animations = [ {
+"frames": [ ExtResource( 61 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 64 ) ],
+"loop": false,
+"name": "open",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 61 ) ],
+"loop": false,
+"name": "closed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=98]
+extents = Vector2( 10, 10.3184 )
+
+[sub_resource type="RectangleShape2D" id=99]
+extents = Vector2( 33.6135, 10 )
+
+[sub_resource type="SpriteFrames" id=100]
+animations = [ {
+"frames": [ ExtResource( 61 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 64 ) ],
+"loop": false,
+"name": "open",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 61 ) ],
+"loop": true,
+"name": "closed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=101]
+
+[sub_resource type="RectangleShape2D" id=102]
+extents = Vector2( 32.1794, 10 )
+
+[sub_resource type="SpriteFrames" id=103]
+animations = [ {
+"frames": [ ExtResource( 61 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 64 ) ],
+"loop": false,
+"name": "open",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 61 ) ],
+"loop": true,
+"name": "closed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=104]
+extents = Vector2( 7.76523, 10 )
 
 [sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0.0148148, 0.459259, 0.985185, 1 )
@@ -1850,119 +1963,6 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ), Vector2( 0.5, 0.75 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=87]
-extents = Vector2( 10, 32.1574 )
-
-[sub_resource type="SpriteFrames" id=88]
-animations = [ {
-"frames": [ ExtResource( 53 ), ExtResource( 59 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 58 ) ],
-"loop": false,
-"name": "open",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 53 ) ],
-"loop": false,
-"name": "closed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=89]
-extents = Vector2( 3.66394, 10 )
-
-[sub_resource type="RectangleShape2D" id=90]
-extents = Vector2( 10.7963, 21.7814 )
-
-[sub_resource type="SpriteFrames" id=91]
-animations = [ {
-"frames": [ ExtResource( 53 ), ExtResource( 59 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 58 ) ],
-"loop": false,
-"name": "open",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 20 ) ],
-"loop": true,
-"name": "closed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=92]
-extents = Vector2( 3.85233, 2.71524 )
-
-[sub_resource type="RectangleShape2D" id=93]
-extents = Vector2( 7.99921, 32.0507 )
-
-[sub_resource type="SpriteFrames" id=94]
-animations = [ {
-"frames": [ ExtResource( 20 ), ExtResource( 59 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 58 ) ],
-"loop": false,
-"name": "open",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 20 ) ],
-"loop": true,
-"name": "closed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=95]
-extents = Vector2( 3.6748, 3.90611 )
-
-[sub_resource type="RectangleShape2D" id=96]
-extents = Vector2( 31.5205, 11.1035 )
-
-[sub_resource type="SpriteFrames" id=97]
-animations = [ {
-"frames": [ ExtResource( 61 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 64 ) ],
-"loop": false,
-"name": "open",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 61 ) ],
-"loop": false,
-"name": "closed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=98]
-extents = Vector2( 10, 10.3184 )
-
-[sub_resource type="RectangleShape2D" id=99]
-extents = Vector2( 33.6135, 10 )
-
-[sub_resource type="SpriteFrames" id=100]
-animations = [ {
-"frames": [ ExtResource( 61 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 64 ) ],
-"loop": false,
-"name": "open",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 61 ) ],
-"loop": true,
-"name": "closed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=101]
-
-[sub_resource type="RectangleShape2D" id=102]
-extents = Vector2( 32.1794, 10 )
-
-[sub_resource type="SpriteFrames" id=103]
-animations = [ {
-"frames": [ ExtResource( 61 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 64 ) ],
-"loop": false,
-"name": "open",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 61 ) ],
-"loop": true,
-"name": "closed",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=104]
-extents = Vector2( 7.76523, 10 )
-
 [sub_resource type="SpriteFrames" id=105]
 animations = [ {
 "frames": [ ExtResource( 45 ) ],
@@ -3052,6 +3052,186 @@ shadow_gradient_length = 10.0
 modulate = Color( 0, 0, 0, 1 )
 color = Color( 0, 0, 0, 1 )
 
+[node name="Spider Sprite" type="Node2D" parent="."]
+modulate = Color( 0.729412, 0.627451, 0.627451, 1 )
+position = Vector2( 115.952, 356.71 )
+scale = Vector2( 0.25, 0.25 )
+
+[node name="Spider_barrel" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( -1024.89, 7.81104 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel33" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( -1130.6, -776.096 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel34" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( -1300.07, -879.598 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel2" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( -1290.08, 175.769 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel3" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( -1558.27, -131.173 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel4" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( -463.942, -79.7462 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel5" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( -427.062, 247.358 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel6" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( -278.557, 706.63 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel7" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 163.985, 706.63 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel8" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 706.218, 719.586 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel9" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2079.55, 716.856 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel28" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2117.34, 714.125 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel29" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2156.07, 714.125 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel30" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2193.38, 711.395 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel31" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2232.42, 712.985 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel32" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2268.77, 712.985 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel10" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2151.83, 230.311 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel11" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2103.55, -345.999 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel12" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2023.58, -451.405 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel13" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2199.68, -542.284 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel14" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2193.29, -965.36 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel15" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2416.57, -894.09 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel16" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2866.38, -1009.13 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel17" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2913.48, -1102.57 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel18" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 3013.96, -956.762 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel19" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2632.65, -546.986 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel20" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2504.88, -437.555 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel21" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2316.83, -645.277 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel35" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2719.66, -327.457 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel22" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2588.66, -201.845 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel23" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2546, -93.198 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel24" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2675.33, 21.7393 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel26" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2716.39, 844.073 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel27" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2662.6, 742.964 )
+scale = Vector2( 0.75, 0.85 )
+
+[node name="Spider_barrel25" parent="Spider Sprite" instance=ExtResource( 67 )]
+modulate = Color( 1, 0.862745, 0.862745, 1 )
+position = Vector2( 2542.86, 733.395 )
+scale = Vector2( 0.75, 0.85 )
+
 [node name="Backgound" type="Node2D" parent="."]
 position = Vector2( -45.6961, 236.747 )
 scale = Vector2( 0.25, 0.25 )
@@ -3810,6 +3990,17 @@ texture = ExtResource( 5 )
 position = Vector2( -0.894531, 0.0560303 )
 shape = SubResource( 1 )
 
+[node name="Barrel Collision274" type="StaticBody2D" parent="Backgound/Barrels/Barrel Collision321"]
+position = Vector2( -2447.98, -647.423 )
+
+[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision321/Barrel Collision274"]
+scale = Vector2( 0.75, 0.8 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision321/Barrel Collision274"]
+position = Vector2( -0.894531, 0.0560303 )
+shape = SubResource( 1 )
+
 [node name="Barrel Collision322" type="StaticBody2D" parent="Backgound/Barrels"]
 position = Vector2( 3807.4, 1050.86 )
 
@@ -4049,17 +4240,6 @@ scale = Vector2( 0.75, 0.8 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision273"]
-position = Vector2( -0.894531, 0.0560303 )
-shape = SubResource( 1 )
-
-[node name="Barrel Collision274" type="StaticBody2D" parent="Backgound/Barrels"]
-position = Vector2( 1375.42, 285.788 )
-
-[node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision274"]
-scale = Vector2( 0.75, 0.8 )
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgound/Barrels/Barrel Collision274"]
 position = Vector2( -0.894531, 0.0560303 )
 shape = SubResource( 1 )
 
@@ -5626,7 +5806,7 @@ position = Vector2( -0.894531, 0.0560303 )
 shape = SubResource( 1 )
 
 [node name="Barrel Collision132" type="StaticBody2D" parent="Backgound/Barrels"]
-position = Vector2( 3560.97, -527.864 )
+position = Vector2( 3562.51, -505.048 )
 
 [node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision132"]
 scale = Vector2( 0.75, 0.8 )
@@ -5637,7 +5817,7 @@ position = Vector2( -0.894531, 0.0560303 )
 shape = SubResource( 1 )
 
 [node name="Barrel Collision133" type="StaticBody2D" parent="Backgound/Barrels"]
-position = Vector2( 3560.97, -498.591 )
+position = Vector2( 3562.51, -479.99 )
 
 [node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision133"]
 scale = Vector2( 0.75, 0.8 )
@@ -5648,7 +5828,7 @@ position = Vector2( -0.894531, 0.0560303 )
 shape = SubResource( 1 )
 
 [node name="Barrel Collision134" type="StaticBody2D" parent="Backgound/Barrels"]
-position = Vector2( 3560.97, -472.62 )
+position = Vector2( 3562.88, -449.79 )
 
 [node name="Barrel" type="Sprite" parent="Backgound/Barrels/Barrel Collision134"]
 scale = Vector2( 0.75, 0.8 )
@@ -7165,6 +7345,139 @@ texture = ExtResource( 5 )
 position = Vector2( -0.894531, 0.0560303 )
 shape = SubResource( 1 )
 
+[node name="Fake Walls" type="Node2D" parent="."]
+
+[node name="vertical_fake_wall" type="StaticBody2D" parent="Fake Walls"]
+position = Vector2( -927.423, 254.719 )
+script = ExtResource( 29 )
+
+[node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
+position = Vector2( 693.835, 96.3341 )
+shape = SubResource( 87 )
+script = ExtResource( 69 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/vertical_fake_wall"]
+position = Vector2( 671.651, 96.0985 )
+frames = SubResource( 88 )
+animation = "closed"
+
+[node name="Timer" type="Timer" parent="Fake Walls/vertical_fake_wall"]
+wait_time = 0.8
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
+position = Vector2( 700.259, 118.267 )
+shape = SubResource( 89 )
+
+[node name="vertical_fake_wall2" type="StaticBody2D" parent="Fake Walls"]
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall2"]
+position = Vector2( 341.513, 468.35 )
+shape = SubResource( 90 )
+script = ExtResource( 69 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/vertical_fake_wall2"]
+position = Vector2( 320.231, 468.347 )
+scale = Vector2( 1, 0.673834 )
+frames = SubResource( 91 )
+animation = "closed"
+
+[node name="Timer" type="Timer" parent="Fake Walls/vertical_fake_wall2"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall2"]
+position = Vector2( 348.474, 487.341 )
+shape = SubResource( 92 )
+
+[node name="vertical_fake_wall3" type="StaticBody2D" parent="Fake Walls"]
+script = ExtResource( 31 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall3"]
+position = Vector2( 671.257, 158.795 )
+shape = SubResource( 93 )
+script = ExtResource( 32 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/vertical_fake_wall3"]
+position = Vector2( 647.224, 158.777 )
+scale = Vector2( 1, 1.00216 )
+frames = SubResource( 94 )
+animation = "closed"
+
+[node name="Timer" type="Timer" parent="Fake Walls/vertical_fake_wall3"]
+wait_time = 0.8
+one_shot = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall3"]
+position = Vector2( 675.601, 186.874 )
+shape = SubResource( 95 )
+
+[node name="horizontal_fake_wall" type="StaticBody2D" parent="Fake Walls"]
+position = Vector2( 364.813, 63.8506 )
+script = ExtResource( 28 )
+
+[node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall"]
+position = Vector2( 142.616, 330.079 )
+shape = SubResource( 96 )
+script = ExtResource( 69 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall"]
+position = Vector2( 144.471, 350.582 )
+scale = Vector2( 0.90929, 0.988436 )
+frames = SubResource( 97 )
+animation = "closed"
+
+[node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall"]
+wait_time = 0.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall"]
+position = Vector2( 115.585, 329.303 )
+shape = SubResource( 98 )
+
+[node name="horizontal_fake_wall2" type="StaticBody2D" parent="Fake Walls"]
+script = ExtResource( 36 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2"]
+position = Vector2( 574.667, 136.796 )
+shape = SubResource( 99 )
+script = ExtResource( 32 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall2"]
+position = Vector2( 575.847, 158.78 )
+scale = Vector2( 1.01959, 1 )
+frames = SubResource( 100 )
+animation = "closed"
+
+[node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall2"]
+wait_time = 0.8
+one_shot = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2"]
+position = Vector2( 544.578, 136.712 )
+shape = SubResource( 101 )
+
+[node name="horizontal_fake_wall3" type="StaticBody2D" parent="Fake Walls"]
+position = Vector2( 320.292, 204.61 )
+script = ExtResource( 38 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall3"]
+position = Vector2( 0.0135193, -21.9256 )
+shape = SubResource( 102 )
+script = ExtResource( 32 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall3"]
+position = Vector2( -0.0284271, 0 )
+scale = Vector2( 1.00117, 1 )
+frames = SubResource( 103 )
+animation = "closed"
+
+[node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall3"]
+wait_time = 0.8
+one_shot = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall3"]
+position = Vector2( -28.8252, -22.0833 )
+shape = SubResource( 104 )
+
 [node name="Knight Layers" type="Node2D" parent="."]
 position = Vector2( -38.709, 234.323 )
 scale = Vector2( 0.25, 0.25 )
@@ -7358,7 +7671,7 @@ position = Vector2( -607.839, -706.376 )
 scale = Vector2( 2.75, 2.17992 )
 
 [node name="Knight66" parent="Knight Layers" instance=ExtResource( 2 )]
-position = Vector2( -172.147, -709.432 )
+position = Vector2( -117.836, -709.799 )
 scale = Vector2( 2.75, 2.17992 )
 
 [node name="Knight10" parent="Knight Layers" instance=ExtResource( 2 )]
@@ -7514,7 +7827,7 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch14/Area2D"]
-position = Vector2( 242.117, 636.57 )
+position = Vector2( -153.581, 546.886 )
 shape = SubResource( 9 )
 
 [node name="torch15" type="StaticBody2D" parent="Torches behind player"]
@@ -8096,7 +8409,7 @@ position = Vector2( 231.087, 517.988 )
 shape = SubResource( 9 )
 
 [node name="torch23" type="StaticBody2D" parent="Torches behind player"]
-position = Vector2( 464.92, 411.79 )
+position = Vector2( 453.722, 410.975 )
 scale = Vector2( 0.251695, 0.255816 )
 script = ExtResource( 15 )
 
@@ -8547,7 +8860,7 @@ position = Vector2( 52.206, 548.229 )
 shape = SubResource( 9 )
 
 [node name="torch34" type="StaticBody2D" parent="Torches behind player"]
-position = Vector2( 719.745, 284.09 )
+position = Vector2( 711.527, 281.905 )
 scale = Vector2( 0.251695, 0.255816 )
 script = ExtResource( 15 )
 
@@ -8584,7 +8897,7 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torches behind player/torch34/Area2D"]
-position = Vector2( 52.206, 548.229 )
+position = Vector2( 256.044, 543.138 )
 shape = SubResource( 9 )
 
 [node name="torch35" type="StaticBody2D" parent="Torches behind player"]
@@ -9449,7 +9762,7 @@ position = Vector2( -28.711, 544.862 )
 shape = SubResource( 9 )
 
 [node name="torch56" type="StaticBody2D" parent="Torches behind player"]
-position = Vector2( 211.664, -35.2614 )
+position = Vector2( 196.104, -38.1505 )
 scale = Vector2( 0.251695, 0.255816 )
 script = ExtResource( 15 )
 
@@ -9859,7 +10172,7 @@ position = Vector2( -1.44409, 556.76 )
 shape = SubResource( 9 )
 
 [node name="torch66" type="StaticBody2D" parent="Torches behind player"]
-position = Vector2( 335.621, -100.448 )
+position = Vector2( 326.153, -103.121 )
 scale = Vector2( 0.251695, 0.255816 )
 script = ExtResource( 15 )
 
@@ -11798,197 +12111,6 @@ scale = Vector2( 0.627555, 0.813778 )
 autoplay = "Ghost Animation"
 "anims/Ghost Animation" = SubResource( 51 )
 
-[node name="Spider Sprite" type="Node2D" parent="Enemies assets"]
-modulate = Color( 0.729412, 0.627451, 0.627451, 1 )
-position = Vector2( 753.381, 213.938 )
-
-[node name="Spider_barrel" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( -1024.89, 7.81104 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel33" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( -1130.6, -776.096 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel34" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( -1300.07, -879.598 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel2" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( -1290.08, 175.769 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel3" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( -1558.27, -131.173 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="CollisionShape2D" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="1"]
-position = Vector2( -0.0185697, -4.11379 )
-
-[node name="Hitbox" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="3"]
-position = Vector2( 0.294067, -0.518921 )
-
-[node name="Hurtbox" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="4"]
-position = Vector2( 0.147095, -4.02393 )
-
-[node name="enemy_detect" parent="Enemies assets/Spider Sprite/Spider_barrel3" index="5"]
-position = Vector2( 0.147095, -4.02393 )
-
-[node name="Spider_barrel4" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( -463.942, -79.7462 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel5" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( -427.062, 247.358 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel6" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( -278.557, 706.63 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel7" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 163.985, 706.63 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel8" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 706.218, 719.586 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel9" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2079.55, 716.856 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel28" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2117.34, 714.125 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel29" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2156.07, 714.125 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel30" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2193.38, 711.395 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel31" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2232.42, 712.985 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel32" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2268.77, 712.985 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel10" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2151.83, 230.311 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel11" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2103.55, -345.999 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel12" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2023.58, -451.405 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel13" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2199.68, -542.284 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel14" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2193.29, -965.36 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel15" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2416.57, -894.09 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel16" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2866.38, -1009.13 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel17" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2913.48, -1102.57 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel18" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 3013.96, -956.762 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel19" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2632.65, -546.986 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel20" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2504.88, -437.555 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel21" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2316.83, -645.277 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel35" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2719.66, -327.457 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel22" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2588.66, -201.845 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel23" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2546, -93.198 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel24" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2675.33, 21.7393 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel25" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2537.88, 726.778 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel26" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2716.39, 844.073 )
-scale = Vector2( 0.75, 0.85 )
-
-[node name="Spider_barrel27" parent="Enemies assets/Spider Sprite" instance=ExtResource( 67 )]
-modulate = Color( 1, 0.862745, 0.862745, 1 )
-position = Vector2( 2662.6, 742.964 )
-scale = Vector2( 0.75, 0.85 )
-
 [node name="Skeleton Sprite" type="Node2D" parent="Enemies assets"]
 position = Vector2( 741.397, 232.875 )
 
@@ -12292,140 +12414,6 @@ position = Vector2( 1821.67, 22.5189 )
 [node name="Enemy35" parent="Enemies assets/Skeleton Sprite" instance=ExtResource( 23 )]
 position = Vector2( 1676.67, -29.0469 )
 
-[node name="Fake Walls" type="Node2D" parent="."]
-
-[node name="vertical_fake_wall" type="StaticBody2D" parent="Fake Walls"]
-position = Vector2( -927.423, 254.719 )
-script = ExtResource( 29 )
-
-[node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
-position = Vector2( 693.835, 96.3341 )
-shape = SubResource( 87 )
-script = ExtResource( 69 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/vertical_fake_wall"]
-position = Vector2( 671.651, 96.0985 )
-frames = SubResource( 88 )
-animation = "closed"
-
-[node name="Timer" type="Timer" parent="Fake Walls/vertical_fake_wall"]
-wait_time = 0.8
-one_shot = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall"]
-position = Vector2( 700.259, 118.267 )
-shape = SubResource( 89 )
-
-[node name="vertical_fake_wall2" type="StaticBody2D" parent="Fake Walls"]
-script = ExtResource( 10 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall2"]
-position = Vector2( 341.513, 468.35 )
-shape = SubResource( 90 )
-script = ExtResource( 69 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/vertical_fake_wall2"]
-position = Vector2( 320.231, 468.347 )
-scale = Vector2( 1, 0.673834 )
-frames = SubResource( 91 )
-animation = "closed"
-
-[node name="Timer" type="Timer" parent="Fake Walls/vertical_fake_wall2"]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall2"]
-position = Vector2( 348.474, 487.341 )
-shape = SubResource( 92 )
-
-[node name="vertical_fake_wall3" type="StaticBody2D" parent="Fake Walls"]
-script = ExtResource( 31 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall3"]
-position = Vector2( 671.257, 158.795 )
-shape = SubResource( 93 )
-script = ExtResource( 32 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/vertical_fake_wall3"]
-position = Vector2( 647.224, 158.777 )
-scale = Vector2( 1, 1.00216 )
-frames = SubResource( 94 )
-animation = "open"
-frame = 7
-
-[node name="Timer" type="Timer" parent="Fake Walls/vertical_fake_wall3"]
-wait_time = 0.8
-one_shot = true
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/vertical_fake_wall3"]
-position = Vector2( 675.601, 186.874 )
-shape = SubResource( 95 )
-
-[node name="horizontal_fake_wall" type="StaticBody2D" parent="Fake Walls"]
-position = Vector2( 364.813, 63.8506 )
-script = ExtResource( 28 )
-
-[node name="wall_collision" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall"]
-position = Vector2( 142.616, 330.079 )
-shape = SubResource( 96 )
-script = ExtResource( 69 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall"]
-position = Vector2( 144.471, 350.582 )
-scale = Vector2( 0.90929, 0.988436 )
-frames = SubResource( 97 )
-animation = "closed"
-
-[node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall"]
-wait_time = 0.4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall"]
-position = Vector2( 115.585, 329.303 )
-shape = SubResource( 98 )
-
-[node name="horizontal_fake_wall2" type="StaticBody2D" parent="Fake Walls"]
-script = ExtResource( 36 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2"]
-position = Vector2( 574.667, 136.796 )
-shape = SubResource( 99 )
-script = ExtResource( 32 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall2"]
-position = Vector2( 575.847, 158.78 )
-scale = Vector2( 1.01959, 1 )
-frames = SubResource( 100 )
-animation = "closed"
-
-[node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall2"]
-wait_time = 0.8
-one_shot = true
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall2"]
-position = Vector2( 544.578, 136.712 )
-shape = SubResource( 101 )
-
-[node name="horizontal_fake_wall3" type="StaticBody2D" parent="Fake Walls"]
-position = Vector2( 320.292, 204.61 )
-script = ExtResource( 38 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall3"]
-position = Vector2( 0.0135193, -21.9256 )
-shape = SubResource( 102 )
-script = ExtResource( 32 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Fake Walls/horizontal_fake_wall3"]
-position = Vector2( -0.0284271, 0 )
-scale = Vector2( 1.00117, 1 )
-frames = SubResource( 103 )
-animation = "closed"
-
-[node name="Timer" type="Timer" parent="Fake Walls/horizontal_fake_wall3"]
-wait_time = 0.8
-one_shot = true
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fake Walls/horizontal_fake_wall3"]
-position = Vector2( -28.8252, -22.0833 )
-shape = SubResource( 104 )
-
 [node name="Doors" type="Node2D" parent="."]
 
 [node name="obj_door" type="StaticBody2D" parent="Doors"]
@@ -12561,7 +12549,7 @@ position = Vector2( -2.33923, 13.1578 )
 shape = SubResource( 121 )
 
 [node name="obj_player" type="KinematicBody2D" parent="."]
-position = Vector2( -81.7458, 341.363 )
+position = Vector2( -81.7459, 336.481 )
 scale = Vector2( 0.65, 0.6 )
 z_as_relative = false
 collision_layer = 2
@@ -14710,6 +14698,12 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fake Torches /fake_torch6/Area2D"]
 position = Vector2( -11.8303, 1.39175 )
 shape = SubResource( 217 )
+[connection signal="timeout" from="Fake Walls/vertical_fake_wall/Timer" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Fake Walls/vertical_fake_wall2/Timer" to="Fake Walls/vertical_fake_wall2/CollisionShape2D" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Fake Walls/vertical_fake_wall3/Timer" to="Fake Walls/vertical_fake_wall3/CollisionShape2D" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2/CollisionShape2D" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Fake Walls/horizontal_fake_wall3/Timer" to="Fake Walls/horizontal_fake_wall3/CollisionShape2D" method="_on_Timer_timeout"]
 [connection signal="area_entered" from="Torches behind player/torch13/Area2D" to="Torches behind player/torch13" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch14/Area2D" to="Torches behind player/torch14" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Torches behind player/torch15/Area2D" to="Torches behind player/torch15" method="_on_Area2D_area_entered"]
@@ -15309,47 +15303,6 @@ shape = SubResource( 217 )
 [connection signal="body_entered" from="PickUp/Bags/obj_bag20" to="PickUp/Bags/obj_bag20" method="_on_obj_bag_body_entered"]
 [connection signal="bagsCollected" from="PickUp/Bags/obj_bag21" to="obj_player/Sprite/UI Layer Only/Bag Icon/Count1" method="_on_obj_bag_collected"]
 [connection signal="body_entered" from="PickUp/Bags/obj_bag21" to="PickUp/Bags/obj_bag21" method="_on_obj_bag_body_entered"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel33/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel34/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel2/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel3/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel4/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel5/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel6/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel7/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel8/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel9/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel28/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel29/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel30/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel31/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel32/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel10/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel11/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel12/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel13/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel14/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel15/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel16/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel17/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel18/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel19/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel20/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel21/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel35/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel22/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel23/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel24/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel25/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel26/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="health_up" from="Enemies assets/Spider Sprite/Spider_barrel27/Area2D" to="obj_player/Sprite/UI Layer Only/Heart Icon/Count2" method="_on_Area2D_health_up"]
-[connection signal="timeout" from="Fake Walls/vertical_fake_wall/Timer" to="Fake Walls/vertical_fake_wall/wall_collision" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Fake Walls/vertical_fake_wall2/Timer" to="Fake Walls/vertical_fake_wall2/CollisionShape2D" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Fake Walls/vertical_fake_wall3/Timer" to="Fake Walls/vertical_fake_wall3/CollisionShape2D" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Fake Walls/horizontal_fake_wall/Timer" to="Fake Walls/horizontal_fake_wall/wall_collision" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Fake Walls/horizontal_fake_wall2/Timer" to="Fake Walls/horizontal_fake_wall2/CollisionShape2D" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Fake Walls/horizontal_fake_wall3/Timer" to="Fake Walls/horizontal_fake_wall3/CollisionShape2D" method="_on_Timer_timeout"]
 [connection signal="frame_changed" from="Doors/obj_door/Sprite" to="Doors/obj_door/door_collision" method="_on_Sprite_frame_changed"]
 [connection signal="body_entered" from="Doors/obj_door/Area2D" to="Doors/obj_door" method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Doors/obj_door/Timer" to="Doors/obj_door" method="_on_Timer_timeout"]
@@ -15408,78 +15361,6 @@ shape = SubResource( 217 )
 [connection signal="light_on6" from="Fake Torches /fake_torch6" to="Fake Walls/horizontal_fake_wall3" method="_on_fake_torch6_light_on6"]
 
 [editable path="Map Layout"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel33"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel34"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel2"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel2/Hitbox"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel3"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel4"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel5"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel6"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel7"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel8"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel9"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel28"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel29"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel30"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel31"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel32"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel10"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel11"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel12"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel13"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel14"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel15"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel16"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel17"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel18"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel19"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel20"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel21"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel35"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel22"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel23"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel24"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel25"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel26"]
-
-[editable path="Enemies assets/Spider Sprite/Spider_barrel27"]
 
 [editable path="Back Fake Torch/Fake_torch"]
 
