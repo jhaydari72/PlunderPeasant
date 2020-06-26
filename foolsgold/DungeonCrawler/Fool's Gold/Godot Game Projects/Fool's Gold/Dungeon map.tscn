@@ -3049,7 +3049,6 @@ energy = 0.5
 shadow_gradient_length = 10.0
 
 [node name="CanvasModulate" parent="Map Layout" index="3"]
-visible = false
 modulate = Color( 0, 0, 0, 1 )
 color = Color( 0, 0, 0, 1 )
 
@@ -14673,7 +14672,6 @@ scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 43 )
 
 [node name="Light2D" type="Light2D" parent="Fake Torches /fake_torch5"]
-visible = false
 position = Vector2( 0, -0.485733 )
 texture = ExtResource( 70 )
 script = ExtResource( 39 )
