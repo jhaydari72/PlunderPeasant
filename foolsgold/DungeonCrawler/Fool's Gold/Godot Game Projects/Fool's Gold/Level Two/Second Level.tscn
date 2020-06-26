@@ -5,16 +5,6 @@
 [ext_resource path="res://Money Machine/obj_bag.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Art Assets/maze_spr_color_v1.png" type="Texture" id=4]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
-
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 2.58932
-height = 10.9732
-
-[sub_resource type="CapsuleShape2D" id=3]
-radius = 6.13159
-height = 0.423706
-
 [sub_resource type="Animation" id=4]
 resource_name = "ColorChangingEnemy"
 loop = true
@@ -31,19 +21,29 @@ tracks/0/keys = {
 "values": [ Color( 1, 0.298039, 0.298039, 1 ), Color( 0.211765, 0.105882, 0.105882, 1 ), Color( 1, 0.298039, 0.298039, 1 ), Color( 0.211765, 0.105882, 0.105882, 1 ), Color( 1, 0.298039, 0.298039, 1 ), Color( 0.211765, 0.105882, 0.105882, 1 ), Color( 1, 0.298039, 0.298039, 1 ), Color( 0.211765, 0.105882, 0.105882, 1 ), Color( 1, 0.298039, 0.298039, 1 ), Color( 0.211765, 0.105882, 0.105882, 1 ), Color( 1, 0.298039, 0.298039, 1 ) ]
 }
 
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 2.58932
+height = 10.9732
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 6.13159
+height = 0.423706
+
 [node name="Second Level" type="Node2D"]
 
 [node name="Map Layout" parent="." instance=ExtResource( 2 )]
 position = Vector2( -399.378, -59.0443 )
 
 [node name="ColorRect" parent="Map Layout" index="0"]
-margin_left = -907.76
+margin_left = -907.54
 margin_top = -1254.63
-margin_right = 2104.24
+margin_right = 2104.46
 margin_bottom = 763.376
 
 [node name="TileMap" parent="Map Layout" index="1"]
-tile_data = PoolIntArray( -131062, 2, 0, -131061, 3, 0, -131060, 3, 0, -131059, 3, 0, -131058, 4, 0, -65526, 1, 0, -65525, 8, 0, -65524, 8, 0, -65523, 8, 0, -65522, 5, 0, 10, 1, 0, 11, 8, 0, 12, 8, 0, 13, 8, 0, 14, 5, 0, 65546, 1, 0, 65547, 8, 0, 65548, 8, 0, 65549, 8, 0, 65550, 5, 0, 131082, 3, 0, 131083, 4, 0, 131084, 5, 0, 131085, 3, 0, 131086, 3, 0, 196619, 5, 0, 196620, 5, 0, 262151, 2, 0, 262152, 3, 0, 262153, 3, 0, 262154, 3, 0, 262155, 3, 0, 262156, 5, 0, 327687, 1, 0, 327688, 2, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 393223, 1, 0, 393224, 1, 0, 458759, 1, 0, 458760, 1, 0, 524295, 1, 0, 524296, 1, 0, 589831, 3, 0 )
+tile_data = PoolIntArray( -65525, 2, 0, -65524, 3, 0, -65523, 4, 0, 11, 1, 0, 12, 8, 0, 13, 5, 0, 65547, 1, 0, 65548, 8, 0, 65549, 5, 0, 131083, 4, 0, 131084, 5, 0, 131085, 3, 0, 196619, 5, 0, 196620, 5, 0, 262151, 2, 0, 262152, 3, 0, 262153, 3, 0, 262154, 3, 0, 262155, 3, 0, 262156, 5, 0, 327687, 1, 0, 327688, 2, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 393223, 1, 0, 393224, 1, 0, 458759, 1, 0, 458760, 1, 0, 524295, 1, 0, 524296, 1, 0, 589831, 3, 0 )
 
 [node name="ColorRect2" parent="Map Layout" index="2"]
 margin_left = 486.0
@@ -94,127 +94,248 @@ __meta__ = {
 [node name="Bags" type="Node2D" parent="."]
 
 [node name="bags" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 40.0002, 447.322 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 40, 454.256 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags2" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 52.8476, 383.961 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 67.446, 415.707 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags3" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 48.0002, 324.395 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 38.7109, 366.154 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags4" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 48.0002, 247.018 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 67.446, 311.677 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags5" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 150.78, 236.506 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 37.6684, 247.12 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags6" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 259.984, 231.018 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 93.915, 222.883 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags7" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 319.549, 240.946 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 145.083, 250.429 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags8" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 364.116, 162.877 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 195.622, 225.499 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags9" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 364.116, 106.016 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 254.716, 248.967 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags10" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 367.505, 64.7573 )
-scale = Vector2( 0.25, 0.5 )
-
-[node name="bags11" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 334.103, 35.2392 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 359.118, 248.967 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags12" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 351.505, 35.2392 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 383.821, 201.828 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags13" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 367.505, 35.2392 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 342.109, 169.025 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags14" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 383.802, 35.2392 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 380.338, 121.401 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags15" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 398.232, 35.2392 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 363.918, 57.0697 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags16" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 342.103, 19.2392 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 357.356, 57.0697 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags17" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 359.505, 19.2392 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 350.474, 57.0697 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags18" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 377.344, 19.2392 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 370.567, 57.0697 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags19" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 391.802, 19.2392 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 377.216, 57.0697 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags20" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 385.344, 0 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 354.318, 50.6697 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags21" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 367.505, 0 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 360.926, 50.1866 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags22" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 350.103, 0 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 367.36, 50.1866 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags23" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 359.505, -16 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 373.794, 50.1866 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags24" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 377.344, -16 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 359.118, 44.2697 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags25" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 367.505, -32 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 365.105, 43.7866 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags26" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 371.175, 43.7866 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags27" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 368.718, 37.3866 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags28" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 362.56, 37.3866 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags29" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 365.767, 30.9866 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags30" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 322.614, -47.7439 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags31" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 307.463, -43.2798 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags32" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 361.52, -107.633 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 299.446, -27.182 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags33" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 356.116, -144.166 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 307.463, -11.4893 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags34" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 367.505, -144.166 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 322.614, -3.62716 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags35" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 351.505, -137.255 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 339.744, -11.4893 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags36" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 346.909, -27.182 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="bags37" parent="Bags" instance=ExtResource( 3 )]
-position = Vector2( 369.52, -137.255 )
-scale = Vector2( 0.25, 0.5 )
+position = Vector2( 339.744, -43.2798 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags38" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 367.36, -43.2798 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags39" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 366.375, -27.182 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags40" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 367.36, -10.0272 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags41" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 381.73, 0 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags42" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 394.581, -10.0272 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags43" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 394.581, -27.182 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags44" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 396.049, -43.2798 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags45" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 425.134, -45.4442 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags46" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 425.134, -30.0174 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags47" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 425.134, -14.0595 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags48" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 425.134, 0 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags11" parent="Bags" instance=ExtResource( 3 )]
+position = Vector2( 294.646, 227.585 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="Fake Player" type="Node2D" parent="."]
+position = Vector2( 13.2823, 50.1866 )
+
+[node name="maze_spr_color_v1" type="Sprite" parent="Fake Player"]
+modulate = Color( 0.537255, 0.27451, 0.27451, 1 )
+position = Vector2( 356.837, -123.891 )
+scale = Vector2( 0.189854, 0.318823 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fake Player/maze_spr_color_v1"]
+autoplay = "ColorChangingEnemy"
+anims/ColorChangingEnemy = SubResource( 4 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="bags30" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 354.318, -71.5674 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags31" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 357.76, -66.8711 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags32" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 362.56, -62.1238 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags33" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 370.567, -59.0443 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags34" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 370.567, -59.0443 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags35" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 385.582, -71.5674 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags36" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 381.73, -66.8711 )
+scale = Vector2( 0.15, 0.2 )
+
+[node name="bags37" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 377.216, -62.1238 )
+scale = Vector2( 0.15, 0.2 )
 
 [node name="obj_player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 74.1285, 465.213 )
+visible = false
+position = Vector2( 363.918, -3.62716 )
+scale = Vector2( 0.5, 0.75 )
 
 [node name="Bag Icon" parent="obj_player/Sprite/UI Layer Only" index="0"]
 visible = true
@@ -235,27 +356,6 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D" parent="obj_player/Hurtbox" index="0"]
 position = Vector2( 0.347168, 9.16647 )
 shape = SubResource( 3 )
-
-[node name="Fake Player" type="Node2D" parent="."]
-position = Vector2( -1.67065, -19.6623 )
-
-[node name="maze_spr_color_v1" type="Sprite" parent="Fake Player"]
-modulate = Color( 0.537255, 0.27451, 0.27451, 1 )
-position = Vector2( 363.191, -121.949 )
-scale = Vector2( 0.331116, 0.473769 )
-texture = ExtResource( 4 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Fake Player/maze_spr_color_v1"]
-autoplay = "ColorChangingEnemy"
-anims/ColorChangingEnemy = SubResource( 4 )
-
-[node name="bags36" parent="." instance=ExtResource( 3 )]
-position = Vector2( 364.116, -129.92 )
-scale = Vector2( 0.25, 0.5 )
-
-[node name="bags37" parent="." instance=ExtResource( 3 )]
-position = Vector2( 356.116, -129.92 )
-scale = Vector2( 0.25, 0.5 )
 
 [editable path="Map Layout"]
 
